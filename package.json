@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "leander.xyz",
+  "description": "A personal site",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
