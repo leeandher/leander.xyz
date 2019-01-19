@@ -1,10 +1,11 @@
 ---
-path: a-test-path
-date: 2018-12-19T00:50:31.178Z
-title: Test Blog
+path: "/blog/a-test-path"
+date: "2018-12-19"
+title: "Test Blog"
 ---
+
 This is a test blog
 
-*let's see how i do*
+_let's see how i do_
 
-__hopefully okay__
+**hopefully okay**
