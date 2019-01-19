@@ -1,5 +1,5 @@
 ---
-path: Whats a path
+path: a-test-path
 date: 2018-12-19T00:50:31.178Z
 title: Test Blog
 ---
