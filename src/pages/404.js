@@ -1,3 +1,3 @@
-import React from "react";
+import React from 'react'
 
-export default () => <div>Error!</div>;
+export default () => <div>Error!</div>
