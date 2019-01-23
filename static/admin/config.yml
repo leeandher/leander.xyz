@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: leeandher/leander.xyz
+  branch: release
 
 media_folder: static/assets
 public_folder: assets
@@ -15,3 +16,10 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: faqs
+    label: FAQs
+    folder: faqs
+    create: true
+    fields:
+      - { name: question, label: Question, widget: string }
+      - { name: answer, label: Answer, widget: markdown }
