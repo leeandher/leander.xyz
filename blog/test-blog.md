@@ -1,7 +1,7 @@
 ---
-path: "/blog/a-test-path"
-date: "2018-12-19"
-title: "Test Blog"
+path: '/blog/a-test-path'
+date: '2018-12-19'
+title: 'Test Blog'
 ---
 
 This is a test blog

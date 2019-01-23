@@ -2,9 +2,9 @@ module.exports = {
   extends: ['standard'],
   plugins: ['standard', 'react'],
   rules: {
-    'no-var': 'error', // optional, recommended when using es6+
-    'no-unused-vars': 1, // recommended
-    'arrow-spacing': ['error', { before: true, after: true }], // recommended
+    'no-var': 'error',
+    'no-unused-vars': 1,
+    'arrow-spacing': ['error', { before: true, after: true }],
     indent: ['error', 2],
     'comma-dangle': [
       'error',
