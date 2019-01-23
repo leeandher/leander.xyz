@@ -1,7 +1,10 @@
+# backend:
+#   name: github
+#   repo: leeandher/leander.xyz
+#   branch: release
+
 backend:
-  name: github
-  repo: leeandher/leander.xyz
-  branch: release
+  name: 'test-repo'
 
 media_folder: static/assets
 public_folder: assets
