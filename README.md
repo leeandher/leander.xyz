@@ -1,12 +1,15 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+## How to Create Pages
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+Create a new `.js` file in the `src/pages/` directory as a default export React component. This will create the entire page.
+
+If the page needs data, import `graphql` from `gatsby` and then use it as an export. That is, include:
+
+```js
+export const queryName = graphql`
+  // Some fancy query
+`
 ```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+and Gatsby will do the heavy lifting by passing it into your Component as a prop under the name `data`.
 
-## Running in development
-`gatsby develop`
+If the page needs info from `gatsby-node.js` file, then you can pass it via `pageContext`. It will be accessible in the `pageContext` prop.
