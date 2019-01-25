@@ -5,7 +5,7 @@ module.exports = {
     'no-var': 'error',
     'no-unused-vars': 1,
     'arrow-spacing': ['error', { before: true, after: true }],
-    indent: ['error', 2],
+    indent: 'off',
     'comma-dangle': [
       'error',
       {
@@ -20,12 +20,12 @@ module.exports = {
     // options to emulate prettier setup
     semi: ['error', 'never'],
     'max-len': ['error', { code: 80 }],
-    'template-curly-spacing': ['error', 'always'],
+    'template-curly-spacing': 'off',
     'arrow-parens': ['error', 'as-needed'],
 
     // standard.js
     'space-before-function-paren': [
-      'error',
+      'off',
       {
         named: 'always',
         anonymous: 'always',

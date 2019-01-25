@@ -1,12 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-
-const StyledBody = styled.body`
-  margin: 0;
-  border: 2px solid red;
-  background: orange
-`
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class HTML extends React.Component {
   render() {
@@ -19,9 +12,13 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Rubik+Mono+One"
+            rel="stylesheet"
+          />
           {this.props.headComponents}
         </head>
-        <StyledBody>
+        <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div
             key={`body`}
@@ -29,7 +26,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-        </StyledBody>
+        </body>
       </html>
     )
   }
