@@ -3,7 +3,7 @@ module.exports = {
     // CMS
     'gatsby-plugin-netlify-cms',
 
-    // Styling,
+    // Styling
     'gatsby-plugin-styled-components',
 
     // Blog

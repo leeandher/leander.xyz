@@ -13,8 +13,8 @@ module.exports = {
         arrays: 'only-multiline',
         imports: 'never',
         exports: 'never',
-        functions: 'never'
-      }
+        functions: 'never',
+      },
     ],
 
     // options to emulate prettier setup
@@ -29,8 +29,8 @@ module.exports = {
       {
         named: 'always',
         anonymous: 'always',
-        asyncArrow: 'always'
-      }
+        asyncArrow: 'always',
+      },
     ],
 
     // standard plugin - options
@@ -41,10 +41,10 @@ module.exports = {
 
     // react plugin - options
     'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
+    'react/jsx-uses-vars': 'error',
   },
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 8 // optional, recommended 6+
-  }
+    ecmaVersion: 8, // optional, recommended 6+
+  },
 }
