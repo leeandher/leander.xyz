@@ -1,18 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ParticleBackground from '../components/ParticleBackground'
 import PageTitle from '../components/PageTitle'
+import PageHeader from '../components/PageHeader'
 
-const HomeBackground = styled(ParticleBackground)`
-  background: linear-gradient(#000000, dimgrey);
-`
+import palette from '../styles'
 
 const Home = () => {
   return (
     <>
-      <HomeBackground design="bubbles" />
-      <PageTitle content={'Hey there!'} />
+      <PageHeader design="bubbles" height="100vh">
+        <PageTitle title="Hey there" />
+      </PageHeader>
     </>
   )
 }

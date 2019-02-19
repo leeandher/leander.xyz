@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   left: 0;
 `
 
-const ParticleBackground = ({ design, className }) => {
+const ParticleBackground = ({ className, design, height }) => {
   const particleData = (styleId => {
     switch (styleId) {
       case 'bubbles':
@@ -25,7 +25,7 @@ const ParticleBackground = ({ design, className }) => {
   })(design)
   return (
     <Wrapper>
-      <Particles className={className} height="100vh" params={particleData} />
+      <Particles className={className} height={height} params={particleData} />
     </Wrapper>
   )
 }
