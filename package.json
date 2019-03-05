@@ -6,7 +6,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "test": "echo \"Sucessfully setup CircleCI\""
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
