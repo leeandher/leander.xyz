@@ -1,13 +1,18 @@
 {
   "name": "leander.xyz",
-  "description": "A personal site",
+  "author": "Leander Rodrigues <me@leander.xyz> (https://leander.xyz)",
+  "bugs": "https://github.com/leeandher/leander.xyz/issues",
+  "homepage": "http://leander.xyz",
+  "version": "2.0.0",
   "license": "MIT",
+  "description": "A revamped personal site",
+  "repository": "github:leeandher/leander.xyz",
   "scripts": {
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "echo \"Sucessfully setup CircleCI\""
+    "test": "echo \"//TODO: Add tests\""
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
