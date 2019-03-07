@@ -1,50 +1,20 @@
 module.exports = {
-  extends: ['standard'],
-  plugins: ['standard', 'react'],
-  rules: {
-    'no-var': 'error',
-    'no-unused-vars': 1,
-    'arrow-spacing': ['error', { before: true, after: true }],
-    indent: 'off',
-    'comma-dangle': [
-      'error',
-      {
-        objects: 'only-multiline',
-        arrays: 'only-multiline',
-        imports: 'never',
-        exports: 'never',
-        functions: 'never',
-      },
-    ],
-
-    // options to emulate prettier setup
-    semi: ['error', 'never'],
-    'max-len': ['error', { code: 80 }],
-    'template-curly-spacing': 'off',
-    'arrow-parens': ['error', 'as-needed'],
-
-    // standard.js
-    'space-before-function-paren': [
-      'off',
-      {
-        named: 'always',
-        anonymous: 'always',
-        asyncArrow: 'always',
-      },
-    ],
-
-    // standard plugin - options
-    'standard/object-curly-even-spacing': ['error', 'either'],
-    'standard/array-bracket-even-spacing': ['error', 'either'],
-    'standard/computed-property-even-spacing': ['error', 'even'],
-    'standard/no-callback-literal': ['error', ['cb', 'callback']],
-
-    // react plugin - options
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
-  },
-  parser: 'babel-eslint',
+  extends: ["prettier", "prettier/react"],
+  plugins: ["html", "prettier", "react", "react-hooks"],
+  parser: "babel-eslint",
   parserOptions: {
-    ecmaVersion: 8, // optional, recommended 6+
+    ecmaVersion: 2018,
+  },
+  rules: {
+    // general
+    "no-var": "error",
+    "no-unused-vars": ["error", { args: "none" }],
+
+    // react
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+
+    // prettier
+    "prettier/prettier": "error",
   },
 }
