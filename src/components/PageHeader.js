@@ -1,9 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import ParticleBackground from './ParticleBackground'
-
-import palette from '../styles'
+import ParticleBackground from "./ParticleBackground"
 
 const Wrapper = styled.header`
   display: flex;

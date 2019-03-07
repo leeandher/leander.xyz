@@ -1,9 +1,9 @@
-import React from 'react'
-import Particles from 'react-particles-js'
-import styled from 'styled-components'
+import React from "react"
+import Particles from "react-particles-js"
+import styled from "styled-components"
 
-import bubbles from '../data/bubbles.json'
-import mesh from '../data/mesh.json'
+import bubbles from "../data/bubbles.json"
+import mesh from "../data/mesh.json"
 
 const Wrapper = styled.div`
   z-index: -1;
@@ -17,9 +17,9 @@ const Wrapper = styled.div`
 const ParticleBackground = ({ className, design, height }) => {
   const particleData = (styleId => {
     switch (styleId) {
-      case 'bubbles':
+      case "bubbles":
         return bubbles
-      case 'mesh':
+      case "mesh":
         return mesh
     }
   })(design)

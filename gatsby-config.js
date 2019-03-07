@@ -1,26 +1,26 @@
 module.exports = {
   plugins: [
     // CMS
-    'gatsby-plugin-netlify-cms',
+    "gatsby-plugin-netlify-cms",
 
     // Styling
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-styled-components",
 
     // Blog
-    'gatsby-transformer-remark',
+    "gatsby-transformer-remark",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'blog',
-        path: `${ __dirname }/blog`
-      }
+        name: "blog",
+        path: `${__dirname}/blog`,
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'faqs',
-        path: `${ __dirname }/faqs`
-      }
-    }
-  ]
+        name: "faqs",
+        path: `${__dirname}/faqs`,
+      },
+    },
+  ],
 }

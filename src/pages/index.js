@@ -1,10 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
 
-import PageTitle from '../components/PageTitle'
-import PageHeader from '../components/PageHeader'
-
-import palette from '../styles'
+import PageTitle from "../components/PageTitle"
+import PageHeader from "../components/PageHeader"
 
 const Home = () => {
   return (

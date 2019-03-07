@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import palette from '../styles'
+import React from "react"
+import styled from "styled-components"
+
+import { palette } from "../styles"
 
 const StyledPageTitle = styled.h1`
   font-family: ${palette.font.family};
