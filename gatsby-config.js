@@ -3,6 +3,9 @@ module.exports = {
     // CMS
     "gatsby-plugin-netlify-cms",
 
+    // SEO
+    "gatsby-plugin-react-helmet",
+
     // Styling
     "gatsby-plugin-styled-components",
 
@@ -12,14 +15,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
-        path: `${__dirname}/blog`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "faqs",
-        path: `${__dirname}/faqs`,
+        path: `${__dirname}/src/pages/blog`,
       },
     },
   ],
