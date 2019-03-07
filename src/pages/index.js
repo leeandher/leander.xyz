@@ -1,14 +1,14 @@
 import React from "react"
 
 import PageTitle from "../components/PageTitle"
-import PageHeader from "../components/PageHeader"
+import Page from "../components/Page.js"
 
 const Home = () => {
   return (
     <>
-      <PageHeader design="bubbles" height="100vh">
+      <Page design="bubbles" height="100vh">
         <PageTitle title="Hey there" />
-      </PageHeader>
+      </Page>
     </>
   )
 }
