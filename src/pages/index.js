@@ -1,11 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Typing from "react-typing-animation"
 
 import Page from "../components/Page.js"
-import Nav from "../components/Nav.js"
-
-import { descriptors } from "../data/descriptors.json"
 
 const StyledHeader = styled.header`
   height: 100vh;
@@ -34,45 +30,30 @@ const StyledHeader = styled.header`
     font-size: 2rem;
     margin: 0;
   }
-  h2 {
+  h2,
+  a {
     font-size: 3rem;
-  }
-`
-const StyledTyping = styled(Typing).attrs({ cursorClassName: "acc" })`
-  min-height: 45px;
-  span {
     text-decoration: underline ${({ theme }) => theme.accent};
+    a {
+      color: inherit;
+    }
   }
 `
-
 const Home = () => {
   return (
-    <Page accent="orange">
-      <Nav />
+    <Page accent="teal">
       <StyledHeader>
         <p>Hi there, My name is</p>
         <h1>
           <span>Leander Rodrigues</span>
         </h1>
-        <p>and I'd probably describe myself as</p>
+        <p>and I'm currently hard at work rebuilding my site.</p>
+        <br />
         <h2>
-          <StyledTyping>
-            {descriptors.map((str, i, arr) => (
-              <React.Fragment key={str}>
-                <span>{str}</span>
-                <Typing.Backspace
-                  count={i === arr.length - 1 ? 4 : str.length}
-                  delay={1250}
-                />
-              </React.Fragment>
-            ))}
-          </StyledTyping>
+          <a href="https://github.com/leeandher">Check out my GitHub</a>
         </h2>
+        <p>to see my latest projects!</p>
       </StyledHeader>
-      <section>
-        <h2>About Me</h2>
-        {/* FLEXBOX */}
-      </section>
     </Page>
   )
 }
