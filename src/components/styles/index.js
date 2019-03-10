@@ -17,7 +17,13 @@ export const palette = {
     light: "#f2f2f2",
     lighter: "#fefefe",
   },
+  spacing: {
+    default: "15px",
+  },
   font: {
     family: "Rubik",
+    thin: 300,
+    reg: 400,
+    bold: 600,
   },
 }

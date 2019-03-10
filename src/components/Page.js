@@ -1,27 +1,42 @@
 import React from "react"
-import styled, { ThemeProvider } from "styled-components"
-
-import ParticleBackground from "./ParticleBackground"
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import { palette } from "./styles"
 
-const Wrapper = styled.header`
-  display: flex;
-  border: 3px solid orange;
-  box-sizing: border-box;
-`
-const Play = styled(ParticleBackground)`
-  background: black;
+const GlobalStyle = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    font-family: ${palette.font.family};
+  }
+  a {
+    text-decoration: none;
+  }
 `
 
-const Page = ({ children, height, design }) => {
+const StyledPage = styled.div``
+
+const Page = ({ accent, children }) => {
+  const theme = {
+    accent: palette.color[accent],
+    ...palette,
+  }
   return (
-    <ThemeProvider theme={palette}>
-      <Wrapper style={{ height }}>
-        <Play design={design} height={height} />
-        {children}
-      </Wrapper>
-    </ThemeProvider>
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <StyledPage>{children}</StyledPage>
+      </ThemeProvider>
+    </>
   )
 }
 
