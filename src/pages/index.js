@@ -47,7 +47,7 @@ const StyledTyping = styled(Typing).attrs({ cursorClassName: "acc" })`
 
 const Home = () => {
   return (
-    <Page accent="orange">
+    <Page accent="teal">
       <Nav />
       <StyledHeader>
         <p>Hi there, My name is</p>

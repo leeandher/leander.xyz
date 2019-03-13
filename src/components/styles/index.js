@@ -26,4 +26,8 @@ export const palette = {
     reg: 400,
     bold: 600,
   },
+  transition: {
+    default: property =>
+      `transition: ${property} 0.4s cubic-bezier(.26,.1,.39,1.29)`,
+  },
 }

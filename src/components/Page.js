@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${palette.font.family};
   }
   a {
+    color: inherit;
     text-decoration: none;
   }
 `
