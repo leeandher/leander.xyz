@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import NavLink from "./NavLink"
-
 const StyledToggler = styled.button`
   height: 0;
   width: 0;
@@ -20,8 +18,8 @@ const StyledToggler = styled.button`
   }
 `
 
-const Toggler = () => {
-  return <StyledToggler />
-}
+const Toggler = ({ showSideBar }) => (
+  <>{showSideBar ? <StyledToggler /> : <StyledToggler />}</>
+)
 
 export default Toggler
