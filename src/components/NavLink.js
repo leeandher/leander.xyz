@@ -31,20 +31,37 @@ const StyledLink = styled(Link)`
   font-size: 2rem;
   position: relative;
   color: ${({ theme }) => theme.shade.lighter};
-  ${({ theme }) => theme.transition.default("all")};
+  ${({ theme }) => theme.transition.default("color")};
+  &:first-child {
+    flex: 2;
+  }
+  @media (max-width: 850px) {
+    flex: 0;
+    text-align: left;
+    &:first-child {
+      flex: 0;
+    }
+  }
 
   &:after {
+    z-index: -1;
     height: 3px;
     background: ${({ theme, accent }) =>
       accent ? theme.color[accent] : theme.accent};
     content: "";
-    width: 0;
+    width: 0px;
     position: absolute;
     transform: translateX(-50%);
     top: 50%;
     left: 50%;
-    ${({ theme }) => theme.transition.default("all")};
+    ${({ theme }) => theme.transition.default("width")};
     margin-top: 2.5rem;
+    @media (max-width: 850px) {
+      top: 0;
+      left: 0;
+      margin-top: 0;
+      height: 60px;
+    }
   }
   &:hover,
   &:focus {
@@ -53,12 +70,16 @@ const StyledLink = styled(Link)`
     &:after {
       width: calc(100% - 60px);
     }
-    @media (max-width: 700px) {
-      width: calc(100% - 10px);
+    @media (max-width: 850px) {
+      color: ${({ theme }) => theme.shade.darker};
+      color: black !important;
+      &:after {
+        transition: all 0.4s ease;
+        transform: translateX(0);
+
+        width: 100%;
+      }
     }
-  }
-  &:first-child {
-    flex: 2;
   }
 `
 
