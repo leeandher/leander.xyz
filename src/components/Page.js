@@ -3,6 +3,8 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import { palette } from "./styles"
 
+import Nav from "./Nav.js"
+
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
@@ -26,19 +28,36 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledPage = styled.div``
 
-const Page = ({ accent, children }) => {
-  const theme = {
-    accent: palette.color[accent],
-    ...palette,
+class Page extends React.Component {
+  state = {
+    showSideBar: false,
   }
-  return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <StyledPage>{children}</StyledPage>
-      </ThemeProvider>
-    </>
-  )
+
+  toggleNav = () => {
+    this.setState({ showSideBar: !this.state.showSideBar })
+  }
+
+  render() {
+    const { accent, children } = this.props
+    const theme = {
+      accent: palette.color[accent],
+      ...palette,
+    }
+    return (
+      <>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <StyledPage>
+            <Nav
+              showSideBar={this.state.showSideBar}
+              handleToggle={this.toggleNav}
+            />
+            {children}
+          </StyledPage>
+        </ThemeProvider>
+      </>
+    )
+  }
 }
 
 export default Page

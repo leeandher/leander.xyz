@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Typist from "react-typist"
 
 import Page from "../components/Page.js"
-import Nav from "../components/Nav.js"
 
 import { descriptors } from "../data/descriptors.json"
 
@@ -72,7 +71,6 @@ const StyledTyping = styled(Typist).attrs({
 const Home = () => {
   return (
     <Page accent="teal">
-      <Nav />
       <StyledHeader>
         <p>Hi there, My name is</p>
         <h1>

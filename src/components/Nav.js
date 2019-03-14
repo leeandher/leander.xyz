@@ -22,13 +22,21 @@ const StyledNav = styled.nav`
     right: calc(100% - 200px);
     flex-flow: column;
     justify-content: flex-start;
+    ${({ showSideBar }) => {
+      if (!showSideBar) {
+        return `
+          transform: translateX(-100%);
+          overflow: hidden;
+        `
+      }
+    }};
   }
 `
 
-const Nav = () => {
+const Nav = ({ handleToggle, showSideBar }) => {
   return (
     <>
-      <StyledNav>
+      <StyledNav showSideBar={showSideBar || false}>
         <NavLink to="/">
           <span>LOGO</span>
         </NavLink>
@@ -51,7 +59,7 @@ const Nav = () => {
           <span>Contact</span>
         </NavLink>
       </StyledNav>
-      <Toggler />
+      <Toggler showSideBar={showSideBar || false} handleToggle={handleToggle} />
     </>
   )
 }
