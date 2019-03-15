@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import { palette } from "./styles"
@@ -47,6 +48,10 @@ class Page extends React.Component {
       <>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
+          <Helmet>
+            <title>{title}</title>
+            <meta name="description" content={description} />
+          </Helmet>
           <StyledPage>
             <Nav
               showSideBar={this.state.showSideBar}
