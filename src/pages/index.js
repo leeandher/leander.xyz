@@ -4,6 +4,7 @@ import Typist from "react-typist"
 
 import Page from "../components/Page.js"
 import Nav from "../components/Nav.js"
+import Button from "../components/ActionButton.js/index.js"
 
 import { descriptors } from "../data/descriptors.json"
 
@@ -69,9 +70,22 @@ const StyledTyping = styled(Typist).attrs({
   }
 `
 
+const StyledSection = styled.section`
+  background: ${({ theme }) => theme.shade.light};
+  h2 {
+    text-align: center;
+    text-dect
+  }
+
+`
+
 const Home = () => {
   return (
-    <Page accent="teal">
+    <Page
+      accent="teal"
+      title="Welcome to leander.xyz!"
+      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+    >
       <Nav />
       <StyledHeader>
         <p>Hi there, My name is</p>
@@ -93,10 +107,11 @@ const Home = () => {
           </StyledTyping>
         </h2>
       </StyledHeader>
-      <section>
-        <h2>About Me</h2>
+      <StyledSection>
+        <h2>Who are you again?</h2>
         {/* FLEXBOX */}
-      </section>
+        <Button>Hello!</Button>
+      </StyledSection>
     </Page>
   )
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import { palette } from "./styles"
@@ -26,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledPage = styled.div``
 
-const Page = ({ accent, children }) => {
+const Page = ({ accent, children, description, title }) => {
   const theme = {
     accent: palette.color[accent],
     ...palette,
@@ -34,6 +35,10 @@ const Page = ({ accent, children }) => {
   return (
     <>
       <GlobalStyle />
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <ThemeProvider theme={theme}>
         <StyledPage>{children}</StyledPage>
       </ThemeProvider>
