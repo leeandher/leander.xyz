@@ -7,11 +7,12 @@ import Toggler from "./Toggler"
 const StyledNav = styled.nav`
   display: flex;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   right: 0;
   left: 0;
   text-align: center;
+  background: ${({ theme }) => theme.shade.darkest};
   @media (max-width: 850px) {
     background: ${({ theme }) => theme.shade.darker};
     border-right: 2px solid ${({ theme }) => theme.shade.lighter};

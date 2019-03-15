@@ -3,25 +3,25 @@ import styled from "styled-components"
 import Typist from "react-typist"
 
 import Page from "../components/Page.js"
-import Button from "../components/ActionButton.js/index.js"
 
 import { descriptors } from "../data/descriptors.json"
 
 const StyledHeader = styled.header`
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: ${({ theme }) => theme.spacing.default};
-  background: ${({ theme }) => theme.shade.darkest};
+  background: transparent;
   color: ${({ theme }) => theme.shade.lighter};
+  div {
+  }
   .acc {
     color: ${({ theme }) => theme.accent};
   }
   h1 {
     margin: 15px;
-    font-size: 5rem;
     transform: skew(-5deg);
     display: inline-block;
     span {
@@ -33,9 +33,6 @@ const StyledHeader = styled.header`
   p {
     font-size: 2rem;
     margin: 0;
-  }
-  h2 {
-    font-size: 3rem;
   }
 `
 const StyledTyping = styled(Typist).attrs({
@@ -71,11 +68,15 @@ const StyledTyping = styled(Typist).attrs({
 
 const StyledSection = styled.section`
   background: ${({ theme }) => theme.shade.light};
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  border: 5px solid ${({ theme }) => theme.accent};
+  padding: 15px;
   h2 {
     text-align: center;
-    text-dect
+    text-decoration: underline ${({ theme }) => theme.accent};
   }
-
 `
 
 const Home = () => {
@@ -86,29 +87,71 @@ const Home = () => {
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <StyledHeader>
-        <p>Hi there, My name is</p>
-        <h1>
-          <span>Leander Rodrigues</span>
-        </h1>
-        <p>and I'd probably describe myself as</p>
-        <h2>
-          <StyledTyping>
-            {descriptors.map((str, i, arr) => (
-              <span key={str}>
-                <span>{str}</span>
-                <Typist.Backspace
-                  count={i === arr.length - 1 ? 4 : str.length}
-                  delay={1250}
-                />
-              </span>
-            ))}
-          </StyledTyping>
-        </h2>
+        <div>
+          <p>Hi there, My name is</p>
+          <h1>
+            <span>Leander Rodrigues</span>
+          </h1>
+          <p>and I'd probably describe myself as</p>
+          <h2>
+            <StyledTyping>
+              {descriptors.map((str, i, arr) => (
+                <span key={str}>
+                  <span>{str}</span>
+                  <Typist.Backspace
+                    count={i === arr.length - 1 ? 4 : str.length}
+                    delay={1250}
+                  />
+                </span>
+              ))}
+            </StyledTyping>
+          </h2>
+        </div>
       </StyledHeader>
       <StyledSection>
         <h2>Who are you again?</h2>
-        {/* FLEXBOX */}
-        <Button>Hello!</Button>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
+      </StyledSection>
+      <StyledSection>
+        <h2>Who are you again?</h2>
       </StyledSection>
     </Page>
   )

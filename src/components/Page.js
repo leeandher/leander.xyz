@@ -21,6 +21,15 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     font-family: ${palette.font.family};
   }
+  h1 {
+    font-size: 5rem
+  }
+  h2  {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
   a {
     color: inherit;
     text-decoration: none;
@@ -39,7 +48,7 @@ class Page extends React.Component {
   }
 
   render() {
-    const { accent, children } = this.props
+    const { accent, children, description, title } = this.props
     const theme = {
       accent: palette.color[accent],
       ...palette,
@@ -47,11 +56,11 @@ class Page extends React.Component {
     return (
       <>
         <GlobalStyle />
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+        </Helmet>
         <ThemeProvider theme={theme}>
-          <Helmet>
-            <title>{title}</title>
-            <meta name="description" content={description} />
-          </Helmet>
           <StyledPage>
             <Nav
               showSideBar={this.state.showSideBar}
