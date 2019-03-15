@@ -9,13 +9,20 @@ module.exports = {
     // Styling
     "gatsby-plugin-styled-components",
 
-    // Blog
+    // Data
     "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
         path: `${__dirname}/src/pages/blog`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "notes",
+        path: `${__dirname}/src/pages/notes/**/`,
       },
     },
   ],

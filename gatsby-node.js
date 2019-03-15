@@ -1,11 +1,12 @@
 const path = require("path")
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve("src/templates/blogTemplate.js")
-
-  return graphql(`
+  // Create blog posts and notes
+  const blogTemplate = path.resolve("src/templates/blogTemplate.js")
+  const noteTemplate = path.resolve("src/templates/noteTemplate.js")
+  const { data: media } = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -20,16 +21,25 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
+  `)
+  media.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { frontmatter: fm } = node
+    let template = null
+    let path = null
+    switch (fm.type) {
+      case "blog":
+        template = blogTemplate
+        path = `${fm.path}`
+        break
+      case "note":
+        template = noteTemplate
+        path = `${fm.category}/${fm.title}`
+        break
     }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: `${node.frontmatter.path}`,
-        component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
-      })
+    return createPage({
+      path: path,
+      component: template,
+      context: {}, // additional data can be passed via context
     })
   })
 }
