@@ -16,6 +16,10 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              type
+              path
+              category
+              title
             }
           }
         }
@@ -29,17 +33,19 @@ exports.createPages = async ({ actions, graphql }) => {
     switch (fm.type) {
       case "blog":
         template = blogTemplate
-        path = `${fm.path}`
+        path = `/blog/${fm.path}`
         break
       case "note":
         template = noteTemplate
-        path = `${fm.category}/${fm.title}`
+        path = `/notes/${fm.category}/${fm.title.replace(/\W/g, "_")}`
         break
     }
     return createPage({
-      path: path,
+      path,
       component: template,
-      context: {}, // additional data can be passed via context
+      context: {
+        title: fm.title,
+      }, // additional data can be passed via context
     })
   })
 }

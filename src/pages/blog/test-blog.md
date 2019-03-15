@@ -1,7 +1,7 @@
 ---
 type: "blog"
 date: "2019-10-27"
-path: "/blog/test-blog"
+path: "test-blog"
 title: "Testing!"
 preview: "This is a preview of the note"
 ---

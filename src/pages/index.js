@@ -111,48 +111,6 @@ const Home = () => {
       <StyledSection>
         <h2>Who are you again?</h2>
       </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
-      <StyledSection>
-        <h2>Who are you again?</h2>
-      </StyledSection>
     </Page>
   )
 }
