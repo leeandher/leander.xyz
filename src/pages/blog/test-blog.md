@@ -1,7 +1,9 @@
 ---
-path: '/blog/test-blog'
-date: '2019-10-27'
-title: 'Testing!'
+type: "blog"
+date: "2019-10-27"
+path: "/blog/test-blog"
+title: "Testing!"
+preview: "This is a preview of the note"
 ---
 
 ### This is a test markdown blogpost
