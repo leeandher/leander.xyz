@@ -11,16 +11,33 @@ import {
 const StyledFooter = styled.footer`
   background: ${({ theme }) => theme.shade.darker};
   height: 50vh;
-  h1 {
+  p {
     color: red;
   }
+  svg {
+    ${({ theme }) => theme.transition.default("all")};
+    box-sizing: content-box;
+    font-size: 7.5rem;
+    margin: 1.5rem;
+    border: 2px solid red;
+    padding: 1rem;
+    line-height: 1;
+    &:hover {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  }
+`
+
+const IconWrapper = styled.div`
+  margin: 0 auto;
 `
 
 const Footer = ({ handleToggle, showSideBar }) => {
   return (
     <StyledFooter>
-      <h1>
-        HOW IS IT GOING
+      <p>HOW IS IT GOING</p>
+      <IconWrapper>
         <a href="https://github.com/leeandher">
           <FaGithub />
         </a>
@@ -33,7 +50,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
         <a href="https://www.linkedin.com/in/leander-rodrigues/">
           <FaLinkedin />
         </a>
-      </h1>
+      </IconWrapper>
     </StyledFooter>
   )
 }
