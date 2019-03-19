@@ -79,6 +79,22 @@ const StyledSection = styled.section`
 const StyledPanel = styled(Link)`
   flex: 1;
   text-align: center;
+  min-width: 30rem;
+  ${({ theme }) => theme.transition.default("all")};
+  border: 0 solid red;
+  position: relative;
+  border-width: 0 2px;
+  &:hover {
+    flex: 2;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      border: 2px solid red;
+      height: 100%;
+      width: 100%;
+    }
+  }
   p {
   }
   h4 {
@@ -89,6 +105,7 @@ const StyledPanel = styled(Link)`
 
 const PanelWrapper = styled.div`
   display: flex;
+  flex-flow: row wrap;
   background: ${({ theme }) => theme.shade.mid};
 `
 
