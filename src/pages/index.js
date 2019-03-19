@@ -110,6 +110,11 @@ const Home = () => {
       </StyledHeader>
       <StyledSection>
         <h2>Who are you again?</h2>
+        <p>
+          Hey there, and welcome to my corner of the internet! I've got
+          everything you need, all in one place (so long as "what you need" is
+          dorky blog posts, programming notes, and some nerd's resume. )
+        </p>
       </StyledSection>
     </Page>
   )

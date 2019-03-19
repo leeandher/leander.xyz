@@ -1,4 +1,8 @@
+https://img.shields.io/circleci/project/github/leeandher/leander.xyz/live.svg
+
 ## How to Create Pages
+
+![CircleCI branch](https://img.shields.io/circleci/project/github/leeandher/leander.xyz/live.svg)
 
 Create a new `.js` file in the `src/pages/` directory as a default export React component. This will create the entire page.
 
