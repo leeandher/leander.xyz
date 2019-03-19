@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Typist from "react-typist"
+import { Link } from "gatsby"
 
 import Page from "../components/Page.js"
 
@@ -68,15 +69,44 @@ const StyledTyping = styled(Typist).attrs({
 
 const StyledSection = styled.section`
   background: ${({ theme }) => theme.shade.light};
-  width: 95%;
-  margin: 0 auto;
-  border-radius: 0.5rem;
-  border: 5px solid ${({ theme }) => theme.accent};
   padding: 15px;
   h2 {
     text-align: center;
     text-decoration: underline ${({ theme }) => theme.accent};
   }
+`
+
+const StyledPanel = styled(Link)`
+  flex: 1;
+  text-align: center;
+  min-width: 30rem;
+  ${({ theme }) => theme.transition.default("all")};
+  border: 0 solid red;
+  position: relative;
+  border-width: 0 2px;
+  &:hover {
+    flex: 2;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      border: 2px solid red;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  p {
+  }
+  h4 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+`
+
+const PanelWrapper = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  background: ${({ theme }) => theme.shade.mid};
 `
 
 const Home = () => {
@@ -115,6 +145,30 @@ const Home = () => {
           everything you need, all in one place (so long as "what you need" is
           dorky blog posts, programming notes, and some nerd's resume. )
         </p>
+        <Link to="/about">More about me</Link>
+      </StyledSection>
+      <br />
+      <StyledSection>
+        <h2>So, what do you do again?</h2>
+        <h3>Well I guess that depends on what you'd like to see?</h3>
+        <PanelWrapper>
+          <StyledPanel to="/projects">
+            <p>Got any</p>
+            <h4>PROJECTS</h4>
+          </StyledPanel>
+          <StyledPanel to="/notes">
+            <p>I'd like to read your</p>
+            <h4>NOTES</h4>
+          </StyledPanel>
+          <StyledPanel to="/blog">
+            <p>Show me some</p>
+            <h4>BLOG POSTS</h4>
+          </StyledPanel>
+          <StyledPanel to="/resume">
+            <p>I want to see</p>
+            <h4>EVERYTHING</h4>
+          </StyledPanel>
+        </PanelWrapper>
       </StyledSection>
     </Page>
   )

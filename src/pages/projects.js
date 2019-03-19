@@ -1,3 +1,3 @@
 import React from "react"
 
-export default () => <div>Hello about!</div>
+export default () => <div style={{ background: "white" }}>Hello PROJECTS!</div>

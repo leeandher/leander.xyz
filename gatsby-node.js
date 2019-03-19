@@ -33,11 +33,13 @@ exports.createPages = async ({ actions, graphql }) => {
     switch (fm.type) {
       case "blog":
         template = blogTemplate
-        path = `/blog/${fm.path}`
+        path = `${fm.path}`
         break
       case "note":
         template = noteTemplate
-        path = `/notes/${fm.category}/${fm.title.replace(/\W/g, "_")}`
+        path = `/notes/${fm.category}/${fm.title
+          .replace(/\s/g, "_")
+          .toLowerCase()}`
         break
     }
     return createPage({

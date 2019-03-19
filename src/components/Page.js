@@ -5,6 +5,7 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import { palette } from "./styles"
 
 import Nav from "./Nav.js"
+import Footer from "./Footer.js"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -67,6 +68,7 @@ class Page extends React.Component {
               handleToggle={this.toggleNav}
             />
             {children}
+            <Footer />
           </StyledPage>
         </ThemeProvider>
       </>
