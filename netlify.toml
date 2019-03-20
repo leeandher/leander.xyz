@@ -13,6 +13,10 @@
   base    = ""
   publish = ""
   command = ""
+[context.dev]
+  base    = ""
+  publish = "public/"
+  command = "gatsby build"
 [context.joke]
   base    = ""
   publish = ""
