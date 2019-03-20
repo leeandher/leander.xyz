@@ -80,8 +80,9 @@ const Footer = ({ handleToggle, showSideBar }) => {
       </IconWrapper>
       <p>I like easter eggs.</p>
       <p>
-        © Copyright {copyrightYears}, but don't worry, I'm{" "}
-        <a href="https://github.com/leeandher/leander.xyz">open source</a>{" "}
+        © Copyright {copyrightYears}, <br />
+        but don't worry, I'm{" "}
+        <a href="https://github.com/leeandher/leander.xyz"> open source</a>{" "}
       </p>
     </StyledFooter>
   )

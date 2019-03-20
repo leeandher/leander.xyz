@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  ::selection {
+    background: ${({ theme }) => ""}red;
+  }
   body {
     padding: 0;
     margin: 0;
@@ -38,7 +41,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const StyledPage = styled.div``
+const StyledPage = styled.div`
+  * {
+    ::selection {
+      background: ${({ theme }) => theme.accent};
+      border: 2px solid blue;
+      opacity: 0.5;
+    }
+  }
+`
 
 class Page extends React.Component {
   state = {
