@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import Spring from "react-spring/renderprops"
+
+import { getCopyrightYearsFrom } from "../helpers/copyrightDate"
 
 import {
   FaGithub,
@@ -9,34 +12,58 @@ import {
 } from "react-icons/fa"
 
 const StyledFooter = styled.footer`
-  background: ${({ theme }) => theme.shade.darker};
   height: 50vh;
+  padding: 5rem;
+  color: ${({ theme }) => theme.shade.lighter};
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h5 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    flex: 1;
+  }
   p {
-    color: red;
+    text-align: center;
+    font-style: italic;
+    color: ${({ theme }) => theme.shade.mid};
+    margin: 1rem;
+    a {
+      color: ${({ theme }) => theme.accent};
+      &:hover {
+        text-decoration: underline ${({ theme }) => theme.accent};
+        color: ${({ theme }) => theme.shade.mid};
+      }
+    }
+    flex: 1;
   }
   svg {
     ${({ theme }) => theme.transition.default("all")};
     box-sizing: content-box;
-    font-size: 7.5rem;
-    margin: 1.5rem;
-    border: 2px solid red;
+    font-size: 4rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    border: 2px solid transparent;
     padding: 1rem;
     line-height: 1;
     &:hover {
-      padding: 1.5rem;
-      margin: 1rem;
+      border-color: ${({ theme }) => theme.accent};
+      color: ${({ theme }) => theme.accent};
     }
   }
 `
 
 const IconWrapper = styled.div`
   margin: 0 auto;
+  flex: 1;
 `
 
 const Footer = ({ handleToggle, showSideBar }) => {
+  const copyrightYears = getCopyrightYearsFrom(2019)
   return (
     <StyledFooter>
-      <p>HOW IS IT GOING</p>
+      <h5>Find me online</h5>
       <IconWrapper>
         <a href="https://github.com/leeandher">
           <FaGithub />
@@ -51,6 +78,11 @@ const Footer = ({ handleToggle, showSideBar }) => {
           <FaLinkedin />
         </a>
       </IconWrapper>
+      <p>I like easter eggs.</p>
+      <p>
+        © Copyright {copyrightYears}, but don't worry, I'm{" "}
+        <a href="https://github.com/leeandher/leander.xyz">open source</a>{" "}
+      </p>
     </StyledFooter>
   )
 }
