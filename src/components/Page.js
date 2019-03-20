@@ -6,6 +6,7 @@ import { palette } from "./styles"
 
 import Nav from "./Nav.js"
 import Footer from "./Footer.js"
+import ParticleBackground from "./ParticleBackground"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -14,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
+  }
+  ::selection {
+    background: ${({ theme }) => ""}red;
   }
   body {
     padding: 0;
@@ -37,7 +41,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const StyledPage = styled.div``
+const StyledPage = styled.div`
+  * {
+    ::selection {
+      background: ${({ theme }) => theme.accent};
+      border: 2px solid blue;
+      opacity: 0.5;
+    }
+  }
+`
 
 class Page extends React.Component {
   state = {
@@ -49,7 +61,14 @@ class Page extends React.Component {
   }
 
   render() {
-    const { accent, children, description, title } = this.props
+    const {
+      accent,
+      accentBg,
+      children,
+      description,
+      design,
+      title,
+    } = this.props
     const theme = {
       accent: palette.color[accent],
       ...palette,
@@ -63,6 +82,13 @@ class Page extends React.Component {
         </Helmet>
         <ThemeProvider theme={theme}>
           <StyledPage>
+            {Boolean(design) ? (
+              <ParticleBackground
+                height="100vh"
+                design={design}
+                accent={accentBg ? theme.accent : theme.shade.lighter}
+              />
+            ) : null}
             <Nav
               showSideBar={this.state.showSideBar}
               handleToggle={this.toggleNav}

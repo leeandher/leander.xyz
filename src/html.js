@@ -14,7 +14,7 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Rubik"
+            href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900"
             rel="stylesheet"
           />
           {this.props.headComponents}

@@ -4,6 +4,7 @@ import Typist from "react-typist"
 import { Link } from "gatsby"
 
 import Page from "../components/Page.js"
+import QuoteCard from "../components/QuoteCard.js"
 
 import { descriptors } from "../data/descriptors.json"
 
@@ -45,11 +46,13 @@ const StyledTyping = styled(Typist).attrs({
   min-height: 45px;
   span {
     text-decoration: underline ${({ theme }) => theme.accent};
+    font-family: monospace;
   }
   .Cursor {
     color: ${({ theme }) => theme.accent};
     width: 0px;
     display: inline-block;
+    text-decoration: none;
     margin-left: 3px;
     opacity: 1;
     animation: blink 0.5s step-end infinite;
@@ -69,6 +72,7 @@ const StyledTyping = styled(Typist).attrs({
 
 const StyledSection = styled.section`
   background: ${({ theme }) => theme.shade.light};
+  opacity: 0.9;
   padding: 15px;
   h2 {
     text-align: center;
@@ -76,44 +80,20 @@ const StyledSection = styled.section`
   }
 `
 
-const StyledPanel = styled(Link)`
-  flex: 1;
-  text-align: center;
-  min-width: 30rem;
-  ${({ theme }) => theme.transition.default("all")};
-  border: 0 solid red;
-  position: relative;
-  border-width: 0 2px;
-  &:hover {
-    flex: 2;
-    &:before {
-      position: absolute;
-      display: block;
-      content: "";
-      border: 2px solid red;
-      height: 100%;
-      width: 100%;
-    }
-  }
-  p {
-  }
-  h4 {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-`
-
 const PanelWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
-  background: ${({ theme }) => theme.shade.mid};
+  max-width: 1250px;
+  margin: 0 auto;
 `
 
 const Home = () => {
   return (
     <Page
-      accent="teal"
+      accent="pink"
+      accentBg
       title="Welcome to leander.xyz!"
+      design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <StyledHeader>
@@ -139,7 +119,7 @@ const Home = () => {
         </div>
       </StyledHeader>
       <StyledSection>
-        <h2>Who are you again?</h2>
+        <h2>"Who are you again?"</h2>
         <p>
           Hey there, and welcome to my corner of the internet! I've got
           everything you need, all in one place (so long as "what you need" is
@@ -149,25 +129,33 @@ const Home = () => {
       </StyledSection>
       <br />
       <StyledSection>
-        <h2>So, what do you do again?</h2>
+        <h2>"So, what do you do again?"</h2>
         <h3>Well I guess that depends on what you'd like to see?</h3>
         <PanelWrapper>
-          <StyledPanel to="/projects">
-            <p>Got any</p>
-            <h4>PROJECTS</h4>
-          </StyledPanel>
-          <StyledPanel to="/notes">
-            <p>I'd like to read your</p>
-            <h4>NOTES</h4>
-          </StyledPanel>
-          <StyledPanel to="/blog">
-            <p>Show me some</p>
-            <h4>BLOG POSTS</h4>
-          </StyledPanel>
-          <StyledPanel to="/resume">
-            <p>I want to see</p>
-            <h4>EVERYTHING</h4>
-          </StyledPanel>
+          <QuoteCard
+            accent="orange"
+            preText="Got any"
+            mainText="PROJECTS"
+            to="/projects"
+          />
+          <QuoteCard
+            accent="yellow"
+            preText="Show me some"
+            mainText="BLOG POSTS"
+            to="/blog"
+          />
+          <QuoteCard
+            accent="green"
+            preText="I'd like to read your"
+            mainText="NOTES"
+            to="/notes"
+          />
+          <QuoteCard
+            accent="blue"
+            preText="I want to see"
+            mainText="EVERYTHING"
+            to="/resume"
+          />
         </PanelWrapper>
       </StyledSection>
     </Page>

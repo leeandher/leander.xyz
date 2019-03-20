@@ -1,20 +1,20 @@
 export const palette = {
   color: {
-    red: " #ce2d48",
+    red: "#ce2d48",
     orange: "#ff9f1c",
     yellow: "#ffd43a",
     green: "#7ae582",
     teal: "#00cccc",
     blue: "#0582ca",
     purple: "#b65fd1",
-    pink: "#d33797",
+    pink: "#f33797",
   },
   shade: {
     darkest: "#0F0F0F",
     darker: "#303030",
     dark: "#686868",
-    mid: "#d8d8d8",
-    light: "#f2f2f2",
+    mid: "#c8c8c8",
+    light: "#e2e2e2",
     lighter: "#fefefe",
   },
   spacing: {
@@ -24,7 +24,7 @@ export const palette = {
     family: "Rubik",
     thin: 300,
     reg: 400,
-    bold: 600,
+    bold: 700,
   },
   transition: {
     default: property =>
