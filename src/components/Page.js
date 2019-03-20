@@ -6,6 +6,7 @@ import { palette } from "./styles"
 
 import Nav from "./Nav.js"
 import Footer from "./Footer.js"
+import ParticleBackground from "./ParticleBackground"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -63,6 +64,11 @@ class Page extends React.Component {
         </Helmet>
         <ThemeProvider theme={theme}>
           <StyledPage>
+            <ParticleBackground
+              height="100vh"
+              design="mesh"
+              accent={theme.accent}
+            />
             <Nav
               showSideBar={this.state.showSideBar}
               handleToggle={this.toggleNav}
