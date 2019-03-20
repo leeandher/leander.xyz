@@ -45,11 +45,13 @@ const StyledTyping = styled(Typist).attrs({
   min-height: 45px;
   span {
     text-decoration: underline ${({ theme }) => theme.accent};
+    font-family: monospace;
   }
   .Cursor {
     color: ${({ theme }) => theme.accent};
     width: 0px;
     display: inline-block;
+    text-decoration: none;
     margin-left: 3px;
     opacity: 1;
     animation: blink 0.5s step-end infinite;
@@ -112,8 +114,10 @@ const PanelWrapper = styled.div`
 const Home = () => {
   return (
     <Page
-      accent="teal"
+      accent="pink"
+      accentBg
       title="Welcome to leander.xyz!"
+      design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <StyledHeader>

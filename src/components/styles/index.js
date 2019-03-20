@@ -1,6 +1,6 @@
 export const palette = {
   color: {
-    red: " #ce2d48",
+    red: "#ce2d48",
     orange: "#ff9f1c",
     yellow: "#ffd43a",
     green: "#7ae582",
@@ -24,7 +24,7 @@ export const palette = {
     family: "Rubik",
     thin: 300,
     reg: 400,
-    bold: 600,
+    bold: 700,
   },
   transition: {
     default: property =>

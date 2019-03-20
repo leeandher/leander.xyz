@@ -50,7 +50,14 @@ class Page extends React.Component {
   }
 
   render() {
-    const { accent, children, description, title } = this.props
+    const {
+      accent,
+      accentBg,
+      children,
+      description,
+      design,
+      title,
+    } = this.props
     const theme = {
       accent: palette.color[accent],
       ...palette,
@@ -64,11 +71,13 @@ class Page extends React.Component {
         </Helmet>
         <ThemeProvider theme={theme}>
           <StyledPage>
-            <ParticleBackground
-              height="100vh"
-              design="mesh"
-              accent={theme.accent}
-            />
+            {Boolean(design) ? (
+              <ParticleBackground
+                height="100vh"
+                design={design}
+                accent={accentBg ? theme.accent : theme.shade.lighter}
+              />
+            ) : null}
             <Nav
               showSideBar={this.state.showSideBar}
               handleToggle={this.toggleNav}

@@ -18,6 +18,7 @@ const ParticleBackground = ({ accent, design, height, ...props }) => {
   const particleData = (styleId => {
     switch (styleId) {
       case "bubbles":
+        bubbles.particles.color.value = accent
         return bubbles
       case "mesh":
         mesh.particles.line_linked.color = accent
