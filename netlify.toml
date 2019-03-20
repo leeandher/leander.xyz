@@ -2,7 +2,7 @@
 [build]
   base    = ""
   publish = "public/"
-  command = "gatsby build"
+  command = "npm run build"
 
 # Branch-specific build context
 [context.cotd]
@@ -16,7 +16,7 @@
 [context.dev]
   base    = ""
   publish = "public/"
-  command = "gatsby build"
+  command = "npm run build"
 [context.joke]
   base    = ""
   publish = ""
