@@ -1,21 +1,22 @@
 export const palette = {
   color: {
-    red: "#ce2d48",
+    red: "#ef4d5d",
     orange: "#ff9f1c",
     yellow: "#ffd43a",
     green: "#7ae582",
     teal: "#00cccc",
     blue: "#0582ca",
     purple: "#b65fd1",
-    pink: "#f33797",
+    pink: "#ff79a7",
   },
   shade: {
     darkest: "#0F0F0F",
     darker: "#303030",
     dark: "#686868",
-    mid: "#c8c8c8",
-    light: "#e2e2e2",
-    lighter: "#fefefe",
+    mid: "#888888",
+    light: "#c8c8c8",
+    lighter: "#e2e2e2",
+    lightest: "#fefefe",
   },
   spacing: {
     default: "15px",

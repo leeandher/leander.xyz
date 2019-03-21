@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
-import { palette } from "./styles"
+import { palette } from "../styles"
 
 import Nav from "./Nav.js"
 import Footer from "./Footer.js"
