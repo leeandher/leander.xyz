@@ -19,9 +19,6 @@ const StyledHeader = styled.header`
   color: ${({ theme }) => theme.shade.lighter};
   div {
   }
-  .acc {
-    color: ${({ theme }) => theme.accent};
-  }
   h1 {
     margin: 15px;
     transform: skew(-5deg);

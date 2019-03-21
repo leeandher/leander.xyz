@@ -1,0 +1,40 @@
+# General build context
+[build]
+  base    = ""
+  publish = "public/"
+  command = "npm run build"
+
+# Branch-specific build context
+[context.cotd]
+  base    = ""
+  publish = ""
+  command = ""
+[context.conway]
+  base    = ""
+  publish = ""
+  command = ""
+[context.dev]
+  base    = ""
+  publish = "public/"
+  command = "npm run build"
+[context.joke]
+  base    = ""
+  publish = ""
+  command = ""
+[context.old]
+  base    = ""
+  publish = ""
+  command = ""
+[context.reduxstagram]
+  base    = ""
+  publish = ""
+  command = ""
+[context.space-shooter]
+  base    = ""
+  publish = ""
+  command = ""
+[context.stacker-news]
+  base    = ""
+  publish = ""
+  command = ""
+  
