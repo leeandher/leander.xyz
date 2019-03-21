@@ -19,6 +19,7 @@ export const palette = {
     lightest: "#fefefe",
   },
   spacing: {
+    mw: "1024px",
     default: "15px",
   },
   font: {

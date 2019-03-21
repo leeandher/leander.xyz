@@ -44,6 +44,7 @@ const StyledTyping = styled(Typist).attrs({
   span {
     text-decoration: underline ${({ theme }) => theme.accent};
     font-family: monospace;
+    font-weight: bold;
   }
   .Cursor {
     color: ${({ theme }) => theme.accent};
@@ -68,12 +69,33 @@ const StyledTyping = styled(Typist).attrs({
 `
 
 const StyledSection = styled.section`
-  background: ${({ theme }) => theme.shade.light};
+  /* background: ${({ theme }) => theme.shade.light}; */
   opacity: 0.9;
-  padding: 15px;
+  position: relative;
+  display: block;
+  /* overflow: hidden; */
   h2 {
     text-align: center;
     text-decoration: underline ${({ theme }) => theme.accent};
+
+  }
+`
+
+const TrpSection = styled(StyledSection)`
+  padding: 100px 0;
+  margin-bottom: 100px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(4deg);
+    transform-origin: top left;
+    background: ${({ theme }) => theme.shade.lighter};
   }
 `
 
@@ -107,7 +129,7 @@ const Home = () => {
                   <span>{str}</span>
                   <Typist.Backspace
                     count={i === arr.length - 1 ? 4 : str.length}
-                    delay={1250}
+                    delay={2250}
                   />
                 </span>
               ))}
@@ -115,7 +137,7 @@ const Home = () => {
           </h2>
         </div>
       </StyledHeader>
-      <StyledSection>
+      <TrpSection>
         <h2>"Who are you again?"</h2>
         <p>
           Hey there, and welcome to my corner of the internet! I've got
@@ -123,8 +145,8 @@ const Home = () => {
           dorky blog posts, programming notes, and some nerd's resume. )
         </p>
         <Link to="/about">More about me</Link>
-      </StyledSection>
-      <br />
+      </TrpSection>
+      {/* <br />
       <StyledSection>
         <h2>"So, what do you do again?"</h2>
         <h3>Well I guess that depends on what you'd like to see?</h3>
@@ -154,7 +176,7 @@ const Home = () => {
             to="/resume"
           />
         </PanelWrapper>
-      </StyledSection>
+      </StyledSection> */}
     </Page>
   )
 }
