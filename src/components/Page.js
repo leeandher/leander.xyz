@@ -22,20 +22,21 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1.5;
     font-family: ${palette.font.family};
   }
   h1 {
-    font-size: 5rem
+    font-size: 6rem
   }
   h2  {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   h3 {
     font-size: 2rem;
   }
   a {
+    font-size: 1.75rem;
     color: inherit;
     text-decoration: none;
   }

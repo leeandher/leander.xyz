@@ -3,37 +3,13 @@ import styled from "styled-components"
 import Typist from "react-typist"
 import { Link } from "gatsby"
 
+import Button from "../components/Button.js"
+import Hero from "../components/Hero.js"
 import Page from "../components/Page.js"
 import QuoteCard from "../components/QuoteCard.js"
 
 import { descriptors } from "../data/descriptors.json"
 
-const StyledHeader = styled.header`
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default};
-  background: transparent;
-  color: ${({ theme }) => theme.shade.lighter};
-  div {
-  }
-  h1 {
-    margin: 15px;
-    transform: skew(-5deg);
-    display: inline-block;
-    span {
-      padding: 10px;
-      background: ${({ theme }) => theme.accent};
-      color: ${({ theme }) => theme.shade.darkest};
-    }
-  }
-  p {
-    font-size: 2rem;
-    margin: 0;
-  }
-`
 const StyledTyping = styled(Typist).attrs({
   cursor: {
     hideWhenDone: true,
@@ -69,21 +45,25 @@ const StyledTyping = styled(Typist).attrs({
 `
 
 const StyledSection = styled.section`
-  /* background: ${({ theme }) => theme.shade.light}; */
+  /* background: ${{ background }}; */
   position: relative;
-  display: block;
   /* overflow: hidden; */
   h2 {
+    font-size: 3.5rem;
     text-align: center;
     text-decoration: underline ${({ theme }) => theme.accent};
-
+  }
+  div {
+    margin: 0 auto;
+    max-width: ${({ theme }) => theme.spacing.mw};
+    padding: 0 2rem;
   }
 `
 
 const TrpSection = styled(StyledSection)`
-  padding: 100px 0;
-  margin-bottom: 100px;
-
+  padding: 10rem 0 5rem 0;
+  margin: 10rem 0;
+  z-index: 0;
   &:before {
     content: "";
     position: absolute;
@@ -94,7 +74,7 @@ const TrpSection = styled(StyledSection)`
     height: 100%;
     transform: skewY(4deg);
     transform-origin: top left;
-    background: ${({ theme }) => theme.shade.lighter};
+    background: ${({ theme }) => theme.shade.lightest};
   }
 `
 
@@ -114,36 +94,65 @@ const Home = () => {
       design="mesh"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <StyledHeader>
-        <div>
-          <p>Hi there, My name is</p>
-          <h1>
-            <span>Leander Rodrigues</span>
-          </h1>
-          <p>and I'd probably describe myself as</p>
-          <h2>
-            <StyledTyping>
-              {descriptors.map((str, i, arr) => (
-                <span key={str}>
-                  <span>{str}</span>
-                  <Typist.Backspace
-                    count={i === arr.length - 1 ? 4 : str.length}
-                    delay={2250}
-                  />
-                </span>
-              ))}
-            </StyledTyping>
-          </h2>
-        </div>
-      </StyledHeader>
+      <Hero>
+        <p>Hi there, My name is</p>
+        <h1>
+          <span>Leander Rodrigues</span>
+        </h1>
+        <p>and I'd probably describe myself as</p>
+        <h2>
+          <StyledTyping>
+            {descriptors.map((str, i, arr) => (
+              <span key={str}>
+                <span>{str}</span>
+                <Typist.Backspace
+                  count={i === arr.length - 1 ? 4 : str.length}
+                  delay={2250}
+                />
+              </span>
+            ))}
+          </StyledTyping>
+        </h2>
+      </Hero>
       <TrpSection>
-        <h2>"Who are you again?"</h2>
-        <p>
-          Hey there, and welcome to my corner of the internet! I've got
-          everything you need, all in one place (so long as "what you need" is
-          dorky blog posts, programming notes, and some nerd's resume. )
-        </p>
-        <Link to="/about">More about me</Link>
+        <div>
+          <h2>"Who are you again?"</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
+            diam malesuada, sagittis lacus id, dapibus est. Sed tristique
+            lobortis ante. Vestibulum justo risus, posuere at semper vitae,
+            sodales a turpis. Vestibulum ornare nec nunc non fermentum. Donec
+            convallis egestas libero nec porta. Duis tincidunt dui tellus, vel
+            sodales urna aliquet a. Pellentesque vestibulum elit mollis nibh
+            cursus scelerisque. Aliquam vitae auctor erat. Aliquam tempor elit
+            quis est malesuada sollicitudin. In non magna dolor. Pellentesque
+            sollicitudin eu est a laoreet. Vestibulum cursus, felis nec mollis
+            facilisis, mi lectus varius orci, quis facilisis odio purus vel
+            enim. Nullam eu nulla at eros scelerisque sagittis nec id tortor.
+          </p>
+
+          <p>
+            Vestibulum mattis lacus quam, sed venenatis metus rutrum eu. Integer
+            vel cursus lectus, quis sodales sem. Quisque non est vel dui
+            consequat suscipit ut at nibh. Vestibulum suscipit posuere
+            consequat. Proin tellus purus, malesuada et mauris eu, laoreet
+            interdum mi. Aliquam erat volutpat. Duis luctus ipsum nec orci
+            volutpat, ac ornare nisl suscipit. Etiam imperdiet vehicula neque,
+            sit amet cursus odio gravida eu. Phasellus et neque orci.
+            Pellentesque id libero at nisl facilisis molestie. Praesent ac odio
+            vitae massa posuere rutrum.
+          </p>
+
+          <p>
+            Nunc lacinia volutpat aliquam. Cras quis egestas tortor, eu pretium
+            est. Donec eu dolor justo. Nunc pellentesque nisl enim. Quisque non
+            dapibus lectus. Nunc eget magna leo. Sed et ligula tincidunt,
+            vestibulum mi ac, faucibus leo. Suspendisse ut commodo ex.
+          </p>
+          <Button>
+            <Link to="/about">More about me</Link>
+          </Button>
+        </div>
       </TrpSection>
       {/* <br />
       <StyledSection>
