@@ -1,16 +1,11 @@
 import styled from "styled-components"
 
-const Button = styled.button`
-  outline: 0;
+const AnchorLink = styled.a`
   text-align: center;
-  border: 0;
-  box-shadow: 0 -3px ${({ theme }) => theme.accent} inset;
-  color: ${({ theme }) => theme.shade.darker};
-  padding: 1rem 1.5rem;
-  font-weight: 700;
   background: transparent;
   position: relative;
-  margin: 1rem;
+  color: ${({ theme }) => theme.accent};
+  transition: 0.2s ease color;
   &:before {
     content: "";
     height: 100%;
@@ -25,11 +20,11 @@ const Button = styled.button`
   }
   &:focus,
   &:hover {
-    cursor: pointer;
+    color: ${({ theme }) => theme.shade.darkest};
     &:before {
       max-height: 100%;
     }
   }
 `
 
-export default Button
+export default AnchorLink

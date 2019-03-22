@@ -32,13 +32,18 @@ const GlobalStyle = createGlobalStyle`
   h2  {
     font-size: 3.5rem;
   }
-  h3 {
-    font-size: 2rem;
+  h3, 
+  h4, 
+  h5 {
+    font-size: 2.5rem;
   }
   a {
     font-size: 1.75rem;
     color: inherit;
     text-decoration: none;
+  }
+  Link, button {
+    user-select: none;
   }
   #nprogress {
     pointer-events: none;
@@ -73,10 +78,9 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledPage = styled.div`
   * {
+    mark,
     ::selection {
-      background: ${({ theme }) => theme.accent};
-      border: 2px solid blue;
-      opacity: 0.5;
+      background: ${({ theme }) => theme.accent}88;
     }
   }
 `
