@@ -21,6 +21,7 @@ module.exports = {
 
     // Styling
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-nprogress",
 
     // Data
     "gatsby-transformer-remark",
