@@ -70,7 +70,6 @@ const StyledTyping = styled(Typist).attrs({
 
 const StyledSection = styled.section`
   /* background: ${({ theme }) => theme.shade.light}; */
-  opacity: 0.9;
   position: relative;
   display: block;
   /* overflow: hidden; */
