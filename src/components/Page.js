@@ -8,6 +8,8 @@ import Nav from "./Nav.js"
 import Footer from "./Footer.js"
 import ParticleBackground from "./ParticleBackground"
 
+import { consoleLiteral } from "../data/consoleLiteral"
+
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
@@ -93,6 +95,10 @@ class Page extends React.Component {
   toggleNav = () => {
     this.setState({ showSideBar: !this.state.showSideBar })
   }
+  componentDidMount() {
+    // console.clear()
+    // console.log(consoleLiteral)
+  }
 
   render() {
     const {
@@ -116,13 +122,11 @@ class Page extends React.Component {
         </Helmet>
         <ThemeProvider theme={theme}>
           <StyledPage>
-            {Boolean(design) ? (
-              <ParticleBackground
-                height="100vh"
-                design={design}
-                accent={accentBg ? theme.accent : theme.shade.lighter}
-              />
-            ) : null}
+            <ParticleBackground
+              height="100vh"
+              design={design}
+              accent={accentBg ? theme.accent : theme.shade.lighter}
+            />
             <Nav
               showSideBar={this.state.showSideBar}
               handleToggle={this.toggleNav}
