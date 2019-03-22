@@ -20,8 +20,9 @@ module.exports = {
     "gatsby-plugin-offline",
 
     // Styling
-    "gatsby-plugin-styled-components",
     "gatsby-plugin-nprogress",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-transition-link",
 
     // Data
     "gatsby-transformer-remark",
