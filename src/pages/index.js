@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Typist from "react-typist"
 import { Link } from "gatsby"
 
 import Button from "../components/Button.js"
@@ -8,41 +7,7 @@ import Hero from "../components/Hero.js"
 import Page from "../components/Page.js"
 import QuoteCard from "../components/QuoteCard.js"
 
-import { descriptors } from "../data/descriptors.json"
-
-const StyledTyping = styled(Typist).attrs({
-  cursor: {
-    hideWhenDone: true,
-    hideWhenDoneDelay: 2000,
-  },
-})`
-  min-height: 45px;
-  span {
-    text-decoration: underline ${({ theme }) => theme.accent};
-    font-family: monospace;
-    font-weight: bold;
-  }
-  .Cursor {
-    color: ${({ theme }) => theme.accent};
-    width: 0px;
-    display: inline-block;
-    text-decoration: none;
-    margin-left: 3px;
-    opacity: 1;
-    animation: blink 0.5s step-end infinite;
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  }
-`
+import Typer from "../components/page-specific/Home/Typer.js"
 
 const StyledSection = styled.section`
   /* background: ${{ background }}; */
@@ -101,17 +66,7 @@ const Home = () => {
         </h1>
         <p>and I'd probably describe myself as</p>
         <h2>
-          <StyledTyping>
-            {descriptors.map((str, i, arr) => (
-              <span key={str}>
-                <span>{str}</span>
-                <Typist.Backspace
-                  count={i === arr.length - 1 ? 4 : str.length}
-                  delay={2250}
-                />
-              </span>
-            ))}
-          </StyledTyping>
+          <Typer />
         </h2>
       </Hero>
       <TrpSection>
@@ -120,15 +75,16 @@ const Home = () => {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
             diam malesuada, sagittis lacus id, dapibus est. Sed tristique
-            lobortis ante. Vestibulum justo risus, posuere at semper vitae,
-            sodales a turpis. Vestibulum ornare nec nunc non fermentum. Donec
-            convallis egestas libero nec porta. Duis tincidunt dui tellus, vel
-            sodales urna aliquet a. Pellentesque vestibulum elit mollis nibh
-            cursus scelerisque. Aliquam vitae auctor erat. Aliquam tempor elit
-            quis est malesuada sollicitudin. In non magna dolor. Pellentesque
-            sollicitudin eu est a laoreet. Vestibulum cursus, felis nec mollis
-            facilisis, mi lectus varius orci, quis facilisis odio purus vel
-            enim. Nullam eu nulla at eros scelerisque sagittis nec id tortor.
+            lobortis ante. <mark>Vestibulum</mark>
+            justo risus, posuere at semper vitae, sodales a turpis. Vestibulum
+            ornare nec nunc non fermentum. Donec convallis egestas libero nec
+            porta. Duis tincidunt dui tellus, vel sodales urna aliquet a.
+            Pellentesque vestibulum elit mollis nibh cursus scelerisque. Aliquam
+            vitae auctor erat. Aliquam tempor elit quis est malesuada
+            sollicitudin. In non magna dolor. Pellentesque sollicitudin eu est a
+            laoreet. Vestibulum cursus, felis nec mollis facilisis, mi lectus
+            varius orci, quis facilisis odio purus vel enim. Nullam eu nulla at
+            eros scelerisque sagittis nec id tortor.
           </p>
 
           <p>
