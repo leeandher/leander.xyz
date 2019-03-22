@@ -43,6 +43,14 @@ const TrpSection = styled(StyledSection)`
   }
 `
 
+const Director = styled(StyledSection)`
+  color: ${({ theme }) => theme.shade.lightest};
+  h3 {
+    font-weight: 300;
+    text-align: center;
+  }
+`
+
 const PanelWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -110,10 +118,14 @@ const Home = () => {
           </Button>
         </div>
       </TrpSection>
-      {/* <br />
-      <StyledSection>
+      <br />
+      <Director>
         <h2>"So, what do you do again?"</h2>
-        <h3>Well I guess that depends on what you'd like to see?</h3>
+        <h3>
+          Well I guess that depends,
+          <br />
+          what would you like to see?
+        </h3>
         <PanelWrapper>
           <QuoteCard
             accent="orange"
@@ -140,7 +152,7 @@ const Home = () => {
             to="/resume"
           />
         </PanelWrapper>
-      </StyledSection> */}
+      </Director>
     </Page>
   )
 }

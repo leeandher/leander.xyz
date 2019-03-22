@@ -1,12 +1,21 @@
+// red: "#ef4d5d",
+// orange: "#ff9f1c",
+// yellow: "#ffd43a",
+// green: "#7ae582",
+// teal: "#00cccc",
+// blue: "#0582ca",
+// purple: "#b65fd1",
+// pink: "#ff79a7",
+
 export const palette = {
   color: {
     red: "#ef4d5d",
-    orange: "#ff9f1c",
-    yellow: "#ffd43a",
+    orange: "#ffb249",
+    yellow: "#ffdc60",
     green: "#7ae582",
     teal: "#00cccc",
-    blue: "#0582ca",
-    purple: "#b65fd1",
+    blue: "#0fa7ff",
+    purple: "#e591ff",
     pink: "#ff79a7",
   },
   shade: {

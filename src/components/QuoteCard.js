@@ -18,7 +18,7 @@ const StyledPanel = styled(Link)`
   border-radius: 1.5rem;
   &:hover,
   &:focus {
-    transform: translateY(5px);
+    transform: translateY(-5px);
     box-shadow: none;
     background: ${({ theme, accent }) => theme.color[accent]};
     color: ${({ theme, accent }) => theme.color[accent]};
