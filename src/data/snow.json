@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 160,
+      "value": 100,
       "density": {
         "enable": true,
         "value_area": 800
@@ -26,12 +26,12 @@
       }
     },
     "opacity": {
-      "value": 1,
-      "random": true,
+      "value": 0.75,
+      "random": false,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 1,
-        "opacity_min": 0,
+        "opacity_min": 0.1,
         "sync": false
       }
     },
@@ -40,8 +40,8 @@
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 4,
-        "size_min": 0.3,
+        "speed": 40,
+        "size_min": 0.1,
         "sync": false
       }
     },
@@ -54,48 +54,48 @@
     },
     "move": {
       "enable": true,
-      "speed": 1,
-      "direction": "none",
-      "random": true,
+      "speed": 6,
+      "direction": "bottom",
+      "random": false,
       "straight": false,
-      "out_mode": "false",
+      "out_mode": "out",
       "bounce": false,
       "attract": {
         "enable": false,
         "rotateX": 600,
-        "rotateY": 600
+        "rotateY": 1200
       }
     }
   },
   "interactivity": {
-    "detect_on": "window",
+    "detect_on": "canvas",
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "bubble"
+        "mode": "repulse"
       },
       "onclick": {
-        "enable": true,
-        "mode": "repulse"
+        "enable": false,
+        "mode": "push"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 119.88011988011988,
+        "distance": 400,
         "line_linked": {
-          "opacity": 0.048570804089661725
+          "opacity": 1
         }
       },
       "bubble": {
-        "distance": 179.82017982017982,
-        "size": 4.060386061506726,
+        "distance": 400,
+        "size": 40,
         "duration": 2,
-        "opacity": 1,
+        "opacity": 8,
         "speed": 3
       },
       "repulse": {
-        "distance": 200,
+        "distance": 125,
         "duration": 0.4
       },
       "push": {

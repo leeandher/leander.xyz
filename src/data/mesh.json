@@ -75,7 +75,7 @@
         "mode": "grab"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "attract"
       },
       "resize": true
