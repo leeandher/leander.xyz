@@ -46,7 +46,8 @@ exports.createPages = async ({ actions, graphql }) => {
     return createPage({
       path: mediaPath,
       component: template,
-      context: { ...fm },
+      // used for notes template query
+      context: { title: fm.title },
     })
   })
 }
