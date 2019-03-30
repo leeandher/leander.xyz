@@ -1,4 +1,8 @@
 ---
+type: "blog"
+date: "2018-04-14"
+path: "/blog/gitting-started"
+title: "Gitting Started"
 preview: "I now see just how powerful a tool git really is!"
 tags: ["personal", "announcement"]
 ---

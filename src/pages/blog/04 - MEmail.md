@@ -1,4 +1,8 @@
 ---
+type: "blog"
+date: "2018-04-08"
+path: "/blog/memail"
+title: "MEmail"
 preview: "I can't wait for the site to be public."
 tags: ["personal", "announcement"]
 ---

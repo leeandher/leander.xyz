@@ -1,12 +1,12 @@
-# backend:
-#   name: github
-#   repo: leeandher/leander.xyz
-#   branch: release
+backend:
+  name: github
+  repo: leeandher/leander.xyz
+  branch: dev
 
 # TODO: Add note collection, refactor FAQ collection
 
-backend:
-  name: "test-repo"
+# backend:
+#   name: "test-repo"
 
 media_folder: static/assets
 public_folder: assets
@@ -22,7 +22,12 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: preview, label: Preview, widget: text }
       - { name: body, label: Body, widget: markdown }
-      - { name: tags, label: Tags, widget: list }
+      - {
+          name: tags,
+          label: Tags,
+          widget: list,
+          fields: { name: tag, label: Tag, widget: string },
+        }
   # - name: faqs
   #   label: FAQs
   #   folder: faqs
