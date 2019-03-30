@@ -1,8 +1,8 @@
 ---
 type: "blog"
-date: "2019-10-27"
-path: "/blog/test-blog"
-title: "Testing!"
+date: "2018-02-02"
+path: "/blog/babys-first-steps"
+title: "January 2018 - Baby's First Steps"
 preview: "I had to build a tribute page."
 tags: ["personal", "announcement"]
 ---

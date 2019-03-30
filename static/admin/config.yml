@@ -3,8 +3,10 @@
 #   repo: leeandher/leander.xyz
 #   branch: release
 
+# TODO: Add note collection, refactor FAQ collection
+
 backend:
-  name: 'test-repo'
+  name: "test-repo"
 
 media_folder: static/assets
 public_folder: assets
@@ -12,18 +14,20 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/blog
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: path, label: Path, widget: string }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: string }
+      - { name: preview, label: Preview, widget: text }
       - { name: body, label: Body, widget: markdown }
-  - name: faqs
-    label: FAQs
-    folder: faqs
-    create: true
-    identifier_field: question
-    fields:
-      - { name: question, label: Question, widget: string }
-      - { name: answer, label: Answer, widget: markdown }
+      - { name: tags, label: Tags, widget: list }
+  # - name: faqs
+  #   label: FAQs
+  #   folder: faqs
+  #   create: true
+  #   identifier_field: question
+  #   fields:
+  #     - { name: question, label: Question, widget: string }
+  #     - { name: answer, label: Answer, widget: markdown }

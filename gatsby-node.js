@@ -15,7 +15,6 @@ exports.createPages = async ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              path
               type
               path
               category
@@ -29,25 +28,25 @@ exports.createPages = async ({ actions, graphql }) => {
   media.allMarkdownRemark.edges.forEach(({ node }) => {
     const { frontmatter: fm } = node
     let template = null
-    let path = null
+    let mediaPath = null
     switch (fm.type) {
       case "blog":
         template = blogTemplate
-        path = `${fm.path}`
+        mediaPath = `${fm.path}`
         break
       case "note":
         template = noteTemplate
-        path = `/notes/${fm.category}/${fm.title
+        mediaPath = `/notes/${fm.category}/${fm.title
           .replace(/\s/g, "_")
           .toLowerCase()}`
         break
+      default:
+        throw new Error(`Unknown media type: ${fm.type}`)
     }
     return createPage({
-      path,
+      path: mediaPath,
       component: template,
-      context: {
-        title: fm.title,
-      }, // additional data can be passed via context
+      context: { ...fm },
     })
   })
 }
