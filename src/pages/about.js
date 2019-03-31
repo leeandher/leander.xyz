@@ -22,7 +22,7 @@ const About = () => {
       accent="red"
       accentBg
       title="me, me, mE, ME, ME!"
-      design="bubbles"
+      design="snow"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <Header>
