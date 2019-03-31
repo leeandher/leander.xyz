@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import bubbles from "../data/bubbles.json"
 import mesh from "../data/mesh.json"
+import snow from "../data/snow.json"
 import space from "../data/space.json"
 
 import { genRand } from "../helpers/random"
@@ -19,6 +20,8 @@ const Wrapper = styled.div`
 
 const ParticleBackground = ({ accent, design, height, ...props }) => {
   function particleData(styleId) {
+    const dataSets = ["bubbles", "mesh", "snow", "space"]
+    const randIndex = genRand(0, dataSets.length - 1, true)
     switch (styleId) {
       case "bubbles":
         bubbles.particles.color.value = accent
@@ -26,13 +29,14 @@ const ParticleBackground = ({ accent, design, height, ...props }) => {
       case "mesh":
         mesh.particles.line_linked.color = accent
         return mesh
+      case "snow":
+        snow.particles.color.value = accent
+        return snow
       case "space":
         space.particles.color.value = accent
         return space
       case "random":
       default:
-        const dataSets = ["bubbles", "mesh", "space"]
-        const randIndex = genRand(0, dataSets.length - 1, true)
         return particleData(dataSets[randIndex])
     }
   }
