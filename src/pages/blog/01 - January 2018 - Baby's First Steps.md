@@ -7,10 +7,6 @@ preview: "I had to build a tribute page."
 tags: ["personal", "announcement"]
 ---
 
-## January 2018 - Baby's First Steps
-
-### February 02, 2018
-
 I'm writing this in the beginning of February because I just got the idea of keeping a log now, but I'm going to try and summarize what I accomplished last month.
 So, about halfway through January, I saw a reddit post that was talking about this service, freeCodeCamp and how it was crazy that it was free for the courses they taught.
 I took some computer science classes in high school, but really fell off of that coming into University, but I decided that I was going to dip my toes in this.

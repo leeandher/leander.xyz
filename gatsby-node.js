@@ -4,8 +4,8 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   // Create blog posts and notes
-  const blogTemplate = path.resolve("src/templates/blogTemplate.js")
-  const noteTemplate = path.resolve("src/templates/noteTemplate.js")
+  const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
+  const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
   const { data: media } = await graphql(`
     {
       allMarkdownRemark(
@@ -31,11 +31,11 @@ exports.createPages = async ({ actions, graphql }) => {
     let mediaPath = null
     switch (fm.type) {
       case "blog":
-        template = blogTemplate
+        template = BlogPostTemplate
         mediaPath = `${fm.path}`
         break
       case "note":
-        template = noteTemplate
+        template = NoteTemplate
         mediaPath = `/notes/${fm.category}/${fm.title
           .replace(/\s/g, "_")
           .toLowerCase()}`
