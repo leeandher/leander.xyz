@@ -17,7 +17,11 @@ const Header = styled.div`
   }
 `
 
-const Article = styled.article`
+const MediaHeader = styled.header``
+
+const MediaSection = styled.section``
+
+const MediaPost = styled.article`
   margin: 0 auto;
   max-width: ${({ theme }) => theme.spacing.mw};
   background: ${({ theme }) => theme.shade.lightest};
@@ -36,17 +40,13 @@ const BlogTemplate = ({ data }) => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Article>
-        <div>
-          <h1>{title}</h1>
-          <article style={{ color: "red" }}>{preview}</article>
-          <h2>{date}</h2>
-          <div
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </Article>
+      <h1>{title}</h1>
+      <article style={{ color: "red" }}>{preview}</article>
+      <h2>{date}</h2>
+      <MediaPost
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Page>
   )
 }
