@@ -2,16 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import Spring from "react-spring/renderprops"
 
-import { getCopyrightYearsFrom } from "../helpers/copyrightDate"
-import AnchorLink from "./AnchorLink"
-import Button from "./Button"
-
 import {
   FaGithub,
   FaStackOverflow,
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa"
+import { getCopyrightYearsFrom } from "../helpers/copyrightDate"
+import AnchorLink from "./AnchorLink"
+import Button from "./Button"
 
 const StyledFooter = styled.footer`
   height: 50vh;
@@ -67,12 +66,17 @@ const Footer = ({ handleToggle, showSideBar }) => {
             <a
               href="https://www.linkedin.com/in/leander-rodrigues/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin />
             </a>
           </Button>
           <Button>
-            <a href="https://github.com/leeandher" target="_blank">
+            <a
+              href="https://github.com/leeandher"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </a>
           </Button>
@@ -80,12 +84,17 @@ const Footer = ({ handleToggle, showSideBar }) => {
             <a
               href="https://stackoverflow.com/users/story/10996907?view=Timeline"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaStackOverflow />
             </a>
           </Button>
           <Button>
-            <a href="https://twitter.com/LeeAndHer" target="_blank">
+            <a
+              href="https://twitter.com/LeeAndHer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter />
             </a>
           </Button>
@@ -96,6 +105,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
           <AnchorLink
             href="https://github.com/leeandher/leander.xyz"
             target="_blank"
+            rel="noopener noreferrer"
           >
             open source
           </AnchorLink>
@@ -106,6 +116,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
         <AnchorLink
           href="https://github.com/leeandher/leander.xyz"
           target="_blank"
+          rel="noopener noreferrer"
         >
           easter eggs.
         </AnchorLink>
