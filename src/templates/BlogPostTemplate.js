@@ -15,7 +15,7 @@ const MediaPost = styled.article`
   padding: 5rem;
 `
 
-const BlogTemplate = ({ data }) => {
+const BlogPostTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { date, preview, tags, title } = frontmatter
@@ -38,7 +38,7 @@ const BlogTemplate = ({ data }) => {
   )
 }
 
-export default BlogTemplate
+export default BlogPostTemplate
 
 export const blogPostQuery = graphql`
   query($path: String!) {
