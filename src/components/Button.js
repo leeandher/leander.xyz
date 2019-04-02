@@ -25,9 +25,9 @@ const Button = styled.button`
   }
   &:focus,
   &:hover {
-    cursor: pointer;
+    cursor: ${({ disabled }) => (disabled ? "disabled" : "pointer")};
     &:before {
-      max-height: 100%;
+      max-height: ${({ disabled }) => (disabled ? "0" : "100")}%;
     }
   }
 `

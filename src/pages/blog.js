@@ -1,22 +1,15 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Page from "../components/Page"
+import Hero from "../components/Hero"
+import MediaLink from "../components/MediaLink"
+import MainWrapper from "../components/MainWrapper"
 
-const Header = styled.div`
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default};
-  color: ${({ theme }) => theme.accent};
-  span {
-    color: ${({ theme }) => theme.shade.lighter};
-  }
-`
-
-const Blog = () => {
+const Blog = ({ data }) => {
+  const { allMarkdownRemark } = data
+  const { nodes: blogPosts } = allMarkdownRemark
   return (
     <Page
       accent="yellow"
@@ -25,15 +18,34 @@ const Blog = () => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Header>
-        <h1>
-          <code>
-            //TODO: <span>Make blog page</span>
-          </code>
-        </h1>
-      </Header>
+      <Hero height="50vh">
+        <h1>The B.log</h1>
+      </Hero>
+      <MainWrapper>
+        <section>
+          {blogPosts.map(({ frontmatter: blogPostsProps }) => (
+            <MediaLink {...blogPostsProps} key={blogPostsProps.path} />
+          ))}
+        </section>
+      </MainWrapper>
     </Page>
   )
 }
 
 export default Blog
+
+export const blogPostsQuery = graphql`
+  query {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "blog" } } }) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          path
+          title
+          preview
+          tags
+        }
+      }
+    }
+  }
+`

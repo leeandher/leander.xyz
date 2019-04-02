@@ -23,7 +23,7 @@ const MediaSection = styled.section``
 
 const MediaPost = styled.article`
   margin: 0 auto;
-  max-width: ${({ theme }) => theme.spacing.mw};
+  max-width: ${({ theme }) => theme.spacing.maxWidth};
   background: ${({ theme }) => theme.shade.lightest};
   padding: 5rem;
 `

@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledHeader = styled.header`
-  height: 100vh;
+const Header = styled.header`
+  min-height: ${({ height }) => height || "100vh"};
   text-align: center;
   display: flex;
   align-items: center;
@@ -25,10 +25,10 @@ const StyledHeader = styled.header`
   }
 `
 
-const Hero = ({ children }) => (
-  <StyledHeader>
+const Hero = ({ children, height }) => (
+  <Header height={height}>
     <div>{children}</div>
-  </StyledHeader>
+  </Header>
 )
 
 export default Hero

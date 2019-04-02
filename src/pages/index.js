@@ -70,7 +70,6 @@ const Home = () => {
             varius orci, quis facilisis odio purus vel enim. Nullam eu nulla at
             eros scelerisque sagittis nec id tortor.
           </p>
-
           <p>
             Vestibulum mattis lacus quam, sed venenatis metus rutrum eu. Integer
             vel cursus lectus, quis sodales sem. Quisque non est vel dui
@@ -82,7 +81,6 @@ const Home = () => {
             Pellentesque id libero at nisl facilisis molestie. Praesent ac odio
             vitae massa posuere rutrum.
           </p>
-
           <p>
             Nunc lacinia volutpat aliquam. Cras quis egestas tortor, eu pretium
             est. Donec eu dolor justo. Nunc pellentesque nisl enim. Quisque non
