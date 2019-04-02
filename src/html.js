@@ -3,8 +3,16 @@ import PropTypes from "prop-types"
 
 export default class HTML extends React.Component {
   render() {
+    const {
+      htmlAttributes,
+      headComponents,
+      preBodyComponents,
+      bodyAttributes,
+      body,
+      postBodyComponents,
+    } = this.props
     return (
-      <html {...this.props.htmlAttributes} style={{ background: "#0F0F0F" }}>
+      <html {...htmlAttributes} style={{ background: "#0F0F0F" }} lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta name="robots" content="index, follow" />
@@ -17,16 +25,16 @@ export default class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900"
             rel="stylesheet"
           />
-          {this.props.headComponents}
+          {headComponents}
         </head>
-        <body {...this.props.bodyAttributes}>
-          {this.props.preBodyComponents}
+        <body {...bodyAttributes}>
+          {preBodyComponents}
           <div
-            key={`body`}
+            key="body"
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{ __html: body }}
           />
-          {this.props.postBodyComponents}
+          {postBodyComponents}
         </body>
       </html>
     )

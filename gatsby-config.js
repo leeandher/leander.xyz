@@ -11,10 +11,20 @@ module.exports = {
         short_name: "Leander",
         start_url: "/",
         background_color: "#0F0F0F",
-        theme_color: "#0F0F0F",
+        theme_color: "#4DCCB0",
         display: "standalone",
-        // icon: "src/assets/images/icon.png", // This path is relative to the root of the site.
-      },
+        icons: [
+          {
+            src: `/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-offline",
