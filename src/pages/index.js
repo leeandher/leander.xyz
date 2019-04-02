@@ -2,60 +2,37 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import Button from "../components/Button.js"
-import Hero from "../components/Hero.js"
-import Page from "../components/Page.js"
-import QuoteCard from "../components/QuoteCard.js"
+import Button from "../components/Button"
+import Hero from "../components/Hero"
+import Page from "../components/Page"
+import QuoteCard from "../components/QuoteCard"
+import MainWrapper from "../components/MainWrapper"
 
-import Typer from "../components/page-specific/Home/Typer.js"
+import { PageSection, SkewedPageSection } from "../components/PageSections"
 
-const StyledSection = styled.section`
-  /* background: ${{ background }}; */
-  position: relative;
-  /* overflow: hidden; */
-  h2 {
-    font-size: 3.5rem;
-    text-align: center;
-    text-decoration: underline ${({ theme }) => theme.accent};
-  }
-  div {
-    margin: 0 auto;
-    max-width: ${({ theme }) => theme.spacing.mw};
-    padding: 0 2rem;
-  }
-`
+import Typer from "../components/page-specific/Home/Typer"
 
-const TrpSection = styled(StyledSection)`
+const Introduction = styled(SkewedPageSection)`
   padding: 10rem 0 5rem 0;
   margin: 10rem 0;
-  z-index: 0;
   &:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: skewY(4deg);
-    transform-origin: top left;
     background: ${({ theme }) => theme.shade.lightest};
   }
 `
 
-const Director = styled(StyledSection)`
+const Director = styled(PageSection)`
   color: ${({ theme }) => theme.shade.lightest};
+  padding-top: 2rem;
   h3 {
     font-weight: 300;
     text-align: center;
   }
 `
 
-const PanelWrapper = styled.div`
+const PanelWrapper = styled(MainWrapper)`
   display: flex;
   flex-flow: row wrap;
   max-width: 1250px;
-  margin: 0 auto;
 `
 
 const Home = () => {
@@ -76,7 +53,7 @@ const Home = () => {
           <Typer />
         </h2>
       </Hero>
-      <TrpSection>
+      <Introduction skew="4deg">
         <div>
           <h2>"Who are you again?"</h2>
           <p>
@@ -116,8 +93,7 @@ const Home = () => {
             <Link to="/about">More about me</Link>
           </Button>
         </div>
-      </TrpSection>
-      <br />
+      </Introduction>
       <Director>
         <h2>"So, what do you do again?"</h2>
         <h3>
@@ -125,7 +101,7 @@ const Home = () => {
           <br />
           what would you like to see?
         </h3>
-        <PanelWrapper>
+        <PanelWrapper maxWidth="1250px">
           <QuoteCard
             accent="orange"
             preText="Got any"

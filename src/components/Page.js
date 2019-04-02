@@ -43,7 +43,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.75rem;
     color: inherit;
     text-decoration: none;
-    padding: 0 0.25rem;
   }
   Link, button {
     user-select: none;
