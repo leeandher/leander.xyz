@@ -7,6 +7,14 @@ import Hero from "../../components/Hero"
 import MediaLink from "../../components/MediaLink"
 import MainWrapper from "../../components/MainWrapper"
 
+import { genRand } from "../../helpers/random"
+
+const PostSection = styled.section`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+`
+
 const Blog = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: blogPosts } = allMarkdownRemark
@@ -19,14 +27,14 @@ const Blog = ({ data }) => {
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <Hero height="50vh">
-        <h1>The B.log</h1>
+        <h1>Blog</h1>
       </Hero>
-      <MainWrapper>
-        <section>
+      <MainWrapper maxWidth="95vw">
+        <PostSection>
           {blogPosts.map(({ frontmatter: blogPostsProps }) => (
             <MediaLink {...blogPostsProps} key={blogPostsProps.path} />
           ))}
-        </section>
+        </PostSection>
       </MainWrapper>
     </Page>
   )
@@ -36,7 +44,10 @@ export default Blog
 
 export const blogPostsQuery = graphql`
   query {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "blog" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "blog" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         frontmatter {
           date(formatString: "MMMM DD, YYYY")

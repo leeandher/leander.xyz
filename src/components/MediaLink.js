@@ -10,9 +10,12 @@ const StyledLink = styled(Link)`
   background: ${({ theme }) => theme.shade.lightest};
   margin: 1.5rem;
   position: relative;
-  border: 3px solid ${({ theme }) => theme.accent};
+  border: 0.5rem solid ${({ theme }) => theme.accent};
+  border-radius: 1.5rem;
   padding: 3rem;
-  min-width: 320px;
+  max-width: 320px;
+  overflow: hidden;
+  transition: transform 0.2s ease-out;
   z-index: 0;
   * {
     z-index: 2;
@@ -22,18 +25,26 @@ const StyledLink = styled(Link)`
   }
   &:before {
     height: 100%;
-    width: 100%;
+    width: 200%;
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    transform: skew(-12deg);
+    right: 5%;
     z-index: -1;
-    max-width: 0;
+    max-width: 7rem;
     background: ${({ theme }) => theme.accent};
-    ${({ theme }) => theme.transition.default("all")};
+    transition: max-width 0.4s ease;
+    transform: skewX(${({ skew }) => skew}deg);
   }
-  &:hover&:before {
-    max-width: 2.5rem;
+  &:nth-child(2n)&:before {
+    transform: skew(12deg);
+  }
+  &:hover {
+    transform: scale(1.03);
+    &:before {
+      max-width: 2.5rem;
+    }
   }
   img {
     position: absolute;
@@ -46,18 +57,24 @@ const StyledLink = styled(Link)`
   }
 `
 
-const MediaLink = ({ date, image, path, preview, tags, title }) => {
+const MediaLink = ({
+  arrangement,
+  date,
+  image,
+  path,
+  preview,
+  tags,
+  title,
+}) => {
   return (
     <StyledLink to={path} image={image}>
-      <img src="/apple-touch-icon.png" alt={`Header image for ${title}`} />
+      {/* <img src="/icons/apple-touch-icon.png" alt={title} /> */}
       <h2>{title}</h2>
       <p>{date}</p>
       <p>{preview}</p>
-      <ul>
-        {tags.map(tag => (
-          <Tag tag={tag} key={Math.random()} />
-        ))}
-      </ul>
+      {tags.map(tag => (
+        <Tag tag={tag} key={Math.random()} />
+      ))}
     </StyledLink>
   )
 }
