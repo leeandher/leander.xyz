@@ -7,10 +7,6 @@ preview: "I definitely wouldn't be this far along if I couldn't make mistakes."
 tags: ["project", "announcement"]
 ---
 
-## Drop me a Line
-
-### April 16 2018
-
 One more part of this site that I can happily say I've completed! I managed to congigure the mailing system to send out emails when a visitor to the site fills out the contact form. It has two preset HTML Email files which take in the form data and send it out to the visitor and myself, both from a no-reply email! After a decent amount of test runs on this email system, The email sent to the visitor has only been sent to a spam folder once, and I assume that's simply because it comes from a unique domain (.xyz). I had to do a lot of reading to get this done because when I was learning PHP I was heavily just considering using the built-in mail function. However, after doing some research, I learned that most of the time the built-in mail function is used, the emails are automatically sorted into Junk/Spam mail. To avoid that I cloned the most commonly used resource for mail within PHP, [PHPMailer](https://github.com/phpmailer/phpmailer)!
 
 After reading the docs, I had to import the code and classes into my PHP and configure the SMTP settings properly to be able to use my server space for outgoing mail. It took a few tries before I was actually able to get it up and running, mainly because they recommend installation with Composer but I didn't want to install that, so I had to manually root the files. After that, I just had to follow along with the examples and their built-in functions and lo and behold it worked like a charm! The minute I got that first email, my god I was so excited that I'd finally gotten it to send properly. I'm still amazed with how easy it was once I understood what was going on.

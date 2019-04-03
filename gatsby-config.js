@@ -13,15 +13,15 @@ module.exports = {
         background_color: "#0F0F0F",
         theme_color: "#4DCCB0",
         display: "standalone",
-        icon: "static/logo.png",
+        icon: "static/icons/logo.png",
         icons: [
           {
-            src: `static/android-chrome-192x192.png`,
+            src: `static/icons/android-chrome-192x192.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `static/android-chrome-512x512.png`,
+            src: `static/icons/android-chrome-512x512.png`,
             sizes: `512x512`,
             type: `image/png`,
           },

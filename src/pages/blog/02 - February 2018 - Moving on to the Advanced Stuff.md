@@ -7,10 +7,6 @@ preview: "Guess that's what the real world is like for web development."
 tags: ["personal", "coding"]
 ---
 
-## February 2018 - Moving on to the Advanced Stuff
-
-### March 1, 2018
-
 So I'm late again to provide an update but I think I'm getting the hang of this whole front end development thing. I've been looking through GitHub, programming blogs/tutorial, and personal blogs to learn from each of them as to what tools they use and how they implement them. As of now, I've completed all the Intermediate Front End projects on freeCodeCamp and I'm working through the final Advanced ones. I have to say, I'm really proud of how the Intermediate ones turned out! I tried my best to make the responsive and tested them on mobile, and thin/long windows and they seem to be functional, but for every new screen size I find that breaks something, it's a whole 20 step process to figure out how to approach it. I definitely think that media queries, and responsiveness in general is the part I'm having the most trouble with. I find myself focusing heavily on that rather than actually finishing the apps which I'm not sure how I feel about. On one hand, I'm being a perfectionist, and not allowing myself to progress because one div has an odd display error, but on the other hand it makes for a final product that I'm much more proud of. The issue with that is that anyone to whom I show my 3h of responsiveness work to can't even tell that anything is different and I just feel silly. Guess that's what the real world is like for web development huh!
 
 I think I just want to talk a little bit about the individual projects. The Random Quote Machine I definitely think turned out really well, but the mobile port still has some bugs, though, with my backlog, I'm never really sure when I'll get to that. It is very colourful and has a vibrant feel to it, and the buttons all function properly with no ugly css alterations anymore!

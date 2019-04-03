@@ -7,10 +7,6 @@ preview: "The goal for April is going to be to find that balance."
 tags: ["personal", "announcement"]
 ---
 
-## March 2018 - Got my FE Dev Cert!
-
-### March 29 2018
-
 So we're nearing the end of march and I thought I'd write another update blog on my progress breaking into the development world. I'm happy to say that I finished the freeCodeCamp Front End Development Certification and I am overjoyed! I really feel like I accomplished something, and I'm proud of all of the projects that came out of it. I could go into detail about each and every project, but I do think that from now on I'd like these posts to be a little more up-to-date, and structured, rather than just run-on summaries. I'm going to be actually putting some though into writing little sumamries or coding explanations into the source code whenever I get the chance, so I don't think the blog is the right place to do that for now.
 
 What I think I'll do instead is just explain where I plan on going from here. Now that I'm comfortable with HTML, CSS and JS, I think I can start exploring some more adventourous stuff. There's a bunch of libraries I'm going to look at for JS but the first one is going to be #React.js and I'm pretty excited. I've already started doing some introductory stuff and plenty of reading and from what I gather it's an essential tool for in browser programs, like single page apps and games. It's going to be a difficult journey for sure, but I'm glad I feel ready moving past the beginner stuff. Goodbye \$('jQuery') and querySelector, hello React.Component and .render()! Now while, I'm excited to see what I can do with React, I'm not going to start just yet.

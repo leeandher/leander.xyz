@@ -122,7 +122,7 @@ class Page extends React.Component {
           <meta name="description" content={description} />
           <link
             rel="mask-icon"
-            href="/safari-pinned-tab.svg"
+            href="icons/safari-pinned-tab.svg"
             color={theme.accent}
           />
           <meta name="msapplication-TileColor" content={theme.accent} />
