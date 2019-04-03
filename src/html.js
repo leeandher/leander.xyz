@@ -42,7 +42,7 @@ export default class HTML extends React.Component {
             sizes="16x16"
             href="icons/favicon-16x16.png"
           />
-          <link rel="manifest" href="icons/site.webmanifest" />
+          <link rel="manifest" href="site.webmanifest" />
           {headComponents}
         </head>
         <body {...bodyAttributes}>

@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Typist from "react-typist"
 
-import Page from "../../components/Page.js"
-
-import { descriptors } from "../../data/descriptors.json"
+import Page from "../../../components/Page"
 
 const StyledHeader = styled.header`
   height: 100vh;
@@ -35,36 +32,6 @@ const StyledHeader = styled.header`
     margin: 0;
   }
 `
-const StyledTyping = styled(Typist).attrs({
-  cursor: {
-    hideWhenDone: true,
-    hideWhenDoneDelay: 2000,
-  },
-})`
-  min-height: 45px;
-  span {
-    text-decoration: underline ${({ theme }) => theme.accent};
-  }
-  .Cursor {
-    color: ${({ theme }) => theme.accent};
-    width: 0px;
-    display: inline-block;
-    margin-left: 3px;
-    opacity: 1;
-    animation: blink 0.5s step-end infinite;
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  }
-`
 
 const StyledSection = styled.section`
   background: ${({ theme }) => theme.shade.light};
@@ -90,22 +57,9 @@ const Home = () => {
         <div>
           <p>Hi there, My name is</p>
           <h1>
-            <span>NODE.JS</span>
+            <span>REACT</span>
           </h1>
           <p>and I'd probably describe myself as</p>
-          <h2>
-            <StyledTyping>
-              {descriptors.map((str, i, arr) => (
-                <span key={str}>
-                  <span>{str}</span>
-                  <Typist.Backspace
-                    count={i === arr.length - 1 ? 4 : str.length}
-                    delay={1250}
-                  />
-                </span>
-              ))}
-            </StyledTyping>
-          </h2>
         </div>
       </StyledHeader>
       <StyledSection>
