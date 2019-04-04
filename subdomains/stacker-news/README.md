@@ -6,7 +6,7 @@ _*Note:*_ If it doesn't work immediately, it's probably because I'm _super_ chea
 
 ## Running the app
 
-For you to get up and running with this app, you'll need a Prisma account, and the Prisma CLI. Sign in on that, and change the `PRISMA_ENDPOINT` env value to `""`. Now run `prisma deploy` and go ahead and make the create the demo server (which will act as the database).
+For you to get up and running with this app, you'll need a Prisma account, and the Prisma CLI. Sign in, and change the `PRISMA_ENDPOINT` env value to `""`. Now run `prisma deploy` and go ahead and make the create the demo server (which will act as the database).
 
 Next, fill in the rest of the `settings-dev.env` and run `npm start` in the `server/` directory. This will launch the server at `localhost:4000`.
 
