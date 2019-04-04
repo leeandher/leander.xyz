@@ -7,6 +7,7 @@ import Hero from "../components/Hero"
 import Page from "../components/Page"
 import QuoteCard from "../components/QuoteCard"
 import MainWrapper from "../components/MainWrapper"
+import ShowItem from "../components/ShowItem"
 
 import { Default, Skewed } from "../components/PageSections"
 
@@ -35,78 +36,34 @@ const PanelWrapper = styled(MainWrapper)`
 `
 
 const Showcase = styled(Skewed)`
-  padding: 5rem 0 15rem;
+  padding: 3rem 0 15rem;
   margin: 15rem 0;
+  h3 {
+    font-weight: 300;
+    text-align: center;
+  }
   &:before {
     background: ${({ theme }) => theme.shade.lightest};
   }
 `
 const Carousel = styled.div`
-  border: 2px solid red;
-`
-const ShowItem = styled(Link)`
-  color: ${({ theme }) => theme.shade.darker};
-  padding: 1.5rem 1rem;
-  display: inline-block;
-  width: 320px;
-  height: 540px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 3rem 2rem 5rem;
+  border-radius: 2rem;
   margin: 2rem;
-  border: 2px solid transparent;
-  border-radius: 1.5rem;
-  box-sizing: content-box;
-  background: linear-gradient(${({ theme }) =>
-    theme.shade.lightest} 45%, transparent);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 1.5rem 1.5rem  ${({ theme }) => theme.shade.lighter};
-  text-align: center;
-  ${({ theme }) => theme.transition.default("transform, border")};
-  &:hover,
-  &:focus {
+  &::-webkit-scrollbar {
+    height: 1.25rem;
     border: 2px solid ${({ theme }) => theme.accent};
+    border-radius: 1.25rem;
   }
-  h4 {
-    margin: 0;
-    display: inline;
-    margin: 1.5rem;
-    position: relative;
-    transform: skewX(-4deg);
-    font-weight: 500;
-    span {
-      padding: 0.5rem 1rem; 
-      background: ${({ theme }) => theme.accent};
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.4;
-    }
-  }
-  p {
-    font-weight: 300;
-    margin: 0;
-  } 
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 75%;
-  }
-  &:before {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    background: url("${({ src }) => src}") transparent;
-    background-size: cover;
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.accent};
+    padding: -0.5rem !important;
+    width: 10px;
+    border-radius: 1.25rem;
   }
 `
 
@@ -203,119 +160,47 @@ const Home = () => {
       </Director>
       <Showcase skew="-4deg">
         <h2>"Help me, I can't decide!"</h2>
+        <h3>
+          I've picked a few goodies out,
+          <br />
+          maybe you'll like one?
+        </h3>
         <Carousel>
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
           <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
-          <ShowItem
-            src="https://source.unsplash.com/random/320x640"
-            alt="Unsplashyboi"
-          >
-            <div>
-              <h4>
-                <span>Fake Project</span>
-              </h4>
-              <p>
-                Some description about the project that isn't too long or
-                anything
-              </p>
-            </div>
-          </ShowItem>
+            src="https://source.unsplash.com/random/340x640"
+            title="Fake Project"
+            description="Some description about the project that isn't too long or anything"
+          />
         </Carousel>
       </Showcase>
     </Page>
