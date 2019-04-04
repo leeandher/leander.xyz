@@ -138,6 +138,7 @@ class Page extends React.Component {
             <Nav
               showSideBar={this.state.showSideBar}
               handleToggle={this.toggleNav}
+              accent={theme.accent}
             />
             {children}
             <Footer />

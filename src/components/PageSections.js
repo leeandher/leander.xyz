@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const PageSection = styled.section`
+export const Default = styled.section`
   position: relative;
   h2 {
     font-size: 3.5rem;
@@ -14,7 +14,7 @@ export const PageSection = styled.section`
   }
 `
 
-export const SkewedPageSection = styled(PageSection)`
+export const Skewed = styled(Default)`
   z-index: 0;
   &:before {
     content: "";
@@ -28,5 +28,17 @@ export const SkewedPageSection = styled(PageSection)`
     transform-origin: top left;
   }
 `
-
-export default PageSection
+export const Sharp = styled(Default)`
+  z-index: 0;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(${({ skew }) => skew});
+    transform-origin: top left;
+  }
+`

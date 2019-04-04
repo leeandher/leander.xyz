@@ -12,7 +12,7 @@ import { genRand } from "../helpers/random"
 const Wrapper = styled.div`
   width: 100%;
   position: fixed;
-  max-height: 100%;
+  max-height: 150%;
   top: 0;
   z-index: -1;
   left: 0;
