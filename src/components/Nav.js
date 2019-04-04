@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import NavLink from "./NavLink"
 import Toggler from "./Toggler"
+import Logo from "./icons/Logo"
 
 const StyledNav = styled.nav`
   display: flex;
@@ -13,6 +15,7 @@ const StyledNav = styled.nav`
   left: 0;
   text-align: center;
   background: ${({ theme }) => theme.shade.darkest};
+  font-size: 20px;
   @media (max-width: 850px) {
     background: ${({ theme }) => theme.shade.darker};
     border-right: 2px solid ${({ theme }) => theme.shade.lighter};
@@ -34,13 +37,18 @@ const StyledNav = styled.nav`
   }
 `
 
-const Nav = ({ handleToggle, showSideBar }) => {
+const StyledLogo = styled(Logo)`
+  padding: 1rem;
+  margin: 0 3rem;
+`
+
+const Nav = ({ accent, handleToggle, showSideBar }) => {
   return (
     <>
       <StyledNav showSideBar={showSideBar || false}>
-        <NavLink to="/">
-          <span>LOGO</span>
-        </NavLink>
+        <Link to="/">
+          <StyledLogo accent={accent} size={60} />
+        </Link>
         <NavLink to="/about" accent="red">
           <span>About</span>
         </NavLink>

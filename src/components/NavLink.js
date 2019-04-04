@@ -83,10 +83,8 @@ const StyledLink = styled(Link)`
   }
 `
 
-const NavLink = ({ accent, children, to }) => (
-  <StyledLink to={to} accent={accent}>
-    {children}
-  </StyledLink>
+const NavLink = ({ children, ...props }) => (
+  <StyledLink {...props}>{children}</StyledLink>
 )
 
 export default NavLink
