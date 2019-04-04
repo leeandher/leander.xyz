@@ -34,7 +34,7 @@
   publish = ""
   command = ""
 [context.stacker-news]
-  base    = ""
-  publish = ""
-  command = ""
+  base    = "subdomains/stacker-news"
+  publish = "build/"
+  command = "npm run build"
   

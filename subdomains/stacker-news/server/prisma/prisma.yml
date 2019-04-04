@@ -1,0 +1,15 @@
+# The HTTP endpoint for the Prisma API
+endpoint: ${env:PRISMA_ENDPOINT}
+
+# Points to the datamodel file
+datamodel: datamodel.prisma
+
+# Specifies language & location for the generated Prisma client
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+
+# Tooling hooks for faster operations
+hooks:
+  post-deploy:
+    - prisma generate

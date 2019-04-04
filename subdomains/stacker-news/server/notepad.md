@@ -1,0 +1,4 @@
+- the prismas gql server takes in typedefs and resolvers
+- typedefs contain an outline the data structures used within the api and what data type gets returned from the
+  - for example if a a `Query` called `find` returns a Person type, then i can look at the Person type to see exactly the info that is available on that person. This way I can just write name age and ignore everyhting else (email, nickname, etc)
+-
