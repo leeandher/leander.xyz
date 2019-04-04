@@ -8,7 +8,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Leander Rodrigues",
-        short_name: "leander.xxyz",
+        short_name: "leander.xyz",
         start_url: "/",
         background_color: "#0F0F0F",
         theme_color: "#4DCCB0",

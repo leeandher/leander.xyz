@@ -1,13 +1,19 @@
 backend:
-  name: github
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
   repo: leeandher/leander.xyz
   branch: dev
+  commit_messages:
+    create: ✨ Create entry in {{collection}} collection - "{{slug}}"
+    update: ✏️ Edit made in {{collection}} collection - "{{slug}}"
+    delete: 🔥 Deletion made in {{collection}} collection - "{{slug}}"
+    uploadMedia: 🍱 Upload media - "{{path}}"
+    deleteMedia: 🔥 Delete media - "{{path}}"
 
 # TODO: Add note collection, refactor FAQ collection
-
-# backend:
-#   name: "test-repo"
-
+a
 media_folder: static/assets
 public_folder: assets
 
