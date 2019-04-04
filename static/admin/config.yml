@@ -13,7 +13,6 @@ backend:
     deleteMedia: 🔥 Delete media - "{{path}}"
 
 # TODO: Add note collection, refactor FAQ collection
-a
 media_folder: static/assets
 public_folder: assets
 
