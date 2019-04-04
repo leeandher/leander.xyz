@@ -23,8 +23,8 @@ import { AUTH_TOKEN, GRAPHQL_ENDPOINT } from "./constants"
 import * as serviceWorker from "./serviceWorker"
 
 // Connect to GraphQL Server
-const httpLink = createHttpLink({
-  uri: `http://${GRAPHQL_ENDPOINT}`,
+const httpsLink = createHttpLink({
+  uri: `https://${GRAPHQL_ENDPOINT}`,
 })
 
 // Set authentication headers
@@ -39,7 +39,7 @@ const authLink = setContext((_, { headers }) => {
 })
 
 // Establish the WebSocketLink
-const wsLink = new WebSocketLink({
+const wssLink = new WebSocketLink({
   uri: `wss://${GRAPHQL_ENDPOINT}`,
   options: {
     reconnect: true,
@@ -59,8 +59,8 @@ const link = split(
     const { kind, operation } = getMainDefinition(query)
     return kind === "OperationDefinition" && operation === "subscription"
   },
-  wsLink,
-  authLink.concat(httpLink)
+  wssLink,
+  authLink.concat(httpsLink)
 )
 
 // Instantiate the ApolloClient
