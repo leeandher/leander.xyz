@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
 # Runtime data
 pids
 *.pid
@@ -68,3 +69,7 @@ yarn-error.log
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Subdomains can take care of themselves mom!
+!subdomains/**/**
+subdomains/.DS_Store

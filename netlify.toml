@@ -1,7 +1,7 @@
 # General build context
 [build]
   base    = ""
-  publish = "public/"
+  publish = "public"
   command = "npm run build"
 
 # Branch-specific build context
@@ -15,7 +15,7 @@
   command = ""
 [context.dev]
   base    = ""
-  publish = "public/"
+  publish = "public"
   command = "npm run build"
 [context.joke]
   base    = ""
@@ -35,6 +35,6 @@
   command = ""
 [context.stacker-news]
   base    = "subdomains/stacker-news"
-  publish = "build/"
+  publish = "subdomains/stacker-news/build"
   command = "npm run build"
   

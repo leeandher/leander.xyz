@@ -1,2 +1,2 @@
 # Stacker News Redirects
-https://stacker-news.leander.xyz/* https://stacker-news.leander.xyz/index.html 200
+https://stacker-news.leander.xyz/*      /subdomains/stacker-news/build/index.html 200!
