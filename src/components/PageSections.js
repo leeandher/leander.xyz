@@ -7,11 +7,6 @@ export const Default = styled.section`
     text-align: center;
     text-decoration: underline ${({ theme }) => theme.accent};
   }
-  div {
-    margin: 0 auto;
-    max-width: ${({ theme }) => theme.spacing.maxWidth};
-    padding: 0 2rem;
-  }
 `
 
 export const Skewed = styled(Default)`

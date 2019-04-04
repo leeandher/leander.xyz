@@ -42,4 +42,12 @@ export const palette = {
     default: property =>
       `transition: ${property} 0.4s cubic-bezier(.26,.1,.39,1.29)`,
   },
+  before: `
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  `,
 }
