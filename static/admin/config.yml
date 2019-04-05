@@ -12,9 +12,13 @@ backend:
     uploadMedia: 🍱 Upload media - "{{path}}"
     deleteMedia: 🔥 Delete media - "{{path}}"
 
-# TODO: Add note collection, refactor FAQ collection
 media_folder: static/assets
 public_folder: assets
+
+site_url: https://www.leander.xyz
+logo_url: https://dev.leander.xyz/icons/logo.png
+
+publish_mode: editorial_workflow
 
 collections:
   - name: blog
@@ -22,17 +26,35 @@ collections:
     folder: src/pages/blog
     create: true
     fields:
-      - { name: path, label: Path, widget: string }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title, widget: string }
-      - { name: preview, label: Preview, widget: text }
-      - { name: body, label: Body, widget: markdown }
-      - { name: tags, label: Tags, widget: list }
-  # - name: faqs
-  #   label: FAQs
-  #   folder: faqs
-  #   create: true
-  #   identifier_field: question
-  #   fields:
-  #     - { name: question, label: Question, widget: string }
-  #     - { name: answer, label: Answer, widget: markdown }
+      - { name: path, label: Path, widget: string, required: true }
+      - { name: date, label: Date, widget: date, required: true }
+      - { name: title, label: Title, widget: string, required: true }
+      - { name: preview, label: Preview, widget: text, required: true }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: tags, label: Tags, widget: list, required: true }
+
+  - name: faqs
+    label: FAQs
+    folder: src/data/faqs
+    create: true
+    identifier_field: question
+    fields:
+      - { name: question, label: Question, widget: string, required: true }
+      - { name: answer, label: Answer, widget: markdown, required: true }
+
+  - name: projects
+    label: Projects
+    folder: src/data/projects
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string, required: true }
+      - {
+          name: decription,
+          label: Description,
+          widget: markdown,
+          required: true,
+        }
+      - { name: date, label: Date Completed, widget: date, required: true }
+      - { name: repo, label: Repo Link, widget: string }
+      - { name: link, label: Live Link, widget: string }
+      - { name: tech, label: Tech Used, widget: list, required: true }
