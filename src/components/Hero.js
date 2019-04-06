@@ -18,6 +18,10 @@ const Header = styled.header`
     color: ${({ theme }) => theme.shade.darkest};
     box-shadow: 7px 0 0 3px ${({ theme }) => theme.accent},
       -7px 0 0 3px ${({ theme }) => theme.accent};
+    ${({ theme }) => theme.transition.default("all")};
+    &:hover {
+      ${({ expanding }) => (expanding ? "letter-spacing: 0.5rem;" : "")}
+    }
   }
   p {
     font-size: 2rem;
@@ -25,8 +29,8 @@ const Header = styled.header`
   }
 `
 
-const Hero = ({ children, height }) => (
-  <Header height={height}>
+const Hero = ({ children, expanding, height }) => (
+  <Header height={height} expanding={expanding}>
     <div>{children}</div>
   </Header>
 )
