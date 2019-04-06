@@ -31,7 +31,7 @@ collections:
       - { name: path, label: Path, widget: string, required: true }
       - { name: date, label: Date, widget: date, required: true }
       - { name: title, label: Title, widget: string, required: true }
-      - { name: preview, label: Preview, widget: text, required: true }
+      - { name: description, label: Description, widget: text, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
       - { name: tags, label: Tags, widget: list, required: true }
   # - name: faqs

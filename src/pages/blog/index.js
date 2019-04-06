@@ -51,7 +51,7 @@ export const blogPostsQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           path
           title
-          preview
+          description
           tags
         }
       }

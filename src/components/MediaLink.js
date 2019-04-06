@@ -57,21 +57,13 @@ const StyledLink = styled(Link)`
   }
 `
 
-const MediaLink = ({
-  arrangement,
-  date,
-  image,
-  path,
-  preview,
-  tags,
-  title,
-}) => {
+const MediaLink = ({ date, image, path, description, tags, title }) => {
   return (
     <StyledLink to={path} image={image}>
       {/* <img src="/icons/apple-touch-icon.png" alt={title} /> */}
       <h2>{title}</h2>
       <p>{date}</p>
-      <p>{preview}</p>
+      <p>{description}</p>
       {tags.map(tag => (
         <Tag tag={tag} key={Math.random()} />
       ))}

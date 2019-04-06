@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Page from "../components/Page"
+import Tag from "../components/Tag"
 
 const MediaHeader = styled.header``
 
@@ -18,7 +19,7 @@ const MediaPost = styled.article`
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { date, preview, tags, title } = frontmatter
+  const { date, description, tags, title } = frontmatter
   return (
     <Page
       accent="yellow"
@@ -28,8 +29,11 @@ const BlogPostTemplate = ({ data }) => {
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <h1>{title}</h1>
-      <article style={{ color: "red" }}>{preview}</article>
+      <article style={{ color: "red" }}>{description}</article>
       <h2>{date}</h2>
+      {tags.map(tag => (
+        <Tag tag={tag} key={Math.random()} />
+      ))}
       <MediaPost
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: html }}
@@ -47,7 +51,7 @@ export const blogPostQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        preview
+        description
         tags
       }
     }

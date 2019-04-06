@@ -3,7 +3,7 @@ type: "blog"
 date: "2018-04-16"
 path: "/blog/drop-me-a-line"
 title: "Drop me a Line"
-preview: "I definitely wouldn't be this far along if I couldn't make mistakes."
+description: "I definitely wouldn't be this far along if I couldn't make mistakes."
 tags: ["project", "announcement"]
 ---
 
