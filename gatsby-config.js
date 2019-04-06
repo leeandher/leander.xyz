@@ -42,6 +42,7 @@ module.exports = {
       options: {
         name: "blog",
         path: `${__dirname}/src/pages/blog`,
+        ignore: [`*.js`],
       },
     },
     {

@@ -11,6 +11,7 @@ const Button = styled.button`
   background: transparent;
   position: relative;
   margin: 1rem;
+  z-index: 1;
   &:before {
     content: "";
     height: 100%;

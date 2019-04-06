@@ -16,7 +16,6 @@ media_folder: static/assets
 public_folder: assets
 
 site_url: https://www.leander.xyz
-logo_url: https://dev.leander.xyz/icons/logo.png
 
 publish_mode: editorial_workflow
 
