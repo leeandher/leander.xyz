@@ -7,8 +7,8 @@ backend:
   branch: dev
   commit_messages:
     create: ✨ Create entry in {{collection}} collection - "{{slug}}"
-    update: ✏️ Edit made in {{collection}} collection - "{{slug}}"
-    delete: 🔥 Deletion made in {{collection}} collection - "{{slug}}"
+    update: ✏️ Edit in {{collection}} collection - "{{slug}}"
+    delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
     uploadMedia: 🍱 Upload media - "{{path}}"
     deleteMedia: 🔥 Delete media - "{{path}}"
 
@@ -17,43 +17,50 @@ public_folder: assets
 
 site_url: https://www.leander.xyz
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 collections:
   - name: blog
     label: Blog
     folder: src/pages/blog
     create: true
+    editor:
+      preview: false
     fields:
+      - { name: type, label: Type, widget: hidden, default: blog }
       - { name: path, label: Path, widget: string, required: true }
       - { name: date, label: Date, widget: date, required: true }
       - { name: title, label: Title, widget: string, required: true }
       - { name: preview, label: Preview, widget: text, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
       - { name: tags, label: Tags, widget: list, required: true }
-
-  - name: faqs
-    label: FAQs
-    folder: src/data/faqs
-    create: true
-    identifier_field: question
-    fields:
-      - { name: question, label: Question, widget: string, required: true }
-      - { name: answer, label: Answer, widget: markdown, required: true }
-
-  - name: projects
-    label: Projects
-    folder: src/data/projects
-    create: true
-    fields:
-      - { name: title, label: Title, widget: string, required: true }
-      - {
-          name: decription,
-          label: Description,
-          widget: markdown,
-          required: true,
-        }
-      - { name: date, label: Date Completed, widget: date, required: true }
-      - { name: repo, label: Repo Link, widget: string }
-      - { name: link, label: Live Link, widget: string }
-      - { name: tech, label: Tech Used, widget: list, required: true }
+  # - name: faqs
+  #   label: FAQs
+  #   folder: src/data/faqs
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   identifier_field: question
+  #   fields:
+  #     - { name: type, label: Type, widget: hidden, default: faq }
+  #     - { name: question, label: Question, widget: string, required: true }
+  #     - { name: answer, label: Answer, widget: markdown, required: true }
+  # - name: projects
+  #   label: Projects
+  #   folder: src/data/projects
+  #   editor:
+  #     preview: false
+  #   create: true
+  #   fields:
+  #     - { name: type, label: Type, widget: hidden, default: faq }
+  #     - { name: title, label: Title, widget: string, required: true }
+  #     - {
+  #         name: decription,
+  #         label: Description,
+  #         widget: markdown,
+  #         required: true,
+  #       }
+  #     - { name: date, label: Date Completed, widget: date, required: true }
+  #     - { name: repo, label: Repo Link, widget: string }
+  #     - { name: link, label: Live Link, widget: string }
+  #     - { name: tech, label: Tech Used, widget: list, required: true }
