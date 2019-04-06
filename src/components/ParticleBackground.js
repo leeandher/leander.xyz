@@ -7,7 +7,7 @@ import mesh from "../data/mesh.json"
 import snow from "../data/snow.json"
 import space from "../data/space.json"
 
-import { genRand } from "../helpers/random"
+import { genRand } from "../helpers"
 
 const Wrapper = styled.div`
   width: 100%;

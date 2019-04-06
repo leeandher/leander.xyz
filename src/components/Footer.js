@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa"
-import { getCopyrightYearsFrom } from "../helpers/copyrightDate"
+import { getCopyrightYearsFrom } from "../helpers"
 import AnchorLink from "./AnchorLink"
 import Button from "./Button"
 

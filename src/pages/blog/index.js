@@ -7,8 +7,6 @@ import Hero from "../../components/Hero"
 import MediaLink from "../../components/MediaLink"
 import MainWrapper from "../../components/MainWrapper"
 
-import { genRand } from "../../helpers/random"
-
 const PostSection = styled.section`
   display: flex;
   flex-flow: row wrap;
