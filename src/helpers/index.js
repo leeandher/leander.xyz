@@ -19,6 +19,17 @@ export const genRand = (min = 0, max = 1, isInt = false) => {
 }
 
 /**
+ * Returns a random property or value from an object passed to it
+ * @param {object} obj - The object whose properties will be selected from
+ * @param {boolean} shouldReturnValue - If true, return the random properties value
+ */
+export const genRandProperty = (obj, shouldReturnValue) => {
+  const objProperties = Object.keys(obj)
+  const randomProperty = objProperties[genRand(0, objProperties.length, true)]
+  return shouldReturnValue ? obj[randomProperty] : randomProperty
+}
+
+/**
  * Returns a URI of encoded data
  * @param {object} data - object of data to URI encode
  */

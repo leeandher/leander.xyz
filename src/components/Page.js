@@ -4,11 +4,12 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import { palette } from "../styles"
 
-import Nav from "./Nav.js"
-import Footer from "./Footer.js"
+import Nav from "./Nav"
+import Footer from "./Footer"
 import ParticleBackground from "./ParticleBackground"
 
 import { consoleLiteral } from "../data/consoleLiteral"
+import { genRandProperty } from "../helpers"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -111,7 +112,10 @@ class Page extends React.Component {
       title,
     } = this.props
     const theme = {
-      accent: palette.color[accent],
+      accent:
+        accent === "random"
+          ? genRandProperty(palette.color, true)
+          : palette.color[accent],
       ...palette,
     }
     return (

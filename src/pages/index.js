@@ -14,10 +14,15 @@ import { Default, Skewed } from "../components/PageSections"
 import Typer from "../components/page-specific/Home/Typer"
 
 const Introduction = styled(Skewed)`
-  padding: 10rem 0 5rem 0;
+  padding: 10rem 0 3rem 0;
   margin: 10rem 0;
   &:before {
     background: ${({ theme }) => theme.shade.lightest};
+  }
+  button {
+    display: block;
+    margin: 1rem auto;
+    margin-top: 4rem;
   }
 `
 
