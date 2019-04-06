@@ -1,8 +1,8 @@
 ---
 type: blog
 path: /blog/memail
-date: "2018-04-08"
-title: MEmail(EDITFROMNETLIFY)
+date: '2018-04-08'
+title: MEmail
 preview: I can't wait for the site to be public.
 tags:
   - personal
