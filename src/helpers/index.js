@@ -25,7 +25,8 @@ export const genRand = (min = 0, max = 1, isInt = false) => {
  */
 export const genRandProperty = (obj, shouldReturnValue) => {
   const objProperties = Object.keys(obj)
-  const randomProperty = objProperties[genRand(0, objProperties.length, true)]
+  const randomProperty =
+    objProperties[genRand(0, objProperties.length - 1, true)]
   return shouldReturnValue ? obj[randomProperty] : randomProperty
 }
 
