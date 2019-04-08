@@ -29,10 +29,6 @@ const Introduction = styled(Skewed)`
 const Director = styled(Default)`
   color: ${({ theme }) => theme.shade.lightest};
   padding-top: 2rem;
-  h3 {
-    font-weight: 300;
-    text-align: center;
-  }
 `
 
 const PanelWrapper = styled(MainWrapper)`
@@ -43,10 +39,6 @@ const PanelWrapper = styled(MainWrapper)`
 const Showcase = styled(Skewed)`
   padding: 3rem 0 15rem;
   margin: 15rem 0;
-  h3 {
-    font-weight: 300;
-    text-align: center;
-  }
   &:before {
     background: ${({ theme }) => theme.shade.lightest};
   }

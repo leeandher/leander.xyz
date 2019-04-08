@@ -40,6 +40,10 @@ const About = () => {
           <br />
           this is just where I talk about myself )
         </h3>
+        {questions.map(({ question, answer }) => {
+          console.log(question, answer)
+          return <FAQ question={question} answer={answer} />
+        })}
       </Questions>
     </Page>
   )

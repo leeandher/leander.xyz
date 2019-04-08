@@ -7,6 +7,10 @@ export const Default = styled.section`
     text-align: center;
     text-decoration: underline ${({ theme }) => theme.accent};
   }
+  h3 {
+    text-align: center;
+    font-weight: 300;
+  }
 `
 
 export const Skewed = styled(Default)`

@@ -89,8 +89,6 @@ const ContactFormWrapper = styled(Skewed)`
   }
 `
 
-const After = styled.section``
-
 class Contact extends React.Component {
   state = {}
 
@@ -203,9 +201,6 @@ class Contact extends React.Component {
             </Form>
           </ContactForm>
         </ContactFormWrapper>
-        <After>
-          <h2 />
-        </After>
       </Page>
     )
   }
