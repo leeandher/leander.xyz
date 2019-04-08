@@ -10,9 +10,9 @@
   publish = ""
   command = ""
 [context.conway]
-  base    = ""
-  publish = ""
-  command = ""
+  base    = "subdomains/conway"
+  publish = "subdomains/conway/build"
+  command = "npm run build"
 [context.dev]
   base    = ""
   publish = "public"

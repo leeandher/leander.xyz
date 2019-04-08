@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.dark-style {
+  filter: invert(1); }
+  .dark-style .override-style {
+    filter: invert(1); }
+
+.logo {
+  max-width: 30px;
+  margin: 30px auto; }
+
+.logo-wrapper {
+  text-align: center;
+  width: 90%; }
+
+.app-header {
+  font-style: italic;
+  text-shadow: 2px 2px #ffadd2;
+  white-space: nowrap; }
+
+.game-board {
+  background: transparent;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto; }
+
+.game-board__generation {
+  text-align: center; }
+  .game-board__generation .number {
+    font-size: 200%;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline #eb2f96; }
+
+.game-board__species {
+  text-align: center; }
+  .game-board__species input {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #ffadd2;
+    font-style: italic;
+    padding: 3px 5px;
+    background: transparent;
+    text-align: center; }
+    .game-board__species input:focus {
+      box-shadow: inset 0 0 15px #eb2f96;
+      outline: 0; }
+
+.game-board__row {
+  display: flex;
+  justify-content: center; }
+
+.game-board__cell {
+  margin: 1px;
+  height: 13px;
+  width: 13px; }
+  .game-board__cell.game-board__cell--dead {
+    background: rgba(0, 0, 0, 0.025); }
+  .game-board__cell.game-board__cell--alive-new {
+    background: #ffadd2; }
+  .game-board__cell.game-board__cell--alive-old {
+    background: #eb2f96; }
