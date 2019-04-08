@@ -1,18 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 
+import Hero from "../components/Hero"
 import Page from "../components/Page"
+import { Skewed } from "../components/PageSections"
+import FAQ from "../components/FAQ"
 
-const Header = styled.div`
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default};
-  color: ${({ theme }) => theme.accent};
-  span {
-    color: ${({ theme }) => theme.shade.lighter};
+import questions from "../data/questions.json"
+
+const Questions = styled(Skewed)`
+  padding: 10rem 0 3rem 0;
+  margin: 10rem 0;
+  &:before {
+    background: ${({ theme }) => theme.shade.lightest};
+  }
+  button {
+    display: block;
+    margin: 1rem auto;
+    margin-top: 4rem;
   }
 `
 
@@ -25,13 +30,17 @@ const About = () => {
       design="snow"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Header>
-        <h1>
-          <code>
-            //TODO: <span>Make about page</span>
-          </code>
-        </h1>
-      </Header>
+      <Hero height="50vh">
+        <h1>All About Me</h1>
+      </Hero>
+      <Questions skew="4deg">
+        <h2>FAQs</h2>
+        <h3>
+          ( People don't actually ask these,
+          <br />
+          this is just where I talk about myself )
+        </h3>
+      </Questions>
     </Page>
   )
 }
