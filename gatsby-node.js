@@ -6,6 +6,7 @@ exports.createPages = async ({ actions, graphql }) => {
   // Create blog posts and notes
   const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
   const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
+
   const { data: media } = await graphql(`
     {
       allMarkdownRemark(

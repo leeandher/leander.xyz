@@ -53,5 +53,13 @@ module.exports = {
         ignore: [`*.js`],
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: `${__dirname}/src/pages/projects`,
+        ignore: [`*.js`],
+      },
+    },
   ],
 }
