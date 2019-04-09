@@ -34,17 +34,6 @@ collections:
       - { name: description, label: Description, widget: text, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
       - { name: tags, label: Tags, widget: list, required: true }
-  # - name: faqs
-  #   label: FAQs
-  #   folder: src/data/faqs
-  #   create: true
-  #   editor:
-  #     preview: false
-  #   identifier_field: question
-  #   fields:
-  #     - { name: type, label: Type, widget: hidden, default: faq }
-  #     - { name: question, label: Question, widget: string, required: true }
-  #     - { name: answer, label: Answer, widget: markdown, required: true }
   - name: projects
     label: Projects
     folder: src/pages/projects
@@ -53,14 +42,30 @@ collections:
     create: true
     fields:
       - { name: type, label: Type, widget: hidden, default: project }
+      - { name: path, label: Path, widget: string, required: true }
       - { name: title, label: Title, widget: string, required: true }
       - { name: date, label: Date Completed, widget: date, required: true }
+      - { name: body, label: Description, widget: markdown, required: true }
       - { name: repo, label: Repo Link, widget: string }
       - { name: link, label: Live Link, widget: string }
       - { name: tech, label: Tech Used, widget: list, required: true }
-      - {
-          name: decription,
-          label: Description,
-          widget: markdown,
-          required: true,
-        }
+  - name: faqs
+    label: FAQs
+    folder: src/data/faqs
+    create: false
+    editor:
+      preview: false
+    identifier_field: question
+    fields:
+      - name: faqs
+        label: FAQs
+        widget: list
+        fields:
+          - name: question
+            label: Question
+            widget: markdowwn
+            required: true
+          - name: answer
+            label: Answer
+            widget: markdown
+            required: true

@@ -6,6 +6,7 @@ exports.createPages = async ({ actions, graphql }) => {
   // Create blog posts and notes
   const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
   const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
+  const ProjectTemplate = path.resolve("src/templates/ProjectTemplate.js")
 
   const { data: media } = await graphql(`
     {
@@ -33,13 +34,17 @@ exports.createPages = async ({ actions, graphql }) => {
     switch (fm.type) {
       case "blog":
         template = BlogPostTemplate
-        mediaPath = `${fm.path}`
+        mediaPath = fm.path
         break
       case "note":
         template = NoteTemplate
         mediaPath = `/notes/${fm.category}/${fm.title
           .replace(/\s/g, "_")
           .toLowerCase()}`
+        break
+      case "project":
+        template = ProjectTemplate
+        mediaPath = fm.path
         break
       default:
         throw new Error(`Unknown media type: ${fm.type}`)
