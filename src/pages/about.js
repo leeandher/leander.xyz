@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import Hero from "../components/Hero"
 import Page from "../components/Page"
+import MainWrapper from "../components/MainWrapper"
 import { Skewed } from "../components/PageSections"
 import FAQ from "../components/FAQ"
 
@@ -30,20 +31,21 @@ const About = () => {
       design="snow"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Hero height="50vh">
+      <Hero expanding height="50vh">
         <h1>All About Me</h1>
       </Hero>
       <Questions skew="4deg">
-        <h2>FAQs</h2>
-        <h3>
-          ( People don't actually ask these,
-          <br />
-          this is just where I talk about myself )
-        </h3>
-        {questions.map(({ question, answer }) => {
-          console.log(question, answer)
-          return <FAQ question={question} answer={answer} />
-        })}
+        <MainWrapper maxWidth="960px">
+          <h2>FAQs</h2>
+          <h3>
+            ( People don't actually ask these,
+            <br />
+            this is just where I talk about myself )
+          </h3>
+          {questions.map(({ question, answer }) => (
+            <FAQ question={question} answer={answer} />
+          ))}
+        </MainWrapper>
       </Questions>
     </Page>
   )

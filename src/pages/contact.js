@@ -119,7 +119,7 @@ class Contact extends React.Component {
         description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
       >
         <Hero expanding height="50vh">
-          <h1>REACH OUT</h1>
+          <h1>Reach Out</h1>
         </Hero>
         <ContactFormWrapper skew="4deg">
           <h2>Drop me a line!</h2>
