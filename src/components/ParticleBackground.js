@@ -2,10 +2,10 @@ import React from "react"
 import Particles from "react-particles-js"
 import styled from "styled-components"
 
-import bubbles from "../data/bubbles.json"
-import mesh from "../data/mesh.json"
-import snow from "../data/snow.json"
-import space from "../data/space.json"
+import bubbles from "../data/particles/bubbles.json"
+import mesh from "../data/particles/mesh.json"
+import snow from "../data/particles/snow.json"
+import space from "../data/particles/space.json"
 
 import { genRand } from "../helpers"
 
