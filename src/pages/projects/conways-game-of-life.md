@@ -1,5 +1,6 @@
 ---
 type: project
+path: /projects/conway
 title: Conway's Game of Life
 date: 2018-12-11T00:54:57.457Z
 repo: 'https://github.com/leeandher/Conways-Game-of-Life'
