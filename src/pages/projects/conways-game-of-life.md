@@ -14,7 +14,7 @@ tech:
   - antd
 ---
 
-This is a single-page application I built to simulate [**Conway's Game of Life**](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). You can check out the live demo over at [conway.leander.xyz](https://conway.leander.xyz).
+This is a single-page application I built to simulate [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). You can check out the live demo over at [conway.leander.xyz](https://conway.leander.xyz).
 
 This simulation app models the 'zero-player game' which serves more as a evolution/mathematics model than a real game. In essence, a rid contains cells which can either be _living_ (colored) or _dead_ (blank). Each cell's _neighbors_ are specified by the surrounding 8 cells (think of a furnace in Minecraft). Next, the board _evolves_, with the next _generation_ adhering to 4 simple rules:
 

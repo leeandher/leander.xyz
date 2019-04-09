@@ -49,23 +49,26 @@ collections:
       - { name: repo, label: Repo Link, widget: string }
       - { name: link, label: Live Link, widget: string }
       - { name: tech, label: Tech Used, widget: list, required: true }
-  - name: faqs
-    label: FAQs
-    folder: src/data/faqs
-    create: false
-    editor:
-      preview: false
-    identifier_field: question
-    fields:
-      - name: faqs
-        label: FAQs
-        widget: list
-        fields:
-          - name: question
-            label: Question
-            widget: markdowwn
-            required: true
-          - name: answer
-            label: Answer
-            widget: markdown
-            required: true
+  # - name: faqs
+  #   label: FAQs
+  #   editor:
+  #     preview: false
+  #   create: true
+  #   files:
+  #     - label: About Page
+  #       name: about
+  #       file: src/data/faqs.md
+  #       identifier_field: faqs
+  #       fields:
+  #         - name: faqs
+  #           label: FAQs
+  #           widget: list
+  #           fields:
+  #             - name: question
+  #               label: Question
+  #               widget: string
+  #               required: true
+  #             - name: answer
+  #               label: Answer
+  #               widget: markdown
+  #               required: true

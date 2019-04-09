@@ -6,9 +6,6 @@ const MediaContent = styled.main`
   p {
     margin: 2.5rem 0;
   }
-  figure {
-  }
-
   img {
     box-sizing: content-box;
     padding: 1rem;
@@ -16,6 +13,20 @@ const MediaContent = styled.main`
     max-width: 100%;
     display: block;
     margin: 1rem auto;
+  }
+  a {
+    position: relative;
+    font-weight: 600;
+    &:hover {
+      transform: translate(-10px);
+    }
+    &:before {
+      ${({ theme }) => theme.before}
+      background: ${({ theme }) => theme.accent};
+      top: 50%;
+      height: 50%;
+      opacity: 0.5;
+    }
   }
   figcaption {
     text-align: center;
