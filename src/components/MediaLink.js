@@ -57,9 +57,9 @@ const StyledLink = styled(Link)`
   }
 `
 
-const MediaLink = ({ date, image, path, description, tags, title }) => {
+const MediaLink = ({ date, image, description, tags, title, type, slug }) => {
   return (
-    <StyledLink to={path} image={image}>
+    <StyledLink to={`/${type}/${slug}`} image={image}>
       {/* <img src="/icons/apple-touch-icon.png" alt={title} /> */}
       <h2>{title}</h2>
       <p>{date}</p>

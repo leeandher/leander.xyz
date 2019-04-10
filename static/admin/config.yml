@@ -28,7 +28,7 @@ collections:
       preview: false
     fields:
       - { name: type, label: Type, widget: hidden, default: blog }
-      - { name: path, label: Path, widget: string, required: true }
+      - { name: slug, label: Slug, widget: string, required: true }
       - { name: date, label: Date, widget: date, required: true }
       - { name: title, label: Title, widget: string, required: true }
       - { name: description, label: Description, widget: text, required: true }
@@ -42,33 +42,26 @@ collections:
     create: true
     fields:
       - { name: type, label: Type, widget: hidden, default: project }
-      - { name: path, label: Path, widget: string, required: true }
+      - { name: slug, label: Slug, widget: string, required: true }
       - { name: title, label: Title, widget: string, required: true }
       - { name: date, label: Date Completed, widget: date, required: true }
       - { name: body, label: Description, widget: markdown, required: true }
       - { name: repo, label: Repo Link, widget: string }
       - { name: link, label: Live Link, widget: string }
       - { name: tech, label: Tech Used, widget: list, required: true }
-  # - name: faqs
-  #   label: FAQs
-  #   editor:
-  #     preview: false
-  #   create: true
-  #   files:
-  #     - label: About Page
-  #       name: about
-  #       file: src/data/faqs.md
-  #       identifier_field: faqs
-  #       fields:
-  #         - name: faqs
-  #           label: FAQs
-  #           widget: list
-  #           fields:
-  #             - name: question
-  #               label: Question
-  #               widget: string
-  #               required: true
-  #             - name: answer
-  #               label: Answer
-  #               widget: markdown
-  #               required: true
+  - name: faqs
+    label: FAQs
+    folder: src/data/faqs
+    editor:
+      preview: false
+    create: true
+    identifier_field: question
+    fields:
+      - name: question
+        label: Question
+        widget: string
+        required: true
+      - name: body
+        label: Answer
+        widget: markdown
+        required: true

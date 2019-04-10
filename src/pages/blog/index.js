@@ -30,7 +30,7 @@ const Blog = ({ data }) => {
       <MainWrapper maxWidth="95vw">
         <PostSection>
           {blogPosts.map(({ frontmatter: blogPostsProps }) => (
-            <MediaLink {...blogPostsProps} key={blogPostsProps.path} />
+            <MediaLink key={blogPostsProps.slug} {...blogPostsProps} />
           ))}
         </PostSection>
       </MainWrapper>
@@ -48,8 +48,9 @@ export const blogPostsQuery = graphql`
     ) {
       nodes {
         frontmatter {
+          type
           date(formatString: "MMMM DD, YYYY")
-          path
+          slug
           title
           description
           tags

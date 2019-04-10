@@ -18,7 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             frontmatter {
               type
-              path
+              slug
               category
               title
             }
@@ -34,7 +34,7 @@ exports.createPages = async ({ actions, graphql }) => {
     switch (fm.type) {
       case "blog":
         template = BlogPostTemplate
-        mediaPath = fm.path
+        mediaPath = `/blog/${fm.slug}`
         break
       case "note":
         template = NoteTemplate
@@ -44,7 +44,7 @@ exports.createPages = async ({ actions, graphql }) => {
         break
       case "project":
         template = ProjectTemplate
-        mediaPath = fm.path
+        mediaPath = `/projects/${fm.slug}`
         break
       default:
         throw new Error(`Unknown media type: ${fm.type}`)
@@ -52,8 +52,10 @@ exports.createPages = async ({ actions, graphql }) => {
     return createPage({
       path: mediaPath,
       component: template,
-      // used for notes template query
-      context: { title: fm.title },
+      context: {
+        slug: fm.slug,
+        title: fm.title,
+      },
     })
   })
 }

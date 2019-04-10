@@ -1,7 +1,7 @@
 ---
 type: "blog"
 date: "2018-04-14"
-path: "/blog/gitting-started"
+slug: "gitting-started"
 title: "Gitting Started"
 description: "I now see just how powerful a tool git really is!"
 tags: ["personal", "announcement"]

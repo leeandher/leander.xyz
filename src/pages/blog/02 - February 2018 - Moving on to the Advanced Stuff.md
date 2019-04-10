@@ -1,7 +1,7 @@
 ---
 type: "blog"
 date: "2018-03-01"
-path: "/blog/moving-on-to-the-adv-stuff"
+slug: "moving-on-to-the-adv-stuff"
 title: "February 2018 - Moving on to the Advanced Stuff"
 description: "Guess that's what the real world is like for web development."
 tags: ["personal", "coding"]

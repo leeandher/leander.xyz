@@ -1,7 +1,7 @@
 ---
 type: "blog"
 date: "2018-03-29"
-path: "/blog/got-my-fe-dev-cert"
+slug: "got-my-fe-dev-cert"
 title: "March 2018 - Got my FE Dev Cert!"
 description: "The goal for April is going to be to find that balance."
 tags: ["personal", "announcement"]

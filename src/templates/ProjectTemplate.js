@@ -77,8 +77,8 @@ const ProjectTemplate = ({ data }) => {
 export default ProjectTemplate
 
 export const projectQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
