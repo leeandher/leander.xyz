@@ -2,7 +2,7 @@
 type: blog
 slug: what-i-thought-of-cytus-ii
 date: 2018-06-07T22:51:25.534Z
-title: What I Thought of _Cytus II_
+title: What I Thought of <i> Cytus II </i>
 description: 'I would recommend [it] to anyone with a few hours to kill, and a pulse.'
 tags:
   - gaming
