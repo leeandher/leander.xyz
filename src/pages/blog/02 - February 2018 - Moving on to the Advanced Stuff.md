@@ -5,7 +5,7 @@ date: '2018-03-01'
 title: February 2018 - Moving on to the Advanced Stuff
 description: Guess that's what the real world is like for web development.
 tags:
-  - personal
+  - update
   - coding
 ---
 
