@@ -1,5 +1,5 @@
 ---
-type: project
+type: projects
 slug: conway
 title: Conway's Game of Life
 date: 2018-12-11T00:54:57.457Z

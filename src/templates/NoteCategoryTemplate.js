@@ -1,11 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { FaCode, FaLink } from "react-icons/fa"
 import styled from "styled-components"
 
 import Page from "../components/Page"
 import Tag from "../components/Tag"
-import AnchorLink from "../components/AnchorLink"
 
 import {
   ContentWrapper,
@@ -16,15 +14,10 @@ import {
   MediaSection,
 } from "../components/page-specific/Media"
 
-const ProjectHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
-
-const ProjectTemplate = ({ data }) => {
+const BlogPostTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { date, title, repo, link, tech } = frontmatter
+  const { date, description, tags, title } = frontmatter
   return (
     <Page
       accent="random"
@@ -37,26 +30,11 @@ const ProjectTemplate = ({ data }) => {
       <MediaSection>
         <ContentWrapper>
           <MediaPreContent>
-            <ProjectHeader>
-              <h1>
-                <span>{title}</span>
-              </h1>
-              <div>
-                <AnchorLink
-                  href={repo}
-                  title="Take a peek at the code! (Repository link)"
-                >
-                  <FaCode />
-                </AnchorLink>
-                <AnchorLink
-                  href={link}
-                  title="View the live project! (Live link)"
-                >
-                  <FaLink />
-                </AnchorLink>
-              </div>
-            </ProjectHeader>
-            <time>Completed: {date}</time>
+            <h1>
+              <span>{title}</span>
+            </h1>
+            <p>{description}</p>
+            <time>{date}</time>
           </MediaPreContent>
           <hr />
           <MediaContent
@@ -64,8 +42,8 @@ const ProjectTemplate = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <MediaPostContent>
-            {tech.map(techName => (
-              <Tag tag={techName} key={Math.random()} />
+            {tags.map(tag => (
+              <Tag tag={tag} key={Math.random()} />
             ))}
           </MediaPostContent>
         </ContentWrapper>
@@ -74,20 +52,17 @@ const ProjectTemplate = ({ data }) => {
   )
 }
 
-export default ProjectTemplate
+export default BlogPostTemplate
 
-export const projectQuery = graphql`
+export const noteCatQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
-      frontmatter: { slug: { eq: $slug }, type: { eq: "projects" } }
-    ) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        repo
-        link
-        tech
+        description
+        tags
       }
     }
   }

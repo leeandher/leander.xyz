@@ -3,9 +3,36 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  // Create blog posts and notes
-  const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
+  /**
+   * Create Note category pages
+   */
   const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
+
+  const { data: noteData } = await graphql(`
+    {
+      allFile(filter: { sourceInstanceName: { eq: "notes" } }) {
+        edges {
+          node {
+            name
+            relativeDirectory
+          }
+        }
+      }
+    }
+  `)
+  noteData.allFile.edges.forEach(({ node }) => {
+    const { name, relativeDirectory } = node
+    // return createPage(
+    //   {
+    //     path: `/notes/${}`
+    //   }
+    // )
+  })
+
+  /**
+   * Create Blog posts, Notes, and Project pages
+   */
+  const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
   const ProjectTemplate = path.resolve("src/templates/ProjectTemplate.js")
 
   const { data: media } = await graphql(`
@@ -27,6 +54,7 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
+
   media.allMarkdownRemark.edges.forEach(({ node }) => {
     const { frontmatter: fm } = node
     let template = null
@@ -35,12 +63,6 @@ exports.createPages = async ({ actions, graphql }) => {
       case "blog":
         template = BlogPostTemplate
         mediaPath = `/blog/${fm.slug}`
-        break
-      case "note":
-        template = NoteTemplate
-        mediaPath = `/notes/${fm.category}/${fm.title
-          .replace(/\s/g, "_")
-          .toLowerCase()}`
         break
       case "project":
         template = ProjectTemplate

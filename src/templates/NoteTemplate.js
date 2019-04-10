@@ -1,27 +1,60 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+
+import Page from "../components/Page"
+import Tag from "../components/Tag"
+
+import {
+  ContentWrapper,
+  MediaContent,
+  MediaHeader,
+  MediaPostContent,
+  MediaPreContent,
+  MediaSection,
+} from "../components/page-specific/Media"
 
 const NoteTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const { date, description, tags, title } = frontmatter
   return (
-    <div style={{ color: "white" }} className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
+    <Page
+      accent="random"
+      accentBg
+      title="Writing is hard"
+      design="bubbles"
+      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+    >
+      <MediaHeader />
+      <MediaSection>
+        <ContentWrapper>
+          <MediaPreContent>
+            <h1>
+              <span>{title}</span>
+            </h1>
+            <p>{description}</p>
+            <time>{date}</time>
+          </MediaPreContent>
+          <hr />
+          <MediaContent
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+          <MediaPostContent>
+            {tags.map(tag => (
+              <Tag tag={tag} key={Math.random()} />
+            ))}
+          </MediaPostContent>
+        </ContentWrapper>
+      </MediaSection>
+    </Page>
   )
 }
 
 export default NoteTemplate
 
-export const pageQuery = graphql`
+export const noteQuery = graphql`
   query($title: String!) {
     markdownRemark(
       frontmatter: { title: { eq: $title }, type: { eq: "note" } }
