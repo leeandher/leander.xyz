@@ -45,12 +45,11 @@ exports.createPages = async ({ actions, graphql }) => {
    */
   const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
   const ProjectTemplate = path.resolve("src/templates/ProjectTemplate.js")
-  const BlogAndProjects = `/src.pages.(blog|projects)/`
 
   const { data: media } = await graphql(`
     {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: ${BlogAndProjects} } }
+        filter: { fileAbsolutePath: { regex: "/src.pages.(blog|projects)/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
@@ -74,7 +73,7 @@ exports.createPages = async ({ actions, graphql }) => {
         template = BlogPostTemplate
         mediaPath = `/blog/${fm.slug}`
         break
-      case "project":
+      case "projects":
         template = ProjectTemplate
         mediaPath = `/projects/${fm.slug}`
         break

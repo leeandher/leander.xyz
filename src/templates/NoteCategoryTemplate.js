@@ -14,10 +14,14 @@ import {
   MediaSection,
 } from "../components/page-specific/Media"
 
-const BlogPostTemplate = ({ data }) => {
+const P = styled.p`
+  color: white;
+  font-size: 3rem;
+`
+
+const NoteCategoryTemplate = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-  const { date, description, tags, title } = frontmatter
+  const { html } = markdownRemark
   return (
     <Page
       accent="random"
@@ -29,41 +33,22 @@ const BlogPostTemplate = ({ data }) => {
       <MediaHeader />
       <MediaSection>
         <ContentWrapper>
-          <MediaPreContent>
-            <h1>
-              <span>{title}</span>
-            </h1>
-            <p>{description}</p>
-            <time>{date}</time>
-          </MediaPreContent>
-          <hr />
           <MediaContent
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <MediaPostContent>
-            {tags.map(tag => (
-              <Tag tag={tag} key={Math.random()} />
-            ))}
-          </MediaPostContent>
         </ContentWrapper>
       </MediaSection>
     </Page>
   )
 }
 
-export default BlogPostTemplate
+export default NoteCategoryTemplate
 
-export const noteCatQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+export const noteQuery = graphql`
+  query($absolutePath: String!) {
+    markdownRemark(fileAbsolutePath: { eq: $absolutePath }) {
       html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-        tags
-      }
     }
   }
 `
