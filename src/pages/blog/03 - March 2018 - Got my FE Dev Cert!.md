@@ -6,7 +6,7 @@ title: March 2018 - Got my FE Dev Cert!
 description: The goal for April is going to be to find that balance.
 tags:
   - personal
-  - announcement
+  - update
 ---
 
 So we're nearing the end of March and I thought I'd write another update blog on my progress breaking into the development world. I'm happy to say that I finished the freeCodeCamp Front End Development Certification and I am overjoyed! I really feel like I accomplished something, and I'm proud of all of the projects that came out of it. I could go into detail about each and every project, but I do think that from now on I'd like these posts to be a little more up-to-date, and structured, rather than just run-on summaries. I'm going to be actually putting some though into writing little summaries or coding explanations into the source code whenever I get the chance, so I don't think the blog is the right place to do that for now.
