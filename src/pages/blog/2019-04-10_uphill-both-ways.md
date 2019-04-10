@@ -6,7 +6,7 @@ title: April 2018 - Uphill Both Ways
 description: 'But that''s life, I guess.'
 tags:
   - personal
-  - announcement
+  - update
 ---
 <p>Now that April is over, I wanted to do another update on my progress. For the past week I've been working largely on my first Work Term Report (WTR). It's this mandatory report that the University of Waterloo requires upon completion of the work term, and it has a bunch of specifications for formatting, content, and grammar. I've been writing, rewriting, editing, and crying trying to get this thing out of the way so I can work on my site. The WTR is due this Friday (May 04), and co-op positions are open for application in about two weeks (May 14), so I <b><i>need</i></b> my site up by then.</p>
 
