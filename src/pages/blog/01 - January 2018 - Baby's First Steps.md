@@ -1,10 +1,12 @@
 ---
-type: "blog"
-date: "2018-02-02"
-slug: "babys-first-steps"
-title: "January 2018 - Baby's First Steps"
-description: "I had to build a tribute page."
-tags: ["personal", "announcement"]
+type: blog
+slug: babys-first-steps
+date: '2018-02-02'
+title: January 2018 - Baby's First Steps
+description: I had to build a tribute page.
+tags:
+  - personal
+  - announcement
 ---
 
 I'm writing this in the beginning of February because I just got the idea of keeping a log now, but I'm going to try and summarize what I accomplished last month.
@@ -15,7 +17,7 @@ After some of the introductory HTML/CSS lessons, I caught the bug again, and wen
 When you have the world at your finger tips, decisions become hard to make, and I couldn't keep everything organized and neat the way I wanted it.
 Eventually persisting through that, I made a basic page that I was proud of, and moved on, because I was really excited for the next one.
 <br><br>The challenge was to build a <b>personal portfolio</b>.
-I've always thought about doing this myself, but I never really got motivated, but since it was an assigned to get the Front End Certfication, I finally had the drive I needed.
+I've always thought about doing this myself, but I never really got motivated, but since it was an assigned to get the Front End Certification, I finally had the drive I needed.
 I jumped right into it and got into so many problems. I had to read up so much about positioning, centering, displays, and navbars trying to get everything stylized and working.
 I remember spending hours just trying to get the navbar functionally scrolling smoothly, but when I did I was lit.
 I even forked the project and made a complete animation for the hamburger to cross animation, which I'm still proud of.
