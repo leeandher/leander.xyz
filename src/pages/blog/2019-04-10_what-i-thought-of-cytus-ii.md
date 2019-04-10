@@ -6,7 +6,6 @@ title: What I Thought of 'Cytus II'
 description: 'I would recommend [it] to anyone with a few hours to kill, and a pulse.'
 tags:
   - gaming
-  - ''
 ---
 I've been writing about how busy I've been for the past two weeks, but it seems I'm always able to squeeze in some gaming time regardless of my stress level. Some would say that's a bad habit, but let's be honest, it's not going anywhere.
 
