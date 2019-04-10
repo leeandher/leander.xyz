@@ -28,9 +28,9 @@ exports.createPages = async ({ actions, graphql }) => {
   noteData.allFile.edges.forEach(({ node }) => {
     const { absolutePath, name, relativeDirectory } = node
     const isCategory = name === "README"
-    const title = isCategory ? "" : `/${slugify(name)}`
-    const category = slugify(relativeDirectory)
-    const notePath = `/notes/${category}${title}`.toLowerCase()
+    const title = isCategory ? "" : `/${slugify(name, { lower: true })}`
+    const category = slugify(relativeDirectory, { lower: true })
+    const notePath = `/notes/${category}${title}`
     return createPage({
       path: notePath,
       component: isCategory ? NoteCategoryTemplate : NoteTemplate,
