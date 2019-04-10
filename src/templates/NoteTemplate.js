@@ -14,10 +14,14 @@ import {
   MediaSection,
 } from "../components/page-specific/Media"
 
+const P = styled.p`
+  color: white;
+  font-size: 3rem;
+`
+
 const NoteTemplate = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-  const { date, description, tags, title } = frontmatter
+  const { html } = markdownRemark
   return (
     <Page
       accent="random"
@@ -29,23 +33,10 @@ const NoteTemplate = ({ data }) => {
       <MediaHeader />
       <MediaSection>
         <ContentWrapper>
-          <MediaPreContent>
-            <h1>
-              <span>{title}</span>
-            </h1>
-            <p>{description}</p>
-            <time>{date}</time>
-          </MediaPreContent>
-          <hr />
           <MediaContent
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <MediaPostContent>
-            {tags.map(tag => (
-              <Tag tag={tag} key={Math.random()} />
-            ))}
-          </MediaPostContent>
         </ContentWrapper>
       </MediaSection>
     </Page>
@@ -55,16 +46,9 @@ const NoteTemplate = ({ data }) => {
 export default NoteTemplate
 
 export const noteQuery = graphql`
-  query($title: String!) {
-    markdownRemark(
-      frontmatter: { title: { eq: $title }, type: { eq: "note" } }
-    ) {
+  query($absolutePath: String!) {
+    markdownRemark(fileAbsolutePath: { eq: $absolutePath }) {
       html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        category
-        title
-      }
     }
   }
 `

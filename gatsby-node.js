@@ -1,12 +1,16 @@
 const path = require("path")
+const slugify = require("slugify")
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   /**
-   * Create Note category pages
+   * Create Note and Note category pages
    */
   const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
+  const NoteCategoryTemplate = path.resolve(
+    "src/templates/NoteCategoryTemplate.js"
+  )
 
   const { data: noteData } = await graphql(`
     {
@@ -15,18 +19,25 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             name
             relativeDirectory
+            absolutePath
           }
         }
       }
     }
   `)
   noteData.allFile.edges.forEach(({ node }) => {
-    const { name, relativeDirectory } = node
-    // return createPage(
-    //   {
-    //     path: `/notes/${}`
-    //   }
-    // )
+    const { absolutePath, name, relativeDirectory } = node
+    const isCategory = name === "README"
+    const title = isCategory ? "" : `/${slugify(name)}`
+    const category = slugify(relativeDirectory)
+    const notePath = `/notes/${category}${title}`.toLowerCase()
+    return createPage({
+      path: notePath,
+      component: isCategory ? NoteCategoryTemplate : NoteTemplate,
+      context: {
+        absolutePath,
+      },
+    })
   })
 
   /**
@@ -34,11 +45,12 @@ exports.createPages = async ({ actions, graphql }) => {
    */
   const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
   const ProjectTemplate = path.resolve("src/templates/ProjectTemplate.js")
+  const BlogAndProjects = `/src.pages.(blog|projects)/`
 
   const { data: media } = await graphql(`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { type: { ne: "faq" } } }
+        filter: { fileAbsolutePath: { regex: ${BlogAndProjects} } }
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
@@ -46,8 +58,6 @@ exports.createPages = async ({ actions, graphql }) => {
             frontmatter {
               type
               slug
-              category
-              title
             }
           }
         }
@@ -76,7 +86,6 @@ exports.createPages = async ({ actions, graphql }) => {
       component: template,
       context: {
         slug: fm.slug,
-        title: fm.title,
       },
     })
   })

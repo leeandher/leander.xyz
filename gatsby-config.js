@@ -42,7 +42,7 @@ module.exports = {
       options: {
         name: "blog",
         path: `${__dirname}/src/pages/blog`,
-        ignore: [`*.js`],
+        ignore: [`**/*\.js`],
       },
     },
     {
@@ -50,7 +50,7 @@ module.exports = {
       options: {
         name: "notes",
         path: `${__dirname}/src/pages/notes`,
-        ignore: [`*.js`],
+        ignore: [`**/*\.js`],
       },
     },
     {
@@ -58,7 +58,7 @@ module.exports = {
       options: {
         name: "projects",
         path: `${__dirname}/src/pages/projects`,
-        ignore: [`*.js`],
+        ignore: [`**/*\.js`],
       },
     },
     {
