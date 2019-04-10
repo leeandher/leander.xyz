@@ -6,7 +6,7 @@ title: May 2018 - Landing That Dev Co-op
 description: I've gotten a few interviews!
 tags:
   - personal
-  - announcement
+  - update
 ---
 This past month has been insane. I covered a bunch of the stressful stuff in my last update but this is going to be a little more general, and cover some more recent updates. Namely, school so far, co-op so far, and some random coding stuff.
 
