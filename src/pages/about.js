@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Hero from "../components/Hero"
@@ -6,8 +7,6 @@ import Page from "../components/Page"
 import MainWrapper from "../components/MainWrapper"
 import { Skewed } from "../components/PageSections"
 import FAQ from "../components/FAQ"
-
-import questions from "../data/questions.json"
 
 const Questions = styled(Skewed)`
   padding: 10rem 0 3rem 0;
@@ -22,7 +21,9 @@ const Questions = styled(Skewed)`
   }
 `
 
-const About = () => {
+const About = ({ data }) => {
+  const { allMarkdownRemark } = data
+  const { nodes: faqs } = allMarkdownRemark
   return (
     <Page
       accent="red"
@@ -42,8 +43,10 @@ const About = () => {
             <br />
             this is just where I talk about myself )
           </h3>
-          {questions.map(({ question, answer }) => (
-            <FAQ question={question} answer={answer} />
+          {faqs.map(({ html, frontmatter }) => (
+            <FAQ question={frontmatter.question}>
+              <span dangerouslySetInnerHTML={{ __html: html }} />
+            </FAQ>
           ))}
         </MainWrapper>
       </Questions>
@@ -52,3 +55,16 @@ const About = () => {
 }
 
 export default About
+
+export const faQuery = graphql`
+  query {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "faq" } } }) {
+      nodes {
+        html
+        frontmatter {
+          question
+        }
+      }
+    }
+  }
+`

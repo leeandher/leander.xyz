@@ -48,12 +48,12 @@ const Summary = styled.summary`
   }
 `
 
-const FAQ = ({ answer, question, ...props }) => {
+const FAQ = ({ answer, children, question, ...props }) => {
   return (
     <Wrapper {...props}>
       <Details open>
         <Summary>{question}</Summary>
-        <p>{answer}</p>
+        {children}
       </Details>
     </Wrapper>
   )
