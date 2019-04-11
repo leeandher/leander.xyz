@@ -11,7 +11,7 @@ module.exports = {
         short_name: "leander.xyz",
         start_url: "/",
         background_color: "#0F0F0F",
-        theme_color: "#4DCCB0",
+        theme_color: "#0f0f0f",
         display: "standalone",
         icon: "static/icons/logo.png",
         icons: [
