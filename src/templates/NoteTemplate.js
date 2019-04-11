@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Page from "../components/Page"
-import Tag from "../components/Tag"
 
 import {
   ContentWrapper,

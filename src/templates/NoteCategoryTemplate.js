@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Page from "../components/Page"
 import Tag from "../components/Tag"
-import TagButton from "../components/Button"
+import Button from "../components/Button"
 
 import {
   ContentWrapper,
