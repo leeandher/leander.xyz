@@ -33,10 +33,7 @@ const NoteTemplate = ({ data }) => {
       <MediaHeader />
       <MediaSection>
         <ContentWrapper>
-          <MediaContent
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <MediaContent dangerouslySetInnerHTML={{ __html: html }} />
         </ContentWrapper>
       </MediaSection>
     </Page>

@@ -37,10 +37,7 @@ const BlogPostTemplate = ({ data }) => {
             <time>{date}</time>
           </MediaPreContent>
           <hr />
-          <MediaContent
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <MediaContent dangerouslySetInnerHTML={{ __html: html }} />
           <MediaPostContent>
             {tags.map(tag => (
               <Tag tag={tag} key={Math.random()} />

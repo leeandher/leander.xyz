@@ -63,6 +63,7 @@ rules:
   react/jsx-uses-vars: error
   react/display-name: warn
   react/no-array-index-key: off
+  react/no-danger: off
   react/react-in-jsx-scope: off
   react/prefer-stateless-function: off
   react/forbid-prop-types: off

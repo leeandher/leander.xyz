@@ -44,7 +44,7 @@ const About = ({ data }) => {
             this is just where I talk about myself )
           </h3>
           {faqs.map(({ html, frontmatter }) => (
-            <FAQ question={frontmatter.question}>
+            <FAQ question={frontmatter.question} key={frontmatter.question}>
               <span dangerouslySetInnerHTML={{ __html: html }} />
             </FAQ>
           ))}

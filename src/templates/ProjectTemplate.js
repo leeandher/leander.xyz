@@ -59,10 +59,7 @@ const ProjectTemplate = ({ data }) => {
             <time>Completed: {date}</time>
           </MediaPreContent>
           <hr />
-          <MediaContent
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <MediaContent dangerouslySetInnerHTML={{ __html: html }} />
           <MediaPostContent>
             {tech.map(techName => (
               <Tag tag={techName} key={Math.random()} />
