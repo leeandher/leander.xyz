@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { withPrefix } from "gatsby"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import { palette } from "../styles"
@@ -126,11 +127,29 @@ class Page extends React.Component {
           <meta name="description" content={description} />
           <link
             rel="mask-icon"
-            href="icons/safari-pinned-tab.svg"
+            href={withPrefix("icons/safari-pinned-tab.svg")}
             color={theme.accent}
           />
           <meta name="msapplication-TileColor" content={theme.accent} />
           <meta name="theme-color" content={theme.shade.darker} />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href={withPrefix("icons/apple-touch-icon.png")}
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href={withPrefix("/favicon-32x32.png")}
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href={withPrefix("/favicon-16x16.png")}
+          />
+          <link rel="manifest" href={withPrefix("site.webmanifest")} />
         </Helmet>
         <ThemeProvider theme={theme}>
           <StyledPage>
