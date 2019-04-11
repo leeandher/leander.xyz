@@ -1,10 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { FaCode, FaLink } from "react-icons/fa"
 import styled from "styled-components"
 
 import Page from "../components/Page"
 import Tag from "../components/Tag"
+import Button from "../components/Button"
 import AnchorLink from "../components/AnchorLink"
 
 import {
@@ -33,7 +34,11 @@ const ProjectTemplate = ({ data }) => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <MediaHeader />
+      <MediaHeader>
+        <Button>
+          <Link to="/projects">&lt;-- /projects</Link>
+        </Button>
+      </MediaHeader>
       <MediaSection>
         <ContentWrapper>
           <MediaPreContent>

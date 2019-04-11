@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 import Page from "../components/Page"
 import Tag from "../components/Tag"
+import TagButton from "../components/Button"
 
 import {
   ContentWrapper,
@@ -30,7 +31,11 @@ const NoteCategoryTemplate = ({ data }) => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <MediaHeader />
+      <MediaHeader>
+        <Button>
+          <Link to="/notes">&lt;-- /notes</Link>
+        </Button>
+      </MediaHeader>
       <MediaSection>
         <ContentWrapper>
           <MediaContent dangerouslySetInnerHTML={{ __html: html }} />

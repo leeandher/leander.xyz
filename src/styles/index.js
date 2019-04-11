@@ -34,6 +34,7 @@ export const palette = {
   },
   font: {
     family: "Rubik",
+    mono: "monospace",
     thin: 300,
     reg: 400,
     bold: 700,

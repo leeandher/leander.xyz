@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 import Tag from "./Tag"
 
 const StyledLink = styled(Link)`
-  border: 2px solid rebeccapurple;
   display: block;
   background: ${({ theme }) => theme.shade.lightest};
   margin: 1.5rem;
@@ -13,7 +12,7 @@ const StyledLink = styled(Link)`
   border: 0.5rem solid ${({ theme }) => theme.accent};
   border-radius: 1.5rem;
   padding: 3rem;
-  max-width: 320px;
+  min-width: 320px;
   overflow: hidden;
   transition: transform 0.2s ease-out;
   z-index: 0;
@@ -60,7 +59,6 @@ const StyledLink = styled(Link)`
 const MediaLink = ({ date, image, description, tags, title, type, slug }) => {
   return (
     <StyledLink to={`/${type}/${slug}`} image={image}>
-      {/* <img src="/icons/apple-touch-icon.png" alt={title} /> */}
       <h2>{title}</h2>
       <p>{date}</p>
       <p>{description}</p>

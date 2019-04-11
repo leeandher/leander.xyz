@@ -10,7 +10,7 @@ import MainWrapper from "../../components/MainWrapper"
 const PostSection = styled.section`
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: left;
 `
 
 const Blog = ({ data }) => {
@@ -24,8 +24,10 @@ const Blog = ({ data }) => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Hero height="50vh">
-        <h1>Blog</h1>
+      <Hero expanding height="50vh">
+        <h1>
+          MyBlog<code>.md</code>
+        </h1>
       </Hero>
       <MainWrapper maxWidth="95vw">
         <PostSection>
