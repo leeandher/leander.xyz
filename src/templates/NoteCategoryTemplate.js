@@ -4,7 +4,7 @@ import slugify from "slugify"
 import styled from "styled-components"
 
 import Page from "../components/Page"
-import Button from "../components/Button"
+import InnerLink from "../components/page-specific/Media/InnerLink"
 
 import {
   ContentWrapper,
@@ -57,11 +57,7 @@ const NoteCategoryTemplate = ({ data, location }) => {
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <MediaHeader>
-        <Button>
-          <Link to="/notes" tabIndex="-1">
-            &lt;-- /notes
-          </Link>
-        </Button>
+        <InnerLink to="/notes">&lt;-- /notes</InnerLink>
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>

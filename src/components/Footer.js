@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Spring from "react-spring/renderprops"
 
 import {
   FaGithub,
@@ -10,7 +9,12 @@ import {
 } from "react-icons/fa"
 import { getCopyrightYearsFrom } from "../helpers"
 import AnchorLink from "./AnchorLink"
-import Button from "./Button"
+
+const StyledAnchorLink = styled(AnchorLink)`
+  display: inline-block;
+  padding: 1.75rem;
+  margin: 3rem;
+`
 
 const StyledFooter = styled.footer`
   height: 50vh;
@@ -66,46 +70,34 @@ const Footer = ({ handleToggle, showSideBar }) => {
       <div>
         <h5>Find me online</h5>
         <IconWrapper>
-          <Button>
-            <a
-              href="https://www.linkedin.com/in/leander-rodrigues/"
-              target="_blank"
-              tabIndex="-1"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-          </Button>
-          <Button>
-            <a
-              href="https://github.com/leeandher"
-              target="_blank"
-              tabIndex="-1"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-          </Button>
-          <Button>
-            <a
-              href="https://stackoverflow.com/users/story/10996907?view=Timeline"
-              target="_blank"
-              tabIndex="-1"
-              rel="noopener noreferrer"
-            >
-              <FaStackOverflow />
-            </a>
-          </Button>
-          <Button>
-            <a
-              href="https://twitter.com/LeeAndHer"
-              target="_blank"
-              tabIndex="-1"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter />
-            </a>
-          </Button>
+          <StyledAnchorLink
+            href="https://www.linkedin.com/in/leander-rodrigues/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </StyledAnchorLink>
+          <StyledAnchorLink
+            href="https://github.com/leeandher"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </StyledAnchorLink>
+          <StyledAnchorLink
+            href="https://stackoverflow.com/users/story/10996907?view=Timeline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaStackOverflow />
+          </StyledAnchorLink>
+          <StyledAnchorLink
+            href="https://twitter.com/LeeAndHer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter />
+          </StyledAnchorLink>
         </IconWrapper>
         <p>
           &copy; Copyright {copyrightYears}, <br />

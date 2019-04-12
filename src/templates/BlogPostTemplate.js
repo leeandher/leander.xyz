@@ -1,10 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import Page from "../components/Page"
 import Tag from "../components/Tag"
-import Button from "../components/Button"
+import InnerLink from "../components/page-specific/Media/InnerLink"
 
 import {
   ContentWrapper,
@@ -28,11 +27,7 @@ const BlogPostTemplate = ({ data }) => {
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <MediaHeader>
-        <Button>
-          <Link to="/blog" tabIndex="-1">
-            &lt;-- /blog
-          </Link>
-        </Button>
+        <InnerLink to="/blog">&lt;-- /blog</InnerLink>
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>

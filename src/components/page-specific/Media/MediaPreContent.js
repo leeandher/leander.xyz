@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const MediaPreContent = styled.div`
-  margin: 0 auto;
+  margin: 0 2rem;
   color: ${({ theme }) => theme.shade.dark};
   h1 {
     font-size: 3rem;
