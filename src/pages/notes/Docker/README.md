@@ -1,5 +1,9 @@
 # Docker (February 2019)
 
+## What's up
+
+### This is third heading
+
 This is a collection of notes I compiled from a bunch of different resources while I was trying to learn about _Docker_. They are all listed below!
 
 - [How does Docker work? - Fullstack Academy](https://www.youtube.com/watch?v=C6LtRb1OJuw)

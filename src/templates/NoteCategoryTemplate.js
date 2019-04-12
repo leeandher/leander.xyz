@@ -10,15 +10,8 @@ import {
   ContentWrapper,
   MediaContent,
   MediaHeader,
-  MediaPostContent,
-  MediaPreContent,
   MediaSection,
 } from "../components/page-specific/Media"
-
-const P = styled.p`
-  color: white;
-  font-size: 3rem;
-`
 
 const NoteCategoryTemplate = ({ data }) => {
   const { markdownRemark } = data
