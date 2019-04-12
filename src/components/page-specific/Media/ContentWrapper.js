@@ -12,6 +12,7 @@ const ContentWrapper = styled(MainWrapper)`
   h1 {
     font-size: 3.5rem;
     text-align: center;
+    margin-bottom: 6rem;
   }
   h2 {
     font-size: 2.5rem;
@@ -41,6 +42,28 @@ const ContentWrapper = styled(MainWrapper)`
   }
   hr {
     border: 1px solid ${({ theme }) => theme.accent};
+  }
+  pre {
+    overflow-x: auto;
+    position: relative;
+    border: 2px solid ${({ theme }) => theme.accent};
+    padding: 1rem;
+    &:before {
+      ${({ theme }) => theme.before};
+      background: ${({ theme }) => theme.accent};
+      opacity: 0.1;
+    }
+    &::-webkit-scrollbar {
+    height: 1.25rem;
+    border: 2px solid ${({ theme }) => theme.accent};
+    border-radius: 1.25rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.accent};
+    padding: -0.5rem !important;
+    width: 10px;
+    border-radius: 1.25rem;
+  }
   }
   &:before,
   &:after {

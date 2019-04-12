@@ -21,7 +21,7 @@ const StyledTyping = styled(Typist).attrs({
     width: 0px;
     display: inline-block;
     text-decoration: none;
-    margin-left: 3px;
+    margin-left: -5px;
     opacity: 1;
     animation: blink 0.5s step-end infinite;
     @keyframes blink {
