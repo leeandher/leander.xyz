@@ -19,13 +19,25 @@ const PageLink = styled(Link)`
   display: block;
   text-align: left;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 600;
   margin: 1rem 2rem;
+  position: relative;
+  overflow: hidden;
+  ${({ theme }) => theme.transition.default("letter-spacing")};
+  &:before {
+    ${({ theme }) => theme.before}
+    background: ${({ theme }) => theme.accent};
+    top: 50%;
+    transform: skew(-45deg) translate(90%);
+  }
   &:after {
     ${({ theme }) => theme.before}
     background: ${({ theme }) => theme.accent};
     height: 10%;
-    top: 100%;
+    top: 90%;
+  }
+  &:hover, &:focus, &:active {
+    letter-spacing: 2px;
   }
 `
 
@@ -46,18 +58,23 @@ const NoteCategoryTemplate = ({ data, location }) => {
     >
       <MediaHeader>
         <Button>
-          <Link to="/notes">&lt;-- /notes</Link>
+          <Link to="/notes" tabIndex="-1">
+            &lt;-- /notes
+          </Link>
         </Button>
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>
           <MediaContent dangerouslySetInnerHTML={{ __html: html }} />
           <MediaPostContent>
-            {noteTitles.map((noteTitle, i) => (
-              <PageLink key={noteTitle} to={noteTitleSlugs[i]}>
-                {noteTitle}
-              </PageLink>
-            ))}
+            <hr />
+            <div>
+              {noteTitles.map((noteTitle, i) => (
+                <PageLink key={noteTitle} to={noteTitleSlugs[i]}>
+                  {noteTitle}
+                </PageLink>
+              ))}
+            </div>
           </MediaPostContent>
         </ContentWrapper>
       </MediaSection>

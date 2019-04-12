@@ -20,9 +20,7 @@ const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  ::selection {
-    background: ${({ theme }) => ""}red;
-  }
+  
   body {
     padding: 0;
     margin: 0;
@@ -84,7 +82,12 @@ const StyledPage = styled.div`
   * {
     mark,
     ::selection {
+      background: ${({ theme }) => theme.accent};
       background: ${({ theme }) => theme.accent}80;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px ${({ theme }) => theme.accent};
     }
   }
 `

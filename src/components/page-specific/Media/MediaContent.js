@@ -6,6 +6,12 @@ const MediaContent = styled.main`
   p {
     margin: 2.5rem 0;
   }
+  date {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    text-decoration: underline ${({ theme }) => theme.accent};
+  }
   img {
     box-sizing: content-box;
     padding: 1rem;
