@@ -70,6 +70,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
             <a
               href="https://www.linkedin.com/in/leander-rodrigues/"
               target="_blank"
+              tabIndex="-1"
               rel="noopener noreferrer"
             >
               <FaLinkedin />
@@ -79,6 +80,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
             <a
               href="https://github.com/leeandher"
               target="_blank"
+              tabIndex="-1"
               rel="noopener noreferrer"
             >
               <FaGithub />
@@ -88,6 +90,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
             <a
               href="https://stackoverflow.com/users/story/10996907?view=Timeline"
               target="_blank"
+              tabIndex="-1"
               rel="noopener noreferrer"
             >
               <FaStackOverflow />
@@ -97,6 +100,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
             <a
               href="https://twitter.com/LeeAndHer"
               target="_blank"
+              tabIndex="-1"
               rel="noopener noreferrer"
             >
               <FaTwitter />

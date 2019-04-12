@@ -29,7 +29,9 @@ const BlogPostTemplate = ({ data }) => {
     >
       <MediaHeader>
         <Button>
-          <Link to="/blog">&lt;-- /blog</Link>
+          <Link to="/blog" tabIndex="-1">
+            &lt;-- /blog
+          </Link>
         </Button>
       </MediaHeader>
       <MediaSection>

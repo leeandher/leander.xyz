@@ -36,7 +36,9 @@ const ProjectTemplate = ({ data }) => {
     >
       <MediaHeader>
         <Button>
-          <Link to="/projects">&lt;-- /projects</Link>
+          <Link to="/projects" tabIndex="-1">
+            &lt;-- /projects
+          </Link>
         </Button>
       </MediaHeader>
       <MediaSection>

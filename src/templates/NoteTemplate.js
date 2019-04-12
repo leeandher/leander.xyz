@@ -31,10 +31,12 @@ const NoteTemplate = ({ data, pageContext }) => {
     >
       <MediaHeader>
         <Button>
-          <Link to="/notes">&lt;-- /notes</Link>
+          <Link to="/notes" tabIndex="-1">
+            &lt;-- /notes
+          </Link>
         </Button>
         <Button>
-          <Link to={`/notes/${parentCategorySlug}`}>
+          <Link to={`/notes/${parentCategorySlug}`} tabIndex="-1">
             &lt;-- /notes/{parentCategorySlug}
           </Link>
         </Button>
