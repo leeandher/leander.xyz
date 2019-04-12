@@ -36,6 +36,7 @@ exports.createPages = async ({ actions, graphql }) => {
       component: isCategory ? NoteCategoryTemplate : NoteTemplate,
       context: {
         absolutePath,
+        relativeDirectory,
       },
     })
   })

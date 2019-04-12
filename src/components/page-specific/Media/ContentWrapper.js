@@ -21,7 +21,7 @@ const ContentWrapper = styled(MainWrapper)`
     &:before {
       ${({ theme }) => theme.before}
       background: ${({ theme }) => theme.accent};
-      opacity: 0.2;
+      opacity: 0.5;
     }
   }
   h3 {
