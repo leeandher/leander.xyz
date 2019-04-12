@@ -55,6 +55,10 @@ const IconWrapper = styled.div`
   flex: 1;
 `
 
+const Easter = styled.small`
+  text-align: right;
+`
+
 const Footer = ({ handleToggle, showSideBar }) => {
   const copyrightYears = getCopyrightYearsFrom(2019)
   return (
@@ -110,17 +114,27 @@ const Footer = ({ handleToggle, showSideBar }) => {
             open source
           </AnchorLink>
         </p>
+        <small>
+          <AnchorLink
+            href="https://github.com/leeandher/leander.xyz/issues/new"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See a bug?
+          </AnchorLink>
+        </small>
       </div>
-      <small>
-        I like{" "}
+      <Easter>
         <AnchorLink
-          href="https://github.com/leeandher/leander.xyz"
+          href="https://en.wikipedia.org/wiki/Konami_Code"
           target="_blank"
           rel="noopener noreferrer"
         >
-          easter eggs.
+          <span role="img" aria-label="easter egg">
+            🥚
+          </span>
         </AnchorLink>
-      </small>
+      </Easter>
     </StyledFooter>
   )
 }
