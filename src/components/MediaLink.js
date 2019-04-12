@@ -39,7 +39,9 @@ const StyledLink = styled(Link)`
   &:nth-child(2n)&:before {
     transform: skew(12deg);
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     transform: scale(1.03);
     &:before {
       max-width: 2.5rem;

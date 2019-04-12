@@ -11,6 +11,9 @@ const MediaContent = styled.main`
     display: block;
     font-style: italic;
     text-decoration: underline ${({ theme }) => theme.accent};
+    &:before {
+      content: "Last Updated: "
+    }
   }
   img {
     box-sizing: content-box;
