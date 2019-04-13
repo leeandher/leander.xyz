@@ -7,15 +7,43 @@ import Hero from "../../components/Hero"
 import MediaLink from "../../components/MediaLink"
 import MainWrapper from "../../components/MainWrapper"
 
-const PostSection = styled.section`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
+const YearWrapper = styled.section`
+  h2.year {
+    display: block;
+    transform: skew(-7deg);
+    line-height: 0;
+    margin: 8rem 2rem;
+    padding-left: 15%;
+    border-bottom: 3px solid ${({ theme }) => theme.shade.lightest};
+    span {
+      background: ${({ theme }) => theme.accent};
+      padding: 1rem 4rem;
+      display: inline;
+    }
+  }
+  div.wrap-posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+  }
 `
 
 const Blog = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: blogPosts } = allMarkdownRemark
+  const blogPostsByYear = {}
+  blogPosts.forEach(post => {
+    const blogYear = new Date(post.frontmatter.date).getFullYear()
+    blogPostsByYear[blogYear] = blogPostsByYear[blogYear]
+      ? [...blogPostsByYear[blogYear], post]
+      : [post]
+  })
+  const sortedPosts = Object.entries(blogPostsByYear).sort(
+    ([yearStringA], [yearStringB]) => {
+      return parseInt(yearStringB) - parseInt(yearStringA)
+    }
+  )
+
   return (
     <Page
       accent="yellow"
@@ -30,11 +58,20 @@ const Blog = ({ data }) => {
         </h1>
       </Hero>
       <MainWrapper maxWidth="95vw">
-        <PostSection>
-          {blogPosts.map(({ frontmatter: blogPostsProps }) => (
-            <MediaLink key={blogPostsProps.slug} {...blogPostsProps} />
+        <main>
+          {sortedPosts.map(([year, blogPostArray]) => (
+            <YearWrapper>
+              <h2 className="year">
+                <span>{year}</span>
+              </h2>
+              <div className="wrap-posts">
+                {blogPostArray.map(({ frontmatter: blogPostsProps }) => (
+                  <MediaLink key={blogPostsProps.slug} {...blogPostsProps} />
+                ))}
+              </div>
+            </YearWrapper>
           ))}
-        </PostSection>
+        </main>
       </MainWrapper>
     </Page>
   )

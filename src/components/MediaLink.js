@@ -22,6 +22,11 @@ const StyledLink = styled(Link)`
   h2 {
     margin: 0;
   }
+  date {
+    font-style: italic;
+    margin: 1rem 0;
+    display: block;
+  }
   &:before {
     height: 100%;
     width: 200%;
@@ -62,7 +67,7 @@ const MediaLink = ({ date, image, description, tags, title, type, slug }) => {
   return (
     <StyledLink to={`/${type}/${slug}`} image={image}>
       <h2>{title}</h2>
-      <p>{date}</p>
+      <date>{date}</date>
       <p>{description}</p>
       {tags.map(tag => (
         <Tag tag={tag} key={Math.random()} />
