@@ -43,7 +43,7 @@ collections:
       preview: false
     create: true
     fields:
-      - { name: type, label: Type, widget: hidden, default: project }
+      - { name: type, label: Type, widget: hidden, default: projects }
       - { name: slug, label: Slug, widget: string }
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date Completed, widget: date }

@@ -15,7 +15,7 @@ export default class HTML extends React.Component {
       <html {...htmlAttributes} style={{ background: "#0F0F0F" }} lang="en">
         <head>
           <meta charSet="utf-8" />
-          <meta name="author" content="Leander Rodrigues">
+          <meta name="author" content="Leander Rodrigues" />
           <meta name="robots" content="index, follow" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
