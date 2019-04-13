@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  @font-face {
+    font-family: dm;
+    src: url(${withPrefix("fonts/dm.ttf")});
+  }
   
   body {
     padding: 0;
@@ -27,6 +31,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.75rem;
     line-height: 1.5;
     font-family: ${palette.font.family};
+  }
+  code {
+    font-family: ${palette.font.mono} !important;
   }
   h1 {
     font-size: 6rem

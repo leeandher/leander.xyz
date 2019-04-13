@@ -69,6 +69,7 @@ const Home = () => {
     <Page
       accent="teal"
       accentBg
+      design="space"
       title="Welcome to leander.xyz!"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >

@@ -41,26 +41,29 @@ const ContentWrapper = styled(MainWrapper)`
   hr {
     border: 1px solid ${({ theme }) => theme.accent};
   }
-  pre {
-    overflow-x: auto;
+  
+  code {
     position: relative;
+    &:before {
+      ${({ theme }) => theme.before}
+      opacity: 0.2;
+      background: ${({ theme }) => theme.accent};
+    }
+    padding: 0 0.5rem;
+  }
+  
+  pre {
     border: 2px solid ${({ theme }) => theme.accent};
     padding: 1rem;
-    &:before {
-      ${({ theme }) => theme.before};
-      background: ${({ theme }) => theme.accent};
-      opacity: 0.1;
-    }
     &::-webkit-scrollbar {
-      height: 1.25rem;
-      border: 2px solid ${({ theme }) => theme.accent};
-      border-radius: 1.25rem;
+      height: 1rem;
+      border: 0px solid ${({ theme }) => theme.accent};
+      border-top-width: 2px;
     }
     &::-webkit-scrollbar-thumb {
       background: ${({ theme }) => theme.accent};
       padding: -0.5rem !important;
       width: 10px;
-      border-radius: 1.25rem;
     }
   }
   &:before,

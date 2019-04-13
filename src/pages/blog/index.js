@@ -65,9 +65,15 @@ const Blog = ({ data }) => {
                 <span>{year}</span>
               </h2>
               <div className="wrap-posts">
-                {blogPostArray.map(({ frontmatter: blogPostsProps }) => (
-                  <MediaLink key={blogPostsProps.slug} {...blogPostsProps} />
-                ))}
+                {blogPostArray.map(
+                  ({ frontmatter: blogPostsProps, timeToRead }) => (
+                    <MediaLink
+                      timeToRead={timeToRead}
+                      key={blogPostsProps.slug}
+                      {...blogPostsProps}
+                    />
+                  )
+                )}
               </div>
             </YearWrapper>
           ))}
@@ -86,6 +92,7 @@ export const blogPostsQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {
+        timeToRead
         frontmatter {
           type
           date(formatString: "MMMM DD, YYYY")

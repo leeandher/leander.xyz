@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FaRegClock } from "react-icons/fa"
 
 import Tag from "./Tag"
 
@@ -21,6 +22,27 @@ const StyledLink = styled(Link)`
   }
   h2 {
     margin: 0;
+  }
+  div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .ttr {
+      align-items: center;
+      display: flex;
+      margin: 0 5rem;
+      svg {
+        margin: 0 0.5rem;
+        display: inline-block;
+      }
+      p {
+        display: inline-block;
+        font-style: italic;
+        &:after {
+          content: " min read";
+        }
+      }
+    }
   }
   date {
     font-style: italic;
@@ -63,13 +85,28 @@ const StyledLink = styled(Link)`
   }
 `
 
-const MediaLink = ({ date, image, description, tags, title, type, slug }) => {
+const MediaLink = ({
+  date,
+  image,
+  description,
+  tags,
+  title,
+  timeToRead,
+  type,
+  slug,
+}) => {
   return (
     <StyledLink to={`/${type}/${slug}`} image={image}>
       <h2>{title}</h2>
-      <date>{date}</date>
+      <div>
+        <date>{date}</date>
+        <span className="ttr">
+          <FaRegClock />
+          <p>{timeToRead}</p>
+        </span>
+      </div>
       <p>{description}</p>
-      {tags.map(tag => (
+      {tags.sort().map(tag => (
         <Tag tag={tag} key={Math.random()} />
       ))}
     </StyledLink>
