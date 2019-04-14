@@ -4,6 +4,7 @@ import MediaHeader from "./MediaHeader"
 import MediaPostContent from "./MediaPostContent"
 import MediaPreContent from "./MediaPreContent"
 import MediaSection from "./MediaSection"
+import ScrollProgress from "./ScrollProgress"
 
 export {
   ContentWrapper,
@@ -12,4 +13,5 @@ export {
   MediaPostContent,
   MediaPreContent,
   MediaSection,
+  ScrollProgress,
 }

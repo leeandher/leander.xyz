@@ -10,6 +10,7 @@ import {
   MediaContent,
   MediaHeader,
   MediaSection,
+  ScrollProgress,
 } from "../components/page-specific/Media"
 
 const NoteTemplate = ({ data, pageContext }) => {
@@ -28,6 +29,7 @@ const NoteTemplate = ({ data, pageContext }) => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
+      <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>
         <InnerLink to={`/notes/${parentCategorySlug}`}>

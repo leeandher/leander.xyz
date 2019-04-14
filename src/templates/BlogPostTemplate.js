@@ -12,12 +12,14 @@ import {
   MediaPostContent,
   MediaPreContent,
   MediaSection,
+  ScrollProgress,
 } from "../components/page-specific/Media"
 
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { date, description, tags, title } = frontmatter
+
   return (
     <Page
       accent="random"
@@ -26,6 +28,7 @@ const BlogPostTemplate = ({ data }) => {
       design="bubbles"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
+      <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/blog">&lt;-- /blog</InnerLink>
       </MediaHeader>

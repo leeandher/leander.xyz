@@ -1,4 +1,7 @@
 export const palette = {
+  constants: {
+    navBarHeight: "67px",
+  },
   color: {
     red: "#ef4d5d",
     orange: "#ffb249",
