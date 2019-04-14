@@ -53,9 +53,7 @@ const Blog = ({ data }) => {
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
       <Hero expanding height="50vh">
-        <h1>
-          MyBlog<code>.md</code>
-        </h1>
+        <h1>The Archive</h1>
       </Hero>
       <MainWrapper maxWidth="95vw">
         <main>
@@ -88,7 +86,7 @@ export default Blog
 export const blogPostsQuery = graphql`
   query {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "blog" }, archive: { eq: false } } }
+      filter: { frontmatter: { type: { eq: "blog" }, archive: { eq: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {

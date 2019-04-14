@@ -1,7 +1,8 @@
 ---
 type: blog
+archive: false
 slug: drop-me-a-line
-date: '2018-04-16'
+date: "2018-04-16"
 title: Drop me a Line
 description: I definitely wouldn't be this far along if I couldn't make mistakes.
 tags:

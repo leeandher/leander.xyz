@@ -1,13 +1,15 @@
 ---
 type: blog
+archive: false
 slug: decompression
 date: 2018-08-21T23:31:10.379Z
 title: July 2018 - Decompression
-description: 'Lectures are tough, School is tougher, Learn however you want.'
+description: "Lectures are tough, School is tougher, Learn however you want."
 tags:
   - personal
   - update
 ---
+
 Hahahahaha, oh my god it's been so long. _Just look at that date, I'm almost done with August now!_ Better late than never, I suppose.
 
 All in all, my July was pretty school-centric and chaotic. Like I said in the last update, I pretty much didn't do anything other than study, sleep, eat pizza, and stress out. My exams began at the end of July, and followed until August 7th, so there was no chance of me getting this update written at the beginning of the month. Even after it all, I took the two weeks as a long break just to come off of the massive streak of all-nighters that it took to pass the term.

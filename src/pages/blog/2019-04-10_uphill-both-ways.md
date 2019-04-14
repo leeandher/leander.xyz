@@ -1,13 +1,15 @@
 ---
 type: blog
+archive: false
 slug: uphill-both-ways
 date: 2018-05-01T22:35:00.993Z
 title: April 2018 - Uphill Both Ways
-description: 'But that''s life, I guess.'
+description: "But that's life, I guess."
 tags:
   - personal
   - update
 ---
+
 <p>Now that April is over, I wanted to do another update on my progress. For the past week I've been working largely on my first Work Term Report (WTR). It's this mandatory report that the University of Waterloo requires upon completion of the work term, and it has a bunch of specifications for formatting, content, and grammar. I've been writing, rewriting, editing, and crying trying to get this thing out of the way so I can work on my site. The WTR is due this Friday (May 04), and co-op positions are open for application in about two weeks (May 14), so I <b><i>need</i></b> my site up by then.</p>
 
 <p>Since I've been on co-op in a Data Analysis position, I chose their System Architecture to write about for my WTR. I'm finding a lot of little hiccups that keep coming up, but for the most part it's been a lot easier to write about something that you're the expert on. I've been working with their Automation system for the whole four months, so I understand it really well, however, the difficulty is in communicating that in the WTR. I find myself going on these long boring rants about specific languages and reports and blah blah blah, none of that is necessary. While I truly despise having to work on this over what <i>I</i> want to do, I can't completely discredit it. I've gotten better at deciding what needs to be cut when writing explanatory sections, which would do wonders for my documentation skills.</p>

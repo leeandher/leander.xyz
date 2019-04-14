@@ -29,6 +29,7 @@ collections:
     create: true
     fields:
       - { name: type, label: Type, widget: hidden, default: blog }
+      - { name: archive, label: Archive, widget: boolean }
       - { name: slug, label: Slug, widget: string }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title, widget: string }

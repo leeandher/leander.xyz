@@ -1,7 +1,8 @@
 ---
 type: blog
+archive: false
 slug: gitting-started
-date: '2018-04-14'
+date: "2018-04-14"
 title: Gitting Started
 description: I now see just how powerful a tool git really is!
 tags:

@@ -1,5 +1,6 @@
 ---
 type: blog
+archive: false
 slug: a-synonym-for-busy
 date: 2018-05-27T22:46:30.135Z
 title: A Synonym For Busy
@@ -7,6 +8,7 @@ description: I'm sure in some cosmic sense everything cancelled out...
 tags:
   - personal
 ---
+
 This entire month has been completely loaded. School started, I deployed the site, co-op first round started/ended, and I went camping for Victoria Day Weekend. I haven't had the time to update this blog, or edit the existing articles, and truth be told I probably should be studying instead of writing this, but everyone procrastinates differently.
 
 I guess this will serve as my self-congratulatory blog. Congrats Me! You finally deployed your website and even sent it to a bunch of hiring managers. Lots of big steps had to be taken in terms of editing, and getting everything to work cross-browser (IE is most definitely the worst thing ever), but at least it's done and it's a thing to be proud of. Of course now that I know more about Front End Tech, I'd do it all differently, but it's still a learning experience.

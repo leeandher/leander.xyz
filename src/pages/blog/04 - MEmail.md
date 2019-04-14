@@ -1,7 +1,8 @@
 ---
 type: blog
+archive: true
 slug: memail
-date: '2018-04-08'
+date: "2018-04-08"
 title: MEmail
 description: I can't wait for the site to be public.
 tags:

@@ -1,12 +1,14 @@
 ---
 type: blog
+archive: false
 slug: what-i-thought-of-cytus-ii
 date: 2018-06-07T22:51:25.534Z
 title: What I Thought of 'Cytus II'
-description: 'I would recommend [it] to anyone with a few hours to kill, and a pulse.'
+description: "I would recommend [it] to anyone with a few hours to kill, and a pulse."
 tags:
   - gaming
 ---
+
 I've been writing about how busy I've been for the past two weeks, but it seems I'm always able to squeeze in some gaming time regardless of my stress level. Some would say that's a bad habit, but let's be honest, it's not going anywhere.
 
 Anyway, this is going to be my first review of a video game, and while I don't play them too often, it's also going to be a mobile game: _Cytus II_. I'd first downloaded _Cytus_ back in Grade 10, and man was it challenging. For those who don't know, I like to call Cytus, 'the OSU of mobile gaming'. It's a chaotic rhythm game in which you tab, drag, hold and swipe on notes along with the music, with each note being rated as 'Perfect', 'Good', 'Bad' or 'Miss'. Right off the bat, I can honestly say it's the best rhythm game I've played since back when Guitar Hero was the fad, and I don't think that's overstating it.

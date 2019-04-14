@@ -1,5 +1,6 @@
 ---
 type: blog
+archive: false
 slug: landing-that-dev-coop
 date: 2018-06-04T22:46:30.135Z
 title: May 2018 - Landing That Dev Co-op
@@ -8,6 +9,7 @@ tags:
   - personal
   - update
 ---
+
 This past month has been insane. I covered a bunch of the stressful stuff in my last update but this is going to be a little more general, and cover some more recent updates. Namely, school so far, co-op so far, and some random coding stuff.
 
 So, school. The concept of 8:30 lectures, and me as an individual are still _conflicting_ ideas, but I'm getting better. That being said, I can totally see myself falling behind the more time I commit to the [JS30 Course](https://javascript30.com) and [Hackerrank's 30 days of Code Tutorials](https://www.hackerrank.com/domains/tutorials/30-days-of-code), but to be honest, it's just a different way of relaxing. I'm enjoying how regimented these are, since I pretty much lost all of May to redesigning and updating the site. I just kept making changes and bug-testing, but now I just get through a challenge a day and then focus on school. Even so, midterms are closing in quick, so I have to close that gap ASAP.
