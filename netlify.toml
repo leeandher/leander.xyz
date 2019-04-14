@@ -25,10 +25,12 @@
 #   base    = "subdomains/old"
 #   publish = "subdomains/old"
 #   command = ""
-# [context.reduxstagram]
-#   base    = "subdomains/reduxstagram"
-#   publish = "subdomains/reduxstagram"
-#   command = "npm run build"
+[context.reduxstagram]
+  base    = "subdomains/reduxstagram"
+  publish = "subdomains/reduxstagram/build"
+  command = "npm run build"
+  [context.reduxstagram.environment]
+    NODE_ENV = "production"
 # [context.space-shooter]
 #   base    = "subdomains/space-shooter"
 #   publish = "subdomains/space-shooter"
