@@ -29,8 +29,8 @@ const Header = styled.header`
   }
 `
 
-const Hero = ({ children, expanding, height }) => (
-  <Header height={height} expanding={expanding}>
+const Hero = ({ children, ...props }) => (
+  <Header {...props}>
     <div>{children}</div>
   </Header>
 )

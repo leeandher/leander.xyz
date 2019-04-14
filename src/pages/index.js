@@ -13,6 +13,10 @@ import { Default, Skewed } from "../components/PageSections"
 
 import Typer from "../components/page-specific/Home/Typer"
 
+const MainHero = styled(Hero)`
+  margin-top: -${({ theme }) => theme.constants.navBarHeight};
+`
+
 const Introduction = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
@@ -73,7 +77,7 @@ const Home = () => {
       title="Welcome to leander.xyz!"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Hero>
+      <MainHero>
         <p>Hi there, My name is</p>
         <h1>
           <span>Leander Rodrigues</span>
@@ -82,7 +86,7 @@ const Home = () => {
         <h2>
           <Typer />
         </h2>
-      </Hero>
+      </MainHero>
       <Introduction skew="4deg">
         <MainWrapper>
           <h2>"Who are you again?"</h2>

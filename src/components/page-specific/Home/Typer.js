@@ -13,7 +13,7 @@ const StyledTyping = styled(Typist).attrs({
   min-height: 45px;
   span {
     text-decoration: underline ${({ theme }) => theme.accent};
-    font-family: monospace;
+    font-family: ${({ theme }) => theme.font.mono};
     font-weight: bold;
   }
   .Cursor {

@@ -86,6 +86,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const StyledPage = styled.div`
+  margin-top: ${({ theme }) => theme.constants.navBarHeight};
   * {
     mark,
     ::selection {
