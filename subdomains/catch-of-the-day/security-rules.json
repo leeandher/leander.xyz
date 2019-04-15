@@ -1,0 +1,10 @@
+{
+  "rules": {
+    ".write": "!data.exists()",
+    ".read": true,
+    "$room": {
+      ".write": "auth != null && (!data.exists() || data.child('owner').val() === auth.uid)",
+      ".read": true
+    }
+  }
+}
