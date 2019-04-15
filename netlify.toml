@@ -23,18 +23,16 @@
 #   command = ""
 # [context.old]
 #   base    = "subdomains/old"
-#   publish = "subdomains/old"
+#   publish = "subdomains/old"unity
 #   command = ""
 [context.reduxstagram]
   base    = "subdomains/reduxstagram"
   publish = "subdomains/reduxstagram/build"
   command = "npm run build"
-  [context.reduxstagram.environment]
-    NODE_ENV = "production"
-# [context.space-shooter]
-#   base    = "subdomains/space-shooter"
-#   publish = "subdomains/space-shooter"
-#   command = ""
+[context.unity]
+  base    = "subdomains/unity"
+  publish = "subdomains/unity"
+  command = "echo Unity"
 [context.stacker-news]
   base    = "subdomains/stacker-news"
   publish = "subdomains/stacker-news/build"
