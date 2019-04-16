@@ -1,9 +1,16 @@
 module.exports = {
+  siteMetadata: {
+    title: `leander.xyz`,
+    siteUrl: `https://leander.xyz`,
+    description: `The complete portfolio of Leander Rodrigues, a Toronto-based full-stack web developer, and undergrad Engineer at the University of Waterloo.`,
+  },
   plugins: [
     // CMS
     "gatsby-plugin-netlify-cms",
 
     // SEO
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -28,7 +35,6 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-offline",
 
     // Styling
