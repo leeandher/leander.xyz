@@ -1,8 +1,8 @@
 ---
-name: "\U0001F41B Bug Report"
+name: 🐛 Bug Report
 about: Something is definitely not the way it should be.
-title: "\U0001F41B [BUG]"
-labels: "\U0001F41B bug"
+title: 🐛 [BUG]
+labels: 🐛 bug
 assignees: leeandher
 ---
 
