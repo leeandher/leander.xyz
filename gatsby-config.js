@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `leander.xyz`,
     siteUrl: `https://leander.xyz`,
+    repository: `https://github.com/leeandher/leander.xyz`,
     description: `The complete portfolio of Leander Rodrigues, a Toronto-based full-stack web developer, and undergrad Engineer at the University of Waterloo.`,
   },
   plugins: [
