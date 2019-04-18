@@ -1,28 +1,27 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 
+const ProgressBar = styled.div`
+  position: fixed;
+  z-index: 1000;
+  display: block;
+  background: ${({ theme }) => theme.accent};
+  width: 100%;
+  max-width: 0%;
+  height: 0.5rem;
+  top: ${({ theme }) => theme.constants.navBarHeight};
+  @media (max-width: 850px) {
+    top: 0;
+  }
+  &:before {
+    ${({ theme }) => theme.before}
+    background: linear-gradient(to right, transparent, 85%, ${({ theme }) =>
+      theme.shade.lightest})
+  }
+`
+
 const ScrollProgress = props => {
-  const ProgressBar = styled.div`
-    position: fixed;
-    z-index: 1000;
-    display: block;
-    background: ${({ theme }) => theme.accent};
-    width: 100%;
-    max-width: ${({ progress }) => progress * 100}%;
-    height: 0.5rem;
-    top: ${({ theme }) => theme.constants.navBarHeight};
-    @media (max-width: 850px) {
-      top: 0;
-    }
-    &:before {
-      ${({ theme }) => theme.before}
-      background: linear-gradient(to right, transparent, 85%, ${({ theme }) =>
-        theme.shade.lightest})
-    }
-  `
-
-  const [progress, setProgress] = useState(0)
-
+  const progressRef = useRef(null)
   const handleScroll = e => {
     const currentScroll = Math.max(
       window.pageYOffset,
@@ -30,13 +29,15 @@ const ScrollProgress = props => {
       document.body.scrollTop
     )
     const maxScroll = e.srcElement.body.scrollHeight - window.innerHeight
-    setProgress(currentScroll / maxScroll)
+    if (progressRef)
+      progressRef.current.style.maxWidth = `${(currentScroll / maxScroll) *
+        100}%`
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   })
-  return <ProgressBar progress={progress} {...props} />
+  return <ProgressBar ref={progressRef} {...props} />
 }
 
 export default ScrollProgress
