@@ -1,7 +1,7 @@
 ---
 type: blog
 archive: false
-slug: "\U0001F533⛏-server-laptop"
+slug: "📦⛏-server-laptop"
 date: 2019-04-17T18:30:08.333Z
 title: Turning your Laptop into a Minecraft Server
 description: >-

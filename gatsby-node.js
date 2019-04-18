@@ -4,9 +4,7 @@ const slugify = require("slugify")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  /**
-   * Create Note and Note category pages
-   */
+  // Create Notes and Note category pages
   const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
   const NoteCategoryTemplate = path.resolve(
     "src/templates/NoteCategoryTemplate.js"
@@ -41,9 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  /**
-   * Create Blog posts, Notes, and Project pages
-   */
+  // Create Blog posts and Project pages
   const BlogPostTemplate = path.resolve("src/templates/BlogPostTemplate.js")
   const ProjectTemplate = path.resolve("src/templates/ProjectTemplate.js")
 
@@ -64,7 +60,6 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-
   media.allMarkdownRemark.edges.forEach(({ node }) => {
     const { frontmatter: fm } = node
     let template = null
