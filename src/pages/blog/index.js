@@ -97,6 +97,7 @@ export const blogPostsQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           slug
           title
+          type
           description
           tags
         }

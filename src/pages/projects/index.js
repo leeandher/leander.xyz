@@ -11,7 +11,7 @@ import { Skewed } from "../../components/PageSections"
 const WhipSection = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
-  height: 110vh;
+  height: 150vh;
   &:before {
     background: ${({ theme }) => theme.shade.lightest};
   }
