@@ -1,0 +1,42 @@
+---
+type: project
+slug: catch-of-the-day
+title: Catch of the Day
+screenshot: /assets/project__catch-of-the-day.png
+date: 2018-10-15T02:27:27.851Z
+repo: 'https://github.com/leeandher/Catch-of-the-Day'
+link: 'https://catch-of-the-day.leander.xyz'
+tech:
+  - react
+  - react-router
+  - firebase
+  - third-party-authentication
+  - css-transitions
+  - prop-types
+---
+This single-page application mocks up a fish market online store, letting you change descriptions, load samples, add to your cart and more. It is all done using a Firebase real-time database so anyone can make and share stores with each other!
+
+This project was my first step into learning the fundamentals of **React.js**! I'd never touched React before outside of online tutorial editors, and it really just let me start using some of concepts I'd learned in a real use-case. The finished product can be found over at [catch-of-the-day.leander.xyz](https://catch-of-the-day.leander.xyz)!
+
+## Using the app
+
+The way the app works, you can generate a 'store' by using the landing page's store picker component. A random title will be suggested for you if you need.
+
+Upon selecting the store you will be presented with the _meat_ of the application. You'll see an area on the right side where you can sign in (through GitHub, Facebook or Twitter), and claim that store (based on the unique name you generated)! Now you should be able to add some sample fish, and see just how dynamic React can be!
+
+When signed-in on a new store, you'll be able to make changes throughout the app which will be saved for anyone who visits that store next time. Even better is, anyone who signs in to that same store, won't be able to change anything, since you've claimed it!
+
+## How it works
+
+The app was written entirely in **_React_**, using the `create-react-app`, with the help of Webpack and Babel. Each component was crafted by hand, keeping in mind the best ES6 practices (destructuring, arrow functions, etc.) as well as some of the more practical stuff, such ass `CSSTransitionGroups` and `PropTypes`.
+
+The URL routing was done through **_React Router_**, which allowed for the dynamic store names.
+
+**_Google's Firebase_** was used as the Database of Choice due to it's _syncState_ capabilities and live responses! This allows the 'owner'user to update the fish info to all other connected users right in front of their eyes!
+
+The sign-in capabilities were also done through Firebase, which ensures proper **_OAuth Security_**.
+
+## Creds
+
+I was able to create this application through the help of a course, developed by [Wes Bos](https://wesbos.com) entitled [React For Beginners](https://reactforbeginners.com).
+If you've stumbled upon this repo, in attempt to learn React, I highly recommend his [courses](https://wesbos.com/courses) and wish you the best of luck!
