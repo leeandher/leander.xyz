@@ -17,7 +17,7 @@ const StyledAnchorLink = styled(AnchorLink)`
 `
 
 const StyledFooter = styled.footer`
-  height: 50vh;
+  min-height: 50vh;
   padding: 5rem;
   color: ${({ theme }) => theme.shade.lighter};
   display: flex;
@@ -67,59 +67,57 @@ const Footer = ({ handleToggle, showSideBar }) => {
   const copyrightYears = getCopyrightYearsFrom(2019)
   return (
     <StyledFooter>
-      <div>
-        <h5>Find me online</h5>
-        <IconWrapper>
-          <StyledAnchorLink
-            href="https://www.linkedin.com/in/leander-rodrigues/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </StyledAnchorLink>
-          <StyledAnchorLink
-            href="https://github.com/leeandher"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </StyledAnchorLink>
-          <StyledAnchorLink
-            href="https://stackoverflow.com/users/story/10996907?view=Timeline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaStackOverflow />
-          </StyledAnchorLink>
-          <StyledAnchorLink
-            href="https://twitter.com/LeeAndHer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </StyledAnchorLink>
-        </IconWrapper>
-        <p>
-          &copy; Copyright {copyrightYears}, <br />
-          but don't worry, I'm{" "}
-          <AnchorLink
-            href="https://github.com/leeandher/leander.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            open source
-          </AnchorLink>
-        </p>
-        <small>
-          <AnchorLink
-            href="https://github.com/leeandher/leander.xyz/issues/new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See a bug?
-          </AnchorLink>
-        </small>
-      </div>
+      <h5>Find me online</h5>
+      <IconWrapper>
+        <StyledAnchorLink
+          href="https://www.linkedin.com/in/leander-rodrigues/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://github.com/leeandher"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://stackoverflow.com/users/story/10996907?view=Timeline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaStackOverflow />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://twitter.com/LeeAndHer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaTwitter />
+        </StyledAnchorLink>
+      </IconWrapper>
+      <p>
+        &copy; Copyright {copyrightYears}, <br />
+        but don't worry, I'm{" "}
+        <AnchorLink
+          href="https://github.com/leeandher/leander.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          open source
+        </AnchorLink>
+      </p>
+      <small>
+        <AnchorLink
+          href="https://github.com/leeandher/leander.xyz/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          See a bug?
+        </AnchorLink>
+      </small>
       <Easter>
         <AnchorLink
           href="https://en.wikipedia.org/wiki/Konami_Code"
