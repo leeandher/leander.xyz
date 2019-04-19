@@ -24,16 +24,25 @@ const GlobalStyle = createGlobalStyle`
     font-family: dm;
     src: url(${withPrefix("fonts/dm.ttf")});
   }
-  
   body {
     padding: 0;
     margin: 0;
     font-size: 1.75rem;
     line-height: 1.5;
-    font-family: ${palette.font.family};
+    font-family: ${({ theme }) => theme.font.family};
+    scrollbar-color: ${({ theme }) =>
+      `${theme.accent} ${theme.shade.lightest}`};
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+      width: 1rem;
+      border-left: 1px solid ${({ theme }) => theme.shade.lightest};
+    }
+    &::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.accent};
+    }
   }
   code {
-    font-family: ${palette.font.mono} !important;
+    font-family: ${({ theme }) => theme.font.mono} !important;
   }
   h1 {
     font-size: 6rem
@@ -53,6 +62,15 @@ const GlobalStyle = createGlobalStyle`
   }
   Link, button {
     user-select: none;
+  }
+  mark,
+  ::selection {
+    background: ${({ theme }) => theme.accent};
+    background: ${({ theme }) => theme.accent}88;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 10px ${({ theme }) => theme.accent};
   }
   #nprogress {
     pointer-events: none;
@@ -91,7 +109,7 @@ const StyledPage = styled.div`
     mark,
     ::selection {
       background: ${({ theme }) => theme.accent};
-      background: ${({ theme }) => theme.accent}80;
+      background: ${({ theme }) => theme.accent}88;
     }
     &:focus {
       outline: none;
@@ -132,7 +150,6 @@ class Page extends React.Component {
     }
     return (
       <>
-        <GlobalStyle />
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={description} />
@@ -163,20 +180,23 @@ class Page extends React.Component {
           <link rel="manifest" href={withPrefix("site.webmanifest")} />
         </Helmet>
         <ThemeProvider theme={theme}>
-          <StyledPage>
-            <ParticleBackground
-              height="100vh"
-              design={design}
-              accent={accentBg ? theme.accent : theme.shade.lighter}
-            />
-            <Nav
-              showSideBar={this.state.showSideBar}
-              handleToggle={this.toggleNav}
-              accent={theme.accent}
-            />
-            {children}
-            <Footer />
-          </StyledPage>
+          <>
+            <GlobalStyle />
+            <StyledPage>
+              <ParticleBackground
+                height="100vh"
+                design={design}
+                accent={accentBg ? theme.accent : theme.shade.lighter}
+              />
+              <Nav
+                showSideBar={this.state.showSideBar}
+                handleToggle={this.toggleNav}
+                accent={theme.accent}
+              />
+              {children}
+              <Footer />
+            </StyledPage>
+          </>
         </ThemeProvider>
       </>
     )
