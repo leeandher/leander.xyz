@@ -94,7 +94,6 @@ export const blogPostsQuery = graphql`
       nodes {
         timeToRead
         frontmatter {
-          type
           date(formatString: "MMMM DD, YYYY")
           slug
           title

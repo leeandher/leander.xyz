@@ -1,22 +1,19 @@
 import React from "react"
-import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import Page from "../../components/Page"
+import Hero from "../../components/Hero"
+import ProjectCard from "../../components/page-specific/Projects/ProjectCard"
 
-const Header = styled.div`
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default};
-  color: ${({ theme }) => theme.accent};
-  span {
-    color: ${({ theme }) => theme.shade.lighter};
-  }
-`
+const Projects = ({ data }) => {
+  const { allMarkdownRemark } = data
+  const { nodes } = allMarkdownRemark
+  const projects = nodes.map(({ frontmatter, id, excerpt }) => ({
+    id,
+    excerpt,
+    ...frontmatter,
+  }))
 
-const Projects = () => {
   return (
     <Page
       accent="orange"
@@ -25,15 +22,36 @@ const Projects = () => {
       design="mesh"
       description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
     >
-      <Header>
-        <h1>
-          <code>
-            //TODO: <span>Make projects page</span>
-          </code>
-        </h1>
-      </Header>
+      <Hero height="50vh">
+        <h1>Shenanigans</h1>
+      </Hero>
+      {projects.map(({ id, ...projectInfo }) => (
+        <ProjectCard key={id} {...projectInfo} />
+      ))}
     </Page>
   )
 }
 
 export default Projects
+
+export const projectsQuery = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "projects" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      nodes {
+        id
+        excerpt(pruneLength: 280)
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          slug
+          title
+          repo
+          link
+          tech
+        }
+      }
+    }
+  }
+`
