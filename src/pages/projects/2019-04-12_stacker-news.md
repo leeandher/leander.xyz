@@ -2,9 +2,10 @@
 type: projects
 slug: stacker-news
 title: Stacker News
+screenshot: /assets/project__stacker-news.png
 date: 2019-01-11T03:27:27.851Z
-repo: "https://github.com/leeandher/Stacker-News"
-link: "https://stacker-news.leander.xyz"
+repo: 'https://github.com/leeandher/Stacker-News'
+link: 'https://stacker-news.leander.xyz'
 tech:
   - react
   - graphql
