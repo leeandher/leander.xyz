@@ -42,12 +42,12 @@ const HeaderImage = styled.figure`
 
 const TagWrapper = styled.div`
   text-align: left;
-  margin: 3.5rem 2rem;
+  margin: 2.5rem 2rem;
 `
 
 const Description = styled.p`
   font-weight: 300;
-  margin: 0.5rem 2rem;
+  margin: 2rem;
   text-align: left;
 `
 
@@ -97,15 +97,17 @@ const ProjectCard = ({
   repo,
   link,
   tech,
+  ...restOfProps
 }) => {
   const altText = `Screenshot of ${title}`
   return (
-    <Card>
+    <Card {...restOfProps}>
       <HeaderImage>
         <img
-          src={image || `https://source.unsplash.com/random/560x400`}
+          src={image || `/assets/${slug}.png`}
           alt={altText}
           title={altText}
+          draggable={false}
         />
       </HeaderImage>
       <h2>{title}</h2>
