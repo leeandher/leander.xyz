@@ -9,15 +9,19 @@ import { Skewed } from "../../components/PageSections"
 import MainWrapper from "../../components/MainWrapper"
 import CategoryLink from "../../components/page-specific/Media/CategoryLink"
 
+import noteDescriptions from "../../data/note-descriptions.json"
+
 const CategoryTile = styled.div`
   display: flex;
   align-items: center;
+  flex-flow: row wrap;
   min-height: 100px;
   h3 {
     flex: 1;
   }
   p {
     flex: 4;
+    min-width: 320px;
   }
 `
 
@@ -33,9 +37,8 @@ const Notes = ({ data }) => {
   const { allFile } = data
   const { distinct: categories } = allFile
   const categorySlugs = categories.map(
-    category => `notes/${slugify(category, { lower: true })}`
+    category => `/notes/${slugify(category, { lower: true })}`
   )
-
   return (
     <Page
       accent="green"
@@ -50,18 +53,22 @@ const Notes = ({ data }) => {
         </h1>
       </Hero>
       <NoteBlock skew="-4deg">
+        <h2>
+          My <code>Library</code>
+        </h2>
+        <h3>
+          These are notes taken during talks and random research stints, <br />
+          but largely while taking some helpful online courses
+        </h3>
         <MainWrapper>
           {categorySlugs.map((categorySlug, i) => (
-            <CategoryTile>
+            <CategoryTile key={i}>
               <CategoryLink to={categorySlug}>
                 <h3>
                   <span>{categories[i]}</span>
                 </h3>
               </CategoryLink>
-              <p>
-                This is a description about the thing that this is about or like
-                whatever ya know
-              </p>
+              <p>{noteDescriptions[categories[i]]}</p>
             </CategoryTile>
           ))}
         </MainWrapper>
