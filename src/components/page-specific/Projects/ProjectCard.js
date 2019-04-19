@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+import { animated } from "react-spring"
 import { Link } from "gatsby"
 import { FaGithub, FaLink } from "react-icons/fa"
 
 import Tag from "../../Tag"
 
-const Card = styled.div`
+const Card = styled(animated.div)`
   background: ${({ theme }) => theme.shade.lightest};
   border: 1rem solid ${({ theme }) => theme.accent};
   margin: 1.5rem;
@@ -49,6 +50,9 @@ const Description = styled.p`
   font-weight: 300;
   margin: 2rem;
   text-align: left;
+  @media (max-width: 850px) {
+    display: none;
+  }
 `
 
 const MoreInfoLink = styled(Link)`
@@ -90,7 +94,7 @@ const ExternalLinkWrapper = styled.div`
 
 const ProjectCard = ({
   date,
-  image,
+  screenshot,
   excerpt,
   slug,
   title,
@@ -104,7 +108,7 @@ const ProjectCard = ({
     <Card {...restOfProps}>
       <HeaderImage>
         <img
-          src={image || "/assets/project__default.png"}
+          src={screenshot || "/assets/project__default.png"}
           alt={altText}
           title={altText}
           draggable={false}

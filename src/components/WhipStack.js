@@ -9,7 +9,6 @@ const NewProjectCard = styled(ProjectCard)`
   will-change: transform;
   box-shadow: 0 12.5px 20px -10px rgba(50, 50, 73, 0.4),
     0 10px 10px -10px rgba(50, 50, 73, 0.3);
-  transform: rotate(3deg);
   * {
     user-select: none;
   }
@@ -25,7 +24,6 @@ const StackWrap = styled(animated.div)`
   width: 100%;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 `
 const Card = styled(animated.div)`
   background-size: auto 85%;
@@ -44,13 +42,13 @@ const Card = styled(animated.div)`
 const to = i => ({
   x: 0,
   y: i * -4,
-  scale: 1,
+  scale: 0.9,
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 })
-const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5, y: -1000 })
+const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1 })
 const trans = (r, s) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${r /
+  `perspective(2000px) rotateX(20deg) rotateY(${r /
     10}deg) rotateZ(${r}deg) scale(${s})`
 
 const WhipStack = ({ itemProps }) => {
@@ -79,7 +77,7 @@ const WhipStack = ({ itemProps }) => {
         const ifNotGoneX = down ? xDelta : 0
         const x = isGone ? (200 + window.innerWidth) * dir : ifNotGoneX // When a card is gone it flys out left or right, otherwise goes back to zero
         const rot = xDelta / 100 + (isGone ? dir * 10 * velocity : 0) // How much the card tilts, flicking it harder makes it rotate faster
-        const scale = down ? 1.1 : 1 // Active cards lift up a bit
+        const scale = down ? 1.0 : 0.9 // Active cards lift up a bit
         const freeTension = isGone ? 200 : 500
         return {
           x,

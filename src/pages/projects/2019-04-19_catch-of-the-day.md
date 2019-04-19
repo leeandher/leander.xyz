@@ -10,7 +10,7 @@ tech:
   - react
   - react-router
   - firebase
-  - third-party-authentication
+  - auth
   - css-transitions
   - prop-types
 ---
