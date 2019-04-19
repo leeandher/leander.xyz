@@ -104,7 +104,7 @@ const ProjectCard = ({
     <Card {...restOfProps}>
       <HeaderImage>
         <img
-          src={image || `/assets/${slug}.png`}
+          src={image || "/assets/project__default.png"}
           alt={altText}
           title={altText}
           draggable={false}

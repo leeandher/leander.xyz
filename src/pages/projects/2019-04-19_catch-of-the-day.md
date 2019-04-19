@@ -1,11 +1,11 @@
 ---
-type: project
+type: projects
 slug: catch-of-the-day
 title: Catch of the Day
 screenshot: /assets/project__catch-of-the-day.png
 date: 2018-10-15T02:27:27.851Z
-repo: 'https://github.com/leeandher/Catch-of-the-Day'
-link: 'https://catch-of-the-day.leander.xyz'
+repo: "https://github.com/leeandher/Catch-of-the-Day"
+link: "https://catch-of-the-day.leander.xyz"
 tech:
   - react
   - react-router
@@ -14,6 +14,7 @@ tech:
   - css-transitions
   - prop-types
 ---
+
 This single-page application mocks up a fish market online store, letting you change descriptions, load samples, add to your cart and more. It is all done using a Firebase real-time database so anyone can make and share stores with each other!
 
 This project was my first step into learning the fundamentals of **React.js**! I'd never touched React before outside of online tutorial editors, and it really just let me start using some of concepts I'd learned in a real use-case. The finished product can be found over at [catch-of-the-day.leander.xyz](https://catch-of-the-day.leander.xyz)!
@@ -39,4 +40,4 @@ The sign-in capabilities were also done through Firebase, which ensures proper *
 ## Creds
 
 I was able to create this application through the help of a course, developed by [Wes Bos](https://wesbos.com) entitled [React For Beginners](https://reactforbeginners.com).
-If you've stumbled upon this repo, in attempt to learn React, I highly recommend his [courses](https://wesbos.com/courses) and wish you the best of luck!
+If you've stumbled upon this project, in attempt to learn React, I highly recommend his [courses](https://wesbos.com/courses) and wish you the best of luck!
