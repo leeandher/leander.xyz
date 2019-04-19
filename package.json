@@ -18,7 +18,7 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "gatsby": "2.3.22",
+    "gatsby": "^2.3.25",
     "gatsby-plugin-manifest": "2.0.24",
     "gatsby-plugin-netlify-cms": "3.0.9",
     "gatsby-plugin-nprogress": "2.0.10",
