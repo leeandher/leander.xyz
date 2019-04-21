@@ -34,11 +34,12 @@ const GlobalStyle = createGlobalStyle`
       `${theme.accent} ${theme.shade.lightest}`};
     scrollbar-width: thin;
     &::-webkit-scrollbar {
-      width: 1rem;
-      border-left: 1px solid ${({ theme }) => theme.shade.lightest};
+      width: 1.25rem;
+      background: ${({ theme }) => theme.shade.darker};
     }
     &::-webkit-scrollbar-thumb {
       background: ${({ theme }) => theme.accent};
+      border-radius: 2rem;
     }
   }
   code {

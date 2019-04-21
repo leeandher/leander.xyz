@@ -30,6 +30,9 @@ const Summary = styled.summary`
   font-weight: 600;
   position: relative;
   font-size: 2rem;
+  &::-webkit-details-marker {
+    color: ${({ theme }) => theme.accent};
+  }
   &:before {
     ${({ theme }) => theme.before}
     transition: 0.75s max-width ease-out;
@@ -51,7 +54,7 @@ const Summary = styled.summary`
 const FAQ = ({ answer, children, question, ...props }) => {
   return (
     <Wrapper {...props}>
-      <Details open>
+      <Details>
         <Summary>{question}</Summary>
         {children}
       </Details>

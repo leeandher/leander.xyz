@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import { about } from "../data/seo-descriptions.json"
-
 import Hero from "../components/Hero"
 import Page from "../components/Page"
 import MainWrapper from "../components/MainWrapper"
 import { Skewed } from "../components/PageSections"
 import FAQ from "../components/FAQ"
+
+import seoDescriptions from "../data/seo-descriptions.json"
 
 const Questions = styled(Skewed)`
   padding: 10rem 0 3rem 0;
