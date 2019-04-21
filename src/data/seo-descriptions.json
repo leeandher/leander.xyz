@@ -1,13 +1,9 @@
 {
-  "home": "",
-  "about": "",
-  "projects": "",
-  "project-page": "",
+  "home": "Hey there, My name is Leander Rodrigues. I'm a full stack web developer from Toronto, and this is my portfolio, blog and corner of the internet!",
+  "about": "Want to know some more about me? Well I'm a Engineering Student at the University, I love sushi, Edgar Wright films, and doing cool stuff online.",
+  "projects": "I've done a bunch of fun development projects. React, Vue, Gatsby, Redux, Node, and a bunch more. Take a peek for some extra info!",
   "blog": "",
-  "blog-post": "",
   "note": "",
-  "note-category": "",
-  "note-page": "",
-  "resume": "",
-  "contact": ""
+  "resume": "My online portfolio",
+  "contact": "I'd love to hear from you! Questions, comments, pull requests, "
 }

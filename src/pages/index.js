@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+import { home } from "../data/seo-descriptions.json"
+
 import Button from "../components/Button"
 import Hero from "../components/Hero"
 import Page from "../components/Page"
@@ -74,8 +76,8 @@ const Home = () => {
       accent="teal"
       accentBg
       design="space"
-      title="Welcome to leander.xyz!"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      title="Leander Rodrigues: Toronto Developer | Web Nerd | Dog Fanatic"
+      description={home}
     >
       <MainHero>
         <p>Hi there, My name is</p>
