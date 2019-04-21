@@ -21,7 +21,7 @@ const WhipSection = styled(Skewed)`
 const Projects = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes } = allMarkdownRemark
-  const projects = nodes.reverse().map(({ frontmatter, id, excerpt }) => ({
+  const projects = nodes.map(({ frontmatter, id, excerpt }) => ({
     id,
     excerpt,
     ...frontmatter,
@@ -51,7 +51,7 @@ export const projectsQuery = graphql`
   query {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "projects" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: ASC }
     ) {
       nodes {
         id
