@@ -10,6 +10,7 @@ import MainWrapper from "../../components/MainWrapper"
 import CategoryLink from "../../components/page-specific/Media/CategoryLink"
 
 import noteDescriptions from "../../data/note-descriptions.json"
+import seoDescriptions from "../../data/seo-descriptions.json"
 
 const CategoryTile = styled.div`
   display: flex;
@@ -45,7 +46,7 @@ const Notes = ({ data }) => {
       accentBg
       title="Learning can be fun!"
       design="mesh"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.notes}
     >
       <Hero expanding height="50vh">
         <h1>

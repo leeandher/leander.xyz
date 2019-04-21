@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
+import { about } from "../data/seo-descriptions.json"
+
 import Hero from "../components/Hero"
 import Page from "../components/Page"
 import MainWrapper from "../components/MainWrapper"
@@ -30,7 +32,7 @@ const About = ({ data }) => {
       accentBg
       title="me, me, mE, ME, ME!"
       design="snow"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.about}
     >
       <Hero expanding height="50vh">
         <h1>All About Me</h1>

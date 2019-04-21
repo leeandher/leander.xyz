@@ -5,8 +5,9 @@ import Page from "../components/Page"
 import MainWrapper from "../components/MainWrapper"
 import Button from "../components/Button"
 import Hero from "../components/Hero"
-
 import { Skewed } from "../components/PageSections"
+
+import seoDescriptions from "../data/seo-descriptions.json"
 
 import { encode } from "../helpers"
 
@@ -116,7 +117,7 @@ class Contact extends React.Component {
         accentBg
         title="Hit me up!"
         design="mesh"
-        description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+        description={seoDescriptions.contact}
       >
         <Hero expanding height="50vh">
           <h1>Reach Out</h1>

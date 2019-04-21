@@ -2,18 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { home } from "../data/seo-descriptions.json"
-
 import Button from "../components/Button"
 import Hero from "../components/Hero"
 import Page from "../components/Page"
 import QuoteCard from "../components/QuoteCard"
 import MainWrapper from "../components/MainWrapper"
 import ShowItem from "../components/ShowItem"
-
 import { Default, Skewed } from "../components/PageSections"
-
 import Typer from "../components/page-specific/Home/Typer"
+
+import seoDescriptions from "../data/seo-descriptions.json"
 
 const MainHero = styled(Hero)`
   margin-top: -${({ theme }) => theme.constants.navBarHeight};
@@ -77,7 +75,7 @@ const Home = () => {
       accentBg
       design="space"
       title="Leander Rodrigues: Toronto Developer | Web Nerd | Dog Fanatic"
-      description={home}
+      description={seoDescriptions.home}
     >
       <MainHero>
         <p>Hi there, My name is</p>

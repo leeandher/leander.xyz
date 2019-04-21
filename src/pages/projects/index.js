@@ -7,6 +7,8 @@ import Hero from "../../components/Hero"
 import WhipStack from "../../components/WhipStack"
 import { Skewed } from "../../components/PageSections"
 
+import seoDescriptions from "../../data/seo-descriptions.json"
+
 const WhipSection = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
@@ -21,7 +23,7 @@ const WhipSection = styled(Skewed)`
 const Projects = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes } = allMarkdownRemark
-  const projects = nodes.map(({ frontmatter, id, excerpt }) => ({
+  const projectProps = nodes.map(({ frontmatter, id, excerpt }) => ({
     id,
     excerpt,
     ...frontmatter,
@@ -32,14 +34,14 @@ const Projects = ({ data }) => {
       accentBg
       title="Wanna see something cool?"
       design="mesh"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.projects}
     >
       <Hero height="35vh">
         <h1>Shenanigans</h1>
       </Hero>
       <WhipSection skew="4deg">
         <h2>My Project Stack</h2>
-        <WhipStack itemProps={projects} />
+        <WhipStack itemProps={projectProps} />
       </WhipSection>
     </Page>
   )
