@@ -8,6 +8,8 @@ import MainWrapper from "../components/MainWrapper"
 import { Skewed } from "../components/PageSections"
 import FAQ from "../components/FAQ"
 
+import seoDescriptions from "../data/seo-descriptions.json"
+
 const Questions = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
@@ -30,7 +32,7 @@ const About = ({ data }) => {
       accentBg
       title="me, me, mE, ME, ME!"
       design="snow"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.about}
     >
       <Hero expanding height="50vh">
         <h1>All About Me</h1>

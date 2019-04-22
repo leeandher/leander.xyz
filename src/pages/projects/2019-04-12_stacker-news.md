@@ -2,6 +2,7 @@
 type: projects
 slug: stacker-news
 title: Stacker News
+screenshot: /assets/project__stacker-news.png
 date: 2019-01-11T03:27:27.851Z
 repo: "https://github.com/leeandher/Stacker-News"
 link: "https://stacker-news.leander.xyz"
@@ -47,4 +48,4 @@ What I'd like to call, the **GARP** stack <small>(that better catch on)</small>
 
 ## Creds
 
-This app was made possible in large part due to the helpful tutorials over at [howtographql.com](http://howtographql.com). By following their backend tutorial, I was able to create the server, and endpoint. Their frontend tutorial recommend downloading the finished server, but since I had it, I was able to write 100% of the code for the app! While I did refactor, add, and style quite a bit extra, the tutorial was a great entrance into the world of GraphQL!
+This app was made possible in large part due to the helpful tutorials over at [howtographql.com](https://howtographql.com). By following their backend tutorial, I was able to create the server, and endpoint. Their frontend tutorial recommend downloading the finished server, but since I had it, I was able to write 100% of the code for the app! While I did refactor, add, and style quite a bit extra, the tutorial was a great entrance into the world of GraphQL!

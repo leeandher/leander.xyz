@@ -3,6 +3,8 @@ import styled from "styled-components"
 
 import Page from "../components/Page"
 
+import seoDescriptions from "../data/seo-descriptions.json"
+
 const Header = styled.div`
   height: 100vh;
   text-align: center;
@@ -23,7 +25,7 @@ const Resume = () => {
       accentBg
       title="Resume - Leander Rodrigues"
       design="bubbles"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.resume}
     >
       <Header>
         <h1>

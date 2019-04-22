@@ -17,6 +17,8 @@ import {
   MediaSection,
 } from "../components/page-specific/Media"
 
+import seoDescriptions from "../data/seo-descriptions.json"
+
 const ProjectHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,7 +34,7 @@ const ProjectTemplate = ({ data }) => {
       accentBg
       title="Writing is hard"
       design="bubbles"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.projects}
     >
       <MediaHeader>
         <Button>

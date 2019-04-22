@@ -7,6 +7,8 @@ import Hero from "../../components/Hero"
 import MediaLink from "../../components/MediaLink"
 import MainWrapper from "../../components/MainWrapper"
 
+import seoDescriptions from "../../data/seo-descriptions.json"
+
 const YearWrapper = styled.section`
   h2.year {
     display: block;
@@ -50,7 +52,7 @@ const Blog = ({ data }) => {
       accentBg
       title="Writing is hard"
       design="bubbles"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.blog}
     >
       <Hero expanding height="50vh">
         <h1>
@@ -94,10 +96,10 @@ export const blogPostsQuery = graphql`
       nodes {
         timeToRead
         frontmatter {
-          type
           date(formatString: "MMMM DD, YYYY")
           slug
           title
+          type
           description
           tags
         }

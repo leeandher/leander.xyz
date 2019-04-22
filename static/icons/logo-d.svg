@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1698px" height="1698px" viewBox="0 0 1698 1698" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>leander.xyz logo w/ large diamond background</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Tilted" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(849.298916, 849.298916) rotate(45.000000) translate(-849.298916, -849.298916) translate(-933.701084, -933.701084)">
+            <rect id="bg-diamond-l" fill="#0F0F0F" x="1183" y="1183" width="1200" height="1200"></rect>
+            <polygon id="r-path" fill="#FEFEFE" points="1583 1283 1583 1980.6 1783.5 1980.6 1783 1483 2083 1483 2083 1683 1883 1683 1883 1883 2283 2283 2283 2000.56 2163 1883 2283 1883 2283 1283"></polygon>
+            <polygon id="l-path" fill="#4DCCB0" points="1283 1283 1283 2283 2283 2283 2083 2082.8 1483 2082.8 1482.1992 1283"></polygon>
+        </g>
+    </g>
+</svg>

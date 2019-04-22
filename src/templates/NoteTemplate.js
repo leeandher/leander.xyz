@@ -13,6 +13,8 @@ import {
   ScrollProgress,
 } from "../components/page-specific/Media"
 
+import seoDescriptions from "../data/seo-descriptions.json"
+
 const NoteTemplate = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { html } = markdownRemark
@@ -27,7 +29,7 @@ const NoteTemplate = ({ data, pageContext }) => {
       accentBg
       title="Writing is hard"
       design="bubbles"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.notes}
     >
       <ScrollProgress />
       <MediaHeader>

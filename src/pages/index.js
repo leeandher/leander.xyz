@@ -8,10 +8,10 @@ import Page from "../components/Page"
 import QuoteCard from "../components/QuoteCard"
 import MainWrapper from "../components/MainWrapper"
 import ShowItem from "../components/ShowItem"
-
 import { Default, Skewed } from "../components/PageSections"
-
 import Typer from "../components/page-specific/Home/Typer"
+
+import seoDescriptions from "../data/seo-descriptions.json"
 
 const MainHero = styled(Hero)`
   margin-top: -${({ theme }) => theme.constants.navBarHeight};
@@ -74,8 +74,8 @@ const Home = () => {
       accent="teal"
       accentBg
       design="space"
-      title="Welcome to leander.xyz!"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      title="Leander Rodrigues: Toronto Developer | Web Nerd | Dog Fanatic"
+      description={seoDescriptions.home}
     >
       <MainHero>
         <p>Hi there, My name is</p>

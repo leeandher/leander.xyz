@@ -6,6 +6,8 @@ import styled from "styled-components"
 import Page from "../components/Page"
 import InnerLink from "../components/page-specific/Media/InnerLink"
 
+import seoDescriptions from "../data/seo-descriptions.json"
+
 import {
   ContentWrapper,
   MediaContent,
@@ -54,7 +56,7 @@ const NoteCategoryTemplate = ({ data, location }) => {
       accentBg
       title="Writing is hard"
       design="bubbles"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
+      description={seoDescriptions.notes}
     >
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>
