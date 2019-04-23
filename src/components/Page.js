@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
       `${theme.accent} ${theme.shade.lightest}`};
     scrollbar-width: thin;
     &::-webkit-scrollbar {
-      width: 1.25rem;
+      width: 1rem;
       background: ${({ theme }) => theme.shade.darker};
     }
     &::-webkit-scrollbar-thumb {
