@@ -6,6 +6,7 @@ import Page from "../components/Page"
 import { Default } from "../components/PageSections"
 
 import seoDescriptions from "../data/seo-descriptions.json"
+import { themer } from "../styles/helpers"
 
 const Header = styled.div`
   padding-top: 100px;
@@ -16,7 +17,7 @@ const MeCard = styled(BusinessCard)`
 `
 
 const ResumeSection = styled(Default)`
-  background: white;
+  background: ${themer("accent")};
 `
 
 const Resume = () => {

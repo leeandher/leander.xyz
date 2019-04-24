@@ -15,4 +15,13 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   return acc
 }, {})
 
-export const themer = paletteKey => {}
+/**
+ * Quickly apply theme item through styled-components
+ * @param {string} paletteBase - The first level property on the styled-component theme
+ * @param {string} [paletteKey] - The second level property on the base of the styled-component theme
+ */
+export const themer = (paletteBase, paletteKey) => {
+  return function({ theme }) {
+    return paletteKey ? theme[paletteBase][paletteKey] : theme[paletteBase]
+  }
+}

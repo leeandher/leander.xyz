@@ -27,9 +27,8 @@ export const palette = {
     default: "15px",
   },
   font: {
-    family: "Rubik",
-    mono:
-      "dm, 'Operator Mono', 'Fira Code', Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace",
+    base: "Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    mono: "dm, 'Operator Mono', 'Fira Code', Monaco, Consolas, monospace",
     thin: 300,
     reg: 400,
     bold: 700,

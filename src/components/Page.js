@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
-import { palette } from "../styles"
+import { palette } from "../styles/palette"
 
 import Nav from "./Nav"
 import Footer from "./Footer"
@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.75rem;
     line-height: 1.5;
-    font-family: ${({ theme }) => theme.font.family};
+    font-family: ${({ theme }) => theme.font.base};
     scrollbar-color: ${({ theme }) =>
       `${theme.accent} ${theme.shade.lightest}`};
     scrollbar-width: thin;

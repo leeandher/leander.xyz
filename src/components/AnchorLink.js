@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import { themer } from "../styles/helpers"
 
 const AnchorLink = styled.a`
   text-align: center;
   background: transparent;
   position: relative;
-  color: ${({ theme }) => theme.accent};
+  color: ${themer("accent")};
   transition: 0.2s ease color;
   &:before {
     content: "";
@@ -15,12 +16,12 @@ const AnchorLink = styled.a`
     position: absolute;
     bottom: 0;
     left: 0;
-    background: ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
     transition: 0.2s ease max-height;
   }
   &:focus,
   &:hover {
-    color: ${({ theme }) => theme.shade.darkest};
+    color: ${themer("shade", "darkest")};
     &:before {
       max-height: 100%;
     }
