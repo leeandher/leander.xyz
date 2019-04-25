@@ -9,7 +9,7 @@ import Nav from "./Nav"
 import Footer from "./Footer"
 import ParticleBackground from "./ParticleBackground"
 
-import { consoleLiteral } from "../data/consoleLiteral"
+// import { consoleLiteral } from "../data/consoleLiteral"
 import { genRandProperty } from "../helpers"
 
 const GlobalStyle = createGlobalStyle`
@@ -125,13 +125,14 @@ class Page extends React.Component {
   }
 
   toggleNav = () => {
-    this.setState({ showSideBar: !this.state.showSideBar })
+    const { showSideBar } = this.state
+    this.setState({ showSideBar: !showSideBar })
   }
 
-  componentDidMount() {
-    // console.clear()
-    // console.log(consoleLiteral)
-  }
+  // componentDidMount() {
+  //   console.clear()
+  //   console.log(consoleLiteral)
+  // }
 
   render() {
     const {
@@ -142,6 +143,7 @@ class Page extends React.Component {
       design,
       title,
     } = this.props
+    const { showSideBar } = this.state
     const theme = {
       accent:
         accent === "random"
@@ -190,7 +192,7 @@ class Page extends React.Component {
                 accent={accentBg ? theme.accent : theme.shade.lighter}
               />
               <Nav
-                showSideBar={this.state.showSideBar}
+                showSideBar={showSideBar}
                 handleToggle={this.toggleNav}
                 accent={theme.accent}
               />

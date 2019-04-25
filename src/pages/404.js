@@ -28,7 +28,8 @@ const Projects = () => {
       <Header>
         <h1>
           <code>
-            //TODO: <span>Make better 404 page</span>
+            {/* eslint-disable-line react/jsx-no-comment-textnodes */}
+            // TODO: <span>Make better 404 page</span>
           </code>
         </h1>
       </Header>

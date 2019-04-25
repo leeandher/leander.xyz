@@ -8,7 +8,7 @@ Whatever you're putting into a subdomain, make sure everything is working, and s
 
 ## Step 1: Checkout a new branch
 
-In order to use Netlify's deploy contexts, you have to checkout a seperate branch that we tell Netlify to use seperate instructions for. The name of this branch must be the name of the subdomain that you wish to publish.
+In order to use Netlify's deploy contexts, you have to checkout a separate branch that we tell Netlify to use separate instructions for. The name of this branch must be the name of the subdomain that you wish to publish.
 
 ```shell
 $ git checkout -b my-new-subdomain

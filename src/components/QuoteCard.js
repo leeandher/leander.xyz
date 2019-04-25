@@ -45,13 +45,6 @@ const StyledPanel = styled(Link)`
   }
 `
 
-const PanelWrapper = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 1250px;
-  margin: 0 auto;
-`
-
 const QuoteCard = ({ accent, mainText, preText, to }) => (
   <StyledPanel accent={accent} to={to}>
     <FaQuoteLeft />
