@@ -1,0 +1,30 @@
+{
+  "home-page": {
+    "title": "Leander Rodrigues: Full-stack Developer | Tech Nerd | Dog Fanatic",
+    "description": "Hey there, My name is Leander Rodrigues. I'm a full-stack web developer from Toronto, and this is my portfolio, blog and corner of the internet!"
+  },
+  "about-page": {
+    "title": "",
+    "description": "Want to know some more about me? Well I'm a Engineering Student at the University, I love sushi, Edgar Wright films, and doing cool stuff online."
+  },
+  "projects-page": {
+    "title": "",
+    "description": "I've done a bunch of fun development projects. React, Vue, Gatsby, Redux, Node, and a bunch more. Take a peek for some extra info!"
+  },
+  "blog-page": {
+    "title": "",
+    "description": "A few of my blog posts. I write about video games, movies, life, code, and probably a little too much about fonts."
+  },
+  "notes-page": {
+    "title": "",
+    "description": "Just a bit of my crazed scribblings. I write notes on development tips, for concepts and courses alike! Check them out!"
+  },
+  "resume-page": {
+    "title": "",
+    "description": "My online portfolio! The TL;DR; of my life, including things like Work Experience, Projects, Education, and my Qualifications"
+  },
+  "contact-page": {
+    "title": "Hit me up!",
+    "description": "I'd love to hear from you! Questions, comments, pull requests, or just say hello! Does that sound desperate? Probably eh?"
+  }
+}

@@ -1,5 +1,7 @@
 {
-  "cSpell.words": [
+  "version": "0.1",
+  "language": "en",
+  "words": [
     "Linkedin",
     "Typer",
     "airbnb",
@@ -17,6 +19,7 @@
     "noreferrer",
     "paren",
     "prismjs",
+    "scribblings",
     "slugify",
     "socio",
     "subdomain",

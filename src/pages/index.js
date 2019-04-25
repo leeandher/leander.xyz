@@ -90,6 +90,7 @@ const Home = () => {
       <Introduction skew="4deg">
         <MainWrapper>
           <h2>"Who are you again?"</h2>
+          {/* cspell: disable */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
             diam malesuada, sagittis lacus id, dapibus est. Sed tristique
@@ -121,6 +122,7 @@ const Home = () => {
             dapibus lectus. Nunc eget magna leo. Sed et ligula tincidunt,
             vestibulum mi ac, faucibus leo. Suspendisse ut commodo ex.
           </p>
+          {/* cspell: enable */}
           <Button>
             <Link to="/about">More about me</Link>
           </Button>
