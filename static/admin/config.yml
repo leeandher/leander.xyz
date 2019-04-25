@@ -41,7 +41,7 @@ collections:
   - name: projects
     label: Projects
     folder: src/pages/projects
-    slug: "{{year}}-{{month}}-{{day}}_{{fields.slug}}"
+    slug: "{{fields.slug}}"
     editor:
       preview: false
     create: true
