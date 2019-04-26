@@ -44,7 +44,7 @@ const StyledLink = styled(Link)`
       }
     }
   }
-  date {
+  time {
     font-style: italic;
     margin: 1rem 0;
     display: block;
@@ -99,7 +99,7 @@ const MediaLink = ({
     <StyledLink to={`/${type}/${slug}`} image={image}>
       <h2>{title}</h2>
       <div>
-        <date>{date}</date>
+        <time>{date}</time>
         <span className="ttr">
           <FaRegClock />
           <p>{timeToRead}</p>

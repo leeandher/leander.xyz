@@ -54,7 +54,7 @@ const Blog = ({ data }) => {
       <MainWrapper maxWidth="95vw">
         <main>
           {sortedPosts.map(([year, blogPostArray]) => (
-            <YearWrapper>
+            <YearWrapper key={year}>
               <h2 className="year">
                 <span>{year}</span>
               </h2>

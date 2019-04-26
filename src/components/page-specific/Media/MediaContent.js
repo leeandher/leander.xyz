@@ -6,7 +6,7 @@ const MediaContent = styled.main`
   p {
     margin: 2.5rem 0;
   }
-  date {
+  time {
     text-align: center;
     display: block;
     font-style: italic;

@@ -53,10 +53,10 @@ class Page extends React.Component {
       ...palette,
     }
     return (
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <SEOBundle seoProfile={seoProfile} theme={theme} />
+      <>
+        <SEOBundle seoProfile={seoProfile} theme={theme} />
+        <GlobalStyles theme={theme} />
+        <ThemeProvider theme={theme}>
           <StyledPage>
             {bgDesign !== "none" && (
               <ParticleBackground
@@ -72,8 +72,8 @@ class Page extends React.Component {
             {children}
             <Footer />
           </StyledPage>
-        </>
-      </ThemeProvider>
+        </ThemeProvider>
+      </>
     )
   }
 }
