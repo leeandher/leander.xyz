@@ -45,13 +45,7 @@ const Blog = ({ data }) => {
   )
 
   return (
-    <Page
-      accent="yellow"
-      accentBg
-      title="Writing is hard"
-      design="bubbles"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
-    >
+    <Page accent="yellow" design="bubbles" seoProfile="blog-page">
       <Hero expanding height="50vh">
         <h1>The Archive</h1>
       </Hero>

@@ -18,13 +18,7 @@ const Header = styled.div`
 
 const Projects = () => {
   return (
-    <Page
-      accent="pink"
-      accentBg
-      title="I think we're lost"
-      design="mesh"
-      description="Hi there! I'm glad you've stumbled across my humble personal site. I have a bunch of projects, notes, blog posts, and even a snazzy resume for you to see!"
-    >
+    <Page accent="pink" design="mesh" seoProfile="404-page">
       <Header>
         <h1>
           <code>

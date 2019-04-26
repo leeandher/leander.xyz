@@ -7,8 +7,6 @@ import Hero from "../../components/Hero"
 import MediaLink from "../../components/MediaLink"
 import MainWrapper from "../../components/MainWrapper"
 
-import seoDescriptions from "../../data/seo-descriptions.json"
-
 const YearWrapper = styled.section`
   h2.year {
     display: block;
@@ -47,13 +45,7 @@ const Blog = ({ data }) => {
   )
 
   return (
-    <Page
-      accent="yellow"
-      accentBg
-      title="Writing is hard"
-      design="bubbles"
-      description={seoDescriptions.blog}
-    >
+    <Page accent="yellow" design="bubbles" seoProfile="blog-page">
       <Hero expanding height="50vh">
         <h1>
           MyBlog<code>.md</code>

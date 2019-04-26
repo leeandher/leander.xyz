@@ -13,8 +13,6 @@ import {
   ScrollProgress,
 } from "../components/page-specific/Media"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 const NoteTemplate = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { html } = markdownRemark
@@ -24,13 +22,7 @@ const NoteTemplate = ({ data, pageContext }) => {
   })
 
   return (
-    <Page
-      accent="random"
-      accentBg
-      title="Writing is hard"
-      design="bubbles"
-      description={seoDescriptions.notes}
-    >
+    <Page accent="random" design="bubbles" seoProfile="notes-page">
       <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>

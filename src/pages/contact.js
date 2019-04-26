@@ -7,8 +7,6 @@ import Button from "../components/Button"
 import Hero from "../components/Hero"
 import { Skewed } from "../components/PageSections"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 import { encode } from "../helpers"
 
 const Form = styled.form`
@@ -112,13 +110,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Page
-        accent="purple"
-        accentBg
-        title="Hit me up!"
-        design="mesh"
-        description={seoDescriptions.contact}
-      >
+      <Page accent="purple" design="mesh" seoProfile="contact-page">
         <Hero expanding height="50vh">
           <h1>Reach Out</h1>
         </Hero>

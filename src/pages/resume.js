@@ -5,7 +5,6 @@ import BusinessCard from "../components/BusinessCard"
 import Page from "../components/Page"
 import { Default } from "../components/PageSections"
 
-import seoDescriptions from "../data/seo-descriptions.json"
 import { themer } from "../styles/helpers"
 
 const Header = styled.div`
@@ -22,13 +21,7 @@ const ResumeSection = styled(Default)`
 
 const Resume = () => {
   return (
-    <Page
-      accent="blue"
-      accentBg
-      title="Resume - Leander Rodrigues"
-      design="space"
-      description={seoDescriptions.resume}
-    >
+    <Page accent="blue" design="space" seoProfile="resume-page">
       <Header>
         <MeCard />
       </Header>

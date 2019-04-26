@@ -6,8 +6,6 @@ import styled from "styled-components"
 import Page from "../components/Page"
 import InnerLink from "../components/page-specific/Media/InnerLink"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 import {
   ContentWrapper,
   MediaContent,
@@ -51,13 +49,7 @@ const NoteCategoryTemplate = ({ data, location }) => {
     noteTitle => `${location.pathname}/${slugify(noteTitle, { lower: true })}`
   )
   return (
-    <Page
-      accent="random"
-      accentBg
-      title="Writing is hard"
-      design="bubbles"
-      description={seoDescriptions.notes}
-    >
+    <Page accent="random" design="bubbles" seoProfile="notes-page">
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>
       </MediaHeader>

@@ -17,8 +17,6 @@ import {
   MediaSection,
 } from "../components/page-specific/Media"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 const ProjectHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -29,13 +27,7 @@ const ProjectTemplate = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   const { date, title, repo, link, tech } = frontmatter
   return (
-    <Page
-      accent="random"
-      accentBg
-      title="Writing is hard"
-      design="bubbles"
-      description={seoDescriptions.projects}
-    >
+    <Page accent="random" design="bubbles" seoProfile="project-page">
       <MediaHeader>
         <Button>
           <Link to="/projects" tabIndex="-1">

@@ -10,7 +10,6 @@ import MainWrapper from "../../components/MainWrapper"
 import CategoryLink from "../../components/page-specific/Media/CategoryLink"
 
 import noteDescriptions from "../../data/note-descriptions.json"
-import seoDescriptions from "../../data/seo-descriptions.json"
 
 const CategoryTile = styled.div`
   display: flex;
@@ -41,13 +40,7 @@ const Notes = ({ data }) => {
     category => `/notes/${slugify(category, { lower: true })}`
   )
   return (
-    <Page
-      accent="green"
-      accentBg
-      title="Learning can be fun!"
-      design="mesh"
-      description={seoDescriptions.notes}
-    >
+    <Page accent="green" design="mesh" seoProfile="notes-section">
       <Hero expanding height="50vh">
         <h1>
           <code>&lt;Scribblings /&gt;</code>

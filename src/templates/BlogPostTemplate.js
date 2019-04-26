@@ -5,8 +5,6 @@ import Page from "../components/Page"
 import Tag from "../components/Tag"
 import InnerLink from "../components/page-specific/Media/InnerLink"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 import {
   ContentWrapper,
   MediaContent,
@@ -23,13 +21,7 @@ const BlogPostTemplate = ({ data }) => {
   const { date, description, tags, title } = frontmatter
 
   return (
-    <Page
-      accent="random"
-      accentBg
-      title="Writing is hard"
-      design="bubbles"
-      description={seoDescriptions.blog}
-    >
+    <Page accent="random" design="bubbles" seoProfile="blog-page">
       <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/blog">&lt;-- /blog</InnerLink>

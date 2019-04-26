@@ -11,8 +11,6 @@ import ShowItem from "../components/ShowItem"
 import { Default, Skewed } from "../components/PageSections"
 import Typer from "../components/page-specific/Home/Typer"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 const MainHero = styled(Hero)`
   margin-top: -${({ theme }) => theme.constants.navBarHeight};
 `
@@ -68,15 +66,9 @@ const Carousel = styled.div`
   }
 `
 
-const Home = () => {
+const Home = props => {
   return (
-    <Page
-      accent="teal"
-      accentBg
-      design="space"
-      title="Leander Rodrigues: Toronto Developer | Web Nerd | Dog Fanatic"
-      description={seoDescriptions.home}
-    >
+    <Page accent="teal" design="space" {...props}>
       <MainHero>
         <p>Hi there, My name is</p>
         <h1>

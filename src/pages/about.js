@@ -8,8 +8,6 @@ import MainWrapper from "../components/MainWrapper"
 import { Skewed } from "../components/PageSections"
 import FAQ from "../components/FAQ"
 
-import seoDescriptions from "../data/seo-descriptions.json"
-
 const Questions = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
@@ -27,13 +25,7 @@ const About = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: faqs } = allMarkdownRemark
   return (
-    <Page
-      accent="red"
-      accentBg
-      title="me, me, mE, ME, ME!"
-      design="snow"
-      description={seoDescriptions.about}
-    >
+    <Page accent="red" design="snow" seoProfile="about-page">
       <Hero expanding height="50vh">
         <h1>All About Me</h1>
       </Hero>

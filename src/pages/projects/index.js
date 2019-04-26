@@ -7,8 +7,6 @@ import Hero from "../../components/Hero"
 import WhipStack from "../../components/WhipStack"
 import { Skewed } from "../../components/PageSections"
 
-import seoDescriptions from "../../data/seo-descriptions.json"
-
 const WhipSection = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
@@ -29,13 +27,7 @@ const Projects = ({ data }) => {
     ...frontmatter,
   }))
   return (
-    <Page
-      accent="orange"
-      accentBg
-      title="Wanna see something cool?"
-      design="mesh"
-      description={seoDescriptions.projects}
-    >
+    <Page accent="orange" design="mesh" seoProfile="projects">
       <Hero height="35vh">
         <h1>Shenanigans</h1>
       </Hero>
