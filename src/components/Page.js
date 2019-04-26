@@ -1,108 +1,16 @@
 import React from "react"
-import { Helmet } from "react-helmet"
-import { withPrefix } from "gatsby"
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 
+import GlobalStyles from "../styles/GlobalStyles"
 import { palette } from "../styles/palette"
 
 import Nav from "./Nav"
 import Footer from "./Footer"
+import SEOBundle from "./SEOBundle"
 import ParticleBackground from "./ParticleBackground"
 
 // import { consoleLiteral } from "../data/consoleLiteral"
 import { genRandProperty } from "../helpers"
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    box-sizing: border-box;
-    font-size: 10px;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  @font-face {
-    font-family: dm;
-    src: url(${withPrefix("fonts/dm.ttf")});
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 1.75rem;
-    line-height: 1.5;
-    font-family: ${({ theme }) => theme.font.base};
-    scrollbar-color: ${({ theme }) =>
-      `${theme.accent} ${theme.shade.lightest}`};
-    scrollbar-width: thin;
-    &::-webkit-scrollbar {
-      width: 1rem;
-      background: ${({ theme }) => theme.shade.darker};
-    }
-    &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.accent};
-      border-radius: 2rem;
-    }
-  }
-  code {
-    font-family: ${({ theme }) => theme.font.mono} !important;
-  }
-  h1 {
-    font-size: 6rem
-  }
-  h2  {
-    font-size: 3.5rem;
-  }
-  h3, 
-  h4, 
-  h5 {
-    font-size: 2.5rem;
-  }
-  a {
-    font-size: 1.75rem;
-    color: inherit;
-    text-decoration: none;
-  }
-  Link, button {
-    user-select: none;
-  }
-  mark,
-  ::selection {
-    background: ${({ theme }) => theme.accent};
-    background: ${({ theme }) => theme.accent}88;
-  }
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 10px ${({ theme }) => theme.accent};
-  }
-  #nprogress {
-    pointer-events: none;
-    .bar {
-      background: #fefefe;
-      position: fixed;
-      z-index: 1031;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-    }
-    .peg {
-      display: block;
-      position: absolute;
-      right: 0px;
-      width: 100px;
-      height: 100%;
-      box-shadow: 0 0 10px #fefefe, 0 0 5px #fefefe;
-      opacity: 1.0;
-      transform: rotate(3deg) translate(0px, -4px);
-    }
-  }
-  .nprogress-custom-parent {
-    overflow: hidden;
-    position: relative;
-    #nprogress .bar {
-      position: absolute;
-    }
-  }
-`
 
 const StyledPage = styled.div`
   margin-top: ${({ theme }) => theme.constants.navBarHeight};
@@ -137,11 +45,11 @@ class Page extends React.Component {
   render() {
     const {
       accent,
-      accentBg,
+      bgColor,
       children,
-      description,
       design,
-      title,
+      location,
+      seoProfile,
     } = this.props
     const { showSideBar } = this.state
     const theme = {
@@ -152,56 +60,30 @@ class Page extends React.Component {
       ...palette,
     }
     return (
-      <>
-        <Helmet>
-          <title>{title}</title>
-          <meta name="description" content={description} />
-          <link
-            rel="mask-icon"
-            href={withPrefix("icons/safari-pinned-tab.svg")}
-            color={theme.accent}
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <SEOBundle
+            seoProfile={seoProfile}
+            theme={theme}
+            url={location.href}
           />
-          <meta name="msapplication-TileColor" content={theme.accent} />
-          <meta name="theme-color" content={theme.shade.darker} />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href={withPrefix("icons/apple-touch-icon.png")}
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href={withPrefix("/favicon-32x32.png")}
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href={withPrefix("/favicon-16x16.png")}
-          />
-          <link rel="manifest" href={withPrefix("site.webmanifest")} />
-        </Helmet>
-        <ThemeProvider theme={theme}>
-          <>
-            <GlobalStyle />
-            <StyledPage>
-              <ParticleBackground
-                height="100vh"
-                design={design}
-                accent={accentBg ? theme.accent : theme.shade.lighter}
-              />
-              <Nav
-                showSideBar={showSideBar}
-                handleToggle={this.toggleNav}
-                accent={theme.accent}
-              />
-              {children}
-              <Footer />
-            </StyledPage>
-          </>
-        </ThemeProvider>
-      </>
+          <StyledPage>
+            <ParticleBackground
+              height="100vh"
+              design={design}
+              theme={bgColor || theme.accent}
+            />
+            <Nav
+              showSideBar={showSideBar}
+              handleToggle={this.toggleNav}
+              accent={theme.accent}
+            />
+            {children}
+            <Footer />
+          </StyledPage>
+        </>
+      </ThemeProvider>
     )
   }
 }

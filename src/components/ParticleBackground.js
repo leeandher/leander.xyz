@@ -18,22 +18,22 @@ const Wrapper = styled.div`
   left: 0;
 `
 
-const ParticleBackground = ({ accent, design, height, ...props }) => {
+const ParticleBackground = ({ color, design, height, ...props }) => {
   function particleData(styleId) {
     const dataSets = ["bubbles", "mesh", "snow", "space"]
     const randIndex = genRand(0, dataSets.length - 1, true)
     switch (styleId) {
       case "bubbles":
-        bubbles.particles.color.value = accent
+        bubbles.particles.color.value = color
         return bubbles
       case "mesh":
-        mesh.particles.line_linked.color = accent
+        mesh.particles.line_linked.color = color
         return mesh
       case "snow":
-        snow.particles.color.value = accent
+        snow.particles.color.value = color
         return snow
       case "space":
-        space.particles.color.value = accent
+        space.particles.color.value = color
         return space
       case "random":
       default:
