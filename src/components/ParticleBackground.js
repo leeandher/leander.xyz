@@ -12,13 +12,17 @@ import { genRand } from "../helpers"
 const Wrapper = styled.div`
   width: 100%;
   position: fixed;
-  max-height: 150%;
+  height: 125%;
   top: 0;
   z-index: -1;
   left: 0;
 `
+const BackgroundParticles = styled(Particles)`
+  width: 100%;
+  height: 100%;
+`
 
-const ParticleBackground = ({ color, design, ...props }) => {
+const ParticleBackground = ({ color, design, ...restOfProps }) => {
   function particleData(styleId) {
     const dataSets = ["bubbles", "mesh", "snow", "space"]
     const randIndex = genRand(0, dataSets.length - 1, true)
@@ -40,9 +44,9 @@ const ParticleBackground = ({ color, design, ...props }) => {
         return particleData(dataSets[randIndex])
     }
   }
-  return design === "none" ? null : (
+  return (
     <Wrapper>
-      <Particles height="100%" params={particleData(design)} {...props} />
+      <BackgroundParticles params={particleData(design)} {...restOfProps} />
     </Wrapper>
   )
 }

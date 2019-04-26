@@ -58,10 +58,12 @@ class Page extends React.Component {
           <GlobalStyles />
           <SEOBundle seoProfile={seoProfile} theme={theme} />
           <StyledPage>
-            <ParticleBackground
-              design={bgDesign}
-              theme={bgColor || theme.accent}
-            />
+            {bgDesign !== "none" && (
+              <ParticleBackground
+                design={bgDesign}
+                color={bgColor || theme.accent}
+              />
+            )}
             <Nav
               showSideBar={showSideBar}
               handleToggle={this.toggleNav}

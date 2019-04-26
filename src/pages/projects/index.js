@@ -27,7 +27,7 @@ const Projects = ({ data }) => {
     ...frontmatter,
   }))
   return (
-    <Page accent="orange" bgDesign="mesh" seoProfile="projects">
+    <Page accent="orange" bgDesign="mesh" seoProfile="projects-page">
       <Hero height="35vh">
         <h1>Shenanigans</h1>
       </Hero>
