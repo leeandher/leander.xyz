@@ -43,14 +43,7 @@ class Page extends React.Component {
   // }
 
   render() {
-    const {
-      accent,
-      bgColor,
-      children,
-      design,
-      location,
-      seoProfile,
-    } = this.props
+    const { accent, bgColor, children, bgDesign, seoProfile } = this.props
     const { showSideBar } = this.state
     const theme = {
       accent:
@@ -63,15 +56,10 @@ class Page extends React.Component {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
-          <SEOBundle
-            seoProfile={seoProfile}
-            theme={theme}
-            url={location.href}
-          />
+          <SEOBundle seoProfile={seoProfile} theme={theme} />
           <StyledPage>
             <ParticleBackground
-              height="100vh"
-              design={design}
+              design={bgDesign}
               theme={bgColor || theme.accent}
             />
             <Nav

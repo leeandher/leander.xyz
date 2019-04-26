@@ -66,9 +66,9 @@ const Carousel = styled.div`
   }
 `
 
-const Home = props => {
+const Home = () => {
   return (
-    <Page accent="teal" design="space" {...props}>
+    <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
         <p>Hi there, My name is</p>
         <h1>

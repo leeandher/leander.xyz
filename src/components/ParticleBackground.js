@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   left: 0;
 `
 
-const ParticleBackground = ({ color, design, height, ...props }) => {
+const ParticleBackground = ({ color, design, ...props }) => {
   function particleData(styleId) {
     const dataSets = ["bubbles", "mesh", "snow", "space"]
     const randIndex = genRand(0, dataSets.length - 1, true)
@@ -42,7 +42,7 @@ const ParticleBackground = ({ color, design, height, ...props }) => {
   }
   return design === "none" ? null : (
     <Wrapper>
-      <Particles height={height} params={particleData(design)} {...props} />
+      <Particles height="100%" params={particleData(design)} {...props} />
     </Wrapper>
   )
 }

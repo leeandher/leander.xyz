@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data }) => {
   const { date, description, tags, title } = frontmatter
 
   return (
-    <Page accent="random" design="bubbles" seoProfile="blog-page">
+    <Page accent="random" bgDesign="bubbles" seoProfile="blog-page">
       <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/blog">&lt;-- /blog</InnerLink>

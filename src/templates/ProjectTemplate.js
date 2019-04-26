@@ -27,7 +27,7 @@ const ProjectTemplate = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   const { date, title, repo, link, tech } = frontmatter
   return (
-    <Page accent="random" design="bubbles" seoProfile="project-page">
+    <Page accent="random" bgDesign="bubbles" seoProfile="project-page">
       <MediaHeader>
         <Button>
           <Link to="/projects" tabIndex="-1">

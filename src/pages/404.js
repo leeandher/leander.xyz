@@ -18,7 +18,7 @@ const Header = styled.div`
 
 const Projects = () => {
   return (
-    <Page accent="pink" design="mesh" seoProfile="404-page">
+    <Page accent="pink" bgDesign="mesh" seoProfile="404-page">
       <Header>
         <h1>
           <code>

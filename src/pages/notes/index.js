@@ -40,7 +40,7 @@ const Notes = ({ data }) => {
     category => `/notes/${slugify(category, { lower: true })}`
   )
   return (
-    <Page accent="green" design="mesh" seoProfile="notes-section">
+    <Page accent="green" bgDesign="mesh" seoProfile="notes-section">
       <Hero expanding height="50vh">
         <h1>
           <code>&lt;Scribblings /&gt;</code>

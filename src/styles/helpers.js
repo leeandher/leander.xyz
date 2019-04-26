@@ -1,4 +1,5 @@
 import { css } from "styled-components"
+import * as _ from "lodash"
 
 const sizes = {
   desktop: 992,
@@ -17,11 +18,11 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
 /**
  * Quickly apply theme item through styled-components
- * @param {string} paletteBase - The first level property on the styled-component theme
- * @param {string} [paletteKey] - The second level property on the base of the styled-component theme
+ * @param {*} paletteKey - A traversal path to the paletteStyle (see https://lodash.com/docs/4.17.11#get)
+ * @returns {} - A style property value from the palette file
  */
-export const themer = (paletteBase, paletteKey) => {
+export const themer = paletteKey => {
   return function({ theme }) {
-    return paletteKey ? theme[paletteBase][paletteKey] : theme[paletteBase]
+    return _.get(theme, paletteKey)
   }
 }

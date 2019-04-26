@@ -21,7 +21,7 @@ const AnchorLink = styled.a`
   }
   &:focus,
   &:hover {
-    color: ${themer("shade", "darkest")};
+    color: ${themer("shade.darkest")};
     &:before {
       max-height: 100%;
     }

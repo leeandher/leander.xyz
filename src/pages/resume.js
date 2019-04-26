@@ -21,7 +21,7 @@ const ResumeSection = styled(Default)`
 
 const Resume = () => {
   return (
-    <Page accent="blue" design="space" seoProfile="resume-page">
+    <Page accent="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
         <MeCard />
       </Header>
