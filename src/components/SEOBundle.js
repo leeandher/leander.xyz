@@ -5,7 +5,7 @@ import { Location } from "@reach/router"
 
 import seo from "../data/seo.json"
 
-const DEFAULT_IMAGE = "https://dev.leander.xyz/icons/logo-d.png"
+const DEFAULT_IMAGE = "https://dev.leander.xyz/icons/logo-s.png"
 
 const SEOBundle = ({ image = DEFAULT_IMAGE, seoProfile, theme }) => {
   if (!seo[seoProfile])
