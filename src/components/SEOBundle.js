@@ -25,6 +25,8 @@ const SEOBundle = ({ image = DEFAULT_IMAGE, seoProfile, theme }) => {
           <meta property="og:type" content="article" />
           <meta property="og:url" content={url} />
           <meta property="og:image" content={image} />
+          <meta property="og:image:height" content={160} />
+          <meta property="og:image:width" content={160} />
 
           {/* Twitter */}
           <meta name="twitter:card" content="summary" />

@@ -2,8 +2,6 @@
   "version": "0.1",
   "language": "en",
   "words": [
-    "Linkedin",
-    "Typer",
     "airbnb",
     "bugfix",
     "circleci",
@@ -12,6 +10,7 @@
     "gif",
     "gifs",
     "grayscale",
+    "Linkedin",
     "msapplication",
     "netlify",
     "netlify's",
@@ -19,12 +18,15 @@
     "noreferrer",
     "paren",
     "prismjs",
+    "rodrigues",
     "scribblings",
     "slugify",
     "socio",
     "subdomain",
     "subdomains",
     "textnodes",
-    "themer"
-  ]
+    "themer",
+    "Typer"
+  ],
+  "flagWords": []
 }
