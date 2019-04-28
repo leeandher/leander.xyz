@@ -16,9 +16,18 @@
         "Git Workflows"
       ],
       "bullets": [
-        "Deployed reusable components in React.js through peer programming and test-driven development",
-        "Designed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases",
-        "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+        {
+          "emoji": "🔨",
+          "text": "Designed reusable components in React.js through peer programming and test-driven development"
+        },
+        {
+          "emoji": "🚀",
+          "text": "Deployed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases"
+        },
+        {
+          "emoji": "📚",
+          "text": "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+        }
       ]
     },
     {

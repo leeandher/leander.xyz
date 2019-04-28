@@ -78,7 +78,7 @@ const WorkCard = ({ bullets, company, location, time, title, skills, url }) => {
           const isString = typeof bullet === "string"
           return (
             <CardListItem key={i} bullet={!isString ? bullet.emoji : ">"}>
-              {bullet}
+              {isString ? bullet : bullet.text}
             </CardListItem>
           )
         })}
