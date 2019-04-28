@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import BusinessCard from "../components/BusinessCard"
 import Page from "../components/Page"
+import WorkCard from "../components/page-specific/Resume/WorkCard"
 import { Default } from "../components/PageSections"
 
 import { themer } from "../styles/helpers"
@@ -16,7 +17,28 @@ const MeCard = styled(BusinessCard)`
 `
 
 const ResumeSection = styled(Default)`
-  background: ${themer("accent")};
+  background: ${themer("shade.lightest")};
+  margin: 2rem 0;
+`
+
+const ResumeLayout = styled.div`
+  display: grid;
+  grid-template-columns: 250px auto;
+  max-width: ${themer("spacing.maxWidth")};
+  margin: 0 auto;
+  .title {
+    padding: 2.5rem;
+    grid-area: 1 / 1 / 1 / 1;
+    border-right: 2px solid ${themer("accent")};
+    text-align: right;
+    font-weight: 300;
+  }
+  .content {
+    padding: 2.5rem;
+    grid-area: 1 / 2 / 1 / 2;
+    font-size: 1.5rem;
+    text-align: left;
+  }
 `
 
 const Resume = () => {
@@ -25,21 +47,50 @@ const Resume = () => {
       <Header>
         <MeCard />
       </Header>
+      <h2>Woot</h2>
       <ResumeSection>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-          consequuntur, ipsum, qui aliquam quo nulla, quibusdam eum sapiente
-          esse ducimus cupiditate eaque? Fugiat, sit ratione aspernatur, facilis
-          natus voluptatibus nesciunt harum temporibus quos accusamus minus quis
-          magnam earum ab neque quasi? Quam, rem. Ad accusantium officia
-          cupiditate placeat aperiam illum aspernatur iusto, veniam error
-          deserunt assumenda animi, provident aut dolore. Odio consectetur quia,
-          ipsum obcaecati mollitia excepturi dignissimos quae deleniti,
-          voluptatum officia cupiditate molestiae neque quasi delectus laborum
-          at perspiciatis adipisci ex quas accusamus ad laboriosam. Eius
-          reiciendis dicta ipsam, temporibus ducimus voluptatum ut dolores non
-          blanditiis magni doloribus unde.
-        </p>
+        <ResumeLayout>
+          <h2 className="title">Work Experience</h2>
+          <div className="content">
+            <WorkCard
+              bullets={["did a bunch of cool jzz", "did a bunch of cool jzz"]}
+              company="Shop Bonsai"
+              location="Toronto, ON"
+              time="Winter 2019"
+              title="Full-stack React Native Developer"
+              skills={[
+                "React Native",
+                "TypeScript / Flow",
+                "GraphQL / MongoDB",
+                "Redux / Apollo",
+                "Code Review",
+                "CI/CD",
+              ]}
+              url="https://corp.shopbonsai.ca/"
+            />
+            <WorkCard
+              bullets={[
+                "Deployed reusable components in React.js through peer programming and test-driven development",
+                "Designed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases",
+                "Received certified, formal training in DevOps, Agile Development and Design Thinking",
+              ]}
+              company="Accenture"
+              location="Toronto, ON"
+              time="Fall 2018"
+              title="Advanced App Engineering Senior Analyst"
+              skills={[
+                "React",
+                "Node",
+                "Handlebars",
+                "AWS Lambda",
+                "AWS SNS/SES",
+                "Google DialogFlow",
+                "Git Workflows",
+              ]}
+              url="https://accenture.com/"
+            />
+          </div>
+        </ResumeLayout>
       </ResumeSection>
     </Page>
   )
