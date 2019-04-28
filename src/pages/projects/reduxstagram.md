@@ -2,7 +2,7 @@
 type: projects
 slug: reduxstagram
 title: Reduxstagram
-screenshot: /assets/project__reduxstagram.png
+image: /assets/project__reduxstagram.png
 date: 2018-11-29T17:26:56.683Z
 repo: "https://github.com/leeandher/Reduxstagram"
 link: "https://reduxstagram.leander.xyz"

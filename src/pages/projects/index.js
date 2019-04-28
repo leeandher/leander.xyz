@@ -53,7 +53,7 @@ export const projectsQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           slug
-          screenshot
+          image
           title
           repo
           link

@@ -94,7 +94,7 @@ const ExternalLinkWrapper = styled.div`
 
 const ProjectCard = ({
   date,
-  screenshot,
+  image,
   excerpt,
   slug,
   title,
@@ -107,12 +107,7 @@ const ProjectCard = ({
   return (
     <Card {...restOfProps}>
       <HeaderImage>
-        <img
-          src={screenshot || "/assets/project__default.png"}
-          alt={altText}
-          title={altText}
-          draggable={false}
-        />
+        <img src={image} alt={altText} title={altText} draggable={false} />
       </HeaderImage>
       <h2>{title}</h2>
       <time>{date}</time>

@@ -24,7 +24,7 @@ const WrapperLink = styled(Link)`
       transform: scale(1.25);
     }
   }
-  h4 {
+  .title {
     margin: 0;
     display: inline;
     margin: 1.5rem;
@@ -36,11 +36,11 @@ const WrapperLink = styled(Link)`
       background: ${({ theme }) => theme.accent};
     }
   }
-  p {
+  .description {
     font-weight: 300;
     margin: 0;
   } 
-  div {
+  .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,11 +63,11 @@ const WrapperLink = styled(Link)`
 const ShowItem = ({ description, src, title, ...props }) => {
   return (
     <WrapperLink src={src} {...props}>
-      <div>
-        <h4>
+      <div className="wrapper">
+        <h4 className="title">
           <span>{title}</span>
         </h4>
-        <p>{description}</p>
+        <p className="description">{description}</p>
       </div>
     </WrapperLink>
   )

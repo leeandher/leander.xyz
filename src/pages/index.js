@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Button from "../components/Button"
 import Hero from "../components/Hero"
@@ -66,7 +66,8 @@ const Carousel = styled.div`
   }
 `
 
-const Home = () => {
+const Home = ({ data }) => {
+  console.log(data)
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
@@ -202,5 +203,21 @@ const Home = () => {
     </Page>
   )
 }
+
+export const showcaseQuery = graphql`
+  query {
+    allMarkdownRemark(filter: { frontmatter: { showcase: { eq: true } } }) {
+      nodes {
+        frontmatter {
+          title
+          type
+          description
+          image
+          slug
+        }
+      }
+    }
+  }
+`
 
 export default Home

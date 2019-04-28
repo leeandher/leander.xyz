@@ -2,7 +2,7 @@
 type: projects
 slug: conway
 title: Conway's Game of Life
-screenshot: /assets/project__conway.png
+image: /assets/project__conway.png
 date: 2018-12-11T00:54:57.457Z
 repo: "https://github.com/leeandher/Conways-Game-of-Life"
 link: "https://conway.leander.xyz"
