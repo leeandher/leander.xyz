@@ -36,6 +36,7 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title, widget: string }
       - { name: description, label: Description, widget: text }
+      - { name: showcase, label: Showcase, widget: boolean, default: false }
       - { name: tags, label: Tags, widget: list }
       - { name: body, label: Body, widget: markdown }
   - name: projects
@@ -53,6 +54,7 @@ collections:
       - { name: date, label: Date Completed, widget: date }
       - { name: repo, label: Repo Link, widget: string }
       - { name: link, label: Live Link, widget: string }
+      - { name: showcase, label: Showcase, widget: boolean, default: false }
       - { name: tech, label: Tech Used, widget: list }
       - { name: body, label: Description, widget: markdown }
   - name: faqs

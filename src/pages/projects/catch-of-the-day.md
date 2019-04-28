@@ -6,6 +6,7 @@ screenshot: /assets/project__catch-of-the-day.png
 date: 2018-10-15T02:27:27.851Z
 repo: "https://github.com/leeandher/Catch-of-the-Day"
 link: "https://catch-of-the-day.leander.xyz"
+showcase: false
 tech:
   - react
   - react-router

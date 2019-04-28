@@ -4,8 +4,9 @@ slug: reduxstagram
 title: Reduxstagram
 screenshot: /assets/project__reduxstagram.png
 date: 2018-11-29T17:26:56.683Z
-repo: 'https://github.com/leeandher/Reduxstagram'
-link: 'https://reduxstagram.leander.xyz'
+repo: "https://github.com/leeandher/Reduxstagram"
+link: "https://reduxstagram.leander.xyz"
+showcase: false
 tech:
   - react
   - redux
@@ -14,6 +15,7 @@ tech:
   - create-react-app
   - clone
 ---
+
 This project is a single page application I made, to understand how to integrate **Redux** with **React**. I'm not going to say it's an _instagram clone_, but ya know. You can like posts, navigate the app, and add comments and your changes will be reflected instantly. Refreshing will reset the app, and give you some new images to play with as well!
 
 It's really simple, and mainly just a demo, but as my first attempt at Redux, I would say it's a success. The finished product can be demo-ed online at [reduxstagram.leander.xyz](https://reduxstagram.leander.xyz).

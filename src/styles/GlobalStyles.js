@@ -19,21 +19,20 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 1.75rem;
     line-height: 1.5;
-    font-family: ${({ theme }) => theme.font.base};
-    scrollbar-color: ${({ theme }) =>
-      `${theme.accent} ${theme.shade.lightest}`};
+    font-family: ${themer("font.base")};
+    scrollbar-color: ${themer("accent")} ${themer("shade.lightest")};
     scrollbar-width: thin;
     &::-webkit-scrollbar {
       width: 1rem;
-      background: ${({ theme }) => theme.shade.darker};
+      background: ${themer("shade.darker")};
     }
     &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.accent};
+      background: ${themer("accent")};
       border-radius: 2rem;
     }
   }
   code {
-    font-family: ${({ theme }) => theme.font.mono} !important;
+    font-family: ${themer("font.mono")} !important;
   }
   h1 {
     font-size: 6rem
@@ -56,17 +55,17 @@ const GlobalStyles = createGlobalStyle`
   }
   mark,
   ::selection {
-    background: ${({ theme }) => theme.accent};
-    background: ${({ theme }) => theme.accent}88;
+    background: ${themer("accent")};
+    background: ${themer("accent")}88;
   }
   &:focus {
     outline: none;
-    box-shadow: 0 0 10px ${({ theme }) => theme.accent};
+    box-shadow: 0 0 10px ${themer("accent")};
   }
   #nprogress {
     pointer-events: none;
     .bar {
-      background: #fefefe;
+      background: ${themer("shade.lightest")};
       position: fixed;
       z-index: 1031;
       top: 0;
@@ -80,7 +79,9 @@ const GlobalStyles = createGlobalStyle`
       right: 0px;
       width: 100px;
       height: 100%;
-      box-shadow: 0 0 10px #fefefe, 0 0 5px #fefefe;
+      box-shadow: 0 0 10px ${themer("shade.lightest")}, 0 0 5px ${themer(
+  "shade.lightest"
+)};
       opacity: 1.0;
       transform: rotate(3deg) translate(0px, -4px);
     }

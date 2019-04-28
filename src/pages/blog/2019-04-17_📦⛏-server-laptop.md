@@ -8,11 +8,13 @@ description: >-
   Have you ever wanted to learn how to turn spin up a Minecraft server from your
   old laptop, or even just a separate terminal? It's surprisingly out of the
   box, just follow these steps!
+showcase: true
 tags:
   - how-to
   - coding
 ---
-To whoever is reading this, trying to spin up a Minecraft server in 2019 without paying for _Minecraft Realms_, I respect that. My girlfriend recently saw some GIFs or something and wants to start up a server for us to play together, plus I think this could be a fun Saturday experiment. I'm going to talk a little bit about my process in getting this up and running. I'm definitely not used to SSHing into Linux servers but we'll give it a shot.
+
+To whoever is reading this, trying to spin up a Minecraft server in 2019 without paying for _Minecraft Realms_, I respect that. My girlfriend recently saw some GIFs or something and wants to start up a server for us to play together, plus I think this could be a fun Saturday experiment. I'm going to talk a little bit about my process in getting this up and running. I'm definitely not used to SSH-ing into Linux servers but we'll give it a shot.
 
 Note: This tutorial is not very verbose and has some strict limitations along with it. It's really only useful if the following are true:
 
@@ -117,7 +119,7 @@ The reason the server stopped was because we hadn't yet signed the End User Lice
 
 It'll look sorta like this:
 
-```txt
+```
 #By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).
 #Sat Mar 02 13:32:14 EST 2019
 eula=false
@@ -163,7 +165,7 @@ Wireless LAN adapter Wi-Fi:
   ...
 ```
 
-This is heavily dependent on what type of router you have so instead of overcomplicating it, I'll just link to [this guide](https://portforward.com/router.htm) which walks you through Port Forwarding for a bunch of different routers. In our case, since Minecraft Servers are connected on port `25565`, that is the one we're going to want to forward to the host machine.
+This is heavily dependent on what type of router you have so instead of over-complicating it, I'll just link to [this guide](https://portforward.com/router.htm) which walks you through Port Forwarding for a bunch of different routers. In our case, since Minecraft Servers are connected on port `25565`, that is the one we're going to want to forward to the host machine.
 
 That should be it! Now to all your friends need to do is connect to the host machine's router's IP address and you're good to go! To find that out, [simply check out this link](http://lmgtfy.com/?q=What+is+my+IP%3F).
 
