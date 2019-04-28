@@ -6,7 +6,8 @@ import Hero from "../components/Hero"
 import Page from "../components/Page"
 import MainWrapper from "../components/MainWrapper"
 import { Skewed } from "../components/PageSections"
-import FAQ from "../components/FAQ"
+
+import FAQ from "../components/page-specific/About/FAQ"
 
 const Questions = styled(Skewed)`
   padding: 10rem 0 3rem 0;

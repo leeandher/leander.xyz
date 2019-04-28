@@ -18,6 +18,7 @@ const CategoryLink = styled(Link)`
   }
   h3 {
     margin: 0;
+    text-align: center;
   }
   span {
     position: relative;

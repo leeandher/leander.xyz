@@ -5,11 +5,12 @@ import { graphql, Link } from "gatsby"
 import Button from "../components/Button"
 import Hero from "../components/Hero"
 import Page from "../components/Page"
-import QuoteCard from "../components/QuoteCard"
 import MainWrapper from "../components/MainWrapper"
-import ShowItem from "../components/ShowItem"
 import { Default, Skewed } from "../components/PageSections"
+
 import Typer from "../components/page-specific/Home/Typer"
+import QuoteCard from "../components/page-specific/Home/QuoteCard"
+import ShowItem from "../components/page-specific/Home/ShowItem"
 
 const MainHero = styled(Hero)`
   margin-top: -${({ theme }) => theme.constants.navBarHeight};
