@@ -1,0 +1,45 @@
+{
+  "work-experience": [
+    {
+      "title": "Advanced App Engineering Senior Analyst",
+      "company": "Accenture",
+      "location": "Toronto, ON",
+      "time": "Fall 2018 (4m)",
+      "url": "https://accenture.com/",
+      "skills": [
+        "React",
+        "Node",
+        "Handlebars",
+        "AWS Lambda",
+        "AWS SNS/SES",
+        "Google DialogFlow",
+        "Git Workflows"
+      ],
+      "bullets": [
+        "Deployed reusable components in React.js through peer programming and test-driven development",
+        "Designed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases",
+        "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+      ]
+    },
+    {
+      "title": "Full-stack React Native Developer",
+      "company": "Shop Bonsai",
+      "location": "Toronto, ON",
+      "time": "Winter 2019 (4m)",
+      "url": "https://corp.shopbonsai.ca/",
+      "skills": [
+        "React Native",
+        "TypeScript / Flow",
+        "GraphQL / MongoDB",
+        "Redux / Apollo",
+        "Code Review",
+        "CI/CD"
+      ],
+      "bullets": [
+        "Deployed reusable components in React.js through peer programming and test-driven development",
+        "Designed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases",
+        "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+      ]
+    }
+  ]
+}

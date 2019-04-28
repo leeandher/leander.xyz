@@ -6,6 +6,8 @@ import Page from "../components/Page"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
 import { Default } from "../components/PageSections"
 
+import resume from "../data/resume.json"
+
 import { themer } from "../styles/helpers"
 
 const Header = styled.div`
@@ -52,43 +54,9 @@ const Resume = () => {
         <ResumeLayout>
           <h2 className="title">Work Experience</h2>
           <div className="content">
-            <WorkCard
-              bullets={["did a bunch of cool jzz", "did a bunch of cool jzz"]}
-              company="Shop Bonsai"
-              location="Toronto, ON"
-              time="Winter 2019"
-              title="Full-stack React Native Developer"
-              skills={[
-                "React Native",
-                "TypeScript / Flow",
-                "GraphQL / MongoDB",
-                "Redux / Apollo",
-                "Code Review",
-                "CI/CD",
-              ]}
-              url="https://corp.shopbonsai.ca/"
-            />
-            <WorkCard
-              bullets={[
-                "Deployed reusable components in React.js through peer programming and test-driven development",
-                "Designed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases",
-                "Received certified, formal training in DevOps, Agile Development and Design Thinking",
-              ]}
-              company="Accenture"
-              location="Toronto, ON"
-              time="Fall 2018"
-              title="Advanced App Engineering Senior Analyst"
-              skills={[
-                "React",
-                "Node",
-                "Handlebars",
-                "AWS Lambda",
-                "AWS SNS/SES",
-                "Google DialogFlow",
-                "Git Workflows",
-              ]}
-              url="https://accenture.com/"
-            />
+            {resume["work-experience"].map(jobInfo => (
+              <WorkCard {...jobInfo} />
+            ))}
           </div>
         </ResumeLayout>
       </ResumeSection>
