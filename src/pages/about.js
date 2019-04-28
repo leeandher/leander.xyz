@@ -31,8 +31,8 @@ const About = ({ data }) => {
       </Hero>
       <Questions skew="4deg">
         <MainWrapper maxWidth="960px">
-          <h2>FAQs</h2>
-          <h3>
+          <h2 className="title">FAQs</h2>
+          <h3 className="subtitle">
             ( People don't actually ask these,
             <br />
             this is just where I talk about myself )

@@ -47,10 +47,10 @@ const Notes = ({ data }) => {
         </h1>
       </Hero>
       <NoteBlock skew="-4deg">
-        <h2>
+        <h2 className="title">
           My <code>Library</code>
         </h2>
-        <h3>
+        <h3 className="subtitle">
           These are notes taken during talks and random research stints, <br />
           but largely while taking some helpful online courses
         </h3>

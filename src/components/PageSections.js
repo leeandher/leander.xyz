@@ -2,12 +2,12 @@ import styled from "styled-components"
 
 export const Default = styled.section`
   position: relative;
-  h2 {
+  .title {
     font-size: 3.5rem;
     text-align: center;
     text-decoration: underline ${({ theme }) => theme.accent};
   }
-  h3 {
+  .subtitle {
     text-align: center;
     font-weight: 300;
   }

@@ -32,7 +32,7 @@ const Projects = ({ data }) => {
         <h1>Shenanigans</h1>
       </Hero>
       <WhipSection skew="4deg">
-        <h2>My Project Stack</h2>
+        <h2 className="title">My Project Stack</h2>
         <WhipStack itemProps={projectProps} />
       </WhipSection>
     </Page>

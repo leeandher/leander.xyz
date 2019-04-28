@@ -81,7 +81,7 @@ const Home = () => {
       </MainHero>
       <Introduction skew="4deg">
         <MainWrapper>
-          <h2>"Who are you again?"</h2>
+          <h2 className="title">"Who are you again?"</h2>
           {/* cspell: disable */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
@@ -121,8 +121,8 @@ const Home = () => {
         </MainWrapper>
       </Introduction>
       <Director>
-        <h2>"So, what do you do again?"</h2>
-        <h3>
+        <h2 className="title">"So, what do you do again?"</h2>
+        <h3 className="subtitle">
           Well I guess that depends,
           <br />
           what would you like to see?
@@ -155,8 +155,8 @@ const Home = () => {
         </PanelWrapper>
       </Director>
       <Showcase skew="-4deg">
-        <h2>"Help me, I can't decide!"</h2>
-        <h3>
+        <h2 className="title">"Help me, I can't decide!"</h2>
+        <h3 className="subtitle">
           I've picked a few goodies out,
           <br />
           maybe you'll like one?
