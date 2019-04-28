@@ -46,7 +46,7 @@ const Showcase = styled(Skewed)`
   }
 `
 const Carousel = styled.div`
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -67,7 +67,8 @@ const Carousel = styled.div`
 `
 
 const Home = ({ data }) => {
-  console.log(data)
+  const { allMarkdownRemark } = data
+  const { nodes: showcaseItems } = allMarkdownRemark
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
@@ -163,41 +164,18 @@ const Home = ({ data }) => {
           maybe you'll like one?
         </h3>
         <Carousel>
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
-          <ShowItem
-            src="https://source.unsplash.com/random/340x640"
-            title="Fake Project"
-            description="Some description about the project that isn't too long or anything"
-          />
+          {showcaseItems.map(
+            ({ frontmatter: { slug, type, ...showItemProps } }) => {
+              const showCaseLink = `/${type}/${slug}`
+              return (
+                <ShowItem
+                  key={showCaseLink}
+                  to={showCaseLink}
+                  {...showItemProps}
+                />
+              )
+            }
+          )}
         </Carousel>
       </Showcase>
     </Page>

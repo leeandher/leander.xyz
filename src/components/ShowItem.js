@@ -31,6 +31,7 @@ const WrapperLink = styled(Link)`
     position: relative;
     transform: skewX(-4deg);
     font-weight: 500;
+    font-size: 1rem;
     span {
       padding: 0.5rem 1rem; 
       background: ${({ theme }) => theme.accent};
@@ -54,15 +55,15 @@ const WrapperLink = styled(Link)`
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.2;
-    background: url("${({ src }) => src}") transparent;
+    opacity: 0.4;
+    background: url("${({ image }) => image}") transparent;
     transition: transform ease 0.4s;
   }
 `
 
-const ShowItem = ({ description, src, title, ...props }) => {
+const ShowItem = ({ description, image, title, ...restOfProps }) => {
   return (
-    <WrapperLink src={src} {...props}>
+    <WrapperLink image={image} {...restOfProps}>
       <div className="wrapper">
         <h4 className="title">
           <span>{title}</span>
