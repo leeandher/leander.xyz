@@ -11,17 +11,47 @@ const CardHeader = styled.a`
   h3 {
     text-align: left;
     margin: 0;
-    font-weight: 600;
+    font-weight: 500;
+    border: 0px solid ${themer("accent")};
+    border-right-width: 10px;
+  }
+  .wrap {
+    display: flex;
+    * {
+      font-size: 1.75rem;
+    }
   }
   h4 {
-    margin: 0;
+    flex: 1;
     font-weight: 300;
-    font-size: 1.75rem;
-    border: 2px solid ${themer("accent")};
-    border-width: 0 10px 5px 0;
-    padding: 0.5rem;
+    margin: 0;
+    padding: 1rem 0.5rem;
+    white-space: nowrap;
+    border: 0px solid ${themer("accent")};
+    border-bottom-width: 5px;
+    span {
+      font-weight: 300;
+      padding: 0.5rem 1rem;
+      position: relative;
+      z-index: 1;
+      &:before {
+        ${themer("before")};
+        background: ${themer("accent")};
+        opacity: 0.25;
+        transform: skew(12deg);
+      }
+    }
   }
   time {
+    flex: 1;
+    text-align: right;
+    font-weight: 300;
+    white-space: nowrap;
+    padding: 1rem 0.5rem;
+    padding-right: 1.5rem;
+    border: 0px solid ${themer("accent")};
+
+    border-width: 0 10px 5px 0;
   }
 `
 const CardContent = styled.ul`
@@ -68,10 +98,12 @@ const WorkCard = ({ bullets, company, location, time, title, skills, url }) => {
     <Card>
       <CardHeader href={url}>
         <h3>{title}</h3>
-        <h4>
-          {company} - {location}
-        </h4>
-        <time>{time}</time>
+        <div className="wrap">
+          <h4>
+            <span>{company}</span> - {location}
+          </h4>
+          <time>{time}</time>
+        </div>
       </CardHeader>
       <CardContent>
         {bullets.map((bullet, i) => {
