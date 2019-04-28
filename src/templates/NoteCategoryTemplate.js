@@ -4,6 +4,7 @@ import slugify from "slugify"
 import styled from "styled-components"
 
 import Page from "../components/Page"
+import AnchorLink from "../components/AnchorLink"
 import InnerLink from "../components/page-specific/Media/InnerLink"
 
 import {
@@ -49,7 +50,7 @@ const NoteCategoryTemplate = ({ data, location }) => {
     noteTitle => `${location.pathname}/${slugify(noteTitle, { lower: true })}`
   )
   return (
-    <Page accent="random" bgDesign="bubbles" seoProfile="notes-page">
+    <Page accent="yellow" bgDesign="bubbles" seoProfile="notes-page">
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>
       </MediaHeader>
@@ -65,6 +66,15 @@ const NoteCategoryTemplate = ({ data, location }) => {
                 </PageLink>
               ))}
             </div>
+            <p className="disclaimer">
+              I wrote these notes while learning so they might be inaccurate or
+              outdated. If so, let me know, and I'll try to fix them up ASAP.
+              Feel free to make an issue or PR in the{" "}
+              <AnchorLink href="https://github.com/leeandher/leander.xyz">
+                site repository
+              </AnchorLink>{" "}
+              to help me out!
+            </p>
           </MediaPostContent>
         </ContentWrapper>
       </MediaSection>
