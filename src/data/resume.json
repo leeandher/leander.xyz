@@ -2,9 +2,9 @@
   "work-experience": [
     {
       "title": "Advanced App Engineering Senior Analyst",
-      "company": "Accenture",
       "location": "Toronto, ON",
       "time": "Fall 2018 (4m)",
+      "company": "Accenture",
       "url": "https://accenture.com/",
       "skills": [
         "React",
@@ -12,7 +12,7 @@
         "Handlebars",
         "AWS Lambda",
         "AWS SNS/SES",
-        "Google DialogFlow",
+        "Google Dialogflow",
         "Git Workflows"
       ],
       "bullets": [
@@ -32,22 +32,37 @@
     },
     {
       "title": "Full-stack React Native Developer",
-      "company": "Shop Bonsai",
       "location": "Toronto, ON",
       "time": "Winter 2019 (4m)",
+      "company": "Shop Bonsai",
       "url": "https://corp.shopbonsai.ca/",
       "skills": [
+        "React",
         "React Native",
-        "TypeScript / Flow",
-        "GraphQL / MongoDB",
-        "Redux / Apollo",
+        "TypeScript/Flow",
+        "GraphQL w/ MongoDB",
+        "Redux",
+        "Apollo",
         "Code Review",
         "CI/CD"
       ],
       "bullets": [
-        "Deployed reusable components in React.js through peer programming and test-driven development",
-        "Designed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases",
-        "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+        {
+          "emoji": "✅",
+          "text": "Implemented E2E tests in Jasmine and Selenium, along with fixtures, for consistent, black-box reporting in CircleCI"
+        },
+        {
+          "emoji": "🏗",
+          "text": "Overhauled atomic design system for React UI elements on both iOS and Android operating systems"
+        },
+        {
+          "emoji": "♻️",
+          "text": "Refactored GraphQL API resolvers and their respective queries via React Native HOCs to reduce over-fetching"
+        },
+        {
+          "emoji": "⚡",
+          "text": "Actively participated in small-team Agile development activities like Scrum, Planning Poker and Sprints"
+        }
       ]
     }
   ]

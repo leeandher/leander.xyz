@@ -85,7 +85,10 @@ collections:
     files:
       - name: resume
         label: Resume
-        file: src/data/resume-test.json
+        file: src/data/resume.json
+        editor:
+          preview: false
+        create: true
         fields:
           - name: work-experience
             label: Work Experience
@@ -102,4 +105,4 @@ collections:
                 widget: list
                 fields:
                   - { name: emoji, label: Bullet Emoji, widget: string }
-                  - { name: text, label: Bullet Text, widget: string }
+                  - { name: text, label: Bullet Text, widget: text }
