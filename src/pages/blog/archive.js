@@ -4,8 +4,11 @@ import styled from "styled-components"
 
 import Page from "../../components/Page"
 import Hero from "../../components/Hero"
-import MediaLink from "../../components/MediaLink"
 import MainWrapper from "../../components/MainWrapper"
+
+import MediaLink from "../../components/page-specific/Media/MediaLink"
+
+import { themer } from "../../styles/helpers"
 
 const YearWrapper = styled.section`
   h2.year {
@@ -14,9 +17,9 @@ const YearWrapper = styled.section`
     line-height: 0;
     margin: 8rem 2rem;
     padding-left: 15%;
-    border-bottom: 3px solid ${({ theme }) => theme.shade.lightest};
+    border-bottom: 3px solid ${themer("shade.lightest")};
     span {
-      background: ${({ theme }) => theme.accent};
+      background: ${themer("accent")};
       padding: 1rem 4rem;
       display: inline;
     }

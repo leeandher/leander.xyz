@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { themer } from "../../../styles/helpers"
 
 const MediaContent = styled.main`
   margin: 0 auto;
@@ -10,37 +11,32 @@ const MediaContent = styled.main`
     text-align: center;
     display: block;
     font-style: italic;
-    text-decoration: underline ${({ theme }) => theme.accent};
+    text-decoration: underline ${themer("accent")};
     &:before {
-      content: "Last Updated: "
+      content: "Last Updated: ";
     }
   }
   img {
     box-sizing: content-box;
     padding: 1rem;
-    border: 2px solid ${({ theme }) => theme.accent};
+    border: 2px solid ${themer("accent")};
     max-width: 100%;
     display: block;
     margin: 1rem auto;
   }
   a {
     position: relative;
-    font-weight: 600;
-    &:hover {
-      transform: translate(-10px);
-    }
-    &:before {
-      ${({ theme }) => theme.before}
-      background: ${({ theme }) => theme.accent};
-      top: 50%;
-      height: 50%;
-      opacity: 0.5;
-    }
+    font-weight: 500;
+    background: ${themer("accent")}88;
+    background: linear-gradient(
+      transparent 65%,
+      ${themer("accent")}88 65% 100%
+    );
   }
   figcaption {
     text-align: center;
     font-style: italic;
-    color: ${({ theme }) => theme.shade.mid};
+    color: ${themer("shade.mid")};
   }
   li > p {
     margin: 0;

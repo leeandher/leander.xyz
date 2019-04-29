@@ -3,9 +3,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { FaRegClock } from "react-icons/fa"
 
-import Tag from "./Tag"
+import Tag from "../../Tag"
 
-const StyledLink = styled(Link)`
+const LinkWrapper = styled(Link)`
   display: block;
   background: ${({ theme }) => theme.shade.lightest};
   margin: 1.5rem;
@@ -20,34 +20,13 @@ const StyledLink = styled(Link)`
   * {
     z-index: 2;
   }
-  h2 {
+  .title {
     margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
   }
-  div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .ttr {
-      align-items: center;
-      display: flex;
-      margin: 0 5rem;
-      svg {
-        margin: 0 0.5rem;
-        display: inline-block;
-      }
-      p {
-        display: inline-block;
-        font-style: italic;
-        &:after {
-          content: " min read";
-        }
-      }
-    }
-  }
-  time {
-    font-style: italic;
-    margin: 1rem 0;
-    display: block;
+  .description {
+    font-size: 1.75rem;
   }
   &:before {
     height: 100%;
@@ -63,7 +42,7 @@ const StyledLink = styled(Link)`
     transition: max-width 0.4s ease;
     transform: skewX(${({ skew }) => skew}deg);
   }
-  &:nth-child(2n)&:before {
+  &:nth-child(3n)&:before {
     transform: skew(12deg);
   }
   &:hover,
@@ -85,6 +64,34 @@ const StyledLink = styled(Link)`
   }
 `
 
+const LinkInfo = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 300;
+  .ttr {
+    align-items: center;
+    display: flex;
+    margin: 0 5rem;
+    svg {
+      margin: 0 0.5rem;
+      display: inline-block;
+    }
+    p {
+      display: inline-block;
+      font-style: italic;
+      &:after {
+        content: " min read";
+      }
+    }
+  }
+  time {
+    font-style: italic;
+    margin: 1rem 0;
+    display: block;
+  }
+`
+
 const MediaLink = ({
   date,
   image,
@@ -96,20 +103,20 @@ const MediaLink = ({
   slug,
 }) => {
   return (
-    <StyledLink to={`/${type}/${slug}`} image={image}>
-      <h2>{title}</h2>
-      <div>
+    <LinkWrapper to={`/${type}/${slug}`} image={image}>
+      <h2 className="title">{title}</h2>
+      <LinkInfo>
         <time>{date}</time>
         <span className="ttr">
           <FaRegClock />
           <p>{timeToRead}</p>
         </span>
-      </div>
-      <p>{description}</p>
+      </LinkInfo>
+      <p className="description">{description}</p>
       {tags.sort().map(tag => (
         <Tag tag={tag} key={Math.random()} />
       ))}
-    </StyledLink>
+    </LinkWrapper>
   )
 }
 export default MediaLink
