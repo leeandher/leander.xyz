@@ -1,0 +1,4 @@
+- each folder
+- development
+- production
+- etc

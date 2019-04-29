@@ -1,0 +1,6 @@
+- where to put them
+- what the must export
+- how to add data
+- `___graphql`
+- components
+- static data
