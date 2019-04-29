@@ -50,7 +50,7 @@ const NoteCategoryTemplate = ({ data, location }) => {
     noteTitle => `${location.pathname}/${slugify(noteTitle, { lower: true })}`
   )
   return (
-    <Page accent="yellow" bgDesign="bubbles" seoProfile="notes-page">
+    <Page accent="random" bgDesign="bubbles" seoProfile="notes-page">
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>
       </MediaHeader>

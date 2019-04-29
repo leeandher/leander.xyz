@@ -1,10 +1,10 @@
-# Learn Node (November 2018)
+# Learn Node
+
+<time>November 2018</time>
 
 This is a collection of notes I compiled from the [Learn Node Course](https://learnnode.com) offered by [Wes Bos](wesbos.com/courses)!
 
-Feel free to look through and learn, and if anything confusing (or blatantly wrong, since I was learning at the time too), please just send me a message or make a PR.
+As my first time touching back-end JavaScript these notes document everything from User Authentication, to server management with **Express.js** to database interfacing with **MongoDB**.
+It even dives into best practices when setting up a Node.js Server, including things like _MVC Design Patterns_.
 
-Thanks!
-
-**Leander Rodrigues**<br/>
-_[LeeAndHer](github.com/leeandher)_
+If you've never worked with Node before, this is a great place to take a look around.

@@ -1,6 +1,4 @@
-# Learn Redux
-
-A quick place for notes about stuff that I pick up throughout the [Learn Redux][learnredux.com] course.
+# Jot Notes
 
 ---
 

@@ -42,6 +42,9 @@ const MediaContent = styled.main`
     font-style: italic;
     color: ${({ theme }) => theme.shade.mid};
   }
+  li > p {
+    margin: 0;
+  }
 `
 
 export default MediaContent

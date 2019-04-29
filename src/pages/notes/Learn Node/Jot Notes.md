@@ -1,4 +1,4 @@
-## Actual Jotted Notes
+## Jot Notes
 
 ---
 
@@ -36,7 +36,7 @@ exports.send = async options => {
 const generateHTML = (template, options = {}) => {
   const html = pug.renderFile(
     `${__dirname}/../views/email/${template}.pug`,
-    options,
+    options
   )
   const inlined = juice(html)
   return inlined
@@ -90,7 +90,7 @@ exports.getStores = async (req, res) => {
   if (!stores.length && skip) {
     req.flash(
       "info",
-      `Hey, You asked for page ${page}, but I couldn't find it, so I put you on page ${pages}`,
+      `Hey, You asked for page ${page}, but I couldn't find it, so I put you on page ${pages}`
     )
     return res.redirect(`/stores/pages/${pages}`)
   }

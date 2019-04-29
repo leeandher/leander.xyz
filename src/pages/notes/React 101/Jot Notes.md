@@ -1,6 +1,4 @@
-## React For Beginners
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
+## Jot Notes
 
 ---
 

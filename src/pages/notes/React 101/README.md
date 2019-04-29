@@ -1,14 +1,9 @@
-**Please Note, these notes may be outdated as they were written for an older version of React**
+# React 101
 
----
+<time>February 2018</time>
 
-# React 101 (Feb 2018)
+This is a collection of notes I compiled from the [React 101, Course, Parts I and II](https://www.codecademy.com/learn/react-101) offered by [Codecademy](codecademy.com) and the [React for Beginners Course](https://reactforbeginners.com) offered by [Wes Bos](wesbos.com/courses)!
 
-This is a collection of notes I compiled from the [React 101, Course, Parts I and II](https://www.codecademy.com/learn/react-101) offered by [Codecademy](codecademy.com)!
+If you've heard the word **React** thrown around a few times, and you wanna learn some more, this is the note collection for you. In here you'll find a beginner's guide to writing applications in React, covering all the basics that you can take with you into your next project.
 
-Feel free to look through and learn, and if anything confusing (or blatently wrong, since I was learning at the time too), please just send me a message or make a PR.
-
-Thanks!
-
-**Leander Rodrigues**<br/>
-_[LeeAndHer](github.com/leeandher)_
+While these notes were written during the time of React 15, they're still helpful to understand concepts, and to grasp what goes on under the hood.

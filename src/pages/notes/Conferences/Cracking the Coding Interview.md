@@ -1,6 +1,6 @@
-### Cracking the Coding Interview
+# Cracking the Coding Interview
 
-#### Notes on a talk by: Marcelo Cortes at Indigo Fair
+## Notes on a talk by: Marcelo Cortes at Indigo Fair
 
 _This talk will be focused on full-time interview rather than coop interviews_
 
@@ -67,7 +67,8 @@ _This talk will be focused on full-time interview rather than coop interviews_
  prefix = 'elect'
 ```
 
-- _Questions to Ask_
+**Questions to Ask**
+
 - What alphabet? Lowercase A to Z? ASCII? Unicode?
 - Do we expect the input to be very large?
 - Do we expect the average string length to be large?
@@ -75,34 +76,35 @@ _This talk will be focused on full-time interview rather than coop interviews_
 - Is null or empty input expected?
 - The Easy Way Itself
 - Is there an obvious brute force (inefficient) solution? _Probably_
-- mention it and quickly explain how the algorithm solution works to show you know it.
+
+**Other Points**
+
+- Mention it and quickly explain how the algorithm solution works to show you know it.
 - ex: "Compare each word to each other, and store the longest prefix as a variable. Once all words have been compared, return the variable"
 - Can We do Better?
 - Almost always there is a better solution
 - Best way to get good at algorithms is practicing (Check out [TopCoder](https://topcoder.com))
 - Always ask questions such as;
-
   - Does sorting input help?
   - What data structures could help? _Set? Hash map? Tree?_
   - Can I collect data to help in a first pass?
-
 - Define the Interface
   - Method, Variable Names, Process, Comments
   - Validation Framework (5 min)
   - Write simple test cases (including an _All Tests Passed!_ message)
 
-_Note: A Trie/Tree is usually the ideal solution for most 'prefix' questions_
+_Note: A trie/tree is usually the ideal solution for most 'prefix' questions_
 
 **Your Time to Interview**
 
 - Don't Ask
-- how did you do in the interview, your solution, other Solutions
-- better ways to solve the Problem
-- salary, bonus, options, etc.
+  - how did you do in the interview, your solution, other Solutions
+  - better ways to solve the Problem
+  - salary, bonus, options, etc.
 - Do Ask
-- About the company, team, the culture, the product, the job
-- The tools, the work environment, the mission, the vision
-- How the team prioritizes tasks, etc.
+  - About the company, team, the culture, the product, the job
+  - The tools, the work environment, the mission, the vision
+  - How the team prioritizes tasks, etc.
 
 **Conclusion**
 
@@ -115,7 +117,7 @@ _Note: A Trie/Tree is usually the ideal solution for most 'prefix' questions_
 - Make sure you understand the problem. Write a simple test framework. Start with a test case.
 - Try to have fun!
 
-**QnA**
+**Q/A**
 
 - Email: marcelo@indigofair.com
 - Twitter: _@mescortes_
