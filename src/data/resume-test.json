@@ -29,6 +29,23 @@
           "text": "Received certified, formal training in DevOps, Agile Development and Design Thinking"
         }
       ]
+    },
+    {
+      "title": "Full-stack React Native Developer",
+      "location": "Toronto, ON",
+      "time": "Winter 2019 (4m)",
+      "company": "Shop Bonsai",
+      "url": "https://corp.shopbonsai.ca/",
+      "skills": [
+        "React",
+        "React Native",
+        "TypeScript/Flow",
+        "GraphQL w/ MongoDB",
+        "Redux",
+        "Apollo",
+        "Code Review",
+        "CI/CD"
+      ]
     }
   ]
 }
