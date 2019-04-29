@@ -80,3 +80,26 @@ collections:
       - { name: type, label: Type, widget: hidden, default: faq }
       - { name: question, label: Question, widget: string }
       - { name: body, label: Answer, widget: markdown }
+  - name: pages
+    label: Pages
+    files:
+      - name: resume
+        label: Resume
+        file: src/data/resume-test.json
+        fields:
+          - name: work-experience
+            label: Work Experience
+            widget: list
+            fields:
+              - { name: title, label: Job Title, widget: string }
+              - { name: location, label: Job Location, widget: string }
+              - { name: time, label: Job Length, widget: string }
+              - { name: company, label: Company, widget: string }
+              - { name: url, label: Company Site, widget: string }
+              - { name: skills, label: Skills, widget: list }
+              - name: bullets
+                label: Bullets
+                widget: list
+                fields:
+                  - { name: emoji, label: Bullet Emoji, widget: string }
+                  - { name: text, label: Bullet Text, widget: string }

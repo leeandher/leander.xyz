@@ -4,7 +4,8 @@ import styled from "styled-components"
 import { themer } from "../../../styles/helpers"
 
 const Card = styled.div`
-  margin: 2rem;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
 `
 const CardHeader = styled.a`
   display: block;
@@ -46,11 +47,11 @@ const CardHeader = styled.a`
     flex: 1;
     text-align: right;
     font-weight: 300;
+    font-style: italic;
     white-space: nowrap;
     padding: 1rem 0.5rem;
     padding-right: 1.5rem;
     border: 0px solid ${themer("accent")};
-
     border-width: 0 10px 5px 0;
   }
 `
@@ -96,7 +97,7 @@ const Skill = styled.div`
 const WorkCard = ({ bullets, company, location, time, title, skills, url }) => {
   return (
     <Card>
-      <CardHeader href={url}>
+      <CardHeader href={url} target="_blank">
         <h3>{title}</h3>
         <div className="wrap">
           <h4>

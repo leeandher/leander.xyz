@@ -54,8 +54,8 @@ const Resume = () => {
         <ResumeLayout>
           <h2 className="title">Work Experience</h2>
           <div className="content">
-            {resume["work-experience"].map(jobInfo => (
-              <WorkCard {...jobInfo} />
+            {resume["work-experience"].map((jobInfo, i) => (
+              <WorkCard key={i} {...jobInfo} />
             ))}
           </div>
         </ResumeLayout>
