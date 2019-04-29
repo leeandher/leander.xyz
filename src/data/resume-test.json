@@ -1,1 +1,34 @@
-{}
+{
+  "work-experience": [
+    {
+      "title": "Advanced App Engineering Senior Analyst",
+      "location": "Toronto, ON",
+      "time": "Fall 2018 (4m)",
+      "company": "Accenture",
+      "url": "https://accenture.com/",
+      "skills": [
+        "React",
+        "Node",
+        "Handlebars",
+        "AWS Lambda",
+        "AWS SNS/SES",
+        "Google Dialogflow",
+        "Git Workflows"
+      ],
+      "bullets": [
+        {
+          "emoji": "🔨",
+          "text": "Designed reusable components in React.js through peer programming and test-driven development"
+        },
+        {
+          "emoji": "🚀",
+          "text": "Deployed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases"
+        },
+        {
+          "emoji": "📚",
+          "text": "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+        }
+      ]
+    }
+  ]
+}
