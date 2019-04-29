@@ -19,12 +19,13 @@ const MeCard = styled(BusinessCard)`
 `
 
 const ResumeSection = styled(Default)`
-  background: ${themer("shade.lightest")};
   margin: 2rem 0;
 `
 
 const ResumeLayout = styled.div`
   display: grid;
+  background: ${themer("shade.lightest")};
+  border-radius: 2rem;
   grid-template-columns: 250px auto;
   max-width: ${themer("spacing.maxWidth")};
   margin: 0 auto;

@@ -61,6 +61,7 @@ const CardContent = styled.ul`
 
 const CardListItem = styled.li`
   list-style: none;
+  margin: 1rem 0;
   &:before {
     display: inline-block;
     position: absolute;
@@ -81,6 +82,8 @@ const Skill = styled.div`
   background: transparent;
   z-index: 0;
   font-size: 1.25rem;
+  font-family: ${themer("font.mono")};
+  font-weight: bold;
   &:before {
     ${themer("before")}
     background: ${themer("accent")};
