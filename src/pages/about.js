@@ -30,16 +30,17 @@ const HeyThere = styled(Skewed)`
 
 const Superlatives = styled(Default)`
   color: ${themer("shade.lightest")};
+  mark {
+    padding: 0.5rem;
+    color: ${themer("shade.lightest")};
+  }
 `
 
-const NUM_ITEMS = 6
 const SuperWrapper = styled(MainWrapper)`
   display: grid;
   padding: 0;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem 2rem;
-  /* background: ${themer("accent")}; */
-  grid-template-rows: repeat(${NUM_ITEMS / 2}, 1fr);
 `
 
 const About = ({ data }) => {
@@ -63,20 +64,55 @@ const About = ({ data }) => {
         </MainWrapper>
       </HeyThere>
       <Superlatives>
-        <h2 className="title">Superlatives</h2>
+        <h2 className="title">The 🔥 Picks</h2>
         <MainWrapper>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, non
-            sunt cum nobis doloribus asperiores neque amet omnis placeat et
-            numquam aut nihil hic, voluptates cupiditate accusantium ex! Placeat
-            numquam laborum iste fuga, esse voluptas illum? Optio necessitatibus
+            Everyone has a list of the things they like more than the other
+            things they like. Here is where you'll find mine. I pick the
+            categories at random, and don't really structure what goes on here,
+            but they're fun little nuggets of info by which you can ruthlessly
+            judge me!
+          </p>
+          <p>
+            These 🔥 picks are always changing, so if you think I'm wrong about
+            any of these, I'm probably on your side, and I'll update it ASAP.
+          </p>
+          <p>
+            <mark>
+              If we disagree, that's fine, this is my website, so I'll probably
+              win 👌😎.
+            </mark>
           </p>
           <SuperWrapper>
             <SuperItem labelText="Favourite Language" revealText="JavaScript" />
-            <SuperItem labelText="Favourite Language" revealText="JavaScript" />
-            <SuperItem labelText="Favourite Language" revealText="JavaScript" />
-            <SuperItem labelText="Favourite Language" revealText="JavaScript" />
-            <SuperItem labelText="Favourite Language" revealText="JavaScript" />
+            <SuperItem labelText="Favourite Editor" revealText="VS Code" />
+            <SuperItem labelText="Favourite Board Game" revealText="Coup" />
+            <SuperItem
+              labelText="Favourite Nerdy Board Game"
+              revealText="Welcome To..."
+            />
+            <SuperItem
+              labelText="Favourite Nerdy Video Game"
+              revealText="Kingdom Hearts BBS"
+            />
+            <SuperItem
+              labelText="Favourite Video Game"
+              revealText="Borderlands"
+            />
+            <SuperItem labelText="Favourite Stark" revealText="Arya" />
+            <SuperItem
+              labelText="Favourite Board Game"
+              revealText="JavaScript"
+            />
+            <SuperItem
+              labelText="Favourite Board Game"
+              revealText="JavaScript"
+            />
+
+            <SuperItem
+              labelText="Favourite Board Game"
+              revealText="JavaScript"
+            />
             <SuperItem labelText="Favourite Language" revealText="JavaScript" />
           </SuperWrapper>
         </MainWrapper>
