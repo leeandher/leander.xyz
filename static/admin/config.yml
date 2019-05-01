@@ -83,12 +83,31 @@ collections:
   - name: pages
     label: Pages
     files:
+      - name: about
+        label: About
+        file: src/data/about.json
+        editor:
+          preview: false
+        fields:
+          - name: picks
+            label: 🔥 Picks
+            widget: list
+            identifier_field: label
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+          - name: faqs
+            label: FAQs
+            widget: list
+            identifier_field: question
+            fields:
+              - { name: question, label: Question, widget: string }
+              - { name: answer, label: Answer, widget: markdown }
       - name: resume
         label: Resume
         file: src/data/resume.json
         editor:
           preview: false
-        create: true
         fields:
           - name: work-experience
             label: Work Experience
