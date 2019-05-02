@@ -25,7 +25,6 @@ const MediaContent = styled.main`
     margin: 1rem auto;
   }
   a {
-    position: relative;
     font-weight: 500;
     background: ${themer("accent")}88;
     background: linear-gradient(

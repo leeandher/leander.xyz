@@ -1,24 +1,25 @@
 import React, { useState } from "react"
-import { useSpring, animated } from "react-spring"
 import styled from "styled-components"
 
 import { themer } from "../../../styles/helpers"
 
-const Button = styled(animated.button)`
+const Button = styled.button`
   border: 0;
-  padding: 2rem;
+  padding: 3rem;
+  border-radius: 2rem;
   background: transparent;
   font-family: inherit;
+  position: relative;
   font-weight: bold;
   &:hover,
   &:active,
   &:focus {
     cursor: pointer;
-    .labelText {
+    .label {
       opacity: 1;
     }
   }
-  .labelText {
+  .label {
     margin: 0;
     margin-bottom: 2rem;
     font-size: 2.5rem;
@@ -28,6 +29,15 @@ const Button = styled(animated.button)`
     padding: 0.5rem 1rem;
     display: inline-block;
     background: ${themer("shade.lightest")};
+    &:before {
+      content: "🔥 PICK";
+      position: absolute;
+      padding: 0.25rem 0.5rem;
+      background: ${themer("shade.lightest")};
+      bottom: 100%;
+      left: 0;
+      font-size: 1rem;
+    }
   }
   @keyframes oscillate {
     0% {
@@ -43,7 +53,7 @@ const Button = styled(animated.button)`
       text-shadow: 0 0 5px ${themer("shade.lightest")};
     }
   }
-  .revealText {
+  .value {
     max-height: ${({ isRevealed }) => (isRevealed ? 300 : 0)}px;
     transition: all linear 2s;
     overflow: hidden;
@@ -56,7 +66,7 @@ const Button = styled(animated.button)`
   }
 `
 
-const SuperItem = ({ labelText, revealText, ...restOfProps }) => {
+const SuperItem = ({ label, value, ...restOfProps }) => {
   const [isRevealed, reveal] = useState(false)
   return (
     <Button
@@ -64,8 +74,8 @@ const SuperItem = ({ labelText, revealText, ...restOfProps }) => {
       isRevealed={isRevealed}
       {...restOfProps}
     >
-      <p className="labelText">{labelText}</p>
-      <p className="revealText">{revealText}</p>
+      <p className="label">{label}</p>
+      <p className="value">{value}</p>
     </Button>
   )
 }

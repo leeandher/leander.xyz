@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { themer } from "../../../styles/helpers"
+
 const Wrapper = styled.div``
 
 const Details = styled.details`
@@ -13,6 +15,14 @@ const Details = styled.details`
   }
   p {
     animation: sweep 0.75s ease-out;
+  }
+  a {
+    font-weight: 500;
+    background: ${themer("accent")}88;
+    background: linear-gradient(
+      transparent 65%,
+      ${themer("accent")}88 65% 100%
+    );
   }
   @keyframes sweep {
     0% {
@@ -31,12 +41,12 @@ const Summary = styled.summary`
   position: relative;
   font-size: 2rem;
   &::-webkit-details-marker {
-    color: ${({ theme }) => theme.accent};
+    color: ${themer("accent")};
   }
   &:before {
     ${({ theme }) => theme.before}
     transition: 0.75s max-width ease-out;
-    background: ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
     height: 0.5rem;
     top: 100%;
   }
@@ -47,7 +57,7 @@ const Summary = styled.summary`
   &:active,
   &:hover {
     outline: 0;
-    text-decoration: underline ${({ theme }) => theme.accent};
+    text-decoration: underline ${themer("accent")};
   }
 `
 
