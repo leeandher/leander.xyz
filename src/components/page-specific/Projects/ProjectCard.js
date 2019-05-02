@@ -6,6 +6,8 @@ import { FaGithub, FaLink } from "react-icons/fa"
 
 import Tag from "../../Tag"
 
+import { media } from "../../../styles/helpers"
+
 const Card = styled(animated.div)`
   background: ${({ theme }) => theme.shade.lightest};
   border: 1rem solid ${({ theme }) => theme.accent};
@@ -44,15 +46,18 @@ const HeaderImage = styled.figure`
 const TagWrapper = styled.div`
   text-align: left;
   margin: 2.5rem 2rem;
+  ${media.phone`
+    display: none;
+  `}
 `
 
 const Description = styled.p`
   font-weight: 300;
   margin: 2rem;
   text-align: left;
-  @media (max-width: 850px) {
+  ${media.tablet`
     display: none;
-  }
+  `}
 `
 
 const MoreInfoLink = styled(Link)`
