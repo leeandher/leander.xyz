@@ -37,5 +37,22 @@
       "value": "Dog"
     }
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What's your coding setup?",
+      "answer": "In terms of hardware, I tend to use Windows laptops, mainly because nothing has provoked me to boot in Linux just yet, and Macs are 💲💸💰. I personally believe it's torture to write code without **at least two monitors**, but that may be a hot take. As for my editor, I'm not nearly cool enough to have any Vim scripts so I tend to stick to **VS Code**. I have way too many extensions and custom settings to list off so I'm just going to direct you to my [.config repository](https://github.com/leeandher/.config)."
+    },
+    {
+      "question": "What's the most rewarding personal project you've worked on?",
+      "answer": "I think it's a tossup between **Twitter CL** and **Conway**. Even though the former is still a work-in-progress, I think they're both visually impressive when turned on. Twitter CL's ability to stream tweets containing `lit` directly to your terminal feels exciting, while Conway's mock evolution and _dark mode_ are nice to zone out and watch."
+    },
+    {
+      "question": "What's the most challenging personal project you've worked on?",
+      "answer": "That one has definitely got to be **lgr.fyi**, my personal URL shortener. The logic behind the shortening and redirecting wasn't all that challenging, but navigating the minefield that is AWS Instances and Load Balances to deploy both the frontend and backend was painful. Eventually I got it all up and running, only to now decide I need to completely redo my hosting situation since AWS is expensive for 24/7 instances past the free tier."
+    },
+    {
+      "question": "You really seem to like coding, why stay in Nanotechnology Engineering?",
+      "answer": "I think that it's really interesting! It's definitely a somewhat masochistic degree, and it's not a discipline I see myself starting a career in, but I still think that the content can be pretty cool. I re-discovered programming late January 2018, and so in hindsight, I might've taken a CS or ECE degree, but I like exploring the development world aimlessly, and I couldn't do that with a syllabus breathing down my neck."
+    }
+  ]
 }
