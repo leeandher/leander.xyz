@@ -69,17 +69,6 @@ collections:
       - { name: tech, label: Tech Used, widget: list }
       - { name: date, label: Date Completed, widget: date }
       - { name: body, label: Description, widget: markdown }
-  - name: faqs
-    label: FAQs
-    folder: src/data/faqs
-    editor:
-      preview: false
-    create: true
-    identifier_field: question
-    fields:
-      - { name: type, label: Type, widget: hidden, default: faq }
-      - { name: question, label: Question, widget: string }
-      - { name: body, label: Answer, widget: markdown }
   - name: pages
     label: Pages
     files:

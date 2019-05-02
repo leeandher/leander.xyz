@@ -57,13 +57,6 @@ module.exports = {
         ignore: [`**/*\.js`],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `faqs`,
-        path: `${__dirname}/src/data/faqs`,
-      },
-    },
 
     // SEO
     `gatsby-plugin-react-helmet`,
