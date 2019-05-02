@@ -1,1 +1,41 @@
-{}
+{
+  "picks": [
+    {
+      "label": "Language",
+      "value": "JavaScript"
+    },
+    {
+      "label": "Editor",
+      "value": "VS Code"
+    },
+    {
+      "label": "Board Game",
+      "value": "Coup"
+    },
+    {
+      "label": "Nerdy Board Game",
+      "value": "Welcome To..."
+    },
+    {
+      "label": "Video Game",
+      "value": "Borderlands"
+    },
+    {
+      "label": "Nerdy Video Game",
+      "value": "Kingdom Hearts: BBS"
+    },
+    {
+      "label": "House",
+      "value": "Ravenclaw / Tyrell "
+    },
+    {
+      "label": "Emoji",
+      "value": "🔥"
+    },
+    {
+      "label": "Animal",
+      "value": "Dog"
+    }
+  ],
+  "faqs": []
+}
