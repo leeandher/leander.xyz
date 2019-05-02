@@ -1,6 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
 import styled from "styled-components"
+import marked from "marked"
 
 import Hero from "../components/Hero"
 import Page from "../components/Page"
@@ -9,6 +9,8 @@ import { Default, Skewed } from "../components/PageSections"
 
 import FAQ from "../components/page-specific/About/FAQ"
 import SuperItem from "../components/page-specific/About/SuperItem"
+
+import aboutData from "../data/about.json"
 
 import { themer } from "../styles/helpers"
 
@@ -39,13 +41,11 @@ const Superlatives = styled(Default)`
 const SuperWrapper = styled(MainWrapper)`
   display: grid;
   padding: 0;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2rem 2rem;
 `
 
-const About = ({ data }) => {
-  const { allMarkdownRemark } = data
-  const { nodes: faqs } = allMarkdownRemark
+const About = () => {
   return (
     <Page accent="red" bgDesign="snow" seoProfile="about-page">
       <Hero expanding height="50vh">
@@ -83,39 +83,12 @@ const About = ({ data }) => {
               win 👌😎.
             </mark>
           </p>
-          <SuperWrapper>
-            <SuperItem labelText="Favourite Language" revealText="JavaScript" />
-            <SuperItem labelText="Favourite Editor" revealText="VS Code" />
-            <SuperItem labelText="Favourite Board Game" revealText="Coup" />
-            <SuperItem
-              labelText="Favourite Nerdy Board Game"
-              revealText="Welcome To..."
-            />
-            <SuperItem
-              labelText="Favourite Nerdy Video Game"
-              revealText="Kingdom Hearts BBS"
-            />
-            <SuperItem
-              labelText="Favourite Video Game"
-              revealText="Borderlands"
-            />
-            <SuperItem labelText="Favourite Stark" revealText="Arya" />
-            <SuperItem
-              labelText="Favourite Board Game"
-              revealText="JavaScript"
-            />
-            <SuperItem
-              labelText="Favourite Board Game"
-              revealText="JavaScript"
-            />
-
-            <SuperItem
-              labelText="Favourite Board Game"
-              revealText="JavaScript"
-            />
-            <SuperItem labelText="Favourite Language" revealText="JavaScript" />
-          </SuperWrapper>
         </MainWrapper>
+        <SuperWrapper>
+          {aboutData.picks.map(({ label, value }, i) => (
+            <SuperItem label={label} value={value} key={i} />
+          ))}
+        </SuperWrapper>
       </Superlatives>
       <Questions skew="4deg">
         <MainWrapper maxWidth="960px">
@@ -125,9 +98,9 @@ const About = ({ data }) => {
             <br />
             this is just where I talk about myself )
           </h3>
-          {faqs.map(({ html, frontmatter }) => (
-            <FAQ question={frontmatter.question} key={frontmatter.question}>
-              <span dangerouslySetInnerHTML={{ __html: html }} />
+          {aboutData.faqs.map(({ question, answer }, i) => (
+            <FAQ question={question} key={i}>
+              <span dangerouslySetInnerHTML={{ __html: marked(answer) }} />
             </FAQ>
           ))}
         </MainWrapper>
@@ -137,16 +110,3 @@ const About = ({ data }) => {
 }
 
 export default About
-
-export const faQuery = graphql`
-  query {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "faq" } } }) {
-      nodes {
-        html
-        frontmatter {
-          question
-        }
-      }
-    }
-  }
-`

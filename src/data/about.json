@@ -9,22 +9,6 @@
       "value": "VS Code"
     },
     {
-      "label": "Board Game",
-      "value": "Coup"
-    },
-    {
-      "label": "Nerdy Board Game",
-      "value": "Welcome To..."
-    },
-    {
-      "label": "Video Game",
-      "value": "Borderlands"
-    },
-    {
-      "label": "Nerdy Video Game",
-      "value": "Kingdom Hearts: BBS"
-    },
-    {
       "label": "House",
       "value": "Ravenclaw / Tyrell "
     },
@@ -35,6 +19,22 @@
     {
       "label": "Animal",
       "value": "Dog"
+    },
+    {
+      "label": "Party Game",
+      "value": "Coup"
+    },
+    {
+      "label": "Nerdy Board Game",
+      "value": "Welcome To..."
+    },
+    {
+      "label": "Shooty Video Game",
+      "value": "Borderlands"
+    },
+    {
+      "label": "Nerdy Video Game",
+      "value": "Kingdom Hearts: BBS"
     }
   ],
   "faqs": [
