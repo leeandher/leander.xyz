@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import BusinessCard from "../components/BusinessCard"
 import Page from "../components/Page"
+import Hero from "../components/Hero"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
+import BusinessCard from "../components/BusinessCard"
 import { Default } from "../components/PageSections"
 
 import resume from "../data/resume.json"
@@ -17,6 +18,17 @@ const Header = styled.div`
 
 const MeCard = styled(BusinessCard)`
   margin: 0 auto;
+  ${media.phone`
+    display: none;
+  `}
+`
+const SmallTitle = styled(Hero).attrs({
+  height: "200px",
+})`
+  display: none;
+  ${media.phone`
+    display: block;
+  `}
 `
 
 const ResumeSection = styled(Default)`
@@ -30,18 +42,31 @@ const ResumeLayout = styled.div`
   grid-template-columns: 250px auto;
   max-width: ${themer("spacing.maxWidth")};
   margin: 2rem auto;
+  ${media.tablet`
+    display: block;
+    margin: 0;
+  `}
   .title {
     padding: ${themer("constants.navBarHeight")} 2.5rem;
     grid-area: 1 / 1 / 1 / 1;
     border-right: 2px solid ${themer("accent")};
     text-align: right;
     font-weight: 300;
+    ${media.tablet`
+      border: 0;
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 0;
+    `}
   }
   .content {
     padding: ${themer("constants.navBarHeight")} 2.5rem;
     grid-area: 1 / 2 / 1 / 2;
     font-size: 1.5rem;
     text-align: left;
+    ${media.tablet`
+      padding: 1rem;
+    `}
   }
 `
 
@@ -50,15 +75,21 @@ const PageWrapper = styled.div`
   grid-template-columns: 200px auto;
   margin: 0 auto;
   max-width: calc(${themer("spacing.maxWidth")} + 200px);
+  ${media.desktop`
+    display: block;
+  `}
 `
 
 const Scroller = styled.aside`
   color: ${themer("shade.lightest")};
   margin: 2rem 1rem;
+  ${media.desktop`
+    display: none;
+  `}
   .links {
     position: sticky;
     top: ${themer("constants.navBarHeight")};
-    margin: 0 auto;
+    padding-top: 1rem;
   }
   .page-link {
     display: block;
@@ -86,54 +117,57 @@ const Resume = () => {
     <Page accent="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
         <MeCard />
+        <SmallTitle>
+          <h1 className="title">Resume</h1>
+        </SmallTitle>
       </Header>
       <PageWrapper>
         <Scroller>
           <div className="links">
-            <a className="page-link" href="#soq">
+            <a className="page-link" href="#summary-of-qualifications">
               Summary of Qualifications
             </a>
-            <a className="page-link" href="#cs">
+            <a className="page-link" href="#character-sheet">
               Character Sheet
             </a>
-            <a className="page-link" href="#edu">
+            <a className="page-link" href="#education">
               Education
             </a>
-            <a className="page-link" href="#we">
+            <a className="page-link" href="#work-experience">
               Work Experience
             </a>
-            <a className="page-link" href="#ps">
+            <a className="page-link" href="#project-showcase">
               Project Showcase
             </a>
-            <a className="page-link" href="#ve">
+            <a className="page-link" href="#volunteer-experience">
               Voluneer Experience
             </a>
-            <a className="page-link" href="#ach">
+            <a className="page-link" href="#achievements">
               Acheivements
             </a>
-            <a className="page-link" href="#int">
+            <a className="page-link" href="#interests">
               Interests
             </a>
           </div>
         </Scroller>
         <ResumeSection>
           <ResumeLayout>
-            <h2 className="title" id="soq">
+            <h2 className="title" id="summary-of-qualifications">
               Summary of Qualifications
             </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title" id="cs">
+            <h2 className="title" id="character-sheet">
               Character Sheet
             </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title" id="edu">
+            <h2 className="title" id="education">
               Education
             </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title" id="we">
+            <h2 className="title" id="work-experience">
               Work Experience
             </h2>
             <div className="content">
@@ -144,23 +178,23 @@ const Resume = () => {
           </ResumeLayout>
 
           <ResumeLayout>
-            <h2 className="title" id="ps">
+            <h2 className="title" id="project-showcase">
               Project Showcase
             </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title" id="ve">
+            <h2 className="title" id="volunteer-experience">
               Volunteer Experience
             </h2>
           </ResumeLayout>
 
           <ResumeLayout>
-            <h2 className="title" id="ach">
+            <h2 className="title" id="achievements">
               Achievements
             </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title" id="int">
+            <h2 className="title" id="interests">
               Interests
             </h2>
           </ResumeLayout>

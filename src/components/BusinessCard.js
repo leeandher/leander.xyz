@@ -8,6 +8,8 @@ import {
   FaLinkedin,
 } from "react-icons/fa"
 
+import { media, themer } from "../styles/helpers"
+
 const CardWrapper = styled.div`
   background: ${({ theme }) => theme.shade.lightest};
   position: relative;
@@ -16,7 +18,7 @@ const CardWrapper = styled.div`
   }
   &:before {
     content: "My Business Card";
-    background: ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
     position: absolute;
     padding: 1rem 2rem;
     font-weight: bold;
@@ -32,6 +34,9 @@ const CardWrapper = styled.div`
   grid-template-rows: 50px 25px 125px 50px;
   justify-items: start;
   align-items: center;
+  ${media.tablet`
+    transform: scale(0.8);
+  `}
 `
 const CardImage = styled.img`
   grid-area: 1 / 1 / 6 / 1;
@@ -49,8 +54,11 @@ const CardHeader = styled.h1`
   font-size: 2.75rem;
   span {
     font-weight: 500;
-    text-decoration: underline ${({ theme }) => theme.accent};
+    text-decoration: underline ${themer("accent")};
   }
+  ${media.tablet`
+    font-size: 2.25rem;
+  `}
 `
 
 const CardSubtitle = styled.h2`
@@ -63,10 +71,10 @@ const CardSubtitle = styled.h2`
   letter-spacing: 2px;
   width: calc(100% - 1.5rem);
   height: 100%;
-  border-bottom: 2px solid ${({ theme }) => theme.accent};
+  border-bottom: 2px solid ${themer("accent")};
   span {
     font-weight: 500;
-    text-decoration: underline ${({ theme }) => theme.accent};
+    text-decoration: underline ${themer("accent")};
   }
 `
 
@@ -96,7 +104,7 @@ const CardAnchorLink = styled.a`
   display: block;
   grid-area: 4 / ${({ order }) => order + 1} / 5 / ${({ order }) => order + 1};
   justify-self: center;
-  color: ${({ theme }) => theme.accent};
+  color: ${themer("accent")};
   border-radius: 100%;
   line-height: 0;
   font-size: 2.5rem;
@@ -108,8 +116,8 @@ const CardAnchorLink = styled.a`
   &:focus,
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.shade.lightest};
-    background: ${({ theme }) => theme.accent};
+    color: ${themer("shade.lightest")};
+    background: ${themer("accent")};
   }
 `
 
