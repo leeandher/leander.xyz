@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { useSpring, animated } from "react-spring"
 
 import BusinessCard from "../components/BusinessCard"
 import Page from "../components/Page"
@@ -24,7 +23,7 @@ const ResumeSection = styled(Default)`
   margin: 2rem 0;
 `
 
-const ResumeLayout = styled(animated.div)`
+const ResumeLayout = styled(div)`
   display: grid;
   background: ${themer("shade.lightest")};
   border-radius: 2rem;
@@ -60,10 +59,6 @@ const Scroller = styled.aside`
   }
 `
 const Resume = () => {
-  const [y, setY] = useSpring(() => ({
-    y: window.scrollY,
-    onFrame: props => window.scroll(0, props.y),
-  }))
   return (
     <Page accent="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
@@ -72,33 +67,30 @@ const Resume = () => {
       <PageWrapper>
         <div>
           <Scroller>
-            <h2>BOOYA</h2>
-            <animated.button
-              type="button"
-              onClick={() =>
-                setY({
-                  from: { y: 100 },
-                  to: { y: window.scrollY },
-                  onStart: () => console.log("test"),
-                })
-              }
-            >
-              {y.y}
-            </animated.button>
+            <a href="#soq">Summary of Qualifications</a>
+            <a href="#cs">Character Sheet</a>
           </Scroller>
         </div>
         <ResumeSection>
           <ResumeLayout>
-            <h2 className="title">Summary of Qualifications</h2>
+            <h2 className="title" id="soq">
+              Summary of Qualifications
+            </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title">Character Sheet</h2>
+            <h2 className="title" id="cs">
+              Character Sheet
+            </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title">Education</h2>
+            <h2 className="title" id="edu">
+              Education
+            </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title">Work Experience</h2>
+            <h2 className="title" id="we">
+              Work Experience
+            </h2>
             <div className="content">
               {resume["work-experience"].map((jobInfo, i) => (
                 <WorkCard key={i} {...jobInfo} />
@@ -107,17 +99,25 @@ const Resume = () => {
           </ResumeLayout>
 
           <ResumeLayout>
-            <h2 className="title">Project Showcase</h2>
+            <h2 className="title" id="ps">
+              Project Showcase
+            </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title">Volunteer Experience</h2>
+            <h2 className="title" id="ve">
+              Volunteer Experience
+            </h2>
           </ResumeLayout>
 
           <ResumeLayout>
-            <h2 className="title">Achievements</h2>
+            <h2 className="title" id="ach">
+              Achievements
+            </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title">Interests</h2>
+            <h2 className="title" id="int">
+              Interests
+            </h2>
           </ResumeLayout>
         </ResumeSection>
       </PageWrapper>
