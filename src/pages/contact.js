@@ -115,7 +115,7 @@ class Contact extends React.Component {
           <h1>Reach Out</h1>
         </Hero>
         <ContactFormWrapper skew="4deg">
-          <h2>Drop me a line!</h2>
+          <h2 className="title">Drop me a line!</h2>
           <ContactForm>
             <Information>
               <p>
