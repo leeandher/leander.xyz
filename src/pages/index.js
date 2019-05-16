@@ -5,12 +5,13 @@ import { graphql, Link } from "gatsby"
 import Button from "../components/Button"
 import Hero from "../components/Hero"
 import Page from "../components/Page"
+import Carousel from "../components/Carousel"
+import ShowItem from "../components/ShowItem"
 import MainWrapper from "../components/MainWrapper"
 import { Default, Skewed } from "../components/PageSections"
 
 import Typer from "../components/page-specific/Home/Typer"
 import QuoteCard from "../components/page-specific/Home/QuoteCard"
-import ShowItem from "../components/page-specific/Home/ShowItem"
 
 const MainHero = styled(Hero)`
   margin-top: -${({ theme }) => theme.constants.navBarHeight};
@@ -44,26 +45,6 @@ const Showcase = styled(Skewed)`
   margin: 15rem 0;
   &:before {
     background: ${({ theme }) => theme.shade.lightest};
-  }
-`
-const Carousel = styled.div`
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  padding: 3rem 2rem 5rem;
-  border-radius: 2rem;
-  margin: 2rem;
-  &::-webkit-scrollbar {
-    height: 1.25rem;
-    border: 2px solid ${({ theme }) => theme.accent};
-    border-radius: 1.25rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.accent};
-    padding: -0.5rem !important;
-    width: 10px;
-    border-radius: 1.25rem;
   }
 `
 

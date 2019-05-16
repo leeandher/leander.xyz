@@ -2,8 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+import { themer } from "../styles/helpers"
+
 const WrapperLink = styled(Link)`
-  color: ${({ theme }) => theme.shade.darker};
+  color: ${themer("shade.darker")};
   padding: 1.5rem 1rem;
   display: inline-block;
   z-index: 2;
@@ -15,7 +17,7 @@ const WrapperLink = styled(Link)`
   box-sizing: content-box;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 1.5rem 1.5rem  ${({ theme }) => theme.shade.lighter};
+  box-shadow: 0 1.5rem 1.5rem  ${themer("shade.lighter")};
   text-align: center;
   ${({ theme }) => theme.transition.default("transform")};
   &:hover,
@@ -24,24 +26,24 @@ const WrapperLink = styled(Link)`
       transform: scale(1.25);
     }
   }
-  .title {
+  .show-title {
     margin: 0;
     display: inline;
     margin: 1.5rem;
     position: relative;
     transform: skewX(-4deg);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 2.5rem;
     span {
-      padding: 0.5rem 1rem; 
-      background: ${({ theme }) => theme.accent};
+      padding: 0.5rem; 
+      background: ${themer("accent")};
     }
   }
-  .description {
+  .show-description {
     font-weight: 300;
     margin: 0;
   } 
-  .wrapper {
+  .show-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,11 +66,11 @@ const WrapperLink = styled(Link)`
 const ShowItem = ({ description, image, title, ...restOfProps }) => {
   return (
     <WrapperLink image={image} {...restOfProps}>
-      <div className="wrapper">
-        <h4 className="title">
+      <div className="show-wrapper">
+        <h4 className="show-title">
           <span>{title}</span>
         </h4>
-        <p className="description">{description}</p>
+        <p className="show-description">{description}</p>
       </div>
     </WrapperLink>
   )

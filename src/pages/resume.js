@@ -1,8 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import Page from "../components/Page"
 import Hero from "../components/Hero"
+import Carousel from "../components/Carousel"
+import ShowItem from "../components/ShowItem"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
 import BusinessCard from "../components/BusinessCard"
 import { Default } from "../components/PageSections"
@@ -112,7 +115,9 @@ const Scroller = styled.aside`
     }
   }
 `
-const Resume = () => {
+const Resume = ({ data }) => {
+  const { allMarkdownRemark } = data
+  const { nodes: showcaseItems } = allMarkdownRemark
   return (
     <Page accent="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
@@ -181,6 +186,20 @@ const Resume = () => {
             <h2 className="title" id="project-showcase">
               Project Showcase
             </h2>
+            <Carousel>
+              {showcaseItems.map(
+                ({ frontmatter: { slug, ...showItemProps } }) => {
+                  const showCaseLink = `/projects/${slug}`
+                  return (
+                    <ShowItem
+                      key={showCaseLink}
+                      to={showCaseLink}
+                      {...showItemProps}
+                    />
+                  )
+                }
+              )}
+            </Carousel>
           </ResumeLayout>
           <ResumeLayout>
             <h2 className="title" id="volunteer-experience">
@@ -205,3 +224,23 @@ const Resume = () => {
 }
 
 export default Resume
+
+// TODO : Fix this workaround
+export const showcaseQuery = graphql`
+  query {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: { showcase: { eq: true }, type: { eq: "projects" } }
+      }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          description
+          image
+          slug
+        }
+      }
+    }
+  }
+`
