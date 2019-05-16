@@ -12,6 +12,9 @@ export const palette = {
     purple: "#e591ff",
     pink: "#ff79a7",
   },
+  opacity: {
+    faded: "0.65",
+  },
   shade: {
     darkest: "#0F0F0F",
     darker: "#303030",

@@ -60,8 +60,8 @@ const Scroller = () => (
       <a className="page-link" href="#achievements">
         Acheivements
       </a>
-      <a className="page-link" href="#interests">
-        Interests
+      <a className="page-link" href="#weird-stuff">
+        Weird Stuff
       </a>
     </div>
   </ScrollWrapper>

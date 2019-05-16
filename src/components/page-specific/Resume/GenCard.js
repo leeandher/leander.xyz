@@ -18,7 +18,7 @@ const CardHeader = styled.a`
     transform: skew(-12deg);
     &:before {
       ${themer("before")};
-      opacity: 0.5;
+      opacity: ${themer("opacity.faded")};
       background: ${themer("accent")};
     }
   }

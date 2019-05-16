@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import marked from "marked"
 import { graphql } from "gatsby"
 
 import Page from "../components/Page"
@@ -10,6 +11,7 @@ import BusinessCard from "../components/BusinessCard"
 import { Default } from "../components/PageSections"
 
 import GenCard from "../components/page-specific/Resume/GenCard"
+import GenText from "../components/page-specific/Resume/GenText"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
 import Scroller from "../components/page-specific/Resume/Scroller"
 
@@ -201,9 +203,19 @@ const Resume = ({ data }) => {
           </ResumeLayout>
 
           <ResumeLayout>
-            <h2 className="title" id="interests">
-              Interests
+            <h2 className="title" id="weird-stuff">
+              Weird Stuff
             </h2>
+            <div className="content">
+              <GenText>
+                {resume["weird-stuff"].map((item, i) => (
+                  <li
+                    key={i}
+                    dangerouslySetInnerHTML={{ __html: marked(item) }}
+                  />
+                ))}
+              </GenText>
+            </div>
           </ResumeLayout>
         </ResumeSection>
       </PageWrapper>

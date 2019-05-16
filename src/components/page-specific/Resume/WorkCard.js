@@ -38,8 +38,8 @@ const CardHeader = styled.a`
       &:before {
         ${themer("before")};
         background: ${themer("accent")};
-        opacity: 0.25;
-        transform: skew(12deg);
+        opacity: ${themer("opacity.faded")};
+        transform: skew(-12deg);
       }
     }
   }
