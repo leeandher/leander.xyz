@@ -6,9 +6,11 @@ import Page from "../components/Page"
 import Hero from "../components/Hero"
 import Carousel from "../components/Carousel"
 import ShowItem from "../components/ShowItem"
-import WorkCard from "../components/page-specific/Resume/WorkCard"
 import BusinessCard from "../components/BusinessCard"
 import { Default } from "../components/PageSections"
+
+import EduCard from "../components/page-specific/Resume/EduCard"
+import WorkCard from "../components/page-specific/Resume/WorkCard"
 
 import resume from "../data/resume.json"
 
@@ -170,6 +172,11 @@ const Resume = ({ data }) => {
             <h2 className="title" id="education">
               Education
             </h2>
+            <div className="content">
+              {resume.education.map((educationInfo, i) => (
+                <EduCard key={i} {...educationInfo} />
+              ))}
+            </div>
           </ResumeLayout>
           <ResumeLayout>
             <h2 className="title" id="work-experience">

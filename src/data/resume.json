@@ -76,13 +76,6 @@
       "description": "Currently a candidate for a B.A.Sc. Honors Nanotechnology Engineering at the University of Waterloo. My program gives me the opportunity to work with/study the latest and greatest in tech, research and science, while learning the fundamentals of engineering. "
     },
     {
-      "title": "Front End Development Certification",
-      "location": "FreeCodeCamp.org",
-      "time": "Jan 2018 - Mar 2018",
-      "link": "https://www.freecodecamp.org",
-      "description": "During my free time of my second coop term, I decided that I wanted to get back into the programming world, and searched for some good courses/resources online. About 2.5 months later, I'd completed a series of projects/challenges in this intensive course covering the basics of web development."
-    },
-    {
       "title": "React for Beginners",
       "location": "ReactForBeginners.com",
       "time": "Oct 2018",
@@ -95,6 +88,13 @@
       "time": "Apr 2018",
       "link": "https://www.codecademy.com",
       "description": "An introductory course to using React which was focused on the basics, but sparked my interest in the JavaScript framework, and set a foundation for future projects and endeavors."
+    },
+    {
+      "title": "Front End Development Certification",
+      "location": "FreeCodeCamp.org",
+      "time": "Jan 2018 - Mar 2018",
+      "link": "https://www.freecodecamp.org",
+      "description": "During my free time of my second coop term, I decided that I wanted to get back into the programming world, and searched for some good courses/resources online. About 2.5 months later, I'd completed a series of projects/challenges in this intensive course covering the basics of web development."
     }
   ],
   "volunteer-work": [

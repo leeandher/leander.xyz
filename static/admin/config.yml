@@ -71,12 +71,12 @@ collections:
       - { name: body, label: Description, widget: markdown }
   - name: pages
     label: Pages
+    editor:
+      preview: false
     files:
       - name: about
         label: About
         file: src/data/about.json
-        editor:
-          preview: false
         fields:
           - name: picks
             label: 🔥 Picks
