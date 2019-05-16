@@ -100,13 +100,15 @@ collections:
         fields:
           - name: work-experience
             label: Work Experience
+            editor:
+              preview: false
             widget: list
             fields:
               - { name: title, label: Job Title, widget: string }
               - { name: location, label: Job Location, widget: string }
               - { name: time, label: Job Length, widget: string }
               - { name: company, label: Company, widget: string }
-              - { name: url, label: Company Site, widget: string }
+              - { name: link, label: Company Site, widget: string }
               - { name: skills, label: Skills, widget: list }
               - name: bullets
                 label: Bullets
@@ -114,3 +116,39 @@ collections:
                 fields:
                   - { name: emoji, label: Bullet Emoji, widget: string }
                   - { name: text, label: Bullet Text, widget: text }
+          - name: education
+            label: Education
+            widget: list
+            fields:
+              - { name: title, label: Course Title, widget: string }
+              - { name: location, label: Location/Website, widget: string }
+              - { name: time, label: Completion Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: volunteer-work
+            label: Volunteering
+            widget: list
+            fields:
+              - { name: title, label: Volunteer Job, widget: string }
+              - { name: location, label: Location/Website, widget: string }
+              - { name: time, label: Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: achievements
+            label: Achievements
+            widget: list
+            fields:
+              - { name: title, label: Achievement Title, widget: string }
+              - { name: location, label: Location/Website, widget: string }
+              - { name: time, label: Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: interests
+            label: Interests
+            widget: list
+            fields:
+              - { name: title, label: Volunteer Job, widget: string }
+              - { name: location, label: Location, widget: string }
+              - { name: time, label: Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }

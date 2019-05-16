@@ -97,10 +97,18 @@ const Skill = styled.div`
   }
 `
 
-const WorkCard = ({ bullets, company, location, time, title, skills, url }) => {
+const WorkCard = ({
+  bullets,
+  company,
+  link,
+  location,
+  time,
+  title,
+  skills,
+}) => {
   return (
     <Card>
-      <CardHeader href={url} target="_blank">
+      <CardHeader href={link} target="_blank">
         <h3>{title}</h3>
         <div className="wrap">
           <h4>
