@@ -32,7 +32,7 @@ const CardHeader = styled.a`
   }
 `
 
-const EduCard = ({ description, link, location, time, title }) => {
+const GenCard = ({ description, link, location, time, title }) => {
   return (
     <Card>
       <CardHeader href={link}>
@@ -47,4 +47,4 @@ const EduCard = ({ description, link, location, time, title }) => {
   )
 }
 
-export default EduCard
+export default GenCard

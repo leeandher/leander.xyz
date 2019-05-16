@@ -9,8 +9,9 @@ import ShowItem from "../components/ShowItem"
 import BusinessCard from "../components/BusinessCard"
 import { Default } from "../components/PageSections"
 
-import EduCard from "../components/page-specific/Resume/EduCard"
+import GenCard from "../components/page-specific/Resume/GenCard"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
+import Scroller from "../components/page-specific/Resume/Scroller"
 
 import resume from "../data/resume.json"
 
@@ -85,38 +86,6 @@ const PageWrapper = styled.div`
   `}
 `
 
-const Scroller = styled.aside`
-  color: ${themer("shade.lightest")};
-  margin: 2rem 1rem;
-  ${media.desktop`
-    display: none;
-  `}
-  .links {
-    position: sticky;
-    top: ${themer("constants.navBarHeight")};
-    padding-top: 1rem;
-  }
-  .page-link {
-    display: block;
-    font-size: 1.5rem;
-    margin: 1.5rem 1rem;
-    margin-left: 2rem;
-    padding-left: 0.5rem;
-    font-weight: 300;
-    position: relative;
-    &:before {
-      content: "# ";
-      position: absolute;
-      right: 100%;
-      font-weight: bold;
-      top: 0;
-      color: ${themer("accent")};
-    }
-    &:hover {
-      text-decoration: underline ${themer("accent")};
-    }
-  }
-`
 const Resume = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: showcaseItems } = allMarkdownRemark
@@ -137,11 +106,11 @@ const Resume = ({ data }) => {
             <a className="page-link" href="#character-sheet">
               Character Sheet
             </a>
-            <a className="page-link" href="#education">
-              Education
-            </a>
             <a className="page-link" href="#work-experience">
               Work Experience
+            </a>
+            <a className="page-link" href="#education">
+              Education
             </a>
             <a className="page-link" href="#project-showcase">
               Project Showcase
@@ -169,22 +138,22 @@ const Resume = ({ data }) => {
             </h2>
           </ResumeLayout>
           <ResumeLayout>
-            <h2 className="title" id="education">
-              Education
-            </h2>
-            <div className="content">
-              {resume.education.map((educationInfo, i) => (
-                <EduCard key={i} {...educationInfo} />
-              ))}
-            </div>
-          </ResumeLayout>
-          <ResumeLayout>
             <h2 className="title" id="work-experience">
               Work Experience
             </h2>
             <div className="content">
               {resume["work-experience"].map((jobInfo, i) => (
                 <WorkCard key={i} {...jobInfo} />
+              ))}
+            </div>
+          </ResumeLayout>
+          <ResumeLayout>
+            <h2 className="title" id="education">
+              Education
+            </h2>
+            <div className="content">
+              {resume.education.map((educationInfo, i) => (
+                <GenCard key={i} {...educationInfo} />
               ))}
             </div>
           </ResumeLayout>
@@ -208,17 +177,29 @@ const Resume = ({ data }) => {
               )}
             </Carousel>
           </ResumeLayout>
+
           <ResumeLayout>
             <h2 className="title" id="volunteer-experience">
               Volunteer Experience
             </h2>
+            <div className="content">
+              {resume["volunteer-work"].map((educationInfo, i) => (
+                <GenCard key={i} {...educationInfo} />
+              ))}
+            </div>
           </ResumeLayout>
 
           <ResumeLayout>
             <h2 className="title" id="achievements">
               Achievements
             </h2>
+            <div className="content">
+              {resume.achievements.map((educationInfo, i) => (
+                <GenCard key={i} {...educationInfo} />
+              ))}
+            </div>
           </ResumeLayout>
+
           <ResumeLayout>
             <h2 className="title" id="interests">
               Interests
