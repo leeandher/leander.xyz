@@ -143,12 +143,7 @@ collections:
               - { name: time, label: Date, widget: string }
               - { name: link, label: Link, widget: string }
               - { name: description, label: Description, widget: text }
-          - name: interests
-            label: Interests
+          - name: weird-stuff
+            label: Weird Stuff
             widget: list
-            fields:
-              - { name: title, label: Volunteer Job, widget: string }
-              - { name: location, label: Location, widget: string }
-              - { name: time, label: Date, widget: string }
-              - { name: link, label: Link, widget: string }
-              - { name: description, label: Description, widget: text }
+            field: { name: item, label: Stuff Content, widget: markdown }
