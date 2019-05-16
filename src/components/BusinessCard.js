@@ -124,7 +124,7 @@ const CardAnchorLink = styled.a`
 const BusinessCard = props => {
   return (
     <CardWrapper {...props}>
-      <CardImage src="https://source.unsplash.com/random/400x400" />
+      <CardImage src="/assets/profile_pic.jpg" />
       <CardHeader>
         Hi, I'm <span>Leander Rodrigues</span>
       </CardHeader>
