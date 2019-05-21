@@ -1,5 +1,18 @@
 {
-  "summary-of-qualifications": [],
+  "summary-of-qualifications": [
+    {
+      "emoji": "🤓",
+      "text": "Committed, self-taught full-stack developer with an unconventional foundation in engineering"
+    },
+    {
+      "emoji": "🛠️",
+      "text": "Inquisitive and perpetual student, focusing free-time towards fully-functional, impressive side-projects"
+    },
+    {
+      "emoji": "🤝",
+      "text": "Energetic hard-worker with diverse history in industry"
+    }
+  ],
   "character-sheet": [
     {
       "category": "Frontend",
