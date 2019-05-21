@@ -1,4 +1,83 @@
 {
+  "summary-of-qualifications": [],
+  "character-sheet": [
+    {
+      "category": "Frontend",
+      "attributes": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React (like a LOT of React)",
+        "Getting Dressed in the Morning",
+        "Sass",
+        "Styled Components",
+        "Redux",
+        "Gatsby",
+        "Markdown",
+        "Apollo"
+      ]
+    },
+    {
+      "category": "Backend",
+      "attributes": [
+        "Node.js",
+        "Express",
+        "Next",
+        "TypeScript",
+        "Prisma",
+        "NetlifyCMS",
+        "Reverse Parking",
+        "GraphQL/REST API Development",
+        "AWS Suite (S3/DynamoDB/EB/EC2/SES/SNS)",
+        "JWTs",
+        "Firebase"
+      ]
+    },
+    {
+      "category": "Cool Stuff",
+      "attributes": [
+        "React Native",
+        "iOS/Android Deployment",
+        "Standalone Apps (Electron)",
+        "Ice Cubes",
+        "Site Deployment",
+        "Unity 3D with C#",
+        "CLI Development",
+        "Gitmoji"
+      ]
+    },
+    {
+      "category": "Tooling",
+      "attributes": [
+        "Git",
+        "CircleCI",
+        "Jest/Mocha/Jasmine",
+        "Prettier/ESLint/TSLint",
+        "Zsh/Bash/Cmd",
+        "Screwdrivers",
+        "Babel/Webpack/Gulp",
+        "Appium/Selenium",
+        "NPM/Yarn",
+        "Netlify"
+      ]
+    },
+    {
+      "category": "Concepts",
+      "attributes": [
+        "MVC",
+        "UI/UX",
+        "Accessbility",
+        "CI/CD",
+        "Data Visualization",
+        "Server-side Rendering",
+        "Code-splitting",
+        "A sense of humour",
+        "Design Thinking",
+        "Dev Ops",
+        "Agile Software Development"
+      ]
+    }
+  ],
   "work-experience": [
     {
       "title": "Advanced App Engineering Senior Analyst",
