@@ -41,12 +41,15 @@ const WrapperLink = styled(Link)`
     span:before {
       ${themer("before")};
       background: ${themer("accent")};
-      opacity: ${themer("opacity.faded")};
+      
     }
   }
   .show-description {
     font-weight: 300;
-    margin: 0;
+    margin:  0 -1rem;
+    padding: 1rem;
+    background: ${themer("shade.lightest")};
+    
   } 
   .show-wrapper {
     display: flex;
@@ -75,7 +78,7 @@ const ShowItem = ({ description, image, title, ...restOfProps }) => {
         <h4 className="show-title">
           <span>{title}</span>
         </h4>
-        <p className="show-description">{description}</p>
+        {description ? <p className="show-description">{description}</p> : null}
       </div>
     </WrapperLink>
   )

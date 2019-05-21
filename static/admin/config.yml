@@ -40,7 +40,7 @@ collections:
           name: image,
           label: Header Image,
           widget: image,
-          default: /assets/blog__default.png,
+          default: /assets/blog__default.jpg,
         }
       - { name: tags, label: Tags, widget: list }
       - { name: date, label: Date, widget: date }
