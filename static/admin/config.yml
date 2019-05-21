@@ -101,14 +101,10 @@ collections:
           - name: summary-of-qualifications
             label: Summary of Qualifications
             widget: list
-            identifier_field: bullets
-            field:
-              name: bullets
-              label: Bullets
-              widget: list
-              fields:
-                - { name: emoji, label: Emoji, widget: string }
-                - { name: text, label: Text, widget: text }
+            identifier_field: text
+            fields:
+              - { name: emoji, label: Emoji, widget: string }
+              - { name: text, label: Text, widget: text }
           - name: character-sheet
             label: Character Sheet
             widget: list
