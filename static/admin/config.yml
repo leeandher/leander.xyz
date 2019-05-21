@@ -78,7 +78,10 @@ collections:
         label: Home
         file: src/data/home.json
         fields:
-          - { name: descriptors, label: Descriptors, widget: list }
+          - name: descriptors
+            label: Descriptors
+            widget: list
+            field: { name: item, label: item, widget: string }
       - name: notes
         label: Notes
         file: src/data/notes.json
