@@ -74,6 +74,22 @@ collections:
     editor:
       preview: false
     files:
+      - name: home
+        label: Home
+        file: src/data/home.json
+        fields:
+          - { name: descriptors, label: Descriptors, widget: list }
+      - name: notes
+        label: Notes
+        file: src/data/notes.json
+        fields:
+          - name: descriptions
+            label: Descriptions
+            widget: list
+            identifier_field: category
+            fields:
+              - { name: category, label: Category, widget: string }
+              - { name: description, label: Description, widget: text }
       - name: about
         label: About
         file: src/data/about.json

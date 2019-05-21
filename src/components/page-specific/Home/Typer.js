@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Typist from "react-typist"
 
-import { descriptors } from "../../../data/home.json"
+import { descriptors } from "../../../data/old-home.json"
 
 const StyledTyping = styled(Typist).attrs({
   cursor: {
