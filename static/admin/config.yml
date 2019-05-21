@@ -98,10 +98,25 @@ collections:
         editor:
           preview: false
         fields:
+          - name: summary-of-qualifications
+            label: Summary of Qualifications
+            widget: list
+            field:
+              - name: bullets
+                label: Bullets
+                widget: list
+                fields:
+                  - { name: emoji, label: Emoji, widget: string }
+                  - { name: text, label: Text, widget: text }
+          - name: character-sheet
+            label: Character Sheet
+            widget: list
+            identifier_field: category
+            fields:
+              - { name: category, label: Category, widget: string }
+              - { name: attributes, label: Attributes, widget: list }
           - name: work-experience
             label: Work Experience
-            editor:
-              preview: false
             widget: list
             fields:
               - { name: title, label: Job Title, widget: string }
@@ -114,8 +129,8 @@ collections:
                 label: Bullets
                 widget: list
                 fields:
-                  - { name: emoji, label: Bullet Emoji, widget: string }
-                  - { name: text, label: Bullet Text, widget: text }
+                  - { name: emoji, label: Emoji, widget: string }
+                  - { name: text, label: Text, widget: text }
           - name: education
             label: Education
             widget: list
