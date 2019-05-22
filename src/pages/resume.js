@@ -14,6 +14,8 @@ import GenCard from "../components/page-specific/Resume/GenCard"
 import GenText from "../components/page-specific/Resume/GenText"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
 import Scroller from "../components/page-specific/Resume/Scroller"
+import AbilityPanel from "../components/page-specific/Resume/AbilityPanel"
+import EmojiBullet from "../components/page-specific/Resume/EmojiBullet"
 
 import resume from "../data/resume.json"
 
@@ -78,6 +80,14 @@ const ResumeLayout = styled.div`
   }
 `
 
+const SOQWrapper = styled.div`
+  padding: 1rem;
+  margin: 2rem;
+  .soq-bullet {
+    font-size: 1.75rem;
+  }
+`
+
 const PageWrapper = styled.div`
   display: grid;
   grid-template-columns: 200px auto;
@@ -133,11 +143,23 @@ const Resume = ({ data }) => {
             <h2 className="title" id="summary-of-qualifications">
               Summary of Qualifications
             </h2>
+            <SOQWrapper className="content">
+              {resume["summary-of-qualifications"].map(({ emoji, text }, i) => (
+                <EmojiBullet emoji={emoji} className="soq-bullet" key={i}>
+                  {text}
+                </EmojiBullet>
+              ))}
+            </SOQWrapper>
           </ResumeLayout>
           <ResumeLayout>
             <h2 className="title" id="character-sheet">
               Character Sheet
             </h2>
+            <div className="content">
+              {resume["character-sheet"].map((ability, i) => (
+                <AbilityPanel key={i} {...ability} />
+              ))}
+            </div>
           </ResumeLayout>
           <ResumeLayout>
             <h2 className="title" id="work-experience">
