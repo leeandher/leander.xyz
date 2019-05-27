@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { themer } from "../../../styles/helpers"
+import { media, themer } from "../../../styles/helpers"
 
 const Card = styled.div`
   padding: 3rem 2rem;
@@ -33,6 +33,9 @@ const CardHeader = styled.a`
       padding: 0.5rem 1rem;
       position: relative;
       z-index: 1;
+      ${media.phone`
+        display: block;
+      `}
       &:before {
         ${themer("before")};
         background: ${themer("accent")};
@@ -51,6 +54,9 @@ const CardHeader = styled.a`
     padding-right: 1.5rem;
     border: 0px solid ${themer("accent")};
     border-width: 0 10px 5px 0;
+    ${media.phone`
+      border-width: 0 0 5px 0;
+    `}
   }
 `
 const CardContent = styled.ul`

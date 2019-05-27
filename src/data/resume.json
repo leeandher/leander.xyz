@@ -40,8 +40,8 @@
         "Prisma",
         "NetlifyCMS",
         "Reverse Parking",
-        "GraphQL/REST API Development",
-        "AWS Suite (S3/DynamoDB/EB/EC2/SES/SNS)",
+        "GraphQL / REST API Development",
+        "AWS Suite (S3 / DynamoDB / EB / EC2 / SES / SNS)",
         "JWTs",
         "Firebase"
       ]
@@ -64,13 +64,13 @@
       "attributes": [
         "Git",
         "CircleCI",
-        "Jest/Mocha/Jasmine",
-        "Prettier/ESLint/TSLint",
-        "Zsh/Bash/Cmd",
+        "Jest / Mocha / Jasmine",
+        "Prettier / ESLint / TSLint",
+        "Zsh / Bash / Cmd",
         "Screwdrivers",
-        "Babel/Webpack/Gulp",
-        "Appium/Selenium",
-        "NPM/Yarn",
+        "Babel / Webpack / Gulp",
+        "Appium / Selenium",
+        "NPM / Yarn",
         "Netlify"
       ]
     },

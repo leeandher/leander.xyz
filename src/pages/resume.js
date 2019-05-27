@@ -14,7 +14,7 @@ import GenCard from "../components/page-specific/Resume/GenCard"
 import GenText from "../components/page-specific/Resume/GenText"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
 import Scroller from "../components/page-specific/Resume/Scroller"
-import AbilityPanel from "../components/page-specific/Resume/AbilityPanel"
+import CharacterSheetWrapper from "../components/page-specific/Resume/CharacterSheetWrapper"
 import EmojiBullet from "../components/page-specific/Resume/EmojiBullet"
 
 import resume from "../data/resume.json"
@@ -42,7 +42,7 @@ const SmallTitle = styled(Hero).attrs({
 `
 
 const ResumeSection = styled(Default)`
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 `
 
 const ResumeLayout = styled.div`
@@ -67,6 +67,7 @@ const ResumeLayout = styled.div`
       text-align: center;
       padding: 2rem;
       margin-bottom: 0;
+      font-size: 3rem;
     `}
   }
   .content {
@@ -156,9 +157,9 @@ const Resume = ({ data }) => {
               Character Sheet
             </h2>
             <div className="content">
-              {resume["character-sheet"].map((ability, i) => (
-                <AbilityPanel key={i} {...ability} />
-              ))}
+              <CharacterSheetWrapper
+                characterSheetData={resume["character-sheet"]}
+              />
             </div>
           </ResumeLayout>
           <ResumeLayout>

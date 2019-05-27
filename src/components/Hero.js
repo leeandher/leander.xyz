@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { media, themer } from "../styles/helpers"
+
 const Header = styled.header`
   min-height: ${({ height }) => height || "100vh"};
   text-align: center;
@@ -10,14 +12,17 @@ const Header = styled.header`
   padding: ${({ theme }) => theme.spacing.default};
   color: ${({ theme }) => theme.shade.lighter};
   h1 {
+    ${media.phone`
+      font-size: 4.5rem;
+    `}
     margin: 15px;
     transform: skew(-5deg);
     display: inline-block;
     padding: 10px;
-    background: ${({ theme }) => theme.accent};
-    color: ${({ theme }) => theme.shade.darkest};
-    box-shadow: 7px 0 0 3px ${({ theme }) => theme.accent},
-      -7px 0 0 3px ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
+    color: ${themer("shade.darkest")};
+    box-shadow: 7px 0 0 3px ${themer("accent")},
+      -7px 0 0 3px ${themer("accent")};
     ${({ theme }) => theme.transition.default("all")};
     &:hover {
       ${({ expanding }) => (expanding ? "letter-spacing: 0.5rem;" : "")}
