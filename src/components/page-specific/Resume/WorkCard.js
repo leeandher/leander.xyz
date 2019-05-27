@@ -13,8 +13,6 @@ const CardHeader = styled.a`
     text-align: left;
     margin: 0;
     font-weight: 500;
-    border: 0px solid ${themer("accent")};
-    border-right-width: 10px;
   }
   .wrap {
     display: flex;

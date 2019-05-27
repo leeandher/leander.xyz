@@ -231,7 +231,7 @@ const Resume = ({ data }) => {
             <div className="content">
               <GenText>
                 {resume["weird-stuff"].map((item, i) => (
-                  <li
+                  <EmojiBullet
                     key={i}
                     dangerouslySetInnerHTML={{ __html: marked(item) }}
                   />
