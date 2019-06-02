@@ -25,6 +25,10 @@
 #   base    = "subdomains/old"
 #   publish = "subdomains/old"unity
 #   command = ""
+[context.md-prevuer]
+  base    = "subdomains/md-prevuer"
+  publish = "subdomains/md-prevuer/dist"
+  command = "npm run build"
 [context.reduxstagram]
   base    = "subdomains/reduxstagram"
   publish = "subdomains/reduxstagram/build"
