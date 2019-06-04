@@ -1,16 +1,19 @@
+# backend:
+#   name: git-gateway
+#   accept_roles:
+#     - admin
+#     - editor
+#   repo: leeandher/leander.xyz
+#   branch: dev
+#   commit_messages:
+#     create: ✨ Create entry in {{collection}} collection - "{{slug}}"
+#     update: ✏️ Edit in {{collection}} collection - "{{slug}}"
+#     delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
+#     uploadMedia: 🍱 Upload media - "{{path}}"
+#     deleteMedia: 🔥 Delete media - "{{path}}"
+
 backend:
-  name: git-gateway
-  accept_roles:
-    - admin
-    - editor
-  repo: leeandher/leander.xyz
-  branch: dev
-  commit_messages:
-    create: ✨ Create entry in {{collection}} collection - "{{slug}}"
-    update: ✏️ Edit in {{collection}} collection - "{{slug}}"
-    delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
-    uploadMedia: 🍱 Upload media - "{{path}}"
-    deleteMedia: 🔥 Delete media - "{{path}}"
+  name: test-repo
 
 media_folder: static/assets
 public_folder: assets
@@ -81,21 +84,9 @@ collections:
           - name: descriptors
             label: Descriptors
             widget: list
-            fields: { name: item, label: item, widget: string }
           - name: self-description
             label: Self Description
             widget: markdown
-      - name: notes
-        label: Notes
-        file: src/data/notes.json
-        fields:
-          - name: descriptions
-            label: Descriptions
-            widget: list
-            identifier_field: category
-            fields:
-              - { name: category, label: Category, widget: string }
-              - { name: description, label: Description, widget: text }
       - name: about
         label: About
         file: src/data/about.json
@@ -114,6 +105,31 @@ collections:
             fields:
               - { name: question, label: Question, widget: string }
               - { name: answer, label: Answer, widget: markdown }
+      - name: contact
+        label: Contact
+        file: src/data/contact.json
+        fields:
+          - name: hit-me-up
+            label: Hit me up Text
+            widget: markdown
+          - name: placeholders
+            label: Placeholders
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: email, label: Email, widget: string }
+              - { name: subject, label: Subject, widget: string }
+              - { name: message, label: Message, widget: string }
+      - name: notes
+        label: Notes
+        file: src/data/notes.json
+        fields:
+          - name: descriptions
+            label: Descriptions
+            widget: list
+            identifier_field: category
+            fields:
+              - { name: category, label: Category, widget: string }
+              - { name: description, label: Description, widget: text }
       - name: resume
         label: Resume
         file: src/data/resume.json
