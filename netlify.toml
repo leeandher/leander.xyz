@@ -1,0 +1,44 @@
+# General build context
+[build]
+  base    = ""
+  publish = "public"
+  command = "npm run build"
+
+# Branch-specific build context
+[context.catch-of-the-day]
+  base    = "subdomains/catch-of-the-day"
+  publish = "subdomains/catch-of-the-day/build"
+  command = "npm run build"
+[context.conway]
+  base    = "subdomains/conway"
+  publish = "subdomains/conway/build"
+  command = "npm run build"
+[context.dev]
+  base    = ""
+  publish = "public"
+  command = "npm run build"
+# [context.joke]
+#   base    = "subdomains/joke"
+#   publish = "subdomains/joke"
+#   command = ""
+# [context.old]
+#   base    = "subdomains/old"
+#   publish = "subdomains/old"unity
+#   command = ""
+[context.md-prevuer]
+  base    = "subdomains/md-prevuer"
+  publish = "subdomains/md-prevuer/dist"
+  command = "npm run build"
+[context.reduxstagram]
+  base    = "subdomains/reduxstagram"
+  publish = "subdomains/reduxstagram/build"
+  command = "npm run build"
+[context.unity]
+  base    = "subdomains/unity"
+  publish = "subdomains/unity"
+  command = "echo Unity"
+[context.stacker-news]
+  base    = "subdomains/stacker-news"
+  publish = "subdomains/stacker-news/build"
+  command = "npm run build"
+  

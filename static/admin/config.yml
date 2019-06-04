@@ -1,29 +1,180 @@
-# backend:
-#   name: github
-#   repo: leeandher/leander.xyz
-#   branch: release
-
 backend:
-  name: 'test-repo'
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  repo: leeandher/leander.xyz
+  branch: dev
+  commit_messages:
+    create: ✨ Create entry in {{collection}} collection - "{{slug}}"
+    update: ✏️ Edit in {{collection}} collection - "{{slug}}"
+    delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
+    uploadMedia: 🍱 Upload media - "{{path}}"
+    deleteMedia: 🔥 Delete media - "{{path}}"
 
 media_folder: static/assets
 public_folder: assets
 
+site_url: https://www.leander.xyz
+display_url: https://www.leander.xyz
+logo_url: https://dev.leander.xyz/icons/logo-d.svg
+
+# publish_mode: editorial_workflow
+
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/blog
+    slug: "{{year}}-{{month}}-{{day}}_{{fields.slug}}"
+    editor:
+      preview: false
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: type, label: Type, widget: hidden, default: blog }
+      - { name: archive, label: Archive, widget: boolean, default: false }
+      - { name: showcase, label: Showcase, widget: boolean, default: false }
+      - { name: slug, label: Slug, widget: string }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - {
+          name: image,
+          label: Header Image,
+          widget: image,
+          default: /assets/blog__default.jpg,
+        }
+      - { name: tags, label: Tags, widget: list }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
-  - name: faqs
-    label: FAQs
-    folder: faqs
+  - name: projects
+    label: Projects
+    folder: src/pages/projects
+    slug: "{{fields.slug}}"
+    editor:
+      preview: false
     create: true
-    identifier_field: question
     fields:
-      - { name: question, label: Question, widget: string }
-      - { name: answer, label: Answer, widget: markdown }
+      - { name: type, label: Type, widget: hidden, default: projects }
+      - { name: showcase, label: Showcase, widget: boolean, default: false }
+      - { name: slug, label: Slug, widget: string }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - {
+          name: image,
+          label: Screenshot,
+          widget: image,
+          default: /assets/project__default.png,
+        }
+      - { name: repo, label: Repo Link, widget: string }
+      - { name: link, label: Live Link, widget: string }
+      - { name: tech, label: Tech Used, widget: list }
+      - { name: date, label: Date Completed, widget: date }
+      - { name: body, label: Description, widget: markdown }
+  - name: pages
+    label: Pages
+    editor:
+      preview: false
+    files:
+      - name: home
+        label: Home
+        file: src/data/home.json
+        fields:
+          - name: descriptors
+            label: Descriptors
+            widget: list
+            field: { name: item, label: item, widget: string }
+      - name: notes
+        label: Notes
+        file: src/data/notes.json
+        fields:
+          - name: descriptions
+            label: Descriptions
+            widget: list
+            identifier_field: category
+            fields:
+              - { name: category, label: Category, widget: string }
+              - { name: description, label: Description, widget: text }
+      - name: about
+        label: About
+        file: src/data/about.json
+        fields:
+          - name: picks
+            label: 🔥 Picks
+            widget: list
+            identifier_field: label
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+          - name: faqs
+            label: FAQs
+            widget: list
+            identifier_field: question
+            fields:
+              - { name: question, label: Question, widget: string }
+              - { name: answer, label: Answer, widget: markdown }
+      - name: resume
+        label: Resume
+        file: src/data/resume.json
+        editor:
+          preview: false
+        fields:
+          - name: summary-of-qualifications
+            label: Summary of Qualifications
+            widget: list
+            identifier_field: text
+            fields:
+              - { name: emoji, label: Emoji, widget: string }
+              - { name: text, label: Text, widget: text }
+          - name: character-sheet
+            label: Character Sheet
+            widget: list
+            identifier_field: category
+            fields:
+              - { name: category, label: Category, widget: string }
+              - { name: attributes, label: Attributes, widget: list }
+          - name: work-experience
+            label: Work Experience
+            widget: list
+            fields:
+              - { name: title, label: Job Title, widget: string }
+              - { name: location, label: Job Location, widget: string }
+              - { name: time, label: Job Length, widget: string }
+              - { name: company, label: Company, widget: string }
+              - { name: link, label: Company Site, widget: string }
+              - { name: skills, label: Skills, widget: list }
+              - name: bullets
+                label: Bullets
+                widget: list
+                fields:
+                  - { name: emoji, label: Emoji, widget: string }
+                  - { name: text, label: Text, widget: text }
+          - name: education
+            label: Education
+            widget: list
+            fields:
+              - { name: title, label: Course Title, widget: string }
+              - { name: location, label: Location/Website, widget: string }
+              - { name: time, label: Completion Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: volunteer-work
+            label: Volunteering
+            widget: list
+            fields:
+              - { name: title, label: Volunteer Job, widget: string }
+              - { name: location, label: Location/Website, widget: string }
+              - { name: time, label: Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: achievements
+            label: Achievements
+            widget: list
+            fields:
+              - { name: title, label: Achievement Title, widget: string }
+              - { name: location, label: Location/Website, widget: string }
+              - { name: time, label: Date, widget: string }
+              - { name: link, label: Link, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: weird-stuff
+            label: Weird Stuff
+            widget: list
+            field: { name: item, label: Stuff Content, widget: markdown }

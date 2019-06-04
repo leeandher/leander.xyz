@@ -1,0 +1,236 @@
+{
+  "summary-of-qualifications": [
+    {
+      "emoji": "🤓",
+      "text": "Committed, self-taught full-stack developer with an unconventional foundation in engineering"
+    },
+    {
+      "emoji": "🛠️",
+      "text": "Inquisitive and perpetual student, focusing free-time towards fully-functional, impressive side-projects"
+    },
+    {
+      "emoji": "🤝",
+      "text": "Energetic hard-worker with diverse history in industry"
+    }
+  ],
+  "character-sheet": [
+    {
+      "category": "Frontend",
+      "attributes": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React (like a LOT of React)",
+        "Getting Dressed in the Morning",
+        "Sass",
+        "Styled Components",
+        "Redux",
+        "Gatsby",
+        "Markdown",
+        "Apollo"
+      ]
+    },
+    {
+      "category": "Backend",
+      "attributes": [
+        "Node.js",
+        "Express",
+        "Next",
+        "TypeScript",
+        "Prisma",
+        "NetlifyCMS",
+        "Reverse Parking",
+        "GraphQL / REST API Development",
+        "AWS Suite (S3 / DynamoDB / EB / EC2 / SES / SNS)",
+        "JWTs",
+        "Firebase"
+      ]
+    },
+    {
+      "category": "Cool Stuff",
+      "attributes": [
+        "React Native",
+        "iOS/Android Deployment",
+        "Standalone Apps (Electron)",
+        "Ice Cubes",
+        "Site Deployment",
+        "Unity 3D with C#",
+        "CLI Development",
+        "Gitmoji"
+      ]
+    },
+    {
+      "category": "Tooling",
+      "attributes": [
+        "Git",
+        "CircleCI",
+        "Jest / Mocha / Jasmine",
+        "Prettier / ESLint / TSLint",
+        "Zsh / Bash / Cmd",
+        "Screwdrivers",
+        "Babel / Webpack / Gulp",
+        "Appium / Selenium",
+        "NPM / Yarn",
+        "Netlify"
+      ]
+    },
+    {
+      "category": "Concepts",
+      "attributes": [
+        "MVC",
+        "UI/UX",
+        "Accessbility",
+        "CI/CD",
+        "Data Visualization",
+        "Server-side Rendering",
+        "Code-splitting",
+        "A sense of humour",
+        "Design Thinking",
+        "Dev Ops",
+        "Agile Software Development"
+      ]
+    }
+  ],
+  "work-experience": [
+    {
+      "title": "Advanced App Engineering Senior Analyst",
+      "location": "Toronto, ON",
+      "time": "Fall 2018 (4m)",
+      "company": "Accenture",
+      "link": "https://www.accenture.com/ca-en",
+      "skills": [
+        "React",
+        "Node",
+        "Handlebars",
+        "AWS Lambda",
+        "AWS SNS/SES",
+        "Google Dialogflow",
+        "Git Workflows"
+      ],
+      "bullets": [
+        {
+          "emoji": "🔨",
+          "text": "Designed reusable components in React.js through peer programming and test-driven development"
+        },
+        {
+          "emoji": "🚀",
+          "text": "Deployed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases"
+        },
+        {
+          "emoji": "📚",
+          "text": "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+        }
+      ]
+    },
+    {
+      "title": "Full-stack React Native Developer",
+      "location": "Toronto, ON",
+      "time": "Winter 2019 (4m)",
+      "company": "Shop Bonsai",
+      "link": "https://corp.shopbonsai.ca/",
+      "skills": [
+        "React",
+        "React Native",
+        "TypeScript/Flow",
+        "GraphQL",
+        "MongoDB",
+        "Redux",
+        "Apollo",
+        "Code Review",
+        "CI/CD"
+      ],
+      "bullets": [
+        {
+          "emoji": "✅",
+          "text": "Implemented E2E tests in Jasmine and Selenium, along with fixtures, for consistent, black-box reporting in CircleCI"
+        },
+        {
+          "emoji": "🏗️",
+          "text": "Overhauled atomic design system for React UI elements on both iOS and Android operating systems"
+        },
+        {
+          "emoji": "♻️",
+          "text": "Refactored GraphQL API resolvers and their respective queries via React Native HOCs to reduce over-fetching"
+        },
+        {
+          "emoji": "⚡",
+          "text": "Actively participated in small-team Agile development activities like Scrum, Planning Poker and Sprints"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Nanotechnology Engineering",
+      "location": "University of Waterloo",
+      "time": "Sep 2016 - Present",
+      "link": "https://uwaterloo.ca/",
+      "description": "Currently a candidate for a B.A.Sc. Honors Nanotechnology Engineering at the University of Waterloo. My program gives me the opportunity to work with/study the latest and greatest in tech, research and science, while learning the fundamentals of engineering. "
+    },
+    {
+      "title": "React for Beginners",
+      "location": "ReactForBeginners.com",
+      "time": "Oct 2018",
+      "link": "https://reactforbeginners.com",
+      "description": "A beginner's project-driven React development course taught by Wes Bos. It covers everything from ES6, to Webpack, and even Firebase Authentication. It covers lifecycle methods, state management, and application structure while creating an application to manage simple fish market!"
+    },
+    {
+      "title": "React 101",
+      "location": "Codecademy.com",
+      "time": "Apr 2018",
+      "link": "https://www.codecademy.com",
+      "description": "An introductory course to using React which was focused on the basics, but sparked my interest in the JavaScript framework, and set a foundation for future projects and endeavors."
+    },
+    {
+      "title": "Front End Development Certification",
+      "location": "FreeCodeCamp.org",
+      "time": "Jan 2018 - Mar 2018",
+      "link": "https://www.freecodecamp.org",
+      "description": "During my free time of my second coop term, I decided that I wanted to get back into the programming world, and searched for some good courses/resources online. About 2.5 months later, I'd completed a series of projects/challenges in this intensive course covering the basics of web development."
+    }
+  ],
+  "volunteer-work": [
+    {
+      "title": "Hour of Code Program Assistant",
+      "location": "John Ross Robertson Public School, Toronto ON",
+      "time": "Dec 4, 2018",
+      "link": "https://hourofcode.com/ca",
+      "description": "With a few other volunteers from the team of developers from Accenture Technology Canada, I was able to help Grade 3's and 4's write their first few lines of JavaScript, all for the #HourOfCode initiative!"
+    },
+    {
+      "title": "Builder/Painter for Project Outreach",
+      "location": "Sosúa, Dominican Republic",
+      "time": "Spring 2014",
+      "link": "https://livedifferent.com/",
+      "description": "TODO"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "100 Days of Code",
+      "location": "My Basement",
+      "time": "Oct 2018 - Jan 2019",
+      "link": "https://twitter.com/LeeAndHer/status/1084678532377137153",
+      "description": "After a long 4 months at school, I wanted to get back into programming in a big way. I started coding for at least an hour a day for 100 Days, and lo and behold, I got a bunch of stuff done! "
+    },
+    {
+      "title": "IC Agile Professional Certification",
+      "location": "International Consortium for Agile",
+      "time": "Sep 2018",
+      "link": "https://icagile.com/",
+      "description": "As part of my term with Accenture Canada, I traveled to Chicago, Illinois to complete a two-week intensive training on the basics of technology development. As part of it, I received a certification in professional agile software development for completing a three-day accredited course!"
+    },
+    {
+      "title": "President's Scholarship",
+      "location": "University of Waterloo",
+      "time": "Sep 2016",
+      "link": "http://uwaterloo.ca",
+      "description": "Earned a big ol' entrance scholarship of $2000.00 upon my admission to the University of Waterloo since my high school grade point average was greater than 90%."
+    }
+  ],
+  "weird-stuff": [
+    "I am a _**total podcast junkie**_. I'm listening to podcasts whenever I'm doing anything with my hands, even coding on occasion. As of this moment, I'm subscribed to **around 25**. Top recommendations include: _Reply All_, _Everything is Alive_, _Syntax_, and _My Brother, My Brother and Me_.",
+    "I am an unwavering **dog** person, but sadly I don't have a cute puppy of my own just yet. When I move out, adopting a cute **pitbull** or **shiba** Inu is probably the top priority. In the meantime `r/rarepuppers`, `r/puppysmiles` and `r/dogpictures` are a good alternative.",
+    "I prefer _VSCode_ to _Atom_, I really enjoy programming in _JavaScript_, _React_ is my preferred framework, but I'm actively exploring _Vue_, and I think `if` statement curly braces don't deserve their own lines. For more opinions to disagree with check out my [/about](https://www.leander.xyz/about) page."
+  ]
+}

@@ -1,43 +1,81 @@
 import React from "react"
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 
-import { palette } from "./styles"
+import GlobalStyles from "../styles/GlobalStyles"
+import { palette } from "../styles/palette"
 
-const GlobalStyle = createGlobalStyle`
-  html {
-    box-sizing: border-box;
-    font-size: 10px;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-family: ${palette.font.family};
-  }
-  a {
-    text-decoration: none;
+import Nav from "./Nav"
+import Footer from "./Footer"
+import SEOBundle from "./SEOBundle"
+import ParticleBackground from "./ParticleBackground"
+
+// import { consoleLiteral } from "../data/consoleLiteral"
+import { genRandProperty } from "../helpers"
+
+const StyledPage = styled.div`
+  margin-top: ${({ theme }) => theme.constants.navBarHeight};
+  * {
+    mark,
+    ::selection {
+      background: ${({ theme }) => theme.accent};
+      background: ${({ theme }) => theme.accent}88;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px ${({ theme }) => theme.accent};
+    }
   }
 `
 
-const StyledPage = styled.div``
-
-const Page = ({ accent, children }) => {
-  const theme = {
-    accent: palette.color[accent],
-    ...palette,
+class Page extends React.Component {
+  state = {
+    showSideBar: false,
   }
-  return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <StyledPage>{children}</StyledPage>
-      </ThemeProvider>
-    </>
-  )
+
+  toggleNav = () => {
+    const { showSideBar } = this.state
+    this.setState({ showSideBar: !showSideBar })
+  }
+
+  // componentDidMount() {
+  //   console.clear()
+  //   console.log(consoleLiteral)
+  // }
+
+  render() {
+    const { accent, bgColor, children, bgDesign, seoProfile } = this.props
+    const { showSideBar } = this.state
+    const theme = {
+      accent:
+        accent === "random"
+          ? genRandProperty(palette.color, true)
+          : palette.color[accent],
+      ...palette,
+    }
+    return (
+      <>
+        <SEOBundle seoProfile={seoProfile} theme={theme} />
+        <GlobalStyles theme={theme} />
+        <ThemeProvider theme={theme}>
+          <StyledPage>
+            {bgDesign !== "none" && (
+              <ParticleBackground
+                design={bgDesign}
+                color={bgColor || theme.accent}
+              />
+            )}
+            <Nav
+              showSideBar={showSideBar}
+              handleToggle={this.toggleNav}
+              accent={theme.accent}
+            />
+            {children}
+            <Footer />
+          </StyledPage>
+        </ThemeProvider>
+      </>
+    )
+  }
 }
 
 export default Page

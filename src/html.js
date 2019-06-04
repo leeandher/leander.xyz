@@ -3,29 +3,39 @@ import PropTypes from "prop-types"
 
 export default class HTML extends React.Component {
   render() {
+    const {
+      htmlAttributes,
+      headComponents,
+      preBodyComponents,
+      bodyAttributes,
+      body,
+      postBodyComponents,
+    } = this.props
     return (
-      <html {...this.props.htmlAttributes}>
+      <html {...htmlAttributes} style={{ background: "#0F0F0F" }} lang="en">
         <head>
           <meta charSet="utf-8" />
+          <meta name="author" content="Leander Rodrigues" />
+          <meta name="robots" content="index, follow" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Rubik"
+            href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900"
             rel="stylesheet"
           />
-          {this.props.headComponents}
+          {headComponents}
         </head>
-        <body {...this.props.bodyAttributes}>
-          {this.props.preBodyComponents}
+        <body {...bodyAttributes}>
+          {preBodyComponents}
           <div
-            key={`body`}
+            key="body"
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{ __html: body }}
           />
-          {this.props.postBodyComponents}
+          {postBodyComponents}
         </body>
       </html>
     )

@@ -1,0 +1,136 @@
+import React from "react"
+import styled from "styled-components"
+
+import {
+  FaGithub,
+  FaStackOverflow,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa"
+import { getCopyrightYearsFrom } from "../helpers"
+import AnchorLink from "./AnchorLink"
+
+const StyledAnchorLink = styled(AnchorLink)`
+  display: inline-block;
+  padding: 1.75rem;
+  margin: 3rem;
+`
+
+const StyledFooter = styled.footer`
+  min-height: 50vh;
+  padding: 5rem;
+  color: ${({ theme }) => theme.shade.lighter};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  h5 {
+    font-weight: 400;
+    margin: 0;
+    flex: 1;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    color: ${({ theme }) => theme.shade.mid};
+    margin-bottom: 3rem;
+    flex: 1;
+  }
+  button {
+    margin: 3rem;
+  }
+  svg {
+    color: ${({ theme }) => theme.shade.lightest};
+    box-sizing: content-box;
+    font-size: 4rem;
+    padding: 0.5rem;
+    padding-bottom: calc(0.5rem - 3px);
+    line-height: 1;
+  }
+  small,
+  small a {
+    font-size: 1.25rem;
+  }
+`
+
+const IconWrapper = styled.div`
+  margin: 0 auto;
+  flex: 1;
+`
+
+const Easter = styled.small`
+  text-align: right;
+`
+
+const Footer = ({ handleToggle, showSideBar }) => {
+  const copyrightYears = getCopyrightYearsFrom(2019)
+  return (
+    <StyledFooter>
+      <h5>Find me online</h5>
+      <IconWrapper>
+        <StyledAnchorLink
+          href="https://www.linkedin.com/in/leander-rodrigues/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://github.com/leeandher"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://stackoverflow.com/users/story/10996907?view=Timeline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaStackOverflow />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://twitter.com/LeeAndHer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaTwitter />
+        </StyledAnchorLink>
+      </IconWrapper>
+      <p>
+        &copy; Copyright {copyrightYears}, <br />
+        but don't worry, I'm{" "}
+        <AnchorLink
+          href="https://github.com/leeandher/leander.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          open source
+        </AnchorLink>
+      </p>
+      <small>
+        <AnchorLink
+          href="https://github.com/leeandher/leander.xyz/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          See a bug?
+        </AnchorLink>
+      </small>
+      <Easter>
+        <AnchorLink
+          href="https://en.wikipedia.org/wiki/Konami_Code"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span role="img" aria-label="easter egg">
+            🥚
+          </span>
+        </AnchorLink>
+      </Easter>
+    </StyledFooter>
+  )
+}
+
+export default Footer

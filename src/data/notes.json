@@ -1,0 +1,32 @@
+{
+  "descriptions": [
+    {
+      "category": "Conferences",
+      "description": "These are some notes that I've taken during conference talks about becoming a better programmer or interviewee or well-rounded person"
+    },
+    {
+      "category": "Docker",
+      "description": "What's Docker? What's a container? How do I dockerize things? What does that mean? This category should help you out!"
+    },
+    {
+      "category": "Git",
+      "description": "The most widespread distributed version control software in the modern age. Notes by a human for human, without all those extra flags from the actual docs"
+    },
+    {
+      "category": "How To GraphQL",
+      "description": "Course notes for an introductory course offered by howtographql.com. Full-stack introduction to GraphQL using Apollo, and Prisma"
+    },
+    {
+      "category": "Learn Node",
+      "description": "Course notes for Wes Bos' Learn Node course, explaining the intricacies behind express apps, MVC methodologies, authentication, and user account flow"
+    },
+    {
+      "category": "Learn Redux",
+      "description": "Course notes for Wes Bos' Learn Redux course, outlining the basic principles to understand when integrating Redux into an application"
+    },
+    {
+      "category": "React 101",
+      "description": "Course notes for Codecademy's React 101, and Wes Bos' React for Beginners course, providing an awesome resource to take your first step into React; life-cycle methods, managing state, prop-types and more!"
+    }
+  ]
+}

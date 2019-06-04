@@ -1,61 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 
-import Page from "../components/Page.js"
+import Page from "../components/Page"
 
-const StyledHeader = styled.header`
+const Header = styled.div`
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: ${({ theme }) => theme.spacing.default};
-  background: ${({ theme }) => theme.shade.darkest};
-  color: ${({ theme }) => theme.shade.lighter};
-  .acc {
-    color: ${({ theme }) => theme.accent};
-  }
-  h1 {
-    margin: 15px;
-    font-size: 5rem;
-    transform: skew(-5deg);
-    display: inline-block;
-    span {
-      padding: 10px;
-      background: ${({ theme }) => theme.accent};
-      color: ${({ theme }) => theme.shade.darkest};
-    }
-  }
-  p {
-    font-size: 2rem;
-    margin: 0;
-  }
-  h2,
-  a {
-    font-size: 3rem;
-    text-decoration: underline ${({ theme }) => theme.accent};
-    a {
-      color: inherit;
-    }
+  color: ${({ theme }) => theme.accent};
+  span {
+    color: ${({ theme }) => theme.shade.lighter};
   }
 `
-const Home = () => {
+
+const Projects = () => {
   return (
-    <Page accent="teal">
-      <StyledHeader>
-        <p>Hi there, My name is</p>
+    <Page accent="pink" bgDesign="mesh" seoProfile="404-page">
+      <Header>
         <h1>
-          <span>Leander Rodrigues</span>
+          <code>
+            {/* eslint-disable-line react/jsx-no-comment-textnodes */}
+            // TODO: <span>Make better 404 page</span>
+          </code>
         </h1>
-        <p>and I'm currently hard at work rebuilding my site.</p>
-        <br />
-        <h2>
-          <a href="https://github.com/leeandher">Check out my GitHub</a>
-        </h2>
-        <p>to see my latest projects!</p>
-      </StyledHeader>
+      </Header>
     </Page>
   )
 }
 
-export default Home
+export default Projects
