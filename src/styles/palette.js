@@ -31,7 +31,8 @@ export const palette = {
   },
   font: {
     base: "Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    mono: "dm, 'Operator Mono', 'Fira Code', Monaco, Consolas, monospace",
+    mono:
+      "'Dank Mono', 'Operator Mono', 'Fira Code', Monaco, Consolas, monospace",
     thin: 300,
     reg: 400,
     bold: 700,

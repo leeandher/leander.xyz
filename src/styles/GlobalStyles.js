@@ -1,4 +1,3 @@
-import { withPrefix } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 import { themer } from "./helpers"
 
@@ -9,10 +8,6 @@ const GlobalStyles = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
-  }
-  @font-face {
-    font-family: dm;
-    src: url(${withPrefix("fonts/dm.ttf")});
   }
   body {
     padding: 0;
