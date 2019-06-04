@@ -58,7 +58,7 @@ const Home = ({ data }) => {
         <h1>
           <span>Leander Rodrigues</span>
         </h1>
-        <p>and I'm currently hard at work rebuilding my site.</p>
+        <p>and I would describe myself as</p>
         <br />
         <h2>
           <Typer />
@@ -68,6 +68,10 @@ const Home = ({ data }) => {
         <MainWrapper>
           <h2 className="title">"Who are you again?"</h2>
           {/* cspell: disable */}
+          <div
+            className="self-description"
+            dangerouslySetInnerHTML={{ __html: "<h1>testing</h1>" }}
+          />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
             diam malesuada, sagittis lacus id, dapibus est. Sed tristique

@@ -81,7 +81,10 @@ collections:
           - name: descriptors
             label: Descriptors
             widget: list
-            field: { name: item, label: item, widget: string }
+            fields: { name: item, label: item, widget: string }
+          - name: self-description
+            label: Self Description
+            widget: markdown
       - name: notes
         label: Notes
         file: src/data/notes.json
