@@ -22,6 +22,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta name="google-site-verification" content="iQUwI23P8VDioDG1W0VTsUDZVoj-CSgRu7aPvbUIQsU" />
           <link
             href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900"
             rel="stylesheet"
