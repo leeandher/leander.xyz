@@ -1,19 +1,19 @@
-# backend:
-#   name: git-gateway
-#   accept_roles:
-#     - admin
-#     - editor
-#   repo: leeandher/leander.xyz
-#   branch: dev
-#   commit_messages:
-#     create: ✨ Create entry in {{collection}} collection - "{{slug}}"
-#     update: ✏️ Edit in {{collection}} collection - "{{slug}}"
-#     delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
-#     uploadMedia: 🍱 Upload media - "{{path}}"
-#     deleteMedia: 🔥 Delete media - "{{path}}"
-
 backend:
-  name: test-repo
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  repo: leeandher/leander.xyz
+  branch: dev
+  commit_messages:
+    create: ✨ Create entry in {{collection}} collection - "{{slug}}"
+    update: ✏️ Edit in {{collection}} collection - "{{slug}}"
+    delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
+    uploadMedia: 🍱 Upload media - "{{path}}"
+    deleteMedia: 🔥 Delete media - "{{path}}"
+
+# backend:
+#   name: test-repo
 
 media_folder: static/assets
 public_folder: assets
@@ -114,6 +114,7 @@ collections:
             widget: markdown
           - name: placeholders
             label: Placeholders
+            widget: object
             fields:
               - { name: name, label: Name, widget: string }
               - { name: email, label: Email, widget: string }
