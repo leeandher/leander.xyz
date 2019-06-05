@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Typist from "react-typist"
 
-import { descriptors } from "../../../data/old-home.json"
-
 const StyledTyping = styled(Typist).attrs({
   cursor: {
     hideWhenDone: true,
@@ -38,7 +36,7 @@ const StyledTyping = styled(Typist).attrs({
   }
 `
 
-const Typer = () => (
+const Typer = ({ descriptors }) => (
   <StyledTyping>
     {descriptors.map((str, i, arr) => (
       <span key={str}>

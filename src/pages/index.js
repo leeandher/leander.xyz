@@ -13,6 +13,8 @@ import { Default, Skewed } from "../components/PageSections"
 import Typer from "../components/page-specific/Home/Typer"
 import QuoteCard from "../components/page-specific/Home/QuoteCard"
 
+import homeData from "../data/home.json"
+
 const MainHero = styled(Hero)`
   margin-top: -${({ theme }) => theme.constants.navBarHeight};
 `
@@ -51,6 +53,7 @@ const Showcase = styled(Skewed)`
 const Home = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: showcaseItems } = allMarkdownRemark
+  console.log(homeData)
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
@@ -61,7 +64,7 @@ const Home = ({ data }) => {
         <p>and I would describe myself as</p>
         <br />
         <h2>
-          <Typer />
+          <Typer descriptors={homeData.descriptors} />
         </h2>
       </MainHero>
       <Introduction skew="4deg">
@@ -70,7 +73,7 @@ const Home = ({ data }) => {
           {/* cspell: disable */}
           <div
             className="self-description"
-            dangerouslySetInnerHTML={{ __html: "<h1>testing</h1>" }}
+            dangerouslySetInnerHTML={{ __html: homeData["self-description"] }}
           />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
