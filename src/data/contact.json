@@ -1,1 +1,9 @@
-{}
+{
+  "hit-me-up": "THIS IS THE HIT ME UP TEXT\norem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id diam malesuada, sagittis lacus id, dapibus est. Sed tristique lobortis ante. <mark>Vestibulum</mark> justo risus, posuere at semper vitae, sodales a turpis. Vestibulum ornare nec nunc non fermentum. Donec convallis egestas libero necporta. Duis tincidunt dui tellus, vel sodales urna aliquet a.\n\norem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id diam malesuada, sagittis lacus id, dapibus est. Sed tristique lobortis ante. <mark>Vestibulum</mark> justo risus, posuere at semper vitae, sodales a turpis. Vestibulum ornare nec nunc non fermentum. Donec convallis egestas libero necporta. Duis tincidunt dui tellus, vel sodales urna aliquet a.\norem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id diam malesuada, sagittis lacus id, dapibus est. Sed tristique lobortis ante. <mark>Vestibulum</mark> justo risus, posuere at semper vitae, sodales a turpis. Vestibulum ornare nec nunc non fermentum. Donec convallis egestas libero necporta. Duis tincidunt dui tellus, vel sodales urna aliquet a.\n\norem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id diam malesuada, sagittis lacus id, dapibus est. Sed tristique lobortis ante. <mark>Vestibulum</mark> justo risus, posuere at semper vitae, sodales a turpis. Vestibulum ornare nec nunc non fermentum. Donec convallis egestas libero necporta. Duis tincidunt dui tellus, vel sodales urna aliquet a.",
+  "placeholders": {
+    "name": "Edgar Wright",
+    "email": "EdWright@gmail.com",
+    "subject": "You've been invited to a screening of Baby Driver 2!",
+    "message": "Just send a few small payments of..."
+  }
+}
