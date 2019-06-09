@@ -52,8 +52,8 @@ const Showcase = styled(Skewed)`
 
 const Home = ({ data }) => {
   const { allMarkdownRemark } = data
-  const { nodes: showcaseItems } = allMarkdownRemark
-  console.log(homeData)
+  const { nodes } = allMarkdownRemark
+  const showcaseItems = nodes.reverse()
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
@@ -161,6 +161,8 @@ const Home = ({ data }) => {
                 <ShowItem
                   key={showCaseLink}
                   to={showCaseLink}
+                  type={type}
+                  includeType
                   {...showItemProps}
                 />
               )

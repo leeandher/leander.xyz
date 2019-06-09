@@ -34,23 +34,28 @@ const WrapperLink = styled(Link)`
     transform: skewX(-4deg);
     font-weight: 500;
     font-size: 2.5rem;
-    span {
-      position: relative;
-      padding: 0.5rem; 
-    }
-    span:before {
-      ${themer("before")};
-      background: ${themer("accent")};
-      
-    }
+    background: ${themer("accent")};
+    padding: 0.5rem;
   }
   .show-description {
     font-weight: 300;
     margin:  0 -1rem;
     padding: 1rem;
     background: ${themer("shade.lightest")};
-    
   } 
+  .show-type {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2rem;
+    padding: 0.5rem 1.5rem;
+    color: ${themer("shade.lightest")};
+    background: ${themer("shade.darker")};
+    &:before {
+      color: ${themer("accent")};
+      content: "#"
+    }
+  }
   .show-wrapper {
     display: flex;
     flex-direction: column;
@@ -71,7 +76,14 @@ const WrapperLink = styled(Link)`
   }
 `
 
-const ShowItem = ({ description, image, title, ...restOfProps }) => {
+const ShowItem = ({
+  description,
+  image,
+  includeType,
+  title,
+  type,
+  ...restOfProps
+}) => {
   return (
     <WrapperLink image={image} {...restOfProps}>
       <div className="show-wrapper">
@@ -79,6 +91,7 @@ const ShowItem = ({ description, image, title, ...restOfProps }) => {
           <span>{title}</span>
         </h4>
         {description ? <p className="show-description">{description}</p> : null}
+        {includeType ? <p className="show-type">{type}</p> : null}
       </div>
     </WrapperLink>
   )
