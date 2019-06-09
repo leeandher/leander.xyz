@@ -1,12 +1,15 @@
 ---
 type: projects
+showcase: true
 slug: conway
 title: Conway's Game of Life
+description: >-
+  A zero-player game evolution game to simulate Conway's Game of Life. It makes
+  cool patterns by replicating over-population, under-population, and generation
+  growth based on neighbouring cells. Best part: Dark mode!
 image: /assets/project__conway.png
-date: 2018-12-11T00:54:57.457Z
-repo: "https://github.com/leeandher/Conways-Game-of-Life"
-link: "https://conway.leander.xyz"
-showcase: true
+repo: 'https://github.com/leeandher/Conways-Game-of-Life'
+link: 'https://conway.leander.xyz'
 tech:
   - react
   - redux
@@ -14,6 +17,7 @@ tech:
   - sass
   - webpack
   - antd
+date: 2018-12-11T00:54:57.457Z
 ---
 
 This is a single-page application I built to simulate [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). You can check out the live demo over at [conway.leander.xyz](https://conway.leander.xyz).
