@@ -5,6 +5,7 @@ slug: decompression
 date: 2018-08-21T23:31:10.379Z
 title: July 2018 - Decompression
 description: "Lectures are tough, School is tougher, Learn however you want."
+image: /assets/blog__default.jpg
 tags:
   - personal
   - update

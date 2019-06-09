@@ -5,6 +5,7 @@ slug: gitting-started
 date: "2018-04-14"
 title: Gitting Started
 description: I now see just how powerful a tool git really is!
+image: /assets/blog__default.jpg
 tags:
   - coding
 ---

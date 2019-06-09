@@ -5,6 +5,7 @@ slug: got-my-fe-dev-cert
 date: "2018-03-29"
 title: March 2018 - Got my FE Dev Cert!
 description: The goal for April is going to be to find that balance.
+image: /assets/blog__default.jpg
 tags:
   - personal
   - update

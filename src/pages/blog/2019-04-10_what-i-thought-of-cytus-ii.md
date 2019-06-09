@@ -5,6 +5,7 @@ slug: what-i-thought-of-cytus-ii
 date: 2018-06-07T22:51:25.534Z
 title: What I Thought of 'Cytus II'
 description: "I would recommend [it] to anyone with a few hours to kill, and a pulse."
+image: /assets/blog__default.jpg
 tags:
   - gaming
 ---
