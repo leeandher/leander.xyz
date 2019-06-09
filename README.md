@@ -36,3 +36,40 @@ This site is based on the JAMstack: "the modern web development architecture bas
 I try to keep everything as modular as possible, but if you see something wrong, or that you can improve feel free to fork this repo and submit a pull request.
 
 If you just wanna let me know where I messed up, send me an issue and I'll get to it ASAP.
+
+## Dev Usage
+
+Launch the local site with:
+
+```shell
+npm install && npm run start
+```
+
+It runs a basic Gatsby setup with a few catches for things like `styled-components` and deployable subdomains. Check out the `docs/` directory for more of the complicated stuff
+
+The continuous deployment is done completely through Netlify, as well as the Form and Identity handling.
+You can see the Identity configuration in `static/admin/config.yml`.
+
+This is also the configuration file for the entire content management system (CMS).
+
+It is accessible at `localhost:8000/admin/`, but with it's current setup it will still be redirected to Netlify.
+You can test your configuration by changing the backend as follows:
+
+```diff
+backend:
+-  name: git-gateway
++  name: test-repo
+-  accept_roles:
+-    - admin
+-    - editor
+-  repo: leeandher/leander.xyz
+-  branch: dev
+-  commit_messages:
+-    create: ✨ Create entry in {{collection}} collection - "{{slug}}"
+-    update: ✏️ Edit in {{collection}} collection - "{{slug}}"
+-    delete: 🔥 Deletion in {{collection}} collection - "{{slug}}"
+-    uploadMedia: 🍱 Upload media - "{{path}}"
+-    deleteMedia: 🔥 Delete media - "{{path}}"
+```
+
+For making actual changes to site content, head over to https://www.leander.xyz/admin/
