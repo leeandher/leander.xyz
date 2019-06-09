@@ -1,12 +1,16 @@
 ---
 type: projects
+showcase: false
 slug: catch-of-the-day
 title: Catch of the Day
+description: >-
+  The first React app I've ever built, emulating a fish market online-store,
+  allowing you to add, modify and delete fish from your order. It has
+  permissions baked in so you can login with Twitter/Github and start your own
+  store! 
 image: /assets/project__catch-of-the-day.png
-date: 2018-10-15T02:27:27.851Z
-repo: "https://github.com/leeandher/Catch-of-the-Day"
-link: "https://catch-of-the-day.leander.xyz"
-showcase: false
+repo: 'https://github.com/leeandher/Catch-of-the-Day'
+link: 'https://catch-of-the-day.leander.xyz'
 tech:
   - react
   - react-router
@@ -14,6 +18,7 @@ tech:
   - auth
   - css-transitions
   - prop-types
+date: 2018-10-15T02:27:27.851Z
 ---
 
 This single-page application mocks up a fish market online store, letting you change descriptions, load samples, add to your cart and more. It is all done using a Firebase real-time database so anyone can make and share stores with each other!
