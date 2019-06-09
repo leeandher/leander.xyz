@@ -65,7 +65,7 @@ collections:
           name: image,
           label: Screenshot,
           widget: image,
-          default: /assets/project__default.png,
+          default: /assets/project__default.jpg,
         }
       - { name: repo, label: Repo Link, widget: string }
       - { name: link, label: Live Link, widget: string }
