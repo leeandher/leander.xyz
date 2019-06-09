@@ -1,18 +1,22 @@
 ---
 type: projects
+showcase: true
 slug: stacker-news
 title: Stacker News
+description: >-
+  A pretty one-to-one clone of Hacker News that I built while learning GraphQL
+  and Apollo for the first time. It has accounts, posting, and voting, and was
+  built entirely from scratch, without any template/starter files!
 image: /assets/project__stacker-news.png
-date: 2019-01-11T03:27:27.851Z
-repo: "https://github.com/leeandher/Stacker-News"
-link: "https://stacker-news.leander.xyz"
-showcase: true
+repo: 'https://github.com/leeandher/Stacker-News'
+link: 'https://stacker-news.leander.xyz'
 tech:
   - react
   - graphql
   - apollo-client
   - prisma
   - graphql-yoga
+date: 2019-01-11T03:27:27.851Z
 ---
 
 # Stacker News
