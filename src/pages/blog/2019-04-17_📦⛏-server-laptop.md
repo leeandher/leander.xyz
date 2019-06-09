@@ -1,17 +1,18 @@
 ---
 type: blog
 archive: false
-slug: "📦⛏-server-laptop"
-date: 2019-04-17T18:30:08.333Z
+showcase: true
+slug: "\U0001F4E6⛏-server-laptop"
 title: Turning your Laptop into a Minecraft Server
 description: >-
   Have you ever wanted to learn how to turn spin up a Minecraft server from your
   old laptop, or even just a separate terminal? It's surprisingly out of the
   box, just follow these steps!
-showcase: true
+image: /assets/blog__minecraft.jpg
 tags:
   - how-to
   - coding
+date: 2019-04-17T18:30:08.333Z
 ---
 
 To whoever is reading this, trying to spin up a Minecraft server in 2019 without paying for _Minecraft Realms_, I respect that. My girlfriend recently saw some GIFs or something and wants to start up a server for us to play together, plus I think this could be a fun Saturday experiment. I'm going to talk a little bit about my process in getting this up and running. I'm definitely not used to SSH-ing into Linux servers but we'll give it a shot.
