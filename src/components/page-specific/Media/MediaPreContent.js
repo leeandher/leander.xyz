@@ -39,6 +39,9 @@ const MediaPreContent = styled.div`
     font-size: 2rem;
     font-style: italic;
   }
+  img {
+    max-width: 100%;
+  }
 `
 
 export default MediaPreContent

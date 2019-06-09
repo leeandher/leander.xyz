@@ -9,6 +9,7 @@ import {
   ContentWrapper,
   MediaContent,
   MediaHeader,
+  MediaBanner,
   MediaPostContent,
   MediaPreContent,
   MediaSection,
@@ -18,7 +19,7 @@ import {
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { date, description, tags, title } = frontmatter
+  const { date, description, image, tags, title } = frontmatter
 
   return (
     <Page accent="random" bgDesign="bubbles" seoProfile="blog-page">
@@ -28,6 +29,7 @@ const BlogPostTemplate = ({ data }) => {
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>
+          <MediaBanner src={image} alt={title} title={title} />
           <MediaPreContent>
             <h1>
               <span>{title}</span>
@@ -56,9 +58,10 @@ export const blogPostQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        title
         description
+        image
         tags
+        title
       }
     }
   }
