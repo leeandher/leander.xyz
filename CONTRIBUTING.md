@@ -1,5 +1,7 @@
 # Contributing
 
+Please read the [Code of Conduct](https://github.com/leeandher/leander.xyz/blob/live/CODE_OF_CONDUCT.md) first.
+
 I don't really expect any one else to be contributing, but help is always welcome.
 Pretty much just don't be mean and we're good to go.
 
