@@ -21,8 +21,6 @@ const Header = styled.header`
     padding: 10px;
     background: ${themer("accent")};
     color: ${themer("shade.darkest")};
-    box-shadow: 7px 0 0 3px ${themer("accent")},
-      -7px 0 0 3px ${themer("accent")};
     ${({ theme }) => theme.transition.default("all")};
     &:hover {
       ${({ expanding }) => (expanding ? "letter-spacing: 0.5rem;" : "")}

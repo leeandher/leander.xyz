@@ -4,13 +4,11 @@ showcase: false
 slug: catch-of-the-day
 title: Catch of the Day
 description: >-
-  The first React app I've ever built, emulating a fish market online-store,
-  allowing you to add, modify and delete fish from your order. It has
-  permissions baked in so you can login with Twitter/Github and start your own
-  store! 
+  The first React app I've ever built, emulating an online fish market.
+  You can even login with Twitter/Github and start your own store!
 image: /assets/project__catch-of-the-day.png
-repo: 'https://github.com/leeandher/Catch-of-the-Day'
-link: 'https://catch-of-the-day.leander.xyz'
+repo: "https://github.com/leeandher/Catch-of-the-Day"
+link: "https://catch-of-the-day.leander.xyz"
 tech:
   - react
   - react-router

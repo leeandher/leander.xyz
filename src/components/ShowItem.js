@@ -42,6 +42,8 @@ const WrapperLink = styled(Link)`
     margin:  0 -1rem;
     padding: 1rem;
     background: ${themer("shade.lightest")};
+    border: 2px solid ${themer("accent")};
+    border-width: 2px 0;
   } 
   .show-type {
     position: absolute;
