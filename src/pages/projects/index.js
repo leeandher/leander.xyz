@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import marked from "marked"
 
 import Page from "../../components/Page"
 import Hero from "../../components/Hero"
-import WhipStack from "../../components/WhipStack"
 import MainWrapper from "../../components/MainWrapper"
+import WhipStack from "../../components/WhipStack"
 import Carousel from "../../components/Carousel"
 import ShowItem from "../../components/ShowItem"
 import { Default, Skewed } from "../../components/PageSections"
 
 import { media, themer } from "../../styles/helpers"
+
+import projectsData from "../../data/projects.json"
 
 const StackSection = styled(Skewed)`
   padding: 10rem 0 3rem 0;
@@ -33,14 +36,16 @@ const StackSection = styled(Skewed)`
 
 const QueueSection = styled(Default)`
   color: ${themer("shade.lightest")};
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 `
 
-const DoneSection = styled(Skewed)`
+const OtherSection = styled(Skewed)`
   padding: 3rem 0 15rem;
   margin: 10rem 0;
   &:before {
     background: ${themer("shade.lightest")};
+  }
+  .other-stuff {
   }
 `
 
@@ -61,7 +66,6 @@ const Projects = ({ data }) => {
     excerpt,
     ...frontmatter,
   }))
-  console.log(projectProps)
   return (
     <Page accent="orange" bgDesign="mesh" seoProfile="projects-page">
       <Hero height="50vh">
@@ -106,9 +110,17 @@ const Projects = ({ data }) => {
             })}
         </StylishCarousel>
       </QueueSection>
-      <DoneSection skew="-4deg">
+      <OtherSection skew="-4deg">
         <h2 className="title">Other Neat Stuff</h2>
-      </DoneSection>
+        <MainWrapper>
+          <div
+            className="other-stuff"
+            dangerouslySetInnerHTML={{
+              __html: marked(projectsData["neat-stuff"] || ""),
+            }}
+          />
+        </MainWrapper>
+      </OtherSection>
     </Page>
   )
 }

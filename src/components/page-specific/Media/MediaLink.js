@@ -11,7 +11,7 @@ const LinkWrapper = styled(Link)`
   margin: 1.5rem;
   position: relative;
   border: 0.5rem solid ${({ theme }) => theme.accent};
-  max-width: 650px;
+  flex: 1;
   border-radius: 1.5rem;
   padding: 3rem;
   min-width: 320px;

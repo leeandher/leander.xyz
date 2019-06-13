@@ -100,7 +100,7 @@ const ExternalLinkWrapper = styled.div`
 const ProjectCard = ({
   date,
   image,
-  excerpt,
+  description,
   slug,
   title,
   repo,
@@ -121,18 +121,22 @@ const ProjectCard = ({
           <Tag key={techItem} tag={techItem} />
         ))}
       </TagWrapper>
-      <Description>{excerpt}</Description>
+      <Description>{description}</Description>
       <hr />
       <MoreInfoLink to={`/projects/${slug}`}>More Info?</MoreInfoLink>
       <ExternalLinkWrapper>
-        <a href={repo} className="left">
-          <FaGithub />
-          View the Code
-        </a>
-        <a href={link} className="right">
-          <FaLink />
-          View it Live
-        </a>
+        {repo.length > 0 ? (
+          <a href={repo} className="left">
+            <FaGithub />
+            View the Code
+          </a>
+        ) : null}
+        {link.length > 0 ? (
+          <a href={link} className="right">
+            <FaLink />
+            View it Live
+          </a>
+        ) : null}
       </ExternalLinkWrapper>
     </Card>
   )

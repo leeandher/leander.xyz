@@ -120,6 +120,13 @@ collections:
               - { name: email, label: Email, widget: string }
               - { name: subject, label: Subject, widget: string }
               - { name: message, label: Message, widget: string }
+      - name: projects
+        label: Projects
+        file: src/data/projects.json
+        fields:
+          - name: neat-stuff
+            label: Some Other Neat Stuff
+            widget: markdown
       - name: notes
         label: Notes
         file: src/data/notes.json
