@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import marked from "marked"
 
 import Page from "../components/Page"
 import MainWrapper from "../components/MainWrapper"
@@ -8,12 +9,15 @@ import Hero from "../components/Hero"
 import { Skewed } from "../components/PageSections"
 
 import { encode } from "../helpers"
+import { themer } from "../styles/helpers"
+
+import contactData from "../data/contact.json"
 
 const Form = styled.form`
   min-width: 280px;
   margin: 0 auto;
   flex: 1;
-  background: ${({ theme }) => theme.shade.lightest};
+  background: ${themer("shade.lightest")};
   button {
     font-size: inherit;
     display: block;
@@ -28,20 +32,19 @@ const Form = styled.form`
 `
 
 const Input = styled.input`
-  border: 0;
   padding: 1rem;
-  border: 2px solid ${({ theme }) => theme.accent};
+  border: 2px solid ${themer("accent")};
   margin: 1rem 0;
   display: block;
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 300;
-  color: ${({ theme }) => theme.shade.darker};
+  color: ${themer("shade.darker")};
   width: 100%;
   &:hover,
   &:focus,
   &:active {
-    box-shadow: ${({ theme }) => theme.accent} 0 0 1rem inset;
+    box-shadow: ${themer("accent")} 0 0 1rem inset;
     outline: 0;
   }
 `
@@ -49,25 +52,26 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   border: 0;
   padding: 1rem;
-  border: 2px solid ${({ theme }) => theme.accent};
+  border: 2px solid ${themer("accent")};
   margin: 1rem 0;
   display: block;
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 300;
-  color: ${({ theme }) => theme.shade.darker};
+  color: ${themer("shade.darker")};
   width: 100%;
   resize: vertical;
+  box-shadow: none;
   &:hover,
   &:focus,
   &:active {
-    box-shadow: ${({ theme }) => theme.accent} 0 0 1rem inset;
+    box-shadow: ${themer("accent")} 0 0 1rem inset;
     outline: 0;
   }
 `
 
 const ContactForm = styled(MainWrapper)`
-  background: ${({ theme }) => theme.shade.lightest};
+  background: ${themer("shade.lightest")};
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -84,7 +88,7 @@ const ContactFormWrapper = styled(Skewed)`
   padding: 10rem 0 5rem 0;
   margin: 10rem 0;
   &:before {
-    background: ${({ theme }) => theme.shade.lightest};
+    background: ${themer("shade.lightest")};
   }
 `
 
@@ -95,6 +99,7 @@ class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  /* eslint-disable no-alert */
   handleSubmit = e => {
     e.preventDefault()
     fetch("/", {
@@ -102,11 +107,10 @@ class Contact extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
-      /* eslint-disable no-alert */
       .then(() => alert("Success!"))
       .catch(error => alert(error))
-    /* eslint-enable no-alert */
   }
+  /* eslint-enable no-alert */
 
   render() {
     return (
@@ -117,32 +121,11 @@ class Contact extends React.Component {
         <ContactFormWrapper skew="4deg">
           <h2 className="title">Drop me a line!</h2>
           <ContactForm>
-            <Information>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptate, neque nulla animi, quasi placeat dolor in aliquam
-                quos provident ut sapiente aliquid assumenda. Incidunt nesciunt
-                dolorum maxime hic, quae quam.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptate, neque nulla animi, quasi placeat dolor in aliquam
-                quos provident ut sapiente aliquid assumenda. Incidunt nesciunt
-                dolorum maxime hic, quae quam.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptate, neque nulla animi, quasi placeat dolor in aliquam
-                quos provident ut sapiente aliquid assumenda. Incidunt nesciunt
-                dolorum maxime hic, quae quam.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptate, neque nulla animi, quasi placeat dolor in aliquam
-                quos provident ut sapiente aliquid assumenda. Incidunt nesciunt
-                dolorum maxime hic, quae quam.
-              </p>
-            </Information>
+            <Information
+              dangerouslySetInnerHTML={{
+                __html: marked(contactData["hit-me-up"]),
+              }}
+            />
             <Form
               name="contact"
               method="post"
@@ -156,7 +139,7 @@ class Contact extends React.Component {
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Edgar Wright"
+                  placeholder={contactData.placeholders.name}
                   required
                 />
               </label>
@@ -166,7 +149,7 @@ class Contact extends React.Component {
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="edgar.wright@gmale.com"
+                  placeholder={contactData.placeholders.email}
                   required
                 />
               </label>
@@ -176,7 +159,7 @@ class Contact extends React.Component {
                   type="text"
                   name="subject"
                   id="subject"
-                  placeholder="We'd like to cast you!"
+                  placeholder={contactData.placeholders.subject}
                   required
                 />
               </label>
@@ -186,11 +169,11 @@ class Contact extends React.Component {
                   name="message"
                   id="message"
                   rows="5"
-                  placeholder="But first, you need to send us 6 payments of..."
+                  placeholder={contactData.placeholders.message}
                   required
                 />
               </label>
-              <Button type="submit">Send!</Button>
+              <Button type="submit">Send</Button>
             </Form>
           </ContactForm>
         </ContactFormWrapper>

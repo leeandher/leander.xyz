@@ -11,6 +11,7 @@ const LinkWrapper = styled(Link)`
   margin: 1.5rem;
   position: relative;
   border: 0.5rem solid ${({ theme }) => theme.accent};
+  max-width: 650px;
   border-radius: 1.5rem;
   padding: 3rem;
   min-width: 320px;
@@ -27,7 +28,7 @@ const LinkWrapper = styled(Link)`
   }
   .description {
     font-size: 1.75rem;
-    max-width: ${Math.random() * 120 + 560}px;
+    max-width: 100%;
   }
   &:before {
     height: 100%;
