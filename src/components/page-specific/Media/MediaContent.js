@@ -1,10 +1,14 @@
 import styled from "styled-components"
-import { themer } from "../../../styles/helpers"
+import { media, themer } from "../../../styles/helpers"
 
 const MediaContent = styled.main`
   margin: 0 auto;
   padding: 1rem 4rem;
+  ${media.tablet`
+    padding: 1rem;
+  `}
   p {
+    position: relative;
     margin: 2.5rem 0;
   }
   time {
@@ -17,8 +21,6 @@ const MediaContent = styled.main`
     }
   }
   img {
-    box-sizing: content-box;
-    padding: 1rem;
     border: 2px solid ${themer("accent")};
     max-width: 100%;
     display: block;

@@ -2,12 +2,17 @@ import styled from "styled-components"
 
 import MainWrapper from "../../MainWrapper"
 
+import { media, themer } from "../../../styles/helpers"
+
 const ContentWrapper = styled(MainWrapper)`
-  background: ${({ theme }) => theme.shade.lightest};
+  background: ${themer("shade.lightest")};
   transform: skewY(-5deg);
   margin: 0 auto;
   position: relative;
   padding: 5rem 2rem;
+  ${media.tablet`
+    padding: 5rem 0.5rem;
+  `}
   h1 {
     font-size: 3.5rem;
     text-align: center;
@@ -17,8 +22,8 @@ const ContentWrapper = styled(MainWrapper)`
     padding: 0.5rem;
     position: relative;
     &:before {
-      ${({ theme }) => theme.before}
-      background: ${({ theme }) => theme.accent};
+      ${themer("before")};
+      background: ${themer("accent")};
       opacity: 0.5;
     }
   }
@@ -29,47 +34,48 @@ const ContentWrapper = styled(MainWrapper)`
     text-align: left;
     position: relative;
     &:before {
-      ${({ theme }) => theme.before}
-      background: ${({ theme }) => theme.accent};
+      ${themer("before")};
+      background: ${themer("accent")};
       top: 100%;
-      height: 5%
+      height: 5%;
     }
   }
-  a, p {
+  a,
+  p {
     font-size: 1.7rem;
   }
   hr {
-    border: 1px solid ${({ theme }) => theme.accent};
+    border: 1px solid ${themer("accent")};
   }
-  
+
   code {
     position: relative;
     &:before {
-      ${({ theme }) => theme.before}
+      ${themer("before")};
+      background: ${themer("accent")};
       opacity: 0.2;
-      background: ${({ theme }) => theme.accent};
     }
     padding: 0 0.5rem;
   }
-  
+
   pre {
-    border: 2px solid ${({ theme }) => theme.accent};
+    border: 2px solid ${themer("accent")};
     padding: 1rem;
     &::-webkit-scrollbar {
       height: 1rem;
-      border: 0px solid ${({ theme }) => theme.accent};
+      border: 0px solid ${themer("accent")};
       border-top-width: 2px;
     }
     &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.accent};
+      background: ${themer("accent")};
       padding: -0.5rem !important;
       width: 10px;
     }
   }
   &:before,
   &:after {
-    ${({ theme }) => theme.before}
-    background: ${({ theme }) => theme.shade.lightest};
+    ${themer("before")};
+    background: ${themer("shade.lightest")};
     transform: translateY(-99%);
   }
   &:after {
