@@ -255,6 +255,7 @@ export const showcaseQuery = graphql`
       filter: {
         frontmatter: { showcase: { eq: true }, type: { eq: "projects" } }
       }
+      sort: { fields: [frontmatter___date], order: ASC }
     ) {
       nodes {
         frontmatter {

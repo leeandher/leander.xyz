@@ -52,8 +52,7 @@ const Showcase = styled(Skewed)`
 
 const Home = ({ data }) => {
   const { allMarkdownRemark } = data
-  const { nodes } = allMarkdownRemark
-  const showcaseItems = nodes.reverse()
+  const { nodes: showcaseItems } = allMarkdownRemark
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
@@ -176,7 +175,10 @@ const Home = ({ data }) => {
 
 export const showcaseQuery = graphql`
   query {
-    allMarkdownRemark(filter: { frontmatter: { showcase: { eq: true } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { showcase: { eq: true } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         frontmatter {
           title
