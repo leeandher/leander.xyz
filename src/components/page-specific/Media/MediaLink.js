@@ -27,6 +27,7 @@ const LinkWrapper = styled(Link)`
   }
   .description {
     font-size: 1.75rem;
+    max-width: ${Math.random() * 120 + 560}px;
   }
   &:before {
     height: 100%;

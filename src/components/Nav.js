@@ -6,6 +6,8 @@ import NavLink from "./NavLink"
 import Toggler from "./Toggler"
 import Logo from "./icons/Logo"
 
+import { themer } from "../styles/helpers"
+
 const StyledNav = styled.nav`
   display: flex;
   position: fixed;
@@ -14,11 +16,11 @@ const StyledNav = styled.nav`
   right: 0;
   left: 0;
   text-align: center;
-  background: ${({ theme }) => theme.shade.darkest};
+  background: ${themer("shade.darkest")};
   font-size: 20px;
   @media (max-width: 850px) {
-    background: ${({ theme }) => theme.shade.darker};
-    border-right: 2px solid ${({ theme }) => theme.shade.lighter};
+    background: ${themer("shade.darker")};
+    border-right: 2px solid ${themer("shade.lighter")};
     opacity: 0.9;
     color: red;
     top: 0;
