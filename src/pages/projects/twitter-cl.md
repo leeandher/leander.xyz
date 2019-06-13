@@ -8,8 +8,8 @@ description: >-
   to interact with some of Twitter's functionality without touching a web
   browser.
 image: /assets/project__twitter-cl.png
-repo: 'https://github.com/leeandher/twitter-cl'
-link: 'https://github.com/leeandher/twitter-cl'
+repo: "https://github.com/leeandher/twitter-cl"
+link: ""
 tech:
   - typescript
   - oclif
@@ -18,6 +18,7 @@ tech:
   - twitter-api
 date: 2019-05-21T23:14:11.634Z
 ---
+
 Twitter-CL is a helpful command-line tool built for some simple twitter functionality without ever needing to touch a web browser. All you need is a set of API keys from https://developer.twitter.com, and you can get set up in a few commands.
 
 ```
