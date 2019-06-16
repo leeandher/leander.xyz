@@ -1,5 +1,2 @@
 User-agent: *
 Disallow: /fonts/
-
-User-agent: *
-Disallow: /blog/archive/
