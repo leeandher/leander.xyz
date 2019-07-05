@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { consoleLiteral } from "./data/consoleLiteral"
-
 export default class HTML extends React.Component {
   render() {
     const {

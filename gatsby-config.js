@@ -94,6 +94,18 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-137618883-1",
+        head: true,
+        exclude: ["/blog/archive/**"],
+        name: "leander.xyz_gatsby-plugin-ga",
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "leander.xyz",
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 }
