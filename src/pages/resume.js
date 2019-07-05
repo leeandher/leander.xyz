@@ -7,9 +7,9 @@ import Page from "../components/Page"
 import Hero from "../components/Hero"
 import Carousel from "../components/Carousel"
 import ShowItem from "../components/ShowItem"
-import BusinessCard from "../components/BusinessCard"
 import { Default } from "../components/PageSections"
 
+import BusinessCard from "../components/page-specific/Resume/BusinessCard"
 import GenCard from "../components/page-specific/Resume/GenCard"
 import GenText from "../components/page-specific/Resume/GenText"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
@@ -129,10 +129,10 @@ const Resume = ({ data }) => {
               Project Showcase
             </a>
             <a className="page-link" href="#volunteer-experience">
-              Voluneer Experience
+              Volunteer Experience
             </a>
             <a className="page-link" href="#achievements">
-              Acheivements
+              Achievements
             </a>
             <a className="page-link" href="#interests">
               Interests
@@ -189,14 +189,10 @@ const Resume = ({ data }) => {
             </h2>
             <Carousel>
               {showcaseItems.map(
-                ({ frontmatter: { slug, ...showItemProps } }) => {
+                ({ frontmatter: { slug, ...showItemProps } }, i) => {
                   const showCaseLink = `/projects/${slug}`
                   return (
-                    <ShowItem
-                      key={showCaseLink}
-                      to={showCaseLink}
-                      {...showItemProps}
-                    />
+                    <ShowItem key={i} to={showCaseLink} {...showItemProps} />
                   )
                 }
               )}

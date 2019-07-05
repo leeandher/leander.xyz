@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import {
   FaGithub,
@@ -8,7 +10,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa"
 
-import { media, themer } from "../styles/helpers"
+import { media, themer } from "../../../styles/helpers"
 
 const CardWrapper = styled.div`
   background: ${({ theme }) => theme.shade.lightest};
@@ -22,6 +24,7 @@ const CardWrapper = styled.div`
     position: absolute;
     padding: 1rem 2rem;
     font-weight: bold;
+    z-index: 1000;
     transform: rotate(-15deg);
     top: -15px;
     left: -30px;
@@ -38,7 +41,7 @@ const CardWrapper = styled.div`
     transform: scale(0.8);
   `}
 `
-const CardImage = styled.img`
+const CardImage = styled(Img)`
   grid-area: 1 / 1 / 6 / 1;
   max-width: 100%;
   height: 100%;
@@ -122,9 +125,24 @@ const CardAnchorLink = styled.a`
 `
 
 const BusinessCard = props => {
+  const {
+    file: {
+      childImageSharp: { fixed },
+    },
+  } = useStaticQuery(graphql`
+    query PROFILE_IMAGE_QUERY {
+      file(relativePath: { eq: "profile_pic.jpg" }) {
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
   return (
     <CardWrapper {...props}>
-      <CardImage src="/assets/profile_pic.jpg" />
+      <CardImage fixed={fixed} />
       <CardHeader>
         Hi, I'm <span>Leander Rodrigues</span>
       </CardHeader>

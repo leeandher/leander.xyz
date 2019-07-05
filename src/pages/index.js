@@ -173,7 +173,7 @@ const Home = ({ data }) => {
   )
 }
 
-export const showcaseQuery = graphql`
+export const SHOWCASE_QUERY = graphql`
   query {
     allMarkdownRemark(
       filter: { frontmatter: { showcase: { eq: true } } }
