@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
+import { themer } from "../styles/helpers"
+
 export const Default = styled.section`
   position: relative;
   .title {
     font-size: 3.5rem;
     text-align: center;
-    text-decoration: underline ${({ theme }) => theme.accent};
+    text-decoration: underline ${themer("accent")};
   }
   .subtitle {
     text-align: center;

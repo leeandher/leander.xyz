@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
+import { themer } from "../styles/helpers"
+
 const Button = styled.button`
   outline: 0;
   text-align: center;
   border: 0;
-  box-shadow: 0 -3px ${({ theme }) => theme.accent} inset;
-  color: ${({ theme }) => theme.shade.darker};
+  box-shadow: 0 -3px ${themer("accent")} inset;
+  color: ${themer("shade.darker")};
   padding: 1rem 1.5rem;
   font-weight: 700;
   background: transparent;
@@ -21,7 +23,7 @@ const Button = styled.button`
     position: absolute;
     bottom: 0;
     left: 0;
-    background: ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
     transition: 0.2s ease max-height;
   }
   &:focus,

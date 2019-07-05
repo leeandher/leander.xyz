@@ -1,13 +1,15 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import { themer } from "../../../styles/helpers"
+
 const InnerLink = styled(Link)`
   outline: 0;
   text-align: center;
   border: 0;
-  box-shadow: 0 -3px ${({ theme }) => theme.accent} inset;
-  color: ${({ theme }) => theme.shade.lightest};
-  font-family: ${({ theme }) => theme.font.mono};
+  box-shadow: 0 -3px ${themer("accent")} inset;
+  color: ${themer("shade.lightest")};
+  font-family: ${themer("font.mono")};
   padding: 1rem 1.5rem;
   font-weight: 700;
   background: transparent;
@@ -24,7 +26,7 @@ const InnerLink = styled(Link)`
     position: absolute;
     bottom: 0;
     left: 0;
-    background: ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
     transition: 0.2s ease max-height;
   }
   &:focus,

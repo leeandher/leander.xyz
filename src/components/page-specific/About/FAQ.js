@@ -44,7 +44,7 @@ const Summary = styled.summary`
     color: ${themer("accent")};
   }
   &:before {
-    ${({ theme }) => theme.before}
+    ${themer("before")}
     transition: 0.75s max-width ease-out;
     background: ${themer("accent")};
     height: 0.5rem;

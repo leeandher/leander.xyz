@@ -13,17 +13,19 @@ import { Default, Skewed } from "../components/PageSections"
 import Typer from "../components/page-specific/Home/Typer"
 import QuoteCard from "../components/page-specific/Home/QuoteCard"
 
+import { themer } from "../styles/helpers"
+
 import homeData from "../data/home.json"
 
 const MainHero = styled(Hero)`
-  margin-top: -${({ theme }) => theme.constants.navBarHeight};
+  margin-top: -${themer("constants.navBarHeight")};
 `
 
 const Introduction = styled(Skewed)`
   padding: 10rem 0 3rem 0;
   margin: 10rem 0;
   &:before {
-    background: ${({ theme }) => theme.shade.lightest};
+    background: ${themer("shade.lightest")};
   }
   button {
     display: block;
@@ -33,7 +35,7 @@ const Introduction = styled(Skewed)`
 `
 
 const Director = styled(Default)`
-  color: ${({ theme }) => theme.shade.lightest};
+  color: ${themer("shade.lightest")};
   padding-top: 2rem;
 `
 
@@ -46,7 +48,7 @@ const Showcase = styled(Skewed)`
   padding: 3rem 0 15rem;
   margin: 15rem 0;
   &:before {
-    background: ${({ theme }) => theme.shade.lightest};
+    background: ${themer("shade.lightest")};
   }
 `
 

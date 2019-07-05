@@ -1,16 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import styled from "styled-components"
+
+import { themer } from "../styles/helpers"
 
 /* v1: Grey borders
 const StyledLink = styled(Link)`
-  padding: ${({ theme }) => theme.spacing.default};
+  padding: ${themer('spacing.default')};
   flex: 1;
   box-shadow: 0 0 15px inset transparent;
   font-weight: bold;
   font-size: 2rem;
-  border: 1px solid ${({ theme }) => theme.shade.darker};
+  border: 1px solid ${themer('shade.darker')};
   border: 0 1px 1px 0;
   ${({ theme }) => theme.transition.default("all")};
   &:hover {
@@ -25,12 +26,12 @@ const StyledLink = styled(Link)`
 */
 
 const StyledLink = styled(Link)`
-  padding: ${({ theme }) => theme.spacing.default};
+  padding: ${themer("spacing.default")};
   flex: 1;
   font-weight: bold;
   font-size: 2rem;
   position: relative;
-  color: ${({ theme }) => theme.shade.lighter};
+  color: ${themer("shade.lighter")};
   ${({ theme }) => theme.transition.default("color")};
   &:first-child {
     flex: 2;
@@ -71,7 +72,7 @@ const StyledLink = styled(Link)`
       width: calc(100% - 60px);
     }
     @media (max-width: 850px) {
-      color: ${({ theme }) => theme.shade.darker};
+      color: ${themer("shade.darker")};
       color: black !important;
       &:after {
         transition: all 0.4s ease;

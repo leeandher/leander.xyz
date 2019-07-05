@@ -1,17 +1,19 @@
 import styled from "styled-components"
 
+import { themer } from "../../../styles/helpers"
+
 const MediaPreContent = styled.div`
   margin: 0 2rem;
-  color: ${({ theme }) => theme.shade.dark};
+  color: ${themer("shade.dark")};
   h1 {
     font-size: 3rem;
     margin: 1.5rem 0;
     transform: skew(-6deg);
     display: inline-block;
     span {
-      background: ${({ theme }) => theme.accent};
+      background: ${themer("accent")};
       padding: 1rem 2rem;
-      color: ${({ theme }) => theme.shade.darkest};
+      color: ${themer("shade.darkest")};
     }
   }
   p {
@@ -28,11 +30,11 @@ const MediaPreContent = styled.div`
     margin: 1rem;
     border-radius: 100%;
     overflow: hidden;
-    border: 2px solid ${({ theme }) => theme.accent};
+    border: 2px solid ${themer("accent")};
     &:hover,
     &:active,
     &:focus {
-      border: 2px solid ${({ theme }) => theme.shade.darkest};
+      border: 2px solid ${themer("shade.darkest")};
     }
   }
   time {

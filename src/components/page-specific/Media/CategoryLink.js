@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import { themer } from "../../../styles/helpers"
+
 const CategoryLink = styled(Link)`
   display: inline-block;
   min-width: 250px;
@@ -9,10 +11,10 @@ const CategoryLink = styled(Link)`
   margin: 2rem;
   transition: all 0.2s ease;
   transform:  skew(5deg);
-  border: 5px solid ${({ theme }) => theme.accent};
+  border: 5px solid ${themer("accent")};
   &:before {
-    ${({ theme }) => theme.before}
-    background: ${({ theme }) => theme.accent};
+    ${themer("before")}
+    background: ${themer("accent")};
     opacity: 0.1;
     transition: all 0.2s ease;
   }
@@ -24,8 +26,8 @@ const CategoryLink = styled(Link)`
     position: relative;
     font-weight: bold;
     &:before {
-      ${({ theme }) => theme.before}
-      background: ${({ theme }) => theme.accent};
+      ${themer("before")}
+      background: ${themer("accent")};
       width: 110%;
       height: 35%;
       top: 60%;

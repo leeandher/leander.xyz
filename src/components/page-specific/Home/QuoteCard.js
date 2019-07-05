@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
+
+import { themer } from "../../../styles/helpers"
 
 const StyledPanel = styled(Link)`
   flex: 1;
@@ -10,9 +11,9 @@ const StyledPanel = styled(Link)`
   min-width: 25rem;
   min-height: 30rem;
   ${({ theme }) => theme.transition.default("all")};
-  background: ${({ theme }) => theme.shade.lighter};
-  color: ${({ theme }) => theme.shade.lighter};
-  box-shadow: ${({ theme }) => `0 8px 15px ${theme.shade.darker}`};
+  background: ${themer("shade.lighter")};
+  color: ${themer("shade.lighter")};
+  box-shadow: 0 8px 15px ${themer("shade.darker")};
   margin: 1rem;
   overflow: hidden;
   border-radius: 1.5rem;
@@ -27,8 +28,8 @@ const StyledPanel = styled(Link)`
     font-size: 2rem;
     font-weight: lighter;
     margin: -2rem 0 2rem;
-    font-weight: ${({ theme }) => theme.font.light};
-    color: ${({ theme }) => theme.shade.dark};
+    font-weight: ${themer("font.light")};
+    color: ${themer("shade.dark")};
   }
   h4 {
     font-size: 4rem;
@@ -36,12 +37,12 @@ const StyledPanel = styled(Link)`
     letter-spacing: 1px;
     margin: 0;
     font-style: italic;
-    background: ${({ theme }) => theme.shade.darker};
+    background: ${themer("shade.darker")};
   }
   svg {
     margin: 3.5rem;
     font-size: 5rem;
-    color: ${({ theme }) => theme.shade.darker};
+    color: ${themer("shade.darker")};
   }
 `
 

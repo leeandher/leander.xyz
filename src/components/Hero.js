@@ -9,8 +9,8 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default};
-  color: ${({ theme }) => theme.shade.lighter};
+  padding: ${themer("spacing.default")};
+  color: ${themer("shade.lighter")};
   h1 {
     ${media.phone`
       font-size: 4.5rem;

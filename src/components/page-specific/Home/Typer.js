@@ -2,6 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import Typist from "react-typist"
 
+import { themer } from "../../../styles/helpers"
+
+themer("accent")
+
 const StyledTyping = styled(Typist).attrs({
   cursor: {
     hideWhenDone: true,
@@ -10,12 +14,12 @@ const StyledTyping = styled(Typist).attrs({
 })`
   min-height: 45px;
   span {
-    text-decoration: underline ${({ theme }) => theme.accent};
-    font-family: ${({ theme }) => theme.font.mono};
+    text-decoration: underline ${themer("accent")};
+    font-family: ${themer("font.mono")};
     font-weight: bold;
   }
   .Cursor {
-    color: ${({ theme }) => theme.accent};
+    color: ${themer("accent")};
     width: 0px;
     display: inline-block;
     text-decoration: none;

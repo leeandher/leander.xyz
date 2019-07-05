@@ -6,11 +6,11 @@ import { FaGithub, FaLink } from "react-icons/fa"
 
 import Tag from "../../Tag"
 
-import { media } from "../../../styles/helpers"
+import { media, themer } from "../../../styles/helpers"
 
 const Card = styled(animated.div)`
-  background: ${({ theme }) => theme.shade.lightest};
-  border: 1rem solid ${({ theme }) => theme.accent};
+  background: ${themer("shade.lightest")};
+  border: 1rem solid ${themer("accent")};
   margin: 1.5rem;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -21,8 +21,8 @@ const Card = styled(animated.div)`
     margin-top: -3rem;
     margin-bottom: 3rem;
     padding: 1.5rem 0;
-    background: ${({ theme }) => theme.shade.darkest};
-    color: ${({ theme }) => theme.shade.lightest};
+    background: ${themer("shade.darkest")};
+    color: ${themer("shade.lightest")};
   }
   time {
     font-style: italic;
@@ -33,7 +33,7 @@ const Card = styled(animated.div)`
 
 const HeaderImage = styled.figure`
   margin: 0;
-  background: ${({ theme }) => theme.accent};
+  background: ${themer("accent")};
   height: 300px;
   overflow: hidden;
   margin-bottom: -5rem;
@@ -67,7 +67,8 @@ const MoreInfoLink = styled(Link)`
   padding: 2rem;
   display: block;
   background: linear-gradient(
-    ${({ theme }) => `${theme.shade.lightest} 15%, ${theme.accent}`}
+    ${themer("shade.lightest")} 15%,
+    ${themer("accent")}
   );
   ${({ theme }) => theme.transition.default("all")};
   &:active,
@@ -79,7 +80,7 @@ const MoreInfoLink = styled(Link)`
 
 const ExternalLinkWrapper = styled.div`
   display: flex;
-  background: ${({ theme }) => theme.accent};
+  background: ${themer("accent")};
   a {
     ${({ theme }) => theme.transition.default("all")};
     flex: 1;
@@ -92,7 +93,7 @@ const ExternalLinkWrapper = styled.div`
     &:active,
     &:focus,
     &:hover {
-      background: ${({ theme }) => theme.shade.lightest};
+      background: ${themer("shade.lightest")};
     }
   }
 `

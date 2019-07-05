@@ -9,6 +9,8 @@ import { Skewed } from "../../components/PageSections"
 import MainWrapper from "../../components/MainWrapper"
 import CategoryLink from "../../components/page-specific/Media/CategoryLink"
 
+import { themer } from "../../styles/helpers"
+
 import noteDescriptions from "../../data/note-descriptions.json"
 
 const CategoryTile = styled.div`
@@ -29,7 +31,7 @@ const NoteBlock = styled(Skewed)`
   padding: 3rem 0 15rem 0;
   margin: 10rem 0;
   &:before {
-    background: ${({ theme }) => theme.shade.lightest};
+    background: ${themer("shade.lightest")};
   }
 `
 

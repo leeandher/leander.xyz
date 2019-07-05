@@ -1,14 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-
 import {
   FaGithub,
   FaStackOverflow,
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa"
+
 import { getCopyrightYearsFrom } from "../helpers"
 import AnchorLink from "./AnchorLink"
+
+import { themer } from "../styles/helpers"
 
 const StyledAnchorLink = styled(AnchorLink)`
   display: inline-block;
@@ -19,7 +21,7 @@ const StyledAnchorLink = styled(AnchorLink)`
 const StyledFooter = styled.footer`
   min-height: 50vh;
   padding: 5rem;
-  color: ${({ theme }) => theme.shade.lighter};
+  color: ${themer("shade.lighter")};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -33,7 +35,7 @@ const StyledFooter = styled.footer`
     font-size: 1.5rem;
     text-align: center;
     font-style: italic;
-    color: ${({ theme }) => theme.shade.mid};
+    color: ${themer("shade.mid")};
     margin-bottom: 3rem;
     flex: 1;
   }
@@ -41,7 +43,7 @@ const StyledFooter = styled.footer`
     margin: 3rem;
   }
   svg {
-    color: ${({ theme }) => theme.shade.lightest};
+    color: ${themer("shade.lightest")};
     box-sizing: content-box;
     font-size: 4rem;
     padding: 0.5rem;

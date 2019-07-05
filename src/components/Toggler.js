@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { themer } from "../styles/helpers"
+
 const StyledToggler = styled.button`
   height: 0;
   width: 0;
@@ -22,7 +24,7 @@ const Bars = styled.div`
   width: 100%;
   ${({ theme }) => theme.transition.default("all")};
   div {
-    background: ${({ theme }) => theme.shade.lighter};
+    background: ${themer("shade.lighter")};
     height: 10%;
     margin: 15% auto;
     width: 80%;

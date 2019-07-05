@@ -11,9 +11,10 @@ import ParticleBackground from "./ParticleBackground"
 
 // import { consoleLiteral } from "../data/consoleLiteral"
 import { genRandProperty } from "../helpers"
+import { themer } from "../styles/helpers"
 
 const StyledPage = styled.div`
-  margin-top: ${({ theme }) => theme.constants.navBarHeight};
+  margin-top: ${themer("constants.navBarHeight")};
 `
 
 class Page extends React.Component {

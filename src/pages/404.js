@@ -3,16 +3,18 @@ import styled from "styled-components"
 
 import Page from "../components/Page"
 
+import { themer } from "../styles/helpers"
+
 const Header = styled.div`
   height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default};
-  color: ${({ theme }) => theme.accent};
+  padding: ${themer("spacing.default")};
+  color: ${themer("accent")};
   span {
-    color: ${({ theme }) => theme.shade.lighter};
+    color: ${themer("shade.lighter")};
   }
 `
 

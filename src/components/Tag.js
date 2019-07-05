@@ -3,12 +3,14 @@ import styled from "styled-components"
 
 import Button from "./Button"
 
+import { themer } from "../styles/helpers"
+
 const TagButton = styled(Button)`
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0.25rem;
-  background: ${({ theme }) => theme.shade.lighter};
-  color: ${({ theme }) => theme.shade.darker};
+  background: ${themer("shade.lighter")};
+  color: ${themer("shade.darker")};
   overflow: hidden;
 `
 

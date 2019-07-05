@@ -26,7 +26,7 @@ const StackSection = styled(Skewed)`
     height: 1000px;
   `}
   &:before {
-    background: ${({ theme }) => theme.shade.lightest};
+    background: ${themer("shade.lightest")};
     height: 88%;
   }
   position: relative;

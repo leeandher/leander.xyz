@@ -15,6 +15,8 @@ import {
   MediaPostContent,
 } from "../components/page-specific/Media"
 
+import { themer } from "../styles/helpers"
+
 const PageLink = styled(Link)`
   padding: 2rem;
   display: block;
@@ -26,14 +28,14 @@ const PageLink = styled(Link)`
   overflow: hidden;
   ${({ theme }) => theme.transition.default("letter-spacing")};
   &:before {
-    ${({ theme }) => theme.before}
-    background: ${({ theme }) => theme.accent};
+    ${themer("before")}
+    background: ${themer("accent")};
     top: 50%;
     transform: skew(-45deg) translate(90%);
   }
   &:after {
-    ${({ theme }) => theme.before}
-    background: ${({ theme }) => theme.accent};
+    ${themer("before")}
+    background: ${themer("accent")};
     height: 10%;
     top: 90%;
   }

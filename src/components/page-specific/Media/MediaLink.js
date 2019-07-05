@@ -5,12 +5,14 @@ import { FaRegClock } from "react-icons/fa"
 
 import Tag from "../../Tag"
 
+import { themer } from "../../../styles/helpers"
+
 const LinkWrapper = styled(Link)`
   display: block;
-  background: ${({ theme }) => theme.shade.lightest};
+  background: ${themer("shade.lightest")};
   margin: 1.5rem;
   position: relative;
-  border: 0.5rem solid ${({ theme }) => theme.accent};
+  border: 0.5rem solid ${themer("accent")};
   flex: 1;
   border-radius: 1.5rem;
   padding: 3rem;
@@ -40,7 +42,7 @@ const LinkWrapper = styled(Link)`
     right: 5%;
     z-index: -1;
     max-width: 7rem;
-    background: ${({ theme }) => theme.accent};
+    background: ${themer("accent")};
     transition: max-width 0.4s ease;
     transform: skewX(${({ skew }) => skew}deg);
   }

@@ -1,22 +1,25 @@
 import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 
+import { themer } from "../../../styles/helpers"
+
 const ProgressBar = styled.div`
   position: fixed;
   z-index: 1000;
   display: block;
-  background: ${({ theme }) => theme.accent};
+  background: ${themer("accent")};
   width: 100%;
   max-width: 0%;
   height: 0.5rem;
-  top: ${({ theme }) => theme.constants.navBarHeight};
+  top: ${themer("constants.navBarHeight")};
   @media (max-width: 850px) {
     top: 0;
   }
   &:before {
-    ${({ theme }) => theme.before}
-    background: linear-gradient(to right, transparent, 85%, ${({ theme }) =>
-      theme.shade.lightest})
+    ${themer("before")}
+    background: linear-gradient(to right, transparent, 85%, ${themer(
+      "shade.lightest"
+    )})
   }
 `
 

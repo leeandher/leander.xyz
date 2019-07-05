@@ -13,7 +13,7 @@ import {
 import { media, themer } from "../../../styles/helpers"
 
 const CardWrapper = styled.div`
-  background: ${({ theme }) => theme.shade.lightest};
+  background: ${themer("shade.lightest")};
   position: relative;
   &:active {
     box-shadow: 0;
