@@ -57,7 +57,6 @@ const Summary = styled.summary`
   &:active,
   &:hover {
     outline: 0;
-    text-decoration: underline ${themer("accent")};
   }
 `
 

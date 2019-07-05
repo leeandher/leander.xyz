@@ -53,10 +53,10 @@ const GlobalStyles = createGlobalStyle`
     background: ${themer("accent")};
     background: ${themer("accent")}88;
   }
-  &:focus {
+  /* &:focus {
     outline: none;
     box-shadow: 0 0 10px ${themer("accent")};
-  }
+  } */
   #nprogress {
     pointer-events: none;
     .bar {

@@ -8,8 +8,8 @@
   "description": "A revamped personal site",
   "repository": "github:leeandher/leander.xyz",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "dev": "gatsby develop",
+    "start": "npm run dev",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"//TODO: Add tests\"",

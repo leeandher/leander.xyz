@@ -14,17 +14,6 @@ import { genRandProperty } from "../helpers"
 
 const StyledPage = styled.div`
   margin-top: ${({ theme }) => theme.constants.navBarHeight};
-  * {
-    mark,
-    ::selection {
-      background: ${({ theme }) => theme.accent};
-      background: ${({ theme }) => theme.accent}88;
-    }
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 10px ${({ theme }) => theme.accent};
-    }
-  }
 `
 
 class Page extends React.Component {
