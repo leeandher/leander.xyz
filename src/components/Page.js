@@ -9,7 +9,6 @@ import Footer from "./Footer"
 import SEOBundle from "./SEOBundle"
 import ParticleBackground from "./ParticleBackground"
 
-// import { consoleLiteral } from "../data/consoleLiteral"
 import { genRandProperty } from "../helpers"
 import { themer } from "../styles/helpers"
 
@@ -26,11 +25,6 @@ class Page extends React.Component {
     const { showSideBar } = this.state
     this.setState({ showSideBar: !showSideBar })
   }
-
-  // componentDidMount() {
-  //   console.clear()
-  //   console.log(consoleLiteral)
-  // }
 
   render() {
     const { accent, bgColor, children, bgDesign, seoProfile } = this.props

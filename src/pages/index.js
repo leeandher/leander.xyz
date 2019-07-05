@@ -16,6 +16,7 @@ import QuoteCard from "../components/page-specific/Home/QuoteCard"
 import { themer } from "../styles/helpers"
 
 import homeData from "../data/home.json"
+import { consoleLiteral } from "../data/consoleLiteral"
 
 const MainHero = styled(Hero)`
   margin-top: -${themer("constants.navBarHeight")};
@@ -55,6 +56,10 @@ const Showcase = styled(Skewed)`
 const Home = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: showcaseItems } = allMarkdownRemark
+  /* eslint-disable no-console */
+  console.clear()
+  console.log(consoleLiteral)
+  /* eslint-enable no-console */
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
       <MainHero>
