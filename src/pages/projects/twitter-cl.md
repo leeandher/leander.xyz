@@ -9,7 +9,7 @@ description: >-
   browser.
 image: /assets/project__twitter-cl.png
 repo: "https://github.com/leeandher/twitter-cl"
-link: ""
+link: "https://www.npmjs.com/package/twitter-cl"
 tech:
   - typescript
   - oclif
