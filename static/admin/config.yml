@@ -71,7 +71,7 @@ collections:
       - { name: link, label: Live Link, widget: string }
       - { name: tech, label: Tech Used, widget: list }
       - { name: date, label: Date Completed, widget: date }
-      - { name: body, label: Description, widget: markdown }
+      - { name: body, label: README, widget: markdown }
   - name: pages
     label: Pages
     editor:
