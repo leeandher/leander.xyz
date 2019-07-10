@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
+import marked from "marked"
 
 import Button from "../components/Button"
 import Hero from "../components/Hero"
@@ -32,6 +33,22 @@ const Introduction = styled(Skewed)`
     display: block;
     margin: 1rem auto;
     margin-top: 4rem;
+  }
+  .self-description {
+    a {
+      position: relative;
+      &:before {
+        ${themer("before")}
+        background: ${themer("accent")};
+        height: 30%;
+        top: 50%;
+      }
+    }
+    pre {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background: ${themer("shade.darkest")};
+    }
   }
 `
 
@@ -76,43 +93,12 @@ const Home = ({ data }) => {
       <Introduction skew="4deg">
         <MainWrapper>
           <h2 className="title">"Who are you again?"</h2>
-          {/* cspell: disable */}
           <div
             className="self-description"
-            dangerouslySetInnerHTML={{ __html: homeData["self-description"] }}
+            dangerouslySetInnerHTML={{
+              __html: marked(homeData["self-description"]),
+            }}
           />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
-            diam malesuada, sagittis lacus id, dapibus est. Sed tristique
-            lobortis ante. <mark>Vestibulum</mark>
-            justo risus, posuere at semper vitae, sodales a turpis. Vestibulum
-            ornare nec nunc non fermentum. Donec convallis egestas libero nec
-            porta. Duis tincidunt dui tellus, vel sodales urna aliquet a.
-            Pellentesque vestibulum elit mollis nibh cursus scelerisque. Aliquam
-            vitae auctor erat. Aliquam tempor elit quis est malesuada
-            sollicitudin. In non magna dolor. Pellentesque sollicitudin eu est a
-            laoreet. Vestibulum cursus, felis nec mollis facilisis, mi lectus
-            varius orci, quis facilisis odio purus vel enim. Nullam eu nulla at
-            eros scelerisque sagittis nec id tortor.
-          </p>
-          <p>
-            Vestibulum mattis lacus quam, sed venenatis metus rutrum eu. Integer
-            vel cursus lectus, quis sodales sem. Quisque non est vel dui
-            consequat suscipit ut at nibh. Vestibulum suscipit posuere
-            consequat. Proin tellus purus, malesuada et mauris eu, laoreet
-            interdum mi. Aliquam erat volutpat. Duis luctus ipsum nec orci
-            volutpat, ac ornare nisl suscipit. Etiam imperdiet vehicula neque,
-            sit amet cursus odio gravida eu. Phasellus et neque orci.
-            Pellentesque id libero at nisl facilisis molestie. Praesent ac odio
-            vitae massa posuere rutrum.
-          </p>
-          <p>
-            Nunc lacinia volutpat aliquam. Cras quis egestas tortor, eu pretium
-            est. Donec eu dolor justo. Nunc pellentesque nisl enim. Quisque non
-            dapibus lectus. Nunc eget magna leo. Sed et ligula tincidunt,
-            vestibulum mi ac, faucibus leo. Suspendisse ut commodo ex.
-          </p>
-          {/* cspell: enable */}
           <Button>
             <Link to="/about">More about me</Link>
           </Button>

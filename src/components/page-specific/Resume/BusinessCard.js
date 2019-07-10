@@ -1,16 +1,21 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import {
   FaGithub,
   FaStackOverflow,
-  FaTwitter,
   FaLinkedin,
+  FaFileAlt,
 } from "react-icons/fa"
 
 import { media, themer } from "../../../styles/helpers"
+
+const wavey = keyframes`
+  0%{ transform: rotate(-10deg); }
+  100%{ transform: rotate(10deg); }
+`
 
 const CardWrapper = styled.div`
   background: ${themer("shade.lightest")};
@@ -19,15 +24,18 @@ const CardWrapper = styled.div`
     box-shadow: 0;
   }
   &:before {
-    content: "My Business Card";
+    content: "Download PDF";
+    font-size: 1.5rem;
     background: ${themer("accent")};
     position: absolute;
-    padding: 1rem 2rem;
-    font-weight: bold;
+    padding: 0.35rem 0.75rem;
+    font-weight: 500;
     z-index: 1000;
     transform: rotate(-15deg);
-    top: -15px;
-    left: -30px;
+    bottom: -15px;
+    right: 0;
+    animation: ${wavey} infinite alternate-reverse 1s
+      cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   max-width: 650px;
   padding: 1.5rem;
@@ -125,13 +133,12 @@ const CardAnchorLink = styled.a`
 `
 
 const BusinessCard = props => {
-  const {
-    file: {
-      childImageSharp: { fixed },
-    },
-  } = useStaticQuery(graphql`
+  const { pdf, image } = useStaticQuery(graphql`
     query PROFILE_IMAGE_QUERY {
-      file(relativePath: { eq: "profile_pic.jpg" }) {
+      pdf: file(extension: { eq: "pdf" }) {
+        publicURL
+      }
+      image: file(relativePath: { eq: "profile_pic.jpg" }) {
         childImageSharp {
           fixed(width: 250) {
             ...GatsbyImageSharpFixed
@@ -142,7 +149,7 @@ const BusinessCard = props => {
   `)
   return (
     <CardWrapper {...props}>
-      <CardImage fixed={fixed} />
+      <CardImage fixed={image.childImageSharp.fixed} />
       <CardHeader>
         Hi, I'm <span>Leander Rodrigues</span>
       </CardHeader>
@@ -172,8 +179,8 @@ const BusinessCard = props => {
       >
         <FaLinkedin />
       </CardAnchorLink>
-      <CardAnchorLink order={4} href="https://twitter.com/LeeAndHer">
-        <FaTwitter />
+      <CardAnchorLink order={4} href={pdf.publicURL}>
+        <FaFileAlt />
       </CardAnchorLink>
     </CardWrapper>
   )
