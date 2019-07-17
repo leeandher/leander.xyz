@@ -5,14 +5,15 @@ slug: md-prevuer
 title: Markdown PreVuer
 description: "A pun that evolved into an actual project. Do you get it? Pre-Vue-r! Because It's built in Vue.js! I thought of it in the shower, and built it out in a day \U0001F44C\U0001F44C"
 image: /assets/project__md-prevuer.png
-repo: 'https://github.com/leeandher/md-prevuer'
-link: md-prevuer.leander.xyz
+repo: "https://github.com/leeandher/md-prevuer"
+link: "https://md-prevuer.leander.xyz"
 tech:
   - vue
   - marked
   - filesaver
 date: 2019-06-02T18:56:50.935Z
 ---
+
 It's a pun get it! It's a good pun I came up with in the shower and coded in a day. I wanted to make a markdown previewer and I wanted to learn Vue.js some more so I put em together. It fits in that sweet spot just too enough work that it looks good, but still way too much to put into a joke app.
 
 Anyway it turned out pretty good and you can check it out over at [https://md-prevuer.leander.xyz](https://md-prevuer.leander.xyz).
