@@ -1,5 +1,5 @@
 import { css } from "styled-components"
-import * as _ from "lodash"
+import get from "lodash/get"
 
 const sizes = {
   desktop: 992,
@@ -23,6 +23,6 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
  */
 export const themer = paletteKey => {
   return function({ theme }) {
-    return _.get(theme, paletteKey)
+    return get(theme, paletteKey)
   }
 }
