@@ -91,6 +91,9 @@ collections:
         label: About
         file: src/data/about.json
         fields:
+          - name: helloText
+            label: Hello Text
+            widget: markdown
           - name: picks
             label: 🔥 Picks
             widget: list

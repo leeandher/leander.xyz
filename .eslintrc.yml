@@ -75,5 +75,8 @@ rules:
         - .js
         - .jsx
 
+  # jsx-a11y
+  jsx-a11y/accessible-emoji: off
+
   # prettier
   prettier/prettier: error
