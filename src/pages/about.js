@@ -54,13 +54,10 @@ const About = () => {
       <HeyThere skew="-4deg">
         <h2 className="title">Hey there!</h2>
         <MainWrapper>
-          <p>
-            asfdasdfa sdfa sdf asdfa sdfa sdfas dflorem Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Iusto, non sunt cum nobis
-            doloribus asperiores neque amet omnis placeat et numquam aut nihil
-            hic, voluptates cupiditate accusantium ex! Placeat numquam laborum
-            iste fuga, esse voluptas illum? Optio necessitatibus culpa nobis.s
-          </p>
+          <p
+            className="markdown"
+            dangerouslySetInnerHTML={{ __html: marked(aboutData.helloText) }}
+          />
         </MainWrapper>
       </HeyThere>
       <Superlatives>
