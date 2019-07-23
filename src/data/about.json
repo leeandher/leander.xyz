@@ -1,7 +1,28 @@
 {
+  "helloText": "This page is supposed to be more _**personal** _and **_intimate_** than the other ones, and where I get _nice and close_ to you to tell you what kind of _**b o a r d g a m e s**_, I like to play, and other saucy details.\n\nThe TL;DR is that I'm just a normal UW Engineering student but with more of a focus on doing my own thing than doing what my program tells me too. I code websites/apps for fun, play lots of board games, spend way too much money on food, and often just sit around listening to podcasts.\n\nI would describe myself as a _**tech enthusiast**_ if it didn't mean I sound like a douche. I keep up with the latest releases in that world too, from hardware (laptops, phones, parts) to software (operating system updates, new features, etc.). My current setup is pretty sick if I do say so myself: _Razer Blade 15 2018 - GTX 1070 MQ, 512 SSD, i7-8750H._\n\nI also watch a lot of TV/Movies, generally whatever is coming out or popular on Netflix. My tastes are kinda wack, but my favourite genres are **thriller**, **horror**, and **action**. I'm totally open to suggestions so hit me up if you got anything you think I'd like.\n\n<mark>Anyway, I've spent way too long _writing about me_, I've taken away from the rest of the page _about me!_</mark>",
   "picks": [
     {
-      "label": "Language",
+      "label": "Board Game",
+      "value": "Spirit Island"
+    },
+    {
+      "label": "Video Game",
+      "value": "Katana Zero"
+    },
+    {
+      "label": "Podcast",
+      "value": "Reply All"
+    },
+    {
+      "label": "Horror Movie",
+      "value": "Midsommar"
+    },
+    {
+      "label": "Movie-of-all-time",
+      "value": "Spiderman: Into the Spiderverse"
+    },
+    {
+      "label": "Programming Language",
       "value": "JavaScript"
     },
     {
@@ -21,20 +42,16 @@
       "value": "Dog"
     },
     {
-      "label": "Party Game",
-      "value": "Coup"
+      "label": "Social Media",
+      "value": "Twitter"
     },
     {
-      "label": "Recent Board Game",
-      "value": "Spirit Island"
+      "label": "UI Appearance",
+      "value": "Dark Mode (🌑)"
     },
     {
-      "label": "Recent Video Game",
-      "value": "Katana Zero"
-    },
-    {
-      "label": "Podcast",
-      "value": "Reply All"
+      "label": "Food",
+      "value": "🍣/🍕/🍔/🍜"
     }
   ],
   "faqs": [
