@@ -1,6 +1,7 @@
 ---
 type: blog
-archive: false
+archive: true
+showcase: false
 slug: what-i-thought-of-cytus-ii
 date: 2018-06-07T22:51:25.534Z
 title: What I Thought of 'Cytus II'

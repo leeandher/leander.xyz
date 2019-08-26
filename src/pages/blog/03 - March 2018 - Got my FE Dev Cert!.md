@@ -1,6 +1,7 @@
 ---
 type: blog
 archive: true
+showcase: false
 slug: got-my-fe-dev-cert
 date: "2018-03-29"
 title: March 2018 - Got my FE Dev Cert!

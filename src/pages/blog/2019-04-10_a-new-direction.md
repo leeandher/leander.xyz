@@ -1,6 +1,7 @@
 ---
 type: blog
-archive: false
+archive: true
+showcase: false
 slug: a-new-direction
 date: 2018-04-20T04:00:00.000Z
 title: A New Direction

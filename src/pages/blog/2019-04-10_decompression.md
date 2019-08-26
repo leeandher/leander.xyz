@@ -1,6 +1,7 @@
 ---
 type: blog
-archive: false
+archive: true
+showcase: false
 slug: decompression
 date: 2018-08-21T23:31:10.379Z
 title: July 2018 - Decompression

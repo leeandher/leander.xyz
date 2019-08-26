@@ -1,6 +1,7 @@
 ---
 type: blog
 archive: true
+showcase: false
 slug: babys-first-steps
 date: "2018-02-02"
 title: January 2018 - Baby's First Steps

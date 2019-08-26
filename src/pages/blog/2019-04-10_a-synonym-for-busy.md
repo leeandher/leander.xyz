@@ -1,6 +1,7 @@
 ---
 type: blog
-archive: false
+archive: true
+showcase: false
 slug: a-synonym-for-busy
 date: 2018-05-27T22:46:30.135Z
 title: A Synonym For Busy

@@ -1,6 +1,7 @@
 ---
 type: blog
 archive: true
+showcase: false
 slug: moving-on-to-the-adv-stuff
 date: "2018-03-01"
 title: February 2018 - Moving on to the Advanced Stuff

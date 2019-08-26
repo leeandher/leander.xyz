@@ -1,6 +1,7 @@
 ---
 type: blog
-archive: false
+archive: true
+showcase: false
 slug: uphill-both-ways
 date: 2018-05-01T22:35:00.993Z
 title: April 2018 - Uphill Both Ways

@@ -1,6 +1,7 @@
 ---
 type: blog
-archive: false
+archive: true
+showcase: false
 slug: landing-that-dev-coop
 date: 2018-06-04T22:46:30.135Z
 title: May 2018 - Landing That Dev Co-op

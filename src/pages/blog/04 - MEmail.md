@@ -1,6 +1,7 @@
 ---
 type: blog
 archive: true
+showcase: false
 slug: memail
 date: "2018-04-08"
 title: MEmail
