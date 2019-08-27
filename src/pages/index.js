@@ -40,8 +40,8 @@ const Introduction = styled(Skewed)`
       &:before {
         ${themer("before")}
         background: ${themer("accent")};
-        height: 30%;
-        top: 50%;
+        height: 20%;
+        top: 85%;
       }
     }
     pre {
