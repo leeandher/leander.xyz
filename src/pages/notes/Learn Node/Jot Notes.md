@@ -1,4 +1,4 @@
-## Jot Notes
+# Jot Notes
 
 ---
 

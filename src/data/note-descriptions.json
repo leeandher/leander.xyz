@@ -5,5 +5,6 @@
   "How To GraphQL": "Course notes for an introductory course offered by howtographql.com. Full-stack introduction to GraphQL using Apollo, and Prisma",
   "Learn Node": "Course notes for Wes Bos' Learn Node course, explaining the intricacies behind express apps, MVC methodologies, authentication, and user account flow",
   "Learn Redux": "Course notes for Wes Bos' Learn Redux course, outlining the basic principles to understand when integrating Redux into an application",
-  "React 101": "Course notes for Codecademy's React 101, and Wes Bos' React for Beginners course, providing an awesome resource to take your first step into React; life-cycle methods, managing state, prop-types and more!"
+  "React 101": "Course notes for Codecademy's React 101, and Wes Bos' React for Beginners course, providing an awesome resource to take your first step into React; life-cycle methods, managing state, prop-types and more!",
+  "Advanced React & GraphQL": "Course notes for Wes Bos' Advanced React course, covering Full-stack GraphQL, State Management with Apollo, SSR/Routing with Next, Testing with Jest, and eCommerce with Stripe!"
 }

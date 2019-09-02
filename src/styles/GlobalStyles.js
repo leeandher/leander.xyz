@@ -88,6 +88,9 @@ const GlobalStyles = createGlobalStyle`
       position: absolute;
     }
   }
+  .md-base {
+    
+  }
 `
 
 export default GlobalStyles
