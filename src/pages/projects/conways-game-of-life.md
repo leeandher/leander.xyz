@@ -32,7 +32,7 @@ In my variation, you can actually track the newborn cells since they appear with
 
 The game doesn't have an ending, since eventually the board becomes relatively stable and following generations change less and less, but the main point is to be able to _visualize_ how the ecosystem evolves!
 
-### Using the app
+## Using the app
 
 The algorithm running the game does pretty much all the heavy lifting here. Simply sit back and watch your simulation run however you specify. On the left, there's a navigation menu containing a few settings you can play around with.
 
@@ -42,7 +42,7 @@ Below the divider are the configuration settings. Things like **board size**, an
 
 You may also notice the label above the board with some italicized text. That's actually just a dummy input for naming your simulation, so you can type whatever you like (I randomized it's defaults a bit, let me know if you think I'm funny).
 
-### How it Works
+## How it Works
 
 This app was developed to work completely locally, reaching for no external resources. It was developed in **React** and uses **Redux** for passing data around. **Webpack** was used to package the application and keep it fast and efficient.
 
