@@ -172,7 +172,7 @@
       "location": "ReactForBeginners.com",
       "time": "Oct 2018",
       "link": "https://reactforbeginners.com",
-      "description": "A beginner's project-driven React development course taught by Wes Bos. It covers everything from ES6, to Webpack, and even Firebase Authentication. It covers lifecycle methods, state management, and application structure while creating an application to manage simple fish market!"
+      "description": "A beginner's project-driven React development course taught by Wes Bos. It covers everything from ES6, to Webpack, and even Firebase Authentication. It covers lifecycle methods, state management, and application structure while creating an application to manage a simple fish market!"
     },
     {
       "title": "React 101",
