@@ -4,10 +4,11 @@ showcase: true
 slug: conway
 title: Conway's Game of Life
 description: >-
-  A zero-player game evolution game to simulate Conway's Game of Life. Best part: Dark mode!
+  A zero-player game evolution game to simulate Conway's Game of Life. Best
+  part: Dark mode!
 image: /assets/project__conway.png
-repo: "https://github.com/leeandher/Conways-Game-of-Life"
-link: "https://conway.leander.xyz"
+repo: 'https://github.com/leeandher/Conways-Game-of-Life'
+link: 'https://conway.leander.xyz'
 tech:
   - react
   - redux
