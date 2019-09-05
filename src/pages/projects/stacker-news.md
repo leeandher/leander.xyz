@@ -18,8 +18,6 @@ tech:
 date: 2019-01-11T03:27:27.851Z
 ---
 
-# Stacker News
-
 This project is one of those 'explore-new-things' sort of things. This is a clone of [Hacker News](https://news.ycombinator.com/), which I coded from the ground up with a modern JavaScript stack, and so, I dub thee **Stacker News**! If you want to see the live demo, go over to [stacker-news.leander.xyz](https://stacker-news.leander.xyz).
 
 _Note:_ The initial fetch takes a while because I'm _super_ cheap, and the GraphQL API endpoint is being hosted on a free-tier Heroku dyno. The catch, is that after 30 min of inactivity, it falls asleep and takes a little while to spin back up when your browser makes the first request.
