@@ -2,7 +2,11 @@
 type: projects
 showcase: true
 slug: sick-fits
+title: Sick Fits
+description: A basic description
 image: /assets/project__sick-fits.png
+repo: 'https://github.com/leeandher/Sick-Fits'
+link: 'https://sick-fits.leanderr.now.sh/'
 tech:
   - react
   - apollo

@@ -10,6 +10,7 @@ import AnchorLink from "../components/AnchorLink"
 
 import {
   ContentWrapper,
+  MediaBanner,
   MediaContent,
   MediaHeader,
   MediaPostContent,
@@ -25,7 +26,7 @@ const ProjectHeader = styled.div`
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { date, title, repo, link, tech } = frontmatter
+  const { date, title, repo, link, tech, image } = frontmatter
   return (
     <Page accent="random" bgDesign="bubbles" seoProfile="projects-page">
       <MediaHeader>
@@ -37,6 +38,7 @@ const ProjectTemplate = ({ data }) => {
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>
+          <MediaBanner src={image} alt={title} title={title} />
           <MediaPreContent>
             <ProjectHeader>
               <h1>
@@ -84,6 +86,7 @@ export const projectQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         repo
+        image
         link
         tech
       }
