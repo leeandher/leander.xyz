@@ -2,7 +2,11 @@
 type: projects
 showcase: true
 slug: sick-fits
+title: Sick Fits
+description: "An online store where you can buy overpriced street wear and even post your own products for sale! Made with a hyper modern stack, with actual credit card processing! I even wrote some tests for this bad boy. \U0001F45AStay Fresh\U0001F457"
 image: /assets/project__sick-fits.png
+repo: 'https://github.com/leeandher/Sick-Fits'
+link: 'https://sick-fits.leanderr.now.sh/'
 tech:
   - react
   - apollo
