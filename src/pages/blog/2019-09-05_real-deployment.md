@@ -16,3 +16,15 @@ tags:
 date: 2019-09-05T15:43:24.947Z
 ---
 This is the content
+
+
+```
+ctrl + s in vim
+ctrl + q to keep going
+```
+
+```shell
+sudo nano /etc/ssh/sshd_config
+PermitRootLogin prohibit-password to PermitRootLogin yes 
+PasswordAuthentication no to PasswordAuthentication yes
+```
