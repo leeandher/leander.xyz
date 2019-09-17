@@ -190,7 +190,7 @@ class LinkList extends Component {
                 <span role="img" aria-label="flexing">
                   💪
                 </span>
-                Fetching...
+                Fetching (My Heroku dyno is sleeping, so it may take around 30s to wake up, but then it'll be fast!)...
                 <span role="img" aria-label="flexing">
                   💪
                 </span>
