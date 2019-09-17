@@ -27,4 +27,10 @@ ctrl + q to keep going
 sudo nano /etc/ssh/sshd_config
 PermitRootLogin prohibit-password to PermitRootLogin yes 
 PasswordAuthentication no to PasswordAuthentication yes
+
 ```
+
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+  ```
+  sudo service nginx start
+  ```
