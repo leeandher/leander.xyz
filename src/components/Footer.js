@@ -113,7 +113,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
       </p>
       <small>
         <AnchorLink
-          href="https://github.com/leeandher/leander.xyz/issues/new"
+          href="https://github.com/leeandher/leander.xyz/issues/new?assignees=leeandher&labels=%F0%9F%90%9B+bug&template=bug_report.md&title=%F0%9F%90%9B+%5BBUG%5D"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -74,6 +74,7 @@ const WrapperLink = styled(Link)`
     height: 100%;
     opacity: 0.4;
     background: url("${({ image }) => image}") transparent;
+    background-size: cover;
     transition: transform ease 0.4s;
   }
 `

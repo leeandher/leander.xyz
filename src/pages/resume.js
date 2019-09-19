@@ -4,7 +4,6 @@ import marked from "marked"
 import { graphql } from "gatsby"
 
 import Page from "../components/Page"
-import Hero from "../components/Hero"
 import Carousel from "../components/Carousel"
 import ShowItem from "../components/ShowItem"
 import { Default } from "../components/PageSections"
@@ -28,17 +27,6 @@ const Header = styled.div`
 
 const MeCard = styled(BusinessCard)`
   margin: 0 auto;
-  ${media.phone`
-    display: none;
-  `}
-`
-const SmallTitle = styled(Hero).attrs({
-  height: "200px",
-})`
-  display: none;
-  ${media.phone`
-    display: block;
-  `}
 `
 
 const ResumeSection = styled(Default)`
@@ -48,13 +36,21 @@ const ResumeSection = styled(Default)`
 const ResumeLayout = styled.div`
   display: grid;
   background: ${themer("shade.lightest")};
-  border-radius: 2rem;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 300px 1fr;
   max-width: ${themer("spacing.maxWidth")};
-  margin: 2rem auto;
+  border-radius: 0.5rem;
+  margin: 2rem 0.75rem;
+  position: relative;
+  &:after {
+    ${themer("before")};
+    background: ${themer("accent")};
+    top: -0.75rem;
+    border-radius: 0.5rem;
+    left: -0.75rem;
+  }
   ${media.tablet`
     display: block;
-    margin: 0;
+    margin: 2rem 0.75rem;
   `}
   .title {
     padding: ${themer("constants.navBarHeight")} 2.5rem;
@@ -72,6 +68,9 @@ const ResumeLayout = styled.div`
   }
   .content {
     padding: ${themer("constants.navBarHeight")} 2.5rem;
+    ${media.tablet`
+      padding: 2.5rem;
+    `}
     grid-area: 1 / 2 / 1 / 2;
     font-size: 1.5rem;
     text-align: left;
@@ -106,9 +105,6 @@ const Resume = ({ data }) => {
     <Page accent="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
         <MeCard />
-        <SmallTitle>
-          <h1 className="title">Resume</h1>
-        </SmallTitle>
       </Header>
       <PageWrapper>
         <Scroller>
@@ -244,7 +240,6 @@ const Resume = ({ data }) => {
 
 export default Resume
 
-// TODO : Fix this workaround
 export const showcaseQuery = graphql`
   query {
     allMarkdownRemark(

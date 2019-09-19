@@ -12,8 +12,11 @@ const Header = styled.header`
   padding: ${themer("spacing.default")};
   color: ${themer("shade.lighter")};
   h1 {
-    ${media.phone`
+    ${media.tablet`
       font-size: 4.5rem;
+    `}
+    ${media.phone`
+      font-size: 3.5rem;
     `}
     margin: 15px;
     transform: skew(-5deg);
