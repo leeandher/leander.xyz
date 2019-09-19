@@ -1,6 +1,6 @@
 ---
 type: blog
-archive: true
+archive: false
 showcase: false
 slug: real-deployment
 title: Deploying to Digital Ocean (Vue + Node)!
