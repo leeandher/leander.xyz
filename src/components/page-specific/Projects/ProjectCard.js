@@ -38,7 +38,9 @@ const HeaderImage = styled.figure`
   overflow: hidden;
   margin-bottom: -5rem;
   object-fit: fill;
+  pointer-events: none;
   img {
+    pointer-events: none;
     max-width: 100%;
   }
 `
