@@ -4,7 +4,6 @@ import marked from "marked"
 import { graphql } from "gatsby"
 
 import Page from "../components/Page"
-import Hero from "../components/Hero"
 import Carousel from "../components/Carousel"
 import ShowItem from "../components/ShowItem"
 import { Default } from "../components/PageSections"
@@ -28,17 +27,6 @@ const Header = styled.div`
 
 const MeCard = styled(BusinessCard)`
   margin: 0 auto;
-  ${media.phone`
-    display: none;
-  `}
-`
-const SmallTitle = styled(Hero).attrs({
-  height: "200px",
-})`
-  display: none;
-  ${media.phone`
-    display: block;
-  `}
 `
 
 const ResumeSection = styled(Default)`
@@ -117,9 +105,6 @@ const Resume = ({ data }) => {
     <Page accent="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
         <MeCard />
-        <SmallTitle>
-          <h1 className="title">Resume</h1>
-        </SmallTitle>
       </Header>
       <PageWrapper>
         <Scroller>
@@ -255,7 +240,6 @@ const Resume = ({ data }) => {
 
 export default Resume
 
-// TODO : Fix this workaround
 export const showcaseQuery = graphql`
   query {
     allMarkdownRemark(

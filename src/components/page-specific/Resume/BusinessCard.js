@@ -36,6 +36,9 @@ const CardWrapper = styled.div`
     right: 0;
     animation: ${wavey} infinite alternate-reverse 1s
       cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    ${media.phone`
+      right: 1rem;
+    `}
   }
   max-width: 650px;
   padding: 1.5rem;
@@ -43,17 +46,24 @@ const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: 250px repeat(4, 1fr);
   grid-template-rows: 50px 25px 125px 50px;
-  justify-items: start;
+  justify-items: center;
   align-items: center;
   ${media.tablet`
-    transform: scale(0.8);
+  transform: scale(0.8);
+  `}
+  ${media.phone`
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 250px repeat(5, auto);
   `}
 `
 const CardImage = styled(Img)`
-  grid-area: 1 / 1 / 6 / 1;
   max-width: 100%;
   height: 100%;
   border-radius: 1rem;
+  grid-area: 1 / 1 / 6 / 1;
+  ${media.phone`
+    grid-area: 1 / 1 / 1 / 5;
+  `}
 `
 
 const CardHeader = styled.h1`
@@ -69,7 +79,11 @@ const CardHeader = styled.h1`
     text-decoration: underline ${themer("accent")};
   }
   ${media.tablet`
-    font-size: 2.25rem;
+  font-size: 2.25rem;
+  `}
+  ${media.phone`
+    grid-area: 2 / 1 / 2 / 5;
+    padding: 0;
   `}
 `
 
@@ -88,11 +102,23 @@ const CardSubtitle = styled.h2`
     font-weight: 500;
     text-decoration: underline ${themer("accent")};
   }
+  ${media.phone`
+    grid-area: 3 / 1 / 3 / 5;
+    text-align: center;
+    margin: 0;
+  `}
 `
 
 const CardTitles = styled.div`
   padding-left: 3rem;
   grid-area: 3 / 2 / 3 / 3;
+  ${media.phone`
+    grid-area: 4 / 1 / 4 / 3;
+    text-align: right;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-left: 0;
+  `}
   font-weight: 500;
   font-size: 1.5rem;
   p {
@@ -104,6 +130,13 @@ const CardTitles = styled.div`
 const CardValues = styled.div`
   padding-left: 4rem;
   grid-area: 3 / 3 / 3 / 6;
+  ${media.phone`
+    grid-area: 4 / 3 / 4 / 5;
+    text-align: left;
+    width: 100%;
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+  `}
   font-weight: 300;
   font-size: 1.5rem;
   p {
@@ -115,6 +148,9 @@ const CardValues = styled.div`
 const CardAnchorLink = styled.a`
   display: block;
   grid-area: 4 / ${({ order }) => order + 1} / 5 / ${({ order }) => order + 1};
+  ${media.phone`
+    grid-area: 5 / ${({ order }) => order} / 6 / ${({ order }) => order};
+  `}
   justify-self: center;
   color: ${themer("accent")};
   border-radius: 100%;
