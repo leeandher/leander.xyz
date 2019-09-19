@@ -8,7 +8,7 @@
   "description": "A revamped personal site",
   "repository": "github:leeandher/leander.xyz",
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "gatsby develop -p 1027",
     "start": "npm run dev",
     "build": "gatsby build",
     "serve": "gatsby serve",

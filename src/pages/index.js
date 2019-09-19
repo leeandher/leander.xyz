@@ -79,7 +79,7 @@ const Home = ({ data }) => {
   /* eslint-enable no-console */
   return (
     <Page accent="teal" bgDesign="space" seoProfile="home-page">
-      <MainHero>
+      <MainHero expanding>
         <p>Hi there, My name is</p>
         <h1>
           <span>Leander Rodrigues</span>
