@@ -45,8 +45,6 @@ const OtherSection = styled(Skewed)`
   &:before {
     background: ${themer("shade.lightest")};
   }
-  .other-stuff {
-  }
 `
 
 const StylishCarousel = styled(Carousel)`
