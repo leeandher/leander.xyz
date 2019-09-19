@@ -48,13 +48,21 @@ const ResumeSection = styled(Default)`
 const ResumeLayout = styled.div`
   display: grid;
   background: ${themer("shade.lightest")};
-  border-radius: 2rem;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 300px 1fr;
   max-width: ${themer("spacing.maxWidth")};
-  margin: 2rem auto;
+  border-radius: 0.5rem;
+  margin: 2rem 0.75rem;
+  position: relative;
+  &:after {
+    ${themer("before")};
+    background: ${themer("accent")};
+    top: -0.75rem;
+    border-radius: 0.5rem;
+    left: -0.75rem;
+  }
   ${media.tablet`
     display: block;
-    margin: 0;
+    margin: 2rem 0.75rem;
   `}
   .title {
     padding: ${themer("constants.navBarHeight")} 2.5rem;
@@ -72,6 +80,9 @@ const ResumeLayout = styled.div`
   }
   .content {
     padding: ${themer("constants.navBarHeight")} 2.5rem;
+    ${media.tablet`
+      padding: 2.5rem;
+    `}
     grid-area: 1 / 2 / 1 / 2;
     font-size: 1.5rem;
     text-align: left;

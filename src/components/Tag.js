@@ -14,6 +14,10 @@ const TagButton = styled(Button)`
   overflow: hidden;
 `
 
-const Tag = ({ tag }) => <TagButton disabled>{tag}</TagButton>
+const Tag = ({ tag, ...props }) => (
+  <TagButton disabled {...props}>
+    {tag}
+  </TagButton>
+)
 
 export default Tag

@@ -63,6 +63,7 @@ const CardHeader = styled.h1`
   margin: 0;
   font-weight: 300;
   font-size: 2.75rem;
+  white-space: nowrap;
   span {
     font-weight: 500;
     text-decoration: underline ${themer("accent")};
@@ -147,6 +148,12 @@ const BusinessCard = props => {
       }
     }
   `)
+  const myAge = () => {
+    const d = new Date()
+    if (d.getMonth() > 9) return d.getFullYear() - 1998
+    if (d.getMonth() === 9 && d.getDate() >= 27) return d.getFullYear() - 1998
+    return d.getFullYear() - 1999
+  }
   return (
     <CardWrapper {...props}>
       <CardImage fixed={image.childImageSharp.fixed} />
@@ -160,7 +167,7 @@ const BusinessCard = props => {
         <p>Email</p>
       </CardTitles>
       <CardValues>
-        <p>20 years old</p>
+        <p>{myAge()} years old</p>
         <p>Toronto, ON</p>
         <p>me@leander.xyz</p>
       </CardValues>

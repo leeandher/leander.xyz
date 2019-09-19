@@ -2,27 +2,23 @@ import React from "react"
 import styled from "styled-components"
 import { themer } from "../../../styles/helpers"
 
-const SectionWrapper = styled.div`
-  display: flex;
-  align-items: top;
-  flex-flow: row wrap;
-  justify-content: center;
-`
+import Tag from "../../Tag"
+
+const SectionWrapper = styled.div``
 
 const PanelWrapper = styled.div`
   padding: 1rem;
   margin: 1.5rem;
-  display: inline-block;
-  width: 200px;
+  display: block;
 `
 
 const Category = styled.h4`
-  margin: 0;
-  font-family: ${themer("font.mono")};
+  margin: 1.5rem;
+  margin-left: 4rem;
   font-size: 2rem;
   span {
-    padding: 0.25rem 1rem;
     position: relative;
+    padding: 0.5rem 1rem;
     z-index: 0;
     &:before {
       ${themer("before")};
@@ -33,10 +29,11 @@ const Category = styled.h4`
   }
 `
 
-const Attribute = styled.p`
-  margin: 0;
-  padding: 0.25rem;
-  font-size: 1.35rem;
+const Attribute = styled(Tag)`
+  margin: 0.5rem;
+  font-weight: normal;
+  font-family: ${themer("font.mono")};
+  background: ${themer("shade.lighter")}88;
   &:before {
     content: ">  ";
     color: ${themer("accent")};
@@ -44,6 +41,12 @@ const Attribute = styled.p`
     font-weight: bold;
     position: absolute;
   }
+`
+const Disclaimer = styled.p`
+  margin: 0 auto;
+  font-size: 1.6rem;
+  max-width: 550px;
+  text-align: center;
 `
 
 const CharacterSheetWrapper = ({ characterSheetData }) => {
@@ -55,10 +58,14 @@ const CharacterSheetWrapper = ({ characterSheetData }) => {
             <span>{category}</span>
           </Category>
           {attributes.map((attribute, j) => (
-            <Attribute key={`${attribute}-${j}`}>{attribute}</Attribute>
+            <Attribute key={`${attribute}-${j}`} tag={attribute} />
           ))}
         </PanelWrapper>
       ))}
+      <Disclaimer>
+        Disclaimer: One of these guys in every category is a joke. Just warning
+        you in case 'Reverse Parking' sounded like a backend database library.
+      </Disclaimer>
     </SectionWrapper>
   )
 }
