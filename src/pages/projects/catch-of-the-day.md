@@ -4,11 +4,11 @@ showcase: false
 slug: catch-of-the-day
 title: Catch of the Day
 description: >-
-  The first React app I've ever built, emulating an online fish market.
-  You can even login with Twitter/Github and start your own store!
+  The first React app I've ever built, emulating an online fish market. You can
+  even login with Twitter/Github and start your own store!
 image: /assets/project__catch-of-the-day.png
-repo: "https://github.com/leeandher/Catch-of-the-Day"
-link: "https://catch-of-the-day.leander.xyz"
+repo: 'https://github.com/leeandher/Catch-of-the-Day'
+link: 'https://catch-of-the-day.leander.xyz'
 tech:
   - react
   - react-router
@@ -40,8 +40,3 @@ The URL routing was done through **_React Router_**, which allowed for the dynam
 **_Google's Firebase_** was used as the Database of Choice due to it's _syncState_ capabilities and live responses! This allows the 'owner'user to update the fish info to all other connected users right in front of their eyes!
 
 The sign-in capabilities were also done through Firebase, which ensures proper **_OAuth Security_**.
-
-## Creds
-
-I was able to create this application through the help of a course, developed by [Wes Bos](https://wesbos.com) entitled [React For Beginners](https://reactforbeginners.com).
-If you've stumbled upon this project, in attempt to learn React, I highly recommend his [courses](https://wesbos.com/courses) and wish you the best of luck!
