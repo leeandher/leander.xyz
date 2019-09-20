@@ -1,16 +1,16 @@
 {
   "summary-of-qualifications": [
     {
-      "emoji": "🤓",
-      "text": "Committed, self-taught full-stack developer with an unconventional foundation in engineering"
+      "emoji": "🏆",
+      "text": "Self-taught full-stack developer with an expansive online portfolio of cool projects"
     },
     {
-      "emoji": "🛠️",
-      "text": "Inquisitive and perpetual student, focusing free-time towards fully-functional, impressive side-projects"
+      "emoji": "🤓",
+      "text": "Avid interest in programming in general; following podcasts, newsletters and picking up new tech just to keep it fresh"
     },
     {
       "emoji": "🤝",
-      "text": "Energetic hard-worker with diverse history in industry"
+      "text": "Experience with startups, corporations, and volunteer-teams; practicing agile development, and shipping code weekly"
     }
   ],
   "character-sheet": [
@@ -43,7 +43,8 @@
         "GraphQL / REST API Development",
         "AWS Suite (S3 / DynamoDB / EB / EC2 / SES / SNS)",
         "JWTs",
-        "Firebase"
+        "Firebase",
+        "Digital Ocean"
       ]
     },
     {
@@ -52,6 +53,8 @@
         "React Native",
         "iOS/Android Deployment",
         "Standalone Apps (Electron)",
+        "Java",
+        "Python",
         "Ice Cubes",
         "Site Deployment",
         "Unity 3D with C#",
@@ -66,6 +69,7 @@
         "CircleCI",
         "Jest / Mocha / Jasmine",
         "Prettier / ESLint / TSLint",
+        "Docker",
         "Zsh / Bash / Cmd",
         "Screwdrivers",
         "Babel / Webpack / Gulp",
@@ -103,7 +107,7 @@
         "Node",
         "Handlebars",
         "AWS Lambda",
-        "AWS SNS/SES",
+        "AWS Suite",
         "Google Dialogflow",
         "Git Workflows"
       ],
@@ -141,16 +145,20 @@
       ],
       "bullets": [
         {
+          "emoji": "♻️",
+          "text": "Refactored GraphQL API resolvers and their respective queries via React Native HOCs to reduce over-fetching"
+        },
+        {
+          "emoji": "📲",
+          "text": "Built, and shipped feature sets in weekly app updates throughout the term "
+        },
+        {
           "emoji": "✅",
           "text": "Implemented E2E tests in Jasmine and Selenium, along with fixtures, for consistent, black-box reporting in CircleCI"
         },
         {
           "emoji": "🏗️",
           "text": "Overhauled atomic design system for React UI elements on both iOS and Android operating systems"
-        },
-        {
-          "emoji": "♻️",
-          "text": "Refactored GraphQL API resolvers and their respective queries via React Native HOCs to reduce over-fetching"
         },
         {
           "emoji": "⚡",
@@ -191,18 +199,25 @@
   ],
   "volunteer-work": [
     {
-      "title": "Hour of Code Program Assistant",
+      "title": "UW Blueprint",
+      "location": "UWBlueprint.org",
+      "time": "Presently!",
+      "link": "https://uwblueprint.org/",
+      "description": "Blueprint is an initiative at the University of Waterloo to provide tech for nonprofits. A bunch of times every week, teams get together and work on building cool stuff for social good, and I'm a part of it! We work in Agile sprints, providing web apps, analysis tools and infrastructure to nonprofits every term - free of charge!"
+    },
+    {
+      "title": "#HourOfCode Mentor",
       "location": "John Ross Robertson Public School, Toronto ON",
       "time": "Dec 4, 2018",
       "link": "https://hourofcode.com/ca",
-      "description": "With a few other volunteers from the team of developers from Accenture Technology Canada, I was able to help Grade 3's and 4's write their first few lines of JavaScript, all for the #HourOfCode initiative!"
+      "description": "With a few other volunteers from the team of developers from Accenture Technology Canada, I was able to help Grade 3's and 4's write their first few lines of JavaScript, all for the #HourOfCode initiative! Answering basic questions, helping them get started, and explaining stuff like 'if statements', and helping get those 'future-programmer' wheels turning."
     },
     {
-      "title": "Builder/Painter for Project Outreach",
-      "location": "Sosúa, Dominican Republic",
-      "time": "Spring 2014",
-      "link": "https://livedifferent.com/",
-      "description": "TODO"
+      "title": "Women in STEM Program Assistant",
+      "location": "University of Waterloo",
+      "time": "Oct 13, 2018",
+      "link": "https://uwaterloo.ca/stem-opportunities-girls/",
+      "description": "Joined a team of representatives from Accenture Technology Canada in running through workshops about 'Design Thinking' for future University students. As one of the youngest reps, I also got the chance to talk about what they can expect at the University of Waterloo, and the opportunities that await them as young women in STEM fields!"
     }
   ],
   "achievements": [
