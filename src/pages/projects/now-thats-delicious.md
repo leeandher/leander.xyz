@@ -15,8 +15,6 @@ tech:
   - ssr
 date: 2018-11-11T03:59:55.643Z
 ---
-# Now That's Delicious!
-
 Hey there, and welcome to the repository for _Now That's Delicious!_ This project is a single page application I developed in an attempt to learn how to use JavaScript to create the backend of a site! It takes advantage of **Node**, **Express**, and **MongoDB**, and definitely keeps true to traditional **MVC** design principals.
 
 I also recorded some notes while going through the development process which you can check out over [here](https://github.com/leeandher/programming-notes). Lastly, you can check out the finished product over at [https://now-thats-delicious-leeandher.herokuapp.com](https://now-thats-delicious-leeandher.herokuapp.com).
