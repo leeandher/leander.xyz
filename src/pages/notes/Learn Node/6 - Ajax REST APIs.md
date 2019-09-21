@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## Introduction
 
 Databases are used for their ability to manipulate and provide/take data from the end user. The most practical and widespread use of these interactions must be done through a REST API, since we never want to give direct access to anyone who isn't authorized. An API like this provides a line of communication between our app and the data it stores.

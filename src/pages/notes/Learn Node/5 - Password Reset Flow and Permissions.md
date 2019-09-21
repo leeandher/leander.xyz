@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## Accepting User Input
 
 When you have to reset the password for existing user accounts, the method to do so is through a specific url with `POST` handling. In the case of this project, we add an extra form to the login page using a mixin entitled `forgotForm`, which will send the user to `/account/forgot`.

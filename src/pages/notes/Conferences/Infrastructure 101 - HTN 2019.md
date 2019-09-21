@@ -1,4 +1,8 @@
-Docker Compose
+## Notes on a talk by Jeff An (Infrastructure Engineer @ Google)
+
+### Docker Compose
+
+The purpose o
 
 - launch multiple containers that can coordinate with each other
 - frontend/backend/logging/etc

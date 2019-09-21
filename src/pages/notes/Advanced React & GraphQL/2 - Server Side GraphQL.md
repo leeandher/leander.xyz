@@ -1,5 +1,3 @@
-# Server Side GraphQL
-
 ## What is GraphQL?
 
 Well first things first, GraphQL is nothing more than an API specification. There are a set of rules that define a GraphQL API, mainly how to interact with one in the **frontend**, via _queries_, _mutations_, and _subscriptions_, and how it is strucured on the **backend** to handle the _requests_. GraphQL APIs are conceptual, so they are _language-agnostic_. For the purpose of this course, we'll be using the context of JavaScript for both the entire stack.

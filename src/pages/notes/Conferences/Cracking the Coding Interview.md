@@ -1,4 +1,3 @@
-# Cracking the Coding Interview
 
 ## Notes on a talk by: Marcelo Cortes at Indigo Fair
 

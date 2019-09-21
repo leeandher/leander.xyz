@@ -1,7 +1,3 @@
-# Jot Notes
-
----
-
 ## Form Handling
 
 If you have a series of input items which will be sending a request to a backend, you can do a neat trick to prevent the user from modifying the data before the request has resolved. If you wrap eht inputs in a `<fieldset>` they will operate the same as usual. Then, whilst your request is firing, use your `loading` flag as a boolean attribute:

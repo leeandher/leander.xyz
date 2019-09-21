@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## MongoDB and ENV
 
 In order to set up a MongoDB database (or any sort of database for that matter), it's best practice to create a `.env` file, which contains the app's sensitive information

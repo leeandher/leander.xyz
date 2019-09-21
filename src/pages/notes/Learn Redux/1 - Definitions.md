@@ -1,11 +1,3 @@
-# Learn Redux
-
-A quick place for notes about stuff that I pick up throughout the [Learn Redux](learnredux.com) course.
-
-_These notes are written as I go through the course, and might have information that is wrong or outdated. Simply put, I'm still learning!_
-
----
-
 ## Stores
 
 Stores is kind of like a database, but for your front-end application. With Redux, creating a store lets you put the global state tree of your application in one place. Stores are tied to the **root reducer** upon declaration. Therefore, the only way you can change the state within the store, is to go through and **dispatch** an **action**, which is filtered through that **reducer**. But let's not get ahead of ourselves.

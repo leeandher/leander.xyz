@@ -1,11 +1,3 @@
-# Learn Redux
-
-A quick place for notes about stuff that I pick up throughout the [Learn Redux](learnredux.com) course.
-
-_These notes are written as I go through the course, and might have information that is wrong or outdated. Simply put, I'm still learning!_
-
----
-
 ## Pure Functions
 
 Pure functions can be described as predictable functions. These are essential for Redux, as the basis of making changes to state. Instead of modifying the existing state, we take a copy, modify it, and return the new state back. This takes place in our reducers. While they seem scary, pure functions are actually relatively easy to understand. By _predictable_ what I mean is that, given the same input, the function always produces the same result. See the following:

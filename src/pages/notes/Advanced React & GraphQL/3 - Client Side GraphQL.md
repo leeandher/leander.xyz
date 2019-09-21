@@ -1,5 +1,3 @@
-# Client Side GraphQL
-
 ## Setting up Apollo Client (w/ Next, and SSR)
 
 To set up the Apollo Client there is a little bit of boilerplate code that needs to be written. The goal of this code is to setup the Apollo Client with a bunch of configuration to be able to make queries and mutations connected to our database, as well as setting up error/loading handling, caching and re-fetching.

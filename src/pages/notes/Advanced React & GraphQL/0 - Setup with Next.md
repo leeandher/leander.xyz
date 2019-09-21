@@ -1,5 +1,3 @@
-# Setup with Next
-
 ## What is Next.js?
 
 **_Next.js_** is actually what I like to call, a super framework. It takes _React.js_ the already powerful front-end framework, and adds a structure to it, which is helpful for setting up applications. Think of it like React is every word in the world, and Next is just your notebook, providing you a clean simple interface, to apply those words.

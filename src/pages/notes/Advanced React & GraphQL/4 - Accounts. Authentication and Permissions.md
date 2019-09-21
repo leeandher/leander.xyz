@@ -1,5 +1,3 @@
-# Accounts, Authentication and Permissions
-
 ## Authentication Flow
 
 The way the authentication of the Server-side Rendered application is going to go is entirely through the help of **JSON Web Tokens (JWTs)** in _cookies_. JWTs are useful little identifiers that we can attach to our requests to and from the server so that we know what permissions the user has associated with them and what mutations/queries are valid for our GraphQL server to do.

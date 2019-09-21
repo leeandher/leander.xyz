@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## Auto-populating Hooks
 
 There's an inconvenience you might encounter with constantly having to populate your `ref`'d fields, because an `ObjectId` does you no good. Well, if it's something that you do for every time this model is put into use, you can specify this behavior via an **auto-populating hook**. These are just normal hooks which invoke the `.populate` method ahead of time:

@@ -1,5 +1,3 @@
-# Advanced UI and Code Quality
-
 ## Composition
 
 When using the render-props methodology for React Components, you might get into some situations where your components become heavily nested in an incomprehensible series of `{}`s and `()`s. To fix this there's a common sort of structural pattern known as **composition**.

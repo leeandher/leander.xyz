@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## Location Data in MongoDB
 
 In Module 5 of the course, we expand our database to take in location coordinates as well as the existing data. Since our schema defaults to _strict_ mode, we must change the schema in order to allow the addition of data.

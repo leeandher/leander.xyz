@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## Creating the Schema
 
 Just like any other set of data we have to save, we need to create a User Schema in order to receive data in a format we can use. The thing is, with handling users, you also have to handle their passports and that kind of sensitive data needs to be `hash`ed so that if our DB leaks, or we have any sort of breach, our users aren't compromised. Here's an example User Account Schema:

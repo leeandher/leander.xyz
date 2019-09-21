@@ -1,9 +1,3 @@
-# Learn Node
-
-_A compilation of useful notes and tricks that could come in handy in the future. Better to be safe than sorry!_
-
----
-
 ## Managing Models
 
 Models are created through the declaration of a database schema. Specifically for MongoDB, this can be done easily through the `mongoose` package. The `mongoose.Schema()` method will create a table schema through the object which you pass to, defaulting to _strict_ mode. Here's an example:

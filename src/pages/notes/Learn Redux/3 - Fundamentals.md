@@ -1,11 +1,3 @@
-# Learn Redux
-
-A quick place for notes about stuff that I pick up throughout the [Learn Redux](learnredux.com) course.
-
-_These notes are written as I go through the course, and might have information that is wrong or outdated. Simply put, I'm still learning!_
-
----
-
 ## Joining Reducers
 
 Something important to note about Redux is that you can't simply import all your reducers at once into your store. Your store requires one **root reducer**, and it's up to you to do that. Of course you could dodge this problem by making all your reducers in the same file, but this can lead to a disorganized file structure.

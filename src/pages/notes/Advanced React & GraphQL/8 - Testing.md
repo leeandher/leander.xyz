@@ -1,5 +1,3 @@
-# Testing 
-
 ## Using Jest and Enzyme
 
 For testing a GraphQL-based React App, the go-to testing frameworks are probably Jest (a javascript testing made by Facebook) and Enzyme (a react testing framework made by Airbnb). Using these guys in tandem will let us test pretty much every part of our application thoroughly, so long as we follow a few specifications. Firstly, Jest crawls our project for any files with the extension `.spec.js`, `.test.js` or any `.js` file located in a `__tests__` directory. Along with that, any of those files will also get a bunch of global testing functions which can be found [here](https://jestjs.io/docs/en/api). They are how we're going to be writing tests in these files.
