@@ -1,5 +1,6 @@
 import React from "react"
-import styled, { ThemeProvider } from "styled-components"
+import styled, { css, ThemeProvider } from "styled-components"
+import Konami from "react-konami"
 
 import GlobalStyles from "../styles/GlobalStyles"
 import { palette } from "../styles/palette"
@@ -14,10 +15,25 @@ import { themer } from "../styles/helpers"
 
 const StyledPage = styled.div`
   margin-top: ${themer("constants.navBarHeight")};
+  ${({ egged }) => {
+    if (!egged) return
+    return css`
+      @keyframes colorize {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      animation: colorize infinite forwards 2s linear;
+    `
+  }}
 `
 
 class Page extends React.Component {
   state = {
+    egged: false,
     showSideBar: false,
   }
 
@@ -26,9 +42,14 @@ class Page extends React.Component {
     this.setState({ showSideBar: !showSideBar })
   }
 
+  onKonami = () => {
+    this.setState({ egged: true })
+    alert("Do you taste the rainbow?")
+  }
+
   render() {
     const { accent, bgColor, children, bgDesign, seoProfile } = this.props
-    const { showSideBar } = this.state
+    const { egged, showSideBar } = this.state
     const theme = {
       accent:
         accent === "random"
@@ -41,11 +62,12 @@ class Page extends React.Component {
         <SEOBundle seoProfile={seoProfile} theme={theme} />
         <GlobalStyles theme={theme} />
         <ThemeProvider theme={theme}>
-          <StyledPage>
+          <StyledPage egged={egged}>
             {bgDesign !== "none" && (
               <ParticleBackground
                 design={bgDesign}
                 color={bgColor || theme.accent}
+                egged={egged}
               />
             )}
             <Nav
@@ -55,6 +77,7 @@ class Page extends React.Component {
             />
             {children}
             <Footer />
+            <Konami easterEgg={this.onKonami} />
           </StyledPage>
         </ThemeProvider>
       </>
