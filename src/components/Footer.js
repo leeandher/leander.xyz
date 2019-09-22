@@ -101,7 +101,7 @@ const Footer = ({ handleToggle, showSideBar }) => {
         </StyledAnchorLink>
       </IconWrapper>
       <p>
-        &copy; Copyright {copyrightYears}, <br />
+        &copy; Copyright {copyrightYears} <br />
         but don't worry, I'm{" "}
         <AnchorLink
           href="https://github.com/leeandher/leander.xyz"
