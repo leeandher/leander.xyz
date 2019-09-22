@@ -2,37 +2,47 @@
 
 ### Docker Compose
 
-The purpose o
+Just in case you don't know, Docker is a useful tool for building your software abstracted from the operating system, and ensuring it runs identically across the deployment scheme.
 
-- launch multiple containers that can coordinate with each other
-- frontend/backend/logging/etc
+_Docker Compose_ lets you coordinate the docker containers with one another and let you run multiple in tandem for launching a product in different modes (e.g. development, staging, etc.).
 
-Docker Stacks/Swarm
+The `docker-compose.yml` will launch your backend container, frontend container, and logging container all from one terminal, leading to much faster building/development!
 
-- equivalent to elastic load blaancing/kubernetees
-- container orchestration
-  - allows you to deploy docker containers onto multiple machines
-- uses the `deploy` key on the yaml file:
-  - replicas number
-  - and
+### Container Orchestration
 
-AWS
+Container orchestration is a broad term for allowing you to deploy docker containers on multiple different machines. It's essentially the concept employed in a bunch of other popular software items:
+
+- Docker Stacks/Swarm
+- AWS Elastic Load Balancing
+- Google's Kubernetes
+
+They take advantage of the `deploy` key on your `yaml` file, where you indicate the number of replica's you'd like to spin up. The request load will be mediated and distributed along these servers to accommodate for high traffic/spikes in activity.
+
+### Using Amazon Web Services
+
+Amazon Web Services is an extremely valuable resource for modern infrastructure engineers. It boils down to a few main points which AWS expertly sells you on:
 
 - resource liquidity
 - cross-region reliability
-- frontend
-  - s3 - serving static website
-  - cloudfront - static assets
-- backend
-  - run an EC2 has your server code on it
-  - load balancers to multiple code instances
+- immense service offerings
 
-Infra important stuff
+For anyone who's ever looked at making an AWS Suite account, you definitely know the last one holds true. In terms of deployment infrastructure, you have so many choices!
 
-- reliability
-- scalability
-- security
-- efficiency
+- Frontend
+  - _S3_ - to serve the static website
+  - _Cloudfront_ - to serve static assets
+- Backend
+  - _EC2_ - a server instance running with your code on it
+  - _EB_ - elastic load balancing, to provide dynamic replicas (through the aforementioned container orchestration)
 
-Link to slides: https://docs.google.com/presentation/d/1Uxq_PHNmyn7hMVZVXlRu9BKipeNiNBtxNoqqFkYwRU8/edit#slide=id.p
-jeff-an/infra-demo-htn-2019
+### Why Infrastructure?
+
+Infrastructure is super important across the board but it can be drastically simplified to just these key benefits in your application:
+
+- Reliability
+- Scalability
+- Security
+- Efficiency
+
+Link to the slides: [lgr.fyi/hMuK3](https://lgr.fyi/hMuK3)<br>
+Link to the demo repo: [lgr.fyi/TWKX7](https://lgr.fyi/TWKX7)
