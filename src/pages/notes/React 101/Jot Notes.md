@@ -1,7 +1,3 @@
-## Jot Notes
-
----
-
 Avoid binding process functions by instead declaring them as properties directly bound to the instance.
 
 ```javascript

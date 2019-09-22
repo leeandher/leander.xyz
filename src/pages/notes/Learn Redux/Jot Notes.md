@@ -1,6 +1,6 @@
 ## `React.cloneElement()` and `props.children`
 
-So quick refresher because I totally forgot about the existance of `props.children`. Essentially it allows you to plan where the contents of a component may go when rendered. Take a look:
+So quick refresher because I totally forgot about the existence of `props.children`. Essentially it allows you to plan where the contents of a component may go when rendered. Take a look:
 
 ```js
 // Header.js

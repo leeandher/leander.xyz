@@ -27,4 +27,6 @@ Twitter-CL is a helpful command-line tool built for some simple twitter function
 > tcl tweet "Hello World!"
 ```
 
-It was built entirely in Node.js with the help of TypeScript to keep things strict. It was built using the Open Command Line Interface Framework (OCLIF) developed by engineers at Heroku. It may not be the most built-out, robust thing in the world, but it's helpful AND useful to it's creator, so it does it's job!
+It was built entirely in Node.js with the help of TypeScript to keep things strict. It was built using the Open Command Line Interface Framework (OCLIF) developed by engineers at Heroku.
+
+It may not be the most built-out, robust thing in the world, but it's helpful AND useful to it's creator, so it does it's job!

@@ -7,8 +7,8 @@ description: >-
   The first React app I've ever built, emulating an online fish market. You can
   even login with Twitter/Github and start your own store!
 image: /assets/project__catch-of-the-day.png
-repo: 'https://github.com/leeandher/Catch-of-the-Day'
-link: 'https://catch-of-the-day.leander.xyz'
+repo: "https://github.com/leeandher/Catch-of-the-Day"
+link: "https://catch-of-the-day.leander.xyz"
 tech:
   - react
   - react-router
@@ -37,6 +37,6 @@ The app was written entirely in **_React_**, using the `create-react-app`, with 
 
 The URL routing was done through **_React Router_**, which allowed for the dynamic store names.
 
-**_Google's Firebase_** was used as the Database of Choice due to it's _syncState_ capabilities and live responses! This allows the 'owner'user to update the fish info to all other connected users right in front of their eyes!
+**_Google's Firebase_** was used as the Database of Choice due to it's _syncState_ capabilities and live responses! This allows the 'owner' user to update the fish info to all other connected users right in front of their eyes!
 
 The sign-in capabilities were also done through Firebase, which ensures proper **_OAuth Security_**.

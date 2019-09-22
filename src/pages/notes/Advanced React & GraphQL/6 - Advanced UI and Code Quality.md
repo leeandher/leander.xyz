@@ -59,11 +59,11 @@ render() {
 }
 ```
 
-What we've done here is provide a wrapper component which goes ahead and nests the render props into one component, which itself provides a new render prop containing keys we declare holding all of that HOC's payload. There are many other looks that this pattern can take depending on the library or implementation but the concept is essentially the same.
+What we've done here is provide a wrapper component which goes ahead and nests the render props into one component, which itself provides a new render prop containing keys we declare holding all of that HOCs payload. There are many other looks that this pattern can take depending on the library or implementation but the concept is essentially the same.
 
 ---
 
-**NOTE:** There is some wack errors/warnings that the HOC's might through using the above implementation since, they want a child to properly use the render props system. Even though it works without it, the suggested fix for `react-adopt` is the following:
+**NOTE:** There is some wack errors/warnings that the HOCs might through using the above implementation since, they want a child to properly use the render props system. Even though it works without it, the suggested fix for `react-adopt` is the following:
 
 ```js
 const Composed = adopt({
@@ -71,7 +71,7 @@ const Composed = adopt({
   toggleCart: ({ render }) => (
     <Mutation mutation={TOGGLE_CART_MUTATION}>{render}</Mutation>
   ),
-  localState: ({ render }) => <Query query={LOCAL_STATE_QUERY}>{render}</Query>
+  localState: ({ render }) => <Query query={LOCAL_STATE_QUERY}>{render}</Query>,
 })
 ```
 
@@ -205,7 +205,7 @@ The consumer is just a specific component, which will access the data set up fro
         onChange: e => {
           e.persist()
           this.handleSearch(e.target.value, client)
-        }
+        },
       })}
     />
   )}

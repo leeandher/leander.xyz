@@ -47,7 +47,3 @@ That's it, a cool, modern stack:
 - **P**risma
 
 What I'd like to call, the **GARP** stack <small>(that better catch on)</small>
-
-## Creds
-
-This app was made possible in large part due to the helpful tutorials over at [howtographql.com](https://howtographql.com). By following their backend tutorial, I was able to create the server, and endpoint. Their frontend tutorial recommend downloading the finished server, but since I had it, I was able to write 100% of the code for the app! While I did refactor, add, and style quite a bit extra, the tutorial was a great entrance into the world of GraphQL!

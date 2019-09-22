@@ -16,7 +16,7 @@ That being said, while it seems like you don't get as much freedom as the basic 
 
 ## Folder Structure
 
-Most simply React apps start with creating your DOM element to host the app, something like `<div id="root"></div>` or `<div id="app"></div>`, then creating a large HOC inevitably called `App.js` or `Main.js`, and admitedly, even CRA starts you down this path, but next has all of that setup out of the box. In fact it starts you up with an `_app.js` file as your application root component!
+Most simply React apps start with creating your DOM element to host the app, something like `<div id="root"></div>` or `<div id="app"></div>`, then creating a large HOC inevitably called `App.js` or `Main.js`, and admittedly, even CRA starts you down this path, but next has all of that setup out of the box. In fact it starts you up with an `_app.js` file as your application root component!
 
 Since you're developing an application in the 21st Century, you should use a proper folder structure. I recommend this one:
 

@@ -4,7 +4,7 @@ archive: false
 showcase: false
 slug: real-deployment
 title: Deploying to Digital Ocean (Vue + Node)!
-description: 'A short little post about my experience deploying to my app https://lgr.fyi!'
+description: "A short little post about my experience deploying to my app https://lgr.fyi!"
 image: /assets/blog__real_deployment.jpg
 tags:
   - node
@@ -15,6 +15,7 @@ tags:
   - typescript
 date: 2019-09-18T15:43:24.947Z
 ---
+
 So it may seem crazy but I really don't have much experience in the world of deployment. Development is a lot of fun, and can get easy when you get into a groove with things, but deployment has always been a confusing journey for me. I'm a _web developer_ not a _sys admin_ and even that label is grasping at straws.
 
 But enough self-deprecation, I actually have something to be proud of! My app works, its routes are correct and it's alive right now, running in the _**Digital Ocean**_.
@@ -23,13 +24,13 @@ How? IDK! I'm not an expert, but I'll just walk through the steps I took to get 
 
 ## Application Structure
 
-Honestly, this part is like, underrated. It's essential to understand how the app is going to work before actually trying to publish anything. The app I'm going to be talking about lives over at <https://lgr.fyi>. It's a simple URL shortener, which has a **Vue** app  on `/`, and runs an **Express** server to redirect on `/:suffix`, but can also handle 404s correctly.
+Honestly, this part is like, underrated. It's essential to understand how the app is going to work before actually trying to publish anything. The app I'm going to be talking about lives over at <https://lgr.fyi>. It's a simple URL shortener, which has a **Vue** app on `/`, and runs an **Express** server to redirect on `/:suffix`, but can also handle 404s correctly.
 
 I tried for way too long to figure out the application structure. First of all, you need to decide how interconnected the backend and frontend are going to be. In my case, I could connect them pretty well. I thought the Vue app needed its own routing and URL management and then I'd have to wrastle with modifying serving client routes and server routes but as it turns out, I could just serve the Vue app statically from Express, so I cut out all the complications:
 
 ```js
 // Serve the Vue App
-app.use('/', express.static(path.join(__dirname, '../client/dist')))
+app.use("/", express.static(path.join(__dirname, "../client/dist")))
 ```
 
 ## CORS
@@ -47,7 +48,7 @@ const res = await fetch(`${API_URL}/history`, {
   headers: { "Content-Type": "application/json" },
   method: "POST",
   body,
-});
+})
 ```
 
 ## Starting a Droplet
@@ -92,7 +93,7 @@ ns2.digitalocean.com
 ns3.digitalocean.com
 ```
 
-Great, now wait a while for your IP to propegate, and once that's done, be sure to add the proper routing records if you need (`A`, `AAAA`, `CNAME`, etc.). This is where you're going to connect your domain to the server you set up before:
+Great, now wait a while for your IP to propagate, and once that's done, be sure to add the proper routing records if you need (`A`, `AAAA`, `CNAME`, etc.). This is where you're going to connect your domain to the server you set up before:
 
 ```
 A - lgr.fyi - 12.345.678.90 - 3600

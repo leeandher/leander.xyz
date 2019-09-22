@@ -7,8 +7,8 @@ description: >-
   A desktop clone of instagram where I first tested the waters with... you
   guessed it... Redux. Total proof of concept, but learned a bunch!
 image: /assets/project__reduxstagram.png
-repo: 'https://github.com/leeandher/Reduxstagram'
-link: 'https://reduxstagram.leander.xyz'
+repo: "https://github.com/leeandher/Reduxstagram"
+link: "https://reduxstagram.leander.xyz"
 tech:
   - react
   - redux
@@ -40,7 +40,3 @@ The app itself is only uses a single `store`, with one `Provider` component, pas
 As for the URL, `react-router` is used in tandem with redux to allow for page-changing to log the `PAGE_CHANGE` action. It can also be tracked via the [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)!
 
 Another cool little bit is that this entire app is being watched by [Sentry](https://sentry.io) for error tracking! Pretty cool little addition.
-
-## Creds
-
-I was able to create this application through the help of a course, developed by [Wes Bos](https://wesbos.com) entitled [Learn Redux](https://learnredux.com). If you've stumbled upon this project, in attempt to learn redux, I highly recommend his courses and wish you the best of luck!

@@ -7,14 +7,14 @@ We do this with the help of a **Higher-Order Component (HOC)** which acts as a w
 ```js
 // withData.js
 
-import withApollo from 'next-with-apollo'
+import withApollo from "next-with-apollo"
 // Apollo-boost contains the Apollo Client with a lot of pre-configured best practices
 // https://www.apollographql.com/docs/react/essentials/get-started/#apollo-boost
-import ApolloClient from 'apollo-boost'
-import { endpoint } from '../config'
+import ApolloClient from "apollo-boost"
+import { endpoint } from "../config"
 ```
 
-The first thing to note is the imports at the top of the file. We need to import the Apollo Client HOC from `next-with-apollo` in order to send up server-side renderings. Our site should have it's queries fulfilled before initally loading the page, so that we don't get an empty page loaded to the user.
+The first thing to note is the imports at the top of the file. We need to import the Apollo Client HOC from `next-with-apollo` in order to send up server-side renderings. Our site should have it's queries fulfilled before initially loading the page, so that we don't get an empty page loaded to the user.
 
 The `withApollo` HOC, accepts our client creation function (which we will declare in a bit) and returns another HOC. The other import is the actual client, which will parse and translate the GraphQL queries/mutations we're making on the front-end. We import it from `apollo-boost` since it's a supplied package pre-configured with a bunch of useful stuff, you can check out [with this link](https://www.apollographql.com/docs/react/essentials/get-started/#apollo-boost).
 
@@ -27,16 +27,16 @@ Now we can go ahead and setup our client creation function:
 
 function createClient({ headers }) {
   return new ApolloClient({
-    uri: process.env.NODE_ENV === 'development' ? endpoint : endpoint,
+    uri: process.env.NODE_ENV === "development" ? endpoint : endpoint,
     request: operation => {
       operation.setContext({
         fetchOptions: {
           // Cookies are included in requests, so we know if the user is logged in
-          credentials: 'include'
+          credentials: "include",
         },
-        headers
+        headers,
       })
-    }
+    },
   })
 }
 
@@ -50,12 +50,12 @@ Now that we've set up our client as an HOC, we need to setup the provider to all
 ```js
 // _app.js
 
-import App, { Container } from 'next/app'
-import { ApolloProvider } from 'react-apollo'
+import App, { Container } from "next/app"
+import { ApolloProvider } from "react-apollo"
 
-import withData from '../lib/withData'
+import withData from "../lib/withData"
 
-import Page from '../components/Page'
+import Page from "../components/Page"
 
 class SickApp extends App {
   // This static method is fired to enable crawling every page and fire off queries server-side before the first render
@@ -133,7 +133,7 @@ In order to send/receive data from the backend with our newly set up client, all
 When using a query inside a React component, we conventionally write it at the top of the file, in all caps as follows:
 
 ```js
-import gql from 'graphql-tag'
+import gql from "graphql-tag"
 
 export const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
@@ -299,7 +299,7 @@ You can also see that you can set default values for your queries to fall-back o
 
 ## Cache Invalidation
 
-Cache Invalidation is the term used to refer to the ability to remove parts of the cache so that our applications's data stays accurate. Say for example, after you've implemented pagination, you want to add an item to the set (e.g. _CREATE_ITEM_ mutation). When you've done so, every query that fires off a request for those items must be updated (e.g. _ALL_ITEMS_ query), and its important to understand that **each paginated page has their own query, since the parameters are different**. Now that we've added a new item to page 1, every other page will have to modify it's cached response as well. There are a few ways to counter this:
+Cache Invalidation is the term used to refer to the ability to remove parts of the cache so that our application's data stays accurate. Say for example, after you've implemented pagination, you want to add an item to the set (e.g. _CREATE_ITEM_ mutation). When you've done so, every query that fires off a request for those items must be updated (e.g. _ALL_ITEMS_ query), and its important to understand that **each paginated page has their own query, since the parameters are different**. Now that we've added a new item to page 1, every other page will have to modify it's cached response as well. There are a few ways to counter this:
 
 1. Fetch Policy
 
@@ -312,7 +312,7 @@ Since we want it to first back to the network, we can add the `fetchPolicy="netw
   query={ALL_ITEMS_QUERY}
   variables={{
     skip: (page - 1) * PER_PAGE,
-    first: PER_PAGE
+    first: PER_PAGE,
   }}
   fetchPolicy="network-only"
 >
@@ -353,4 +353,4 @@ render() {
 
 This works great for smaller queries or applications, but unfortunately, if the query uses parameters, they must be specified in this declaration. You can programmatically declare all of them, sure, but then if you have hundreds of pages, that's hundreds of pages that the client has to resolve all at once.
 
-Unfortunately, there's no better way to handle cache invalidation in this scenario, since it's currently being worked on by the Apollo team. Oh, and I didn't even mention manually writing to and rewriting the cache as done above because that's not a recommmended solution to anyone encountering this problem.
+Unfortunately, there's no better way to handle cache invalidation in this scenario, since it's currently being worked on by the Apollo team. Oh, and I didn't even mention manually writing to and rewriting the cache as done above because that's not a recommended solution to anyone encountering this problem.

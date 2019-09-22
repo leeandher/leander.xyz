@@ -190,10 +190,12 @@ Implementing a password reset flow can be boiled down to just implementing a few
 ## Sending Mail
 
 There are really only a few parts to sending mail with Node.js:
-  - The templating strategy
-  - The mail servers
+
+- The templating strategy
+- The mail servers
 
 For development purposes, one of the easiest solutions is to go with a service such as [mailtrap.io](https://mailtrap.io/). They provide you with a demo mailbox to send mail from, and all you need to do is pass in credentials (which should be in an environment file) to your `NodeMailer` client (a helpful library for easily sending mail):
+
 ```js
 const transport = nodemailer.createTransport({
   host: process.env.MAIL_HOST // "smtp.mailtrap.io",
@@ -204,14 +206,16 @@ const transport = nodemailer.createTransport({
   }
 });
 ```
+
 Without implementing a templating strategy, you're left to just setting basic inline styles on `html` as a string, which works just fine. You can check out solutions such as [MJML](https://mjml.io/) for scalable alternative templating strategies.
 
 You can send basic emails as follows:
+
 ```js
 await transport.sendMail({
-  fromt: 'me@leander.xyz',
+  from: "me@leander.xyz",
   to: user.email,
-  subject: '🙌 Reset your Password! 🙌',
+  subject: "🙌 Reset your Password! 🙌",
   html: `
   <div className="email" style="
     border: 1px solid black;
@@ -224,7 +228,7 @@ await transport.sendMail({
     }/reset?resetToken=${resetToken}">Click here to reset your password!</a>
     </p>
     <p>✌, Leander Rodrigues</p>
-  </div>`
+  </div>`,
 })
 ```
 
@@ -270,11 +274,11 @@ async createItem(parent, args, ctx, info) {
   },
 ```
 
-This syntax will connect the the item to the user by using the `id` field as the relationship! Now, in queries, the following is possible to query: 
+This syntax will connect the the item to the user by using the `id` field as the relationship! Now, in queries, the following is possible to query:
 
 ```graphql
 query {
-  item(where: { id: { eq: "dajf9912l0asd" }}) {
+  item(where: { id: { eq: "dajf9912l0asd" } }) {
     id
     title
     user {
@@ -352,9 +356,9 @@ class SignIn extends Component {
 
 ```js
 // FOR ENUMS UDPATE
-  permissions: {
-    set: args.permissions
-  }
+permissions: {
+  set: args.permissions
+}
 ```
 
 passing GQL mutations to event handler functions

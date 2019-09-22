@@ -15,8 +15,8 @@ Specifically with Styled Components, one of the best parts about transitioning o
 Styled Components is based on React, and template literals. With these concepts combines, you get a library that can easily add styles to custom components, and standard HTML5 tags all at once. Checkout the following examples:
 
 ```js
-import styled from 'styled-components'
-import Header from './Header'
+import styled from "styled-components"
+import Header from "./Header"
 
 // Based on HTML5 tag
 const StyledTitle = styled.h1`
@@ -25,13 +25,13 @@ const StyledTitle = styled.h1`
 `
 // Based on Custom Component
 const StyledHeader = styled(Header)`
-  bordder: 3px solid blue;
+  border: 3px solid blue;
   font-size: 20px;
 `
 // Other cool stuff
 const StyledForm = styled.input.attrs({
-  name: 'username',
-  placeholder: 'stylish-boi'
+  name: "username",
+  placeholder: "stylish-boi",
 })`
   background: dimgrey;
   color: #fefefe;
@@ -90,7 +90,7 @@ export default Page
 If you ever need to style the entire application one way, the best tool for the job is the `injectGlobal` function that Styled Components comes with. Think of it like a `<style>` tag at the top of your app!
 
 ```js
-import styled, { injectGlobal } from 'styled-components'
+import styled, { injectGlobal } from "styled-components"
 
 injectGlobal`
   html {
@@ -117,8 +117,8 @@ To avoid this, Next.js gives us a handy tool known as the Document component. Th
 Literally copying the following into your `./pages/` directory, will yield a server-rendered and styled initial load:
 
 ```js
-import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, { Head, Main, NextScript } from "next/document"
+import { ServerStyleSheet } from "styled-components"
 
 export default class SickDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -154,12 +154,12 @@ Since React-Routed Applications change based on the URL, but don't ever actually
 
 Because of this, NProgress is a helpful little library that will give you that snazzy indicator at the top of your page to show exactly that, while making it look pretty neat at the same time.
 
-When using this library with Next.js, there are a few lifecycle methods you should hook into. Check out the following:
+When using this library with Next.js, there are a few life cycle methods you should hook into. Check out the following:
 
 ```js
-// In any persistant HOC file
-import Router from 'next/router'
-import NProgress from 'nprogress'
+// In any persistent HOC file
+import Router from "next/router"
+import NProgress from "nprogress"
 
 Router.onRouteChangeStart = () => {
   NProgress.start()
