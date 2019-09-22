@@ -11,9 +11,14 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
 
     // Styling
-    `gatsby-plugin-nprogress`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#FFFFFF`,
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-styled-components`,
-    // `gatsby-plugin-transition-link`,
 
     // Data
     {

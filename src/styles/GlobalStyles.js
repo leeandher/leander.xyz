@@ -53,41 +53,6 @@ const GlobalStyles = createGlobalStyle`
     background: ${themer("accent")};
     background: ${themer("accent")}88;
   }
-  /* &:focus {
-    outline: none;
-    box-shadow: 0 0 10px ${themer("accent")};
-  } */
-  #nprogress {
-    pointer-events: none;
-    .bar {
-      background: ${themer("shade.lightest")};
-      position: fixed;
-      z-index: 1031;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-    }
-    .peg {
-      display: block;
-      position: absolute;
-      right: 0px;
-      width: 100px;
-      height: 100%;
-      box-shadow: 0 0 10px ${themer("shade.lightest")}, 0 0 5px ${themer(
-  "shade.lightest"
-)};
-      opacity: 1.0;
-      transform: rotate(3deg) translate(0px, -4px);
-    }
-  }
-  .nprogress-custom-parent {
-    overflow: hidden;
-    position: relative;
-    #nprogress .bar {
-      position: absolute;
-    }
-  }
   .md-base {
     margin: 0 auto;
     padding: 1rem ;
