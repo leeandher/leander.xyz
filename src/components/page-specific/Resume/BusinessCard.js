@@ -30,7 +30,7 @@ const CardWrapper = styled.div`
     position: absolute;
     padding: 0.35rem 0.75rem;
     font-weight: 500;
-    z-index: 1000;
+    z-index: 2;
     transform: rotate(-15deg);
     bottom: -15px;
     right: 0;
@@ -49,7 +49,7 @@ const CardWrapper = styled.div`
   justify-items: center;
   align-items: center;
   ${media.tablet`
-  transform: scale(0.8);
+    transform: scale(0.8);
   `}
   ${media.phone`
     grid-template-columns: auto auto auto auto;
