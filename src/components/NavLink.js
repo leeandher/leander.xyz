@@ -32,8 +32,6 @@ const StyledLink = styled(Link)`
   font-size: 2rem;
   position: relative;
   color: ${themer("shade.lighter")};
-  border-left: 5px solid
-    ${({ theme, accent }) => (accent ? theme.color[accent] : theme.accent)};
   ${({ theme }) => theme.transition.default("color")};
   transform: translateX(-5px);
   &:first-child {
@@ -42,6 +40,8 @@ const StyledLink = styled(Link)`
   @media (max-width: 850px) {
     flex: 0;
     text-align: left;
+    border-left: 5px solid
+      ${({ theme, accent }) => (accent ? theme.color[accent] : theme.accent)};
     &:first-child {
       flex: 0;
     }
