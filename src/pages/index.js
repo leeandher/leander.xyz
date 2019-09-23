@@ -45,6 +45,7 @@ const Introduction = styled(Skewed)`
       }
     }
     pre {
+      overflow-x: auto;
       padding: 0.75rem;
       border-radius: 0.5rem;
       background: ${themer("shade.darkest")};
