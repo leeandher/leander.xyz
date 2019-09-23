@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import { themer } from "../styles/helpers"
 
@@ -32,13 +32,14 @@ const Bars = styled.div`
     height: 10%;
     margin: 15% auto;
     width: 80%;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &#bt {
       margin-top: 20%;
     }
   }
   ${({ showSideBar }) => {
     if (showSideBar) {
-      return `
+      return css`
         #bt {
           transform: translateY(250%) rotate(315deg);
         }
