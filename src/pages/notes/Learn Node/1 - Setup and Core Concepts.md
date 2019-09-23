@@ -2,7 +2,7 @@
 
 In order to set up a MongoDB database (or any sort of database for that matter), it's best practice to create a `.env` file, which contains the app's sensitive information
 
-```env
+```
 DATABASE=mongodb://user:pass@host.com:port/database
 PORT=7777
 MAP_KEY=456123
@@ -186,7 +186,7 @@ exports.myResponse = (req, res, next) => {
 router.get(
   "/example",
   exampleController.myMiddleWare,
-  exampleController.myResponse,
+  exampleController.myResponse
 )
 
 // When navigating to the route /example

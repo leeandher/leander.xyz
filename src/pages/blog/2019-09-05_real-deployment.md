@@ -57,7 +57,7 @@ So now that your app is done and working over the internet, you gotta get a DO D
 
 After your purchase, you'll have to SSH into the thing, and this part caused me some trouble. So you're going to have to do this entirely from command line. Copy your droplet's IP and run:
 
-```sh
+```shell
 $ ssh connect root@12.345.678.90
 ```
 
@@ -67,7 +67,7 @@ You'll be prompted for your password which you probably have in your email inbox
 
 You gotta go on DO, and manually edit your server's SSH config. So click the `Console` button when selecting the droplet and you'll already be logged in. After the window opens, run the following:
 
-```sh
+```shell
 $ sudo vi /etc/ssh/sshd_config
 ```
 
