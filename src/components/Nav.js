@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 
 import NavLink from "./NavLink"
@@ -11,7 +11,7 @@ import { themer } from "../styles/helpers"
 const StyledNav = styled.nav`
   display: flex;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   right: 0;
   left: 0;
@@ -24,13 +24,16 @@ const StyledNav = styled.nav`
     opacity: 0.9;
     color: red;
     top: 0;
+    border-left: 3px solid ${themer("shade.lighter")};
     bottom: 0;
     right: calc(100% - 200px);
     flex-flow: column;
     justify-content: flex-start;
+    transform: translateX(0%);
+    transition: transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
     ${({ showSideBar }) => {
       if (!showSideBar) {
-        return `
+        return css`
           transform: translateX(-100%);
           overflow: hidden;
         `

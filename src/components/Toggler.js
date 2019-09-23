@@ -13,7 +13,11 @@ const StyledToggler = styled.button`
   top: 15px;
   right: 15px;
   outline: 0;
+  z-index: 1000;
+  transform: skew(-6deg);
+  border: 2px solid ${themer("shade.darkest")};
   ${({ theme }) => theme.transition.default("all")};
+  background: ${themer("accent")};
   @media (max-width: 850px) {
     height: 50px;
     width: 50px;
@@ -24,7 +28,7 @@ const Bars = styled.div`
   width: 100%;
   ${({ theme }) => theme.transition.default("all")};
   div {
-    background: ${themer("shade.lighter")};
+    background: ${themer("shade.darkest")};
     height: 10%;
     margin: 15% auto;
     width: 80%;
