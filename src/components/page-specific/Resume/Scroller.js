@@ -36,35 +36,6 @@ const ScrollWrapper = styled.aside`
   }
 `
 
-const Scroller = () => (
-  <ScrollWrapper>
-    <div className="links">
-      <a className="page-link" href="#summary-of-qualifications">
-        Summary of Qualifications
-      </a>
-      <a className="page-link" href="#character-sheet">
-        Character Sheet
-      </a>
-      <a className="page-link" href="#work-experience">
-        Work Experience
-      </a>
-      <a className="page-link" href="#education">
-        Education
-      </a>
-      <a className="page-link" href="#project-showcase">
-        Project Showcase
-      </a>
-      <a className="page-link" href="#volunteer-experience">
-        Voluneer Experience
-      </a>
-      <a className="page-link" href="#achievements">
-        Acheivements
-      </a>
-      <a className="page-link" href="#weird-stuff">
-        Weird Stuff
-      </a>
-    </div>
-  </ScrollWrapper>
-)
+const Scroller = ({ children }) => <ScrollWrapper>{children}</ScrollWrapper>
 
 export default Scroller
