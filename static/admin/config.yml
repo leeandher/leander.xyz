@@ -204,7 +204,7 @@ collections:
               - { name: time, label: Date, widget: string }
               - { name: link, label: Link, widget: string }
               - { name: description, label: Description, widget: text }
-          - name: weird-stuff
-            label: Weird Stuff
+          - name: interests
+            label: Interests
             widget: list
-            field: { name: item, label: Stuff Content, widget: markdown }
+            field: { name: item, label: Item, widget: markdown }

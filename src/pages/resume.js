@@ -178,7 +178,6 @@ const Resume = ({ data }) => {
               ))}
             </div>
           </ResumeLayout>
-
           <ResumeLayout>
             <h2 className="title" id="project-showcase">
               Project Showcase
@@ -218,12 +217,12 @@ const Resume = ({ data }) => {
           </ResumeLayout>
 
           <ResumeLayout>
-            <h2 className="title" id="weird-stuff">
-              Weird Stuff
+            <h2 className="title" id="interests">
+              Interests
             </h2>
             <div className="content">
               <GenText>
-                {resume["weird-stuff"].map((item, i) => (
+                {resume.interests.map((item, i) => (
                   <EmojiBullet
                     key={i}
                     dangerouslySetInnerHTML={{ __html: marked(item) }}
