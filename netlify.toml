@@ -5,6 +5,10 @@
   command = "npm run build"
 
 # Branch-specific build context
+[context.bgcg]
+  base    = "subdomains/bgcg"
+  publish = "subdomains/bgcg/build"
+  command = "npm run build"
 [context.catch-of-the-day]
   base    = "subdomains/catch-of-the-day"
   publish = "subdomains/catch-of-the-day/build"
