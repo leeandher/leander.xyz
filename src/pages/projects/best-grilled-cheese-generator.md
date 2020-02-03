@@ -6,7 +6,7 @@ title: Best Grilled Cheese Generator
 description: >-
   This one is a dumb project that took a few hours from create-react-app to
   deployment. Super super dumb, I'd skip looking at this one.
-image: /assets/project__default.jpg
+image: /assets/project__bgcg.png
 repo: 'https://github.com/leeandher/bgcg/'
 link: 'https://bgcg.leander.xyz/'
 tech:
@@ -23,8 +23,6 @@ It's kinda my first time playing around with hooks, and I finally ended up using
 
 ![A conversation screenshot with Hashem telling me to "Make my computer make a Grilled Cheese"](/assets/asset__start_bgcg.png "the start of something mediocre")
 
-
-
 ## How It Came to Pass
 
-![]()
+![A screenshot of me sending the finished link to Hashem](/assets/asset__end_bgcg.png "the end of something mediocre")
