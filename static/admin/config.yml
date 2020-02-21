@@ -4,7 +4,7 @@ backend:
     - admin
     - editor
   repo: leeandher/leander.xyz
-  branch: dev
+  branch: live
   commit_messages:
     create: ✨ Create entry in {{collection}} collection - "{{slug}}"
     update: ✏️ Edit in {{collection}} collection - "{{slug}}"
