@@ -3,11 +3,11 @@
   "picks": [
     {
       "label": "Board Game",
-      "value": "Spirit Island"
+      "value": "Everdell"
     },
     {
       "label": "Podcast",
-      "value": "Reply All"
+      "value": "Everything is Alive"
     },
     {
       "label": "Horror Movie",
@@ -18,12 +18,12 @@
       "value": "Spiderman: Into the Spiderverse"
     },
     {
-      "label": "RPG Video Game",
-      "value": "Kingdom Hearts"
+      "label": "Recent Coop Game",
+      "value": "Terraria"
     },
     {
-      "label": "FPS-ish Video Game",
-      "value": "Dishonored"
+      "label": "Recent Solo Game",
+      "value": "Katana Zero"
     },
     {
       "label": "Mobile Game",
@@ -42,8 +42,8 @@
       "value": "🍣/🍕/🍔/🍜"
     },
     {
-      "label": "House",
-      "value": "Ravenclaw / Tyrell "
+      "label": "YT Channel",
+      "value": "Dave2D / CGP Grey"
     },
     {
       "label": "Emoji",
@@ -64,7 +64,7 @@
   ],
   "faqs": [
     {
-      "question": "\"What is this site built on?\"\"",
+      "question": "\"What is this site built on?\"",
       "answer": "Ahhhh a fellow web nerd I see! Well this bad boy was built in React on Gatsby.js, and deployed through Netlify and Github. Gotta keep up those **JAMStack** methodologies 👌. Styled Components, and _my beautiful design aesthetic_ are responsible for the UI, no library was good enough for me!"
     },
     {
