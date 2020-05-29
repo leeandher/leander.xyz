@@ -18,7 +18,7 @@ tech:
   - prop-types
 date: 2018-10-15T02:27:27.851Z
 ---
-EOL**: Just FYI, this project isn't being maintained anymore, so certain Firebase functionality probably won't work. The app can still be visited/explored but may not work as intended!
+**EOL:** Just FYI, this project isn't being maintained anymore, so certain Firebase functionality probably won't work. The app can still be visited/explored but may not work as intended!
 
 ---
 
@@ -36,10 +36,10 @@ When signed-in on a new store, you'll be able to make changes throughout the app
 
 ## How it works
 
-The app was written entirely in _**React**_, using the `create-react-app`, with the help of Webpack and Babel. Each component was crafted by hand, keeping in mind the best ES6 practices (destructuring, arrow functions, etc.) as well as some of the more practical stuff, such ass `CSSTransitionGroups` and `PropTypes`.
+The app was written entirely in **_React_**, using the `create-react-app`, with the help of Webpack and Babel. Each component was crafted by hand, keeping in mind the best ES6 practices (destructuring, arrow functions, etc.) as well as some of the more practical stuff, such ass `CSSTransitionGroups` and `PropTypes`.
 
-The URL routing was done through _**React Router**_, which allowed for the dynamic store names.
+The URL routing was done through **_React Router_**, which allowed for the dynamic store names.
 
-_**Google's Firebase**_ was used as the Database of Choice due to it's _syncState_ capabilities and live responses! This allows the 'owner' user to update the fish info to all other connected users right in front of their eyes!
+**_Google's Firebase_** was used as the Database of Choice due to it's _syncState_ capabilities and live responses! This allows the 'owner' user to update the fish info to all other connected users right in front of their eyes!
 
-The sign-in capabilities were also done through Firebase, which ensures proper _**OAuth Security**_.
+The sign-in capabilities were also done through Firebase, which ensures proper **_OAuth Security_**.
