@@ -17,13 +17,17 @@
   base    = ""
   publish = "public"
   command = "npm run build"
+[context.fyi]
+  base  = "subdomains/fyi"
+  publish = "subdomains/fyi/dist"
+  command = "npm run build"
 # [context.joke]
 #   base    = "subdomains/joke"
 #   publish = "subdomains/joke"
 #   command = ""
 # [context.old]
 #   base    = "subdomains/old"
-#   publish = "subdomains/old"unity
+#   publish = "subdomains/old"
 #   command = ""
 [context.md-prevuer]
   base    = "subdomains/md-prevuer"

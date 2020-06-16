@@ -36,7 +36,7 @@
         <span class="red">.</span>
       </p>
       <p>
-        <span>Maybe next time, you intreped internet explorer</span>
+        <span>Maybe next time, you intrepid internet explorer</span>
         <span class="red">.</span>
       </p>
     </div>
@@ -45,18 +45,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator"
 
 @Component({
   data() {
     return {
-      year: new Date().getFullYear()
-    };
-  }
+      year: new Date().getFullYear(),
+    }
+  },
 })
 class Description extends Vue {}
 
-export default Description;
+export default Description
 </script>
 
 <style scoped lang="scss">
