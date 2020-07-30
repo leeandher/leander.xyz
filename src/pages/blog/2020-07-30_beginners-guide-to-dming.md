@@ -5,9 +5,9 @@ showcase: true
 slug: beginners-guide-to-dming
 title: Beginner's Guide to DMing
 description: >-
-  Okay, I don't actually know what I'm talking about, but I just started playing
-  DnD 5e, and I want to talk about it. I .have a few tips, but mostly just some
-  thoughts on the game, and what I love about it (so far)
+  I'm sure a 'beginner's guide' indicates that have some sort of authority but
+  that's just silly. I don't actually know what I'm talking about, but I just
+  started playing DnD 5e, and I want to talk about it
 image: /assets/blog__becoming-a-dm.png
 tags:
   - games
