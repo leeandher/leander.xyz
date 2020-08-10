@@ -39,6 +39,8 @@ If you just wanna let me know where I messed up, send me an issue and I'll get t
 
 ## Dev Usage
 
+**Due to some issues with `sharp`, you'll likely run into issues if you're not using `node v10`**
+
 Launch the local site with:
 
 ```shell

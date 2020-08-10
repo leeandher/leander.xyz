@@ -182,7 +182,7 @@ To walk through this flow, we'll go through how you would add an item to our Sch
 
 - The `datamodel.prisma` file outlines the types that we're passing to prisma to generate CRUD operations for. There are a few new unique identifiers we need to add for prisma to make some helpful extra fields, as seen in the comments of this mockup:
 
-```grapqhl
+```graphql
 type User {
   id: ID! @id
   name: String!
