@@ -9,7 +9,7 @@ const MediaContent = styled.main`
   `}
   p {
     position: relative;
-    margin: 2.5rem 0;
+    margin: 1.5rem 0;
   }
   time {
     text-align: center;
@@ -38,18 +38,6 @@ const MediaContent = styled.main`
     text-align: center;
     font-style: italic;
     color: ${themer("shade.mid")};
-  }
-  li > p {
-    margin: 0;
-  }
-  li {
-    margin: 2.5rem;
-  }
-  blockquote {
-    background: ${themer("accent")}22;
-    border: 0 solid ${themer("accent")};
-    border-width: 0 0 0 0.5rem;
-    padding-left: 1.5rem;
   }
 `
 

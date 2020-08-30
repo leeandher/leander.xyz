@@ -47,7 +47,6 @@ const ContentWrapper = styled(MainWrapper)`
   hr {
     border: 1px solid ${themer("accent")};
   }
-
   code {
     position: relative;
     &:before {
@@ -55,9 +54,16 @@ const ContentWrapper = styled(MainWrapper)`
       background: ${themer("accent")};
       opacity: 0.2;
     }
-    padding: 0 0.5rem;
   }
-
+  li {
+    margin: 2.5rem;
+  }
+  blockquote {
+    background: ${themer("accent")}22;
+    border: 0 solid ${themer("accent")};
+    border-width: 0 0 0 0.5rem;
+    padding-left: 1.5rem;
+  }
   pre {
     border: 2px solid ${themer("accent")};
     padding: 1rem;

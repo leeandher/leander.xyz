@@ -29,7 +29,6 @@ const BlogPostTemplate = ({ data }) => {
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>
-          <MediaBanner src={image} alt={title} title={title} />
           <MediaPreContent>
             <h1>
               <span>{title}</span>
@@ -37,7 +36,7 @@ const BlogPostTemplate = ({ data }) => {
             <p>{description}</p>
             <time>{date}</time>
           </MediaPreContent>
-          <hr />
+          <MediaBanner src={image} alt={title} title={title} />
           <MediaContent dangerouslySetInnerHTML={{ __html: html }} />
           <MediaPostContent>
             {tags.map(tag => (

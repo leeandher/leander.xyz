@@ -4,17 +4,23 @@ import { themer } from "../../../styles/helpers"
 
 const BannerImage = styled.img`
   width: 100%;
-  height: 250px;
+  height: 450px;
   position: relative;
   object-fit: cover;
 `
 
 const BannerWrapper = styled.div`
-  margin: -10rem -2rem 0;
   position: relative;
+  margin: 1rem -2rem;
+  border: 0 solid ${themer("accent")};
+  border-top-width: 5px;
   &:after {
     ${themer("before")};
-    background: linear-gradient(transparent, ${themer("shade.lightest")});
+    background: linear-gradient(
+      transparent,
+      ${themer("shade.lightest")} 98%,
+      ${themer("shade.lightest")}
+    );
     z-index: 10;
   }
 `
