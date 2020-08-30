@@ -2,16 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import marked from "marked"
 
-import Page from "../components/Page"
-import MainWrapper from "../components/MainWrapper"
-import Button from "../components/Button"
-import Hero from "../components/Hero"
-import { Skewed } from "../components/PageSections"
+import Page from "../../components/Page"
+import MainWrapper from "../../components/MainWrapper"
+import Button from "../../components/Button"
+import Hero from "../../components/Hero"
+import { Skewed } from "../../components/PageSections"
 
-import { encode } from "../helpers"
-import { themer } from "../styles/helpers"
+import { encode } from "../../helpers"
+import { themer } from "../../styles/helpers"
 
-import contactData from "../data/contact.json"
+import contactData from "../../data/contact.json"
 
 const Form = styled.form`
   min-width: 280px;
@@ -29,44 +29,23 @@ const Form = styled.form`
     font-style: italic;
     display: block;
   }
-`
-
-const Input = styled.input`
-  padding: 1rem;
-  border: 2px solid ${themer("accent")};
-  margin: 1rem 0;
-  display: block;
-  font-family: inherit;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: ${themer("shade.darker")};
-  width: 100%;
-  &:hover,
-  &:focus,
-  &:active {
-    box-shadow: ${themer("accent")} 0 0 1rem inset;
-    outline: 0;
-  }
-`
-
-const TextArea = styled.textarea`
-  border: 0;
-  padding: 1rem;
-  border: 2px solid ${themer("accent")};
-  margin: 1rem 0;
-  display: block;
-  font-family: inherit;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: ${themer("shade.darker")};
-  width: 100%;
-  resize: vertical;
-  box-shadow: none;
-  &:hover,
-  &:focus,
-  &:active {
-    box-shadow: ${themer("accent")} 0 0 1rem inset;
-    outline: 0;
+  input,
+  textarea {
+    padding: 1rem;
+    border: 2px solid ${themer("accent")};
+    margin: 1rem 0;
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: ${themer("shade.darker")};
+    width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: ${themer("accent")} 0 0 1rem inset;
+      outline: 0;
+    }
   }
 `
 
@@ -131,11 +110,12 @@ class Contact extends React.Component {
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              action="/contact/success"
             >
-              <Input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="contact" />
               <label htmlFor="name">
                 Name:
-                <Input
+                <input
                   type="text"
                   name="name"
                   id="name"
@@ -145,7 +125,7 @@ class Contact extends React.Component {
               </label>
               <label htmlFor="email">
                 Email:
-                <Input
+                <input
                   type="email"
                   name="email"
                   id="email"
@@ -155,7 +135,7 @@ class Contact extends React.Component {
               </label>
               <label htmlFor="subject">
                 Subject:
-                <Input
+                <input
                   type="text"
                   name="subject"
                   id="subject"
@@ -165,7 +145,7 @@ class Contact extends React.Component {
               </label>
               <label htmlFor="message">
                 Message:
-                <TextArea
+                <textarea
                   name="message"
                   id="message"
                   rows="5"

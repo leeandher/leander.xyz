@@ -47,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
   }
   Link, button {
     user-select: none;
+    font-family: inherit;
   }
   mark,
   ::selection {

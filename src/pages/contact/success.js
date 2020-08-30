@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import Page from "../components/Page"
-import Button from "../components/Button"
+import Page from "../../components/Page"
+import Button from "../../components/Button"
 
-import { themer } from "../styles/helpers"
+import { themer } from "../../styles/helpers"
 
 const Header = styled.div`
   height: 100vh;
@@ -26,19 +26,19 @@ const StylishHome = styled(Button)`
   display: block;
   color: ${themer("shade.lightest")};
   font-size: 1.6rem;
-  font-weight: normal;
+  font-weight: bold;
 `
 
-const FourOhFour = () => {
+const Success = () => {
   return (
-    <Page accentKey="pink" bgDesign="mesh" seoProfile="404-page">
+    <Page accentKey="purple" bgDesign="mesh" seoProfile="404-page">
       <Header>
         <h1>
-          <code>
-            {/* eslint-disable */}
-            // TODO: <span>Make better 404 page</span>
-            {/* eslint-enable */}
-          </code>
+          <span>I'll get back to you</span>
+          <br />
+          ASAP<span>.</span>
+          <br />
+          <span>Probably.</span>
         </h1>
         <Link to="/">
           <StylishHome>Take me home</StylishHome>
@@ -48,4 +48,4 @@ const FourOhFour = () => {
   )
 }
 
-export default FourOhFour
+export default Success
