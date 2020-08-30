@@ -47,10 +47,6 @@ const OtherSection = styled(Skewed)`
   }
 `
 
-const StylishCarousel = styled(Carousel)`
-  margin: 3rem 0;
-`
-
 const StylishShowItem = styled(ShowItem)`
   background: ${themer("shade.lighter")};
   box-shadow: 0 1.5rem 1.5rem ${themer("shade.darkest")} inset;
@@ -91,7 +87,7 @@ const Projects = ({ data }) => {
           Another coding pun! The same projects as above, <br />
           but far less flashy presentation 😎👌
         </h3>
-        <StylishCarousel>
+        <Carousel>
           {projectProps
             .slice()
             .reverse()
@@ -106,7 +102,7 @@ const Projects = ({ data }) => {
                 />
               )
             })}
-        </StylishCarousel>
+        </Carousel>
       </QueueSection>
       <OtherSection skew="-4deg">
         <h2 className="title">Other Neat Stuff</h2>
