@@ -15,10 +15,9 @@
     "start": "npm run dev",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "echo \"//TODO: Add tests\"",
-    "lint": "eslint .",
+    "lint": "eslint src/**/*.js",
     "lint:check": "eslint --print-config . | eslint-config-prettier-check",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint src/**/*.js --fix"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",

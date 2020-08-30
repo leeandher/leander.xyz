@@ -93,7 +93,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Page accentKey="purple" bgDesign="mesh" seoProfile="contact-page">
+      <Page accentKey="pink" bgDesign="mesh" seoProfile="contact-page">
         <Hero expanding height="50vh">
           <h1>Reach Out</h1>
         </Hero>

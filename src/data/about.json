@@ -15,15 +15,15 @@
     },
     {
       "label": "Best Movie",
-      "value": "Spiderman: Into the Spiderverse"
+      "value": "Spider-Man: Into the Spiderverse"
     },
     {
       "label": "Recent Coop Game",
-      "value": "Terraria"
+      "value": "🐲 DnD 5e"
     },
     {
       "label": "Recent Solo Game",
-      "value": "Katana Zero"
+      "value": "Hollow Knight"
     },
     {
       "label": "Mobile Game",
@@ -42,24 +42,12 @@
       "value": "🍣/🍕/🍔/🍜"
     },
     {
-      "label": "YT Channel",
-      "value": "Dave2D / CGP Grey"
-    },
-    {
       "label": "Emoji",
       "value": "🔥"
     },
     {
       "label": "Animal",
       "value": "Dog"
-    },
-    {
-      "label": "Social Media",
-      "value": "Twitter"
-    },
-    {
-      "label": "UI Appearance",
-      "value": "Dark Mode (🌑)"
     }
   ],
   "faqs": [

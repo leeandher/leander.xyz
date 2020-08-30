@@ -114,28 +114,34 @@ const Home = ({ data }) => {
         </h3>
         <PanelWrapper>
           <QuoteCard
-            accentKey="orange"
+            accent="orange"
             preText="Got any"
             mainText="PROJECTS"
             to="/projects"
           />
           <QuoteCard
-            accentKey="yellow"
+            accent="yellow"
             preText="Show me some"
             mainText="BLOG POSTS"
             to="/blog"
           />
           <QuoteCard
-            accentKey="green"
+            accent="green"
             preText="I'd like to read your"
             mainText="NOTES"
             to="/notes"
           />
           <QuoteCard
-            accentKey="blue"
-            preText="I want to see"
-            mainText="EVERYTHING"
+            accent="blue"
+            preText="Lemme see some"
+            mainText="WORK STUFF"
             to="/resume"
+          />
+          <QuoteCard
+            accent="purple"
+            preText="I heard you have a"
+            mainText="PODCAST"
+            to="https://jumpcut.fm"
           />
         </PanelWrapper>
       </Director>
