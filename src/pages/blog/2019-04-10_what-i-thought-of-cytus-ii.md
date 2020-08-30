@@ -4,7 +4,7 @@ archive: false
 showcase: false
 slug: what-i-thought-of-cytus-ii
 title: What I Thought of 'Cytus II'
-description: 'I would recommend [it] to anyone with a few hours to kill, and a pulse.'
+description: "Unless you have something against japanese electronic/dance/jazz/rock music, You should probably buy and install Cytus immediately on your nearest mobile device. Even if it's not yours."
 image: /assets/blog__what-i-thought-of-cytus-ii.jpg
 tags:
   - gaming

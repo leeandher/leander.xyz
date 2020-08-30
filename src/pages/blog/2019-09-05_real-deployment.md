@@ -7,12 +7,8 @@ title: Deploying to Digital Ocean (Vue + Node)
 description: 'A short little post about my experience deploying to my app https://lgr.fyi!'
 image: /assets/blog__real_deployment.jpg
 tags:
-  - node
-  - aws
-  - digital-ocean
-  - vue
-  - full-stack
-  - typescript
+  - coding
+  - how-to
 date: 2019-09-18T15:43:24.947Z
 ---
 
