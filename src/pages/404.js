@@ -31,7 +31,7 @@ const StylishHome = styled(Button)`
 
 const Projects = () => {
   return (
-    <Page accent="pink" bgDesign="mesh" seoProfile="404-page">
+    <Page accentKey="pink" bgDesign="mesh" seoProfile="404-page">
       <Header>
         <h1>
           <code>

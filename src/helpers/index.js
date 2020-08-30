@@ -31,6 +31,18 @@ export const genRandProperty = (obj, shouldReturnValue) => {
 }
 
 /**
+ * Returns a computed property or value from an object passed to it, based on string length
+ * @param {string} str - The string whose length will compute the key
+ * @param {object} obj - The object whose properties will be selected from
+ * @param {boolean} shouldReturnValue - If true, return the random properties value
+ */
+export const genComputedProperty = (str, obj, shouldReturnValue) => {
+  const objProperties = Object.keys(obj)
+  const computedProperty = objProperties[str.length % objProperties.length]
+  return shouldReturnValue ? obj[computedProperty] : computedProperty
+}
+
+/**
  * Returns a URI of encoded data
  * @param {object} data - object of data to URI encode
  */

@@ -48,7 +48,7 @@ const Blog = ({ data }) => {
   )
 
   return (
-    <Page accent="yellow" bgDesign="bubbles" seoProfile="blog-page">
+    <Page accentKey="yellow" bgDesign="bubbles" seoProfile="blog-page">
       <Hero expanding height="50vh">
         <h1>The Archive</h1>
       </Hero>

@@ -47,7 +47,7 @@ const SuperWrapper = styled(MainWrapper)`
 
 const About = () => {
   return (
-    <Page accent="red" bgDesign="snow" seoProfile="about-page">
+    <Page accentKey="red" bgDesign="snow" seoProfile="about-page">
       <Hero expanding height="50vh">
         <h1>All About Me</h1>
       </Hero>

@@ -10,7 +10,7 @@ import Footer from "./Footer"
 import SEOBundle from "./SEOBundle"
 import ParticleBackground from "./ParticleBackground"
 
-import { genRandProperty } from "../helpers"
+import { genComputedProperty } from "../helpers"
 import { themer } from "../styles/helpers"
 
 const StyledPage = styled.div`
@@ -44,17 +44,17 @@ class Page extends React.Component {
 
   onKonami = () => {
     this.setState({ egged: true })
+    // eslint-disable-next-line no-alert
     alert("Do you taste the rainbow?")
   }
 
   render() {
-    const { accent, bgColor, children, bgDesign, seoProfile } = this.props
+    const { accentKey, bgColor, bgDesign, children, seoProfile } = this.props
     const { egged, showSideBar } = this.state
     const theme = {
-      accent:
-        accent === "random"
-          ? genRandProperty(palette.color, true)
-          : palette.color[accent],
+      accent: Object.prototype.hasOwnProperty.call(palette.color, accentKey)
+        ? palette.color[accentKey]
+        : genComputedProperty(accentKey, palette.color, true),
       ...palette,
     }
     return (

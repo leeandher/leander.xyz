@@ -42,6 +42,15 @@ const MediaContent = styled.main`
   li > p {
     margin: 0;
   }
+  li {
+    margin: 2.5rem;
+  }
+  blockquote {
+    background: ${themer("accent")}22;
+    border: 0 solid ${themer("accent")};
+    border-width: 0 0 0 0.5rem;
+    padding-left: 1.5rem;
+  }
 `
 
 export default MediaContent

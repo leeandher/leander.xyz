@@ -102,7 +102,7 @@ const Resume = ({ data }) => {
   const { allMarkdownRemark } = data
   const { nodes: showcaseItems } = allMarkdownRemark
   return (
-    <Page accent="blue" bgDesign="space" seoProfile="resume-page">
+    <Page accentKey="blue" bgDesign="space" seoProfile="resume-page">
       <Header>
         <MeCard />
       </Header>

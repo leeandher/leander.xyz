@@ -22,7 +22,11 @@ const NoteTemplate = ({ data, pageContext }) => {
   })
 
   return (
-    <Page accent="random" bgDesign="bubbles" seoProfile="notes-page">
+    <Page
+      accentKey={parentCategorySlug}
+      bgDesign="bubbles"
+      seoProfile="notes-page"
+    >
       <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/notes">&lt;-- /notes</InnerLink>

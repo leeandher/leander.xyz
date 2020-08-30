@@ -79,7 +79,7 @@ const Home = ({ data }) => {
   console.log(consoleLiteral)
   /* eslint-enable no-console */
   return (
-    <Page accent="teal" bgDesign="space" seoProfile="home-page">
+    <Page accentKey="teal" bgDesign="space" seoProfile="home-page">
       <MainHero expanding>
         <p>Hi there, My name is</p>
         <h1>
@@ -114,25 +114,25 @@ const Home = ({ data }) => {
         </h3>
         <PanelWrapper>
           <QuoteCard
-            accent="orange"
+            accentKey="orange"
             preText="Got any"
             mainText="PROJECTS"
             to="/projects"
           />
           <QuoteCard
-            accent="yellow"
+            accentKey="yellow"
             preText="Show me some"
             mainText="BLOG POSTS"
             to="/blog"
           />
           <QuoteCard
-            accent="green"
+            accentKey="green"
             preText="I'd like to read your"
             mainText="NOTES"
             to="/notes"
           />
           <QuoteCard
-            accent="blue"
+            accentKey="blue"
             preText="I want to see"
             mainText="EVERYTHING"
             to="/resume"
