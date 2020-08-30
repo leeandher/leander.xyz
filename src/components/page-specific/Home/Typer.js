@@ -42,13 +42,11 @@ const StyledTyping = styled(Typist).attrs({
 
 const Typer = ({ descriptors }) => (
   <StyledTyping>
-    {descriptors.map((str, i, arr) => (
-      <span key={str}>
-        {i === 1 ? <span>a bro</span> : ""}
-        {i === 1 ? <Typist.Backspace count={3} delay={550} /> : ""}
-        <span>{i === 1 ? str.slice(2) : str}</span>
+    {descriptors.map((descriptor, index, arr) => (
+      <span key={index}>
+        <span>{descriptor}</span>
         <Typist.Backspace
-          count={i === arr.length - 1 ? 4 : str.length}
+          count={index === arr.length - 1 ? 0 : descriptor.length}
           delay={2250}
         />
       </span>
