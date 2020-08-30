@@ -38,8 +38,10 @@ const ResumeLayout = styled.div`
   background: ${themer("shade.lightest")};
   grid-template-columns: 300px 1fr;
   max-width: ${themer("spacing.maxWidth")};
+  min-width: ${themer("spacing.minWidth")};
   border-radius: 0.5rem;
   margin: 2rem 0.75rem;
+  padding: 0.5rem 0;
   position: relative;
   &:after {
     ${themer("before")};
@@ -50,7 +52,9 @@ const ResumeLayout = styled.div`
   }
   ${media.tablet`
     display: block;
-    margin: 2rem 0.75rem;
+  `}
+  ${media.desktop`
+    margin: 2rem 1.5rem;
   `}
   .title {
     padding: ${themer("constants.navBarHeight")} 2.5rem;

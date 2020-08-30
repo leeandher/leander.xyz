@@ -2,7 +2,7 @@ import { css } from "styled-components"
 import get from "lodash/get"
 
 const sizes = {
-  desktop: 992,
+  desktop: 1030,
   tablet: 768,
   phone: 580,
 }

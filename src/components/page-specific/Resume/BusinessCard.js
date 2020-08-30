@@ -41,6 +41,7 @@ const CardWrapper = styled.div`
     `}
   }
   max-width: 650px;
+  min-width: ${themer("spacing.minWidth")};
   padding: 1.5rem;
   border-radius: 1.5rem;
   display: grid;
