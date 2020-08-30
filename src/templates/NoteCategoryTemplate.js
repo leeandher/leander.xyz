@@ -26,9 +26,10 @@ const PageLink = styled(Link)`
   margin: 1rem 2rem;
   position: relative;
   overflow: hidden;
-  ${({ theme }) => theme.transition.default("letter-spacing")};
+  ${({ theme }) => theme.transition.default("all")};
   &:before {
     ${themer("before")}
+    ${({ theme }) => theme.transition.default("all")};
     background: ${themer("accent")};
     top: 50%;
     transform: skew(-45deg) translate(90%);
@@ -41,6 +42,11 @@ const PageLink = styled(Link)`
   }
   &:hover, &:focus, &:active {
     letter-spacing: 2px;
+    &:before {
+      
+    top: 0%;
+    transform: skew(-45deg) translate(90%);
+    }
   }
 `
 

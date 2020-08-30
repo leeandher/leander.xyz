@@ -18,6 +18,13 @@ const CategoryLink = styled(Link)`
     opacity: 0.1;
     transition: all 0.2s ease;
   }
+  &:after {
+    ${themer("before")}
+    background: ${themer("accent")};
+    opacity: 0.3;
+    max-height: 0;
+    transition: all 0.2s ease;
+  }
   h3 {
     margin: 0;
     text-align: center;
@@ -25,19 +32,11 @@ const CategoryLink = styled(Link)`
   span {
     position: relative;
     font-weight: bold;
-    &:before {
-      ${themer("before")}
-      background: ${themer("accent")};
-      width: 110%;
-      height: 35%;
-      top: 60%;
-      transform: translateX(-5%);
-    }
   }
   
   &:hover {
-    &:before {
-      opacity: 0.3;
+    &:after {
+    max-height: 100%;
     }
     transform:  skew(-5deg) ;
   }

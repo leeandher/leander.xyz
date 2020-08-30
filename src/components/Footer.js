@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import {
   FaGithub,
-  FaStackOverflow,
-  FaTwitter,
   FaLinkedin,
+  FaSteam,
+  FaTwitter,
+  FaPodcast,
 } from "react-icons/fa"
 
 import { getCopyrightYearsFrom } from "../helpers"
@@ -15,11 +16,10 @@ import { themer } from "../styles/helpers"
 const StyledAnchorLink = styled(AnchorLink)`
   display: inline-block;
   padding: 1.75rem;
-  margin: 3rem;
+  margin: 2rem;
 `
 
 const StyledFooter = styled.footer`
-  min-height: 50vh;
   padding: 5rem;
   color: ${themer("shade.lighter")};
   display: flex;
@@ -72,12 +72,28 @@ const Footer = ({ handleToggle, showSideBar }) => {
       <h5>Find me online</h5>
       <IconWrapper>
         <StyledAnchorLink
-          href="https://www.linkedin.com/in/leander-rodrigues/"
+          href="https://twitter.com/LeeAndHer"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin />
+          <FaTwitter />
         </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://steamcommunity.com/id/LeeAndHer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaSteam />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://www.jumpcut.fm/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaPodcast />
+        </StyledAnchorLink>
+      </IconWrapper>
+      <IconWrapper>
         <StyledAnchorLink
           href="https://github.com/leeandher"
           target="_blank"
@@ -86,18 +102,11 @@ const Footer = ({ handleToggle, showSideBar }) => {
           <FaGithub />
         </StyledAnchorLink>
         <StyledAnchorLink
-          href="https://stackoverflow.com/users/story/10996907?view=Timeline"
+          href="https://www.linkedin.com/in/leander-rodrigues/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaStackOverflow />
-        </StyledAnchorLink>
-        <StyledAnchorLink
-          href="https://twitter.com/LeeAndHer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitter />
+          <FaLinkedin />
         </StyledAnchorLink>
       </IconWrapper>
       <p>
