@@ -28,7 +28,12 @@ const ProjectTemplate = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   const { date, title, repo, link, tech, image } = frontmatter
   return (
-    <Page accentKey={title} bgDesign="bubbles" seoProfile="projects-page">
+    <Page
+      accentKey={title}
+      bgDesign="bubbles"
+      seoProfile="projects-page"
+      seoTitle={title}
+    >
       <MediaHeader>
         <Button>
           <Link to="/projects" tabIndex="-1">
@@ -38,7 +43,6 @@ const ProjectTemplate = ({ data }) => {
       </MediaHeader>
       <MediaSection>
         <ContentWrapper>
-          <MediaBanner src={image} alt={title} title={title} />
           <MediaPreContent>
             <ProjectHeader>
               <h1>
@@ -61,7 +65,7 @@ const ProjectTemplate = ({ data }) => {
             </ProjectHeader>
             <time>Completed: {date}</time>
           </MediaPreContent>
-          <hr />
+          <MediaBanner src={image} alt={title} title={title} />
           <MediaContent dangerouslySetInnerHTML={{ __html: html }} />
           <MediaPostContent>
             {tech.map(techName => (

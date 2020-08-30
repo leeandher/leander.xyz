@@ -49,7 +49,16 @@ class Page extends React.Component {
   }
 
   render() {
-    const { accentKey, bgColor, bgDesign, children, seoProfile } = this.props
+    const {
+      accentKey,
+      bgColor,
+      bgDesign,
+      children,
+      seoImage,
+      seoProfile,
+      seoTitle,
+      seoDescription,
+    } = this.props
     const { egged, showSideBar } = this.state
     const theme = {
       accent: Object.prototype.hasOwnProperty.call(palette.color, accentKey)
@@ -59,7 +68,13 @@ class Page extends React.Component {
     }
     return (
       <>
-        <SEOBundle seoProfile={seoProfile} theme={theme} />
+        <SEOBundle
+          image={seoImage}
+          profile={seoProfile}
+          theme={theme}
+          title={seoTitle}
+          description={seoDescription}
+        />
         <GlobalStyles theme={theme} />
         <ThemeProvider theme={theme}>
           <StyledPage egged={egged}>

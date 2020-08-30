@@ -7,21 +7,27 @@ import seo from "../data/seo.json"
 
 const DEFAULT_IMAGE = "https://dev.leander.xyz/icons/logo-s.png"
 
-const SEOBundle = ({ image = DEFAULT_IMAGE, seoProfile, theme }) => {
-  if (!seo[seoProfile])
-    throw new Error(`SEO Profile "${seoProfile}" not found.`)
-  const { title, description } = seo[seoProfile]
+const SEOBundle = ({
+  description,
+  image = DEFAULT_IMAGE,
+  profile,
+  title,
+  theme,
+}) => {
+  const seoTitle = title != null ? title : seo[profile].title
+  const seoDescription =
+    description != null ? description : seo[profile].description
   return (
     <Location>
       {({ location: { href: url } }) => (
         <Helmet>
           {/* Generic */}
-          <title>{title}</title>
-          <meta name="description" content={description} />
+          <title>{seoTitle}</title>
+          <meta name="description" content={seoDescription} />
 
           {/* Open Graph */}
-          <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
+          <meta property="og:title" content={seoTitle} />
+          <meta property="og:description" content={seoDescription} />
           <meta property="og:site_name" content="leander.xyz" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content={url} />
@@ -33,8 +39,8 @@ const SEOBundle = ({ image = DEFAULT_IMAGE, seoProfile, theme }) => {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@leeandher" />
           <meta name="twitter:creator" content="@leeandher" />
-          <meta name="twitter:title" content={title} />
-          <meta name="twitter:description" content={description} />
+          <meta name="twitter:title" content={seoTitle} />
+          <meta name="twitter:description" content={seoDescription} />
           <meta name="twitter:image" content={image} />
           <meta name="twitter:image:alt" content="leander.xyz logo" />
 

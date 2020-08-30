@@ -17,12 +17,19 @@ import {
 } from "../components/page-specific/Media"
 
 const BlogPostTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { siteUrl } = data.site.siteMetadata
+  const { frontmatter, html } = data.markdownRemark
   const { date, description, image, tags, title } = frontmatter
 
   return (
-    <Page accentKey={title} bgDesign="bubbles" seoProfile="blog-page">
+    <Page
+      accentKey={title}
+      bgDesign="bubbles"
+      seoProfile="blog-page"
+      seoImage={siteUrl + image}
+      seoDescription={description}
+      seoTitle={title}
+    >
       <ScrollProgress />
       <MediaHeader>
         <InnerLink to="/blog">&lt;-- /blog</InnerLink>
@@ -53,6 +60,11 @@ export default BlogPostTemplate
 
 export const blogPostQuery = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(frontmatter: { slug: { eq: $slug }, type: { eq: "blog" } }) {
       html
       frontmatter {
