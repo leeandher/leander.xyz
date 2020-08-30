@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import {
   FaGithub,
@@ -57,7 +56,7 @@ const CardWrapper = styled.div`
     grid-template-rows: 250px repeat(5, auto);
   `}
 `
-const CardImage = styled(Img)`
+const CardImage = styled.img`
   max-width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -171,17 +170,10 @@ const CardAnchorLink = styled.a`
 `
 
 const BusinessCard = props => {
-  const { pdf, image } = useStaticQuery(graphql`
+  const { pdf } = useStaticQuery(graphql`
     query PROFILE_IMAGE_QUERY {
       pdf: file(extension: { eq: "pdf" }) {
         publicURL
-      }
-      image: file(relativePath: { eq: "profile_pic.jpg" }) {
-        childImageSharp {
-          fixed(width: 250) {
-            ...GatsbyImageSharpFixed
-          }
-        }
       }
     }
   `)
@@ -193,11 +185,11 @@ const BusinessCard = props => {
   }
   return (
     <CardWrapper {...props}>
-      <CardImage fixed={image.childImageSharp.fixed} />
+      <CardImage src="/assets/profile_pic.jpg" alt="me throwin' peace signs" />
       <CardHeader>
         Hi, I'm <span>Leander Rodrigues</span>
       </CardHeader>
-      <CardSubtitle>Full-stack Web Developer</CardSubtitle>
+      <CardSubtitle>Full-stack Software Engineer</CardSubtitle>
       <CardTitles>
         <p>Age</p>
         <p>Location</p>

@@ -197,7 +197,6 @@ const Resume = ({ data }) => {
               )}
             </Carousel>
           </ResumeLayout>
-
           <ResumeLayout>
             <h2 className="title" id="volunteer-experience">
               Volunteer Experience
@@ -208,7 +207,6 @@ const Resume = ({ data }) => {
               ))}
             </div>
           </ResumeLayout>
-
           <ResumeLayout>
             <h2 className="title" id="achievements">
               Achievements
@@ -219,7 +217,6 @@ const Resume = ({ data }) => {
               ))}
             </div>
           </ResumeLayout>
-
           <ResumeLayout>
             <h2 className="title" id="interests">
               Interests

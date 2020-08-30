@@ -28,8 +28,6 @@ module.exports = {
         path: `${__dirname}/static/assets`,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -71,34 +69,9 @@ module.exports = {
         ignore: [`**/*\.js`],
       },
     },
-
     // SEO
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Leander Rodrigues`,
-        short_name: `leander.xyz`,
-        start_url: `/`,
-        background_color: `#0F0F0F`,
-        theme_color: `#0f0f0f`,
-        display: `standalone`,
-        icon: `static/icons/logo.png`,
-        icons: [
-          {
-            src: `static/icons/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `static/icons/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
-    },
     `gatsby-plugin-offline`,
   ],
 }
