@@ -3,7 +3,6 @@ const slugify = require("slugify")
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  console.log("working?")
 
   // Create Notes and Note category pages
   const NoteTemplate = path.resolve("src/templates/NoteTemplate.js")
