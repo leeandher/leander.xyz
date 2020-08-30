@@ -1,31 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import { themer } from "../styles/helpers"
 
-/* v1: Grey borders
-const StyledLink = styled(Link)`
-  padding: ${themer('spacing.default')};
-  flex: 1;
-  box-shadow: 0 0 15px inset transparent;
-  font-weight: bold;
-  font-size: 2rem;
-  border: 1px solid ${themer('shade.darker')};
-  border: 0 1px 1px 0;
-  ${({ theme }) => theme.transition.default("all")};
-  &:hover {
-    box-shadow: 0 0 15px 4px inset
-      ${({ theme, accent }) => (accent ? theme.color[accent] : theme.accent)};
-  }
-  &:first-child {
-    flex: 2;
-    border-left: 0;
-  }
-`
-*/
-
-const StyledLink = styled(Link)`
+export const linkStyles = css`
   padding: ${themer("spacing.default")};
   flex: 1;
   font-weight: bold;
@@ -85,9 +64,22 @@ const StyledLink = styled(Link)`
     }
   }
 `
+const StyledLink = styled(Link)`
+  ${linkStyles}
+`
+const StyledAnchorLink = styled.a`
+  ${linkStyles}
+`
 
-const NavLink = ({ children, ...props }) => (
-  <StyledLink {...props}>{children}</StyledLink>
-)
+const NavLink = ({ children, isExternal, to, ...props }) =>
+  isExternal ? (
+    <StyledAnchorLink href={to} {...props}>
+      {children}
+    </StyledAnchorLink>
+  ) : (
+    <StyledLink to={to} {...props}>
+      {children}
+    </StyledLink>
+  )
 
 export default NavLink

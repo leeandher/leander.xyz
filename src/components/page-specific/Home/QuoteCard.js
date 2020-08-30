@@ -1,11 +1,11 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa"
 
 import { themer } from "../../../styles/helpers"
 
-const StyledPanel = styled(Link)`
+export const quoteCardStyles = css`
   flex: 1;
   text-align: center;
   min-width: 25rem;
@@ -45,14 +45,28 @@ const StyledPanel = styled(Link)`
     color: ${themer("shade.darker")};
   }
 `
+const StyledPanel = styled(Link)`
+  ${quoteCardStyles}
+`
+const StyledAnchorPanel = styled.a`
+  ${quoteCardStyles}
+`
 
-const QuoteCard = ({ accent, mainText, preText, to }) => (
-  <StyledPanel accent={accent} to={to}>
-    <FaQuoteLeft />
-    <p>{preText}</p>
-    <h4>{mainText}</h4>
-    <FaQuoteRight />
-  </StyledPanel>
-)
+const QuoteCard = ({ accent, isExternal, mainText, preText, to }) =>
+  isExternal ? (
+    <StyledAnchorPanel accent={accent} href={to}>
+      <FaQuoteLeft />
+      <p>{preText}</p>
+      <h4>{mainText}</h4>
+      <FaQuoteRight />
+    </StyledAnchorPanel>
+  ) : (
+    <StyledPanel accent={accent} to={to}>
+      <FaQuoteLeft />
+      <p>{preText}</p>
+      <h4>{mainText}</h4>
+      <FaQuoteRight />
+    </StyledPanel>
+  )
 
 export default QuoteCard

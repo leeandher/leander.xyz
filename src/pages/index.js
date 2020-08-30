@@ -139,6 +139,7 @@ const Home = ({ data }) => {
           />
           <QuoteCard
             accent="purple"
+            isExternal
             preText="I heard you have a"
             mainText="PODCAST"
             to="https://jumpcut.fm"
