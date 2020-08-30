@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 import { FaRegClock } from "react-icons/fa"
 
@@ -10,13 +10,16 @@ import { themer } from "../../../styles/helpers"
 const LinkWrapper = styled(Link)`
   display: block;
   background: ${themer("shade.lightest")};
+  ${({ image }) => image && css``}
   margin: 1.5rem;
   position: relative;
   border: 0.5rem solid ${themer("accent")};
-  flex: 1;
+  flex: 2 1;
   border-radius: 1.5rem;
+  height: fit-content;
   padding: 3rem;
   min-width: 320px;
+  max-width: 640px;
   overflow: hidden;
   transition: transform 0.2s ease-out;
   z-index: 0;
@@ -43,27 +46,37 @@ const LinkWrapper = styled(Link)`
     z-index: -1;
     max-width: 7rem;
     background: ${themer("accent")};
-    transition: max-width 0.4s ease;
+    transition: all 0.4s ease;
     transform: skewX(${({ skew }) => skew}deg);
   }
-  &:nth-child(3n)&:before {
+  &:nth-child(2n)&:before {
     transform: skew(12deg);
   }
   &:hover,
   &:focus,
   &:active {
     transform: scale(1.03);
+    img {
+      filter: grayscale(0) blur(2px);
+      opacity: 0.2;
+    }
     &:before {
       max-width: 2.5rem;
     }
   }
-  img {
+  .image-container {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 320px;
+    height: 100%;
+    width: 100%;
+  }
+  img {
+    position: absolute;
+    object-fit: cover;
+    transition: all 0.4s ease;
     z-index: -1;
-    filter: grayscale(1);
+    filter: grayscale(1) blur(6px);
     opacity: 0.1;
   }
 `
@@ -76,7 +89,7 @@ const LinkInfo = styled.div`
   .ttr {
     align-items: center;
     display: flex;
-    margin: 0 5rem;
+    margin-left: 3rem;
     svg {
       margin: 0 0.5rem;
       display: inline-block;
@@ -84,8 +97,11 @@ const LinkInfo = styled.div`
     p {
       display: inline-block;
       font-style: italic;
+      &:before {
+        content: "~";
+      }
       &:after {
-        content: " min read";
+        content: " min";
       }
     }
   }
@@ -108,6 +124,9 @@ const MediaLink = ({
 }) => {
   return (
     <LinkWrapper to={`/${type}/${slug}`} image={image}>
+      <div className="image-container">
+        <img src={image} alt={title} />
+      </div>
       <h2 className="title">{title}</h2>
       <LinkInfo>
         <time>{date}</time>

@@ -46,7 +46,6 @@ const Blog = ({ data }) => {
       return parseInt(yearStringB) - parseInt(yearStringA)
     }
   )
-
   return (
     <Page accentKey="yellow" bgDesign="bubbles" seoProfile="blog-page">
       <Hero expanding height="50vh">
@@ -67,6 +66,7 @@ const Blog = ({ data }) => {
                     <MediaLink
                       timeToRead={timeToRead}
                       key={blogPostsProps.slug}
+                      image={blogPostsProps.image}
                       {...blogPostsProps}
                     />
                   )
@@ -92,10 +92,11 @@ export const blogPostsQuery = graphql`
         timeToRead
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
+          description
+          image
           slug
           title
           type
-          description
           tags
         }
       }
