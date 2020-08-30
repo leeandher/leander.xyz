@@ -3,8 +3,8 @@ type: blog
 archive: false
 showcase: false
 slug: real-deployment
-title: Deploying to Digital Ocean (Vue + Node)!
-description: "A short little post about my experience deploying to my app https://lgr.fyi!"
+title: Deploying to Digital Ocean (Vue + Node)
+description: 'A short little post about my experience deploying to my app https://lgr.fyi!'
 image: /assets/blog__real_deployment.jpg
 tags:
   - node

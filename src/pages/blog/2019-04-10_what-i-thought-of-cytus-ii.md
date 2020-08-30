@@ -1,14 +1,14 @@
 ---
 type: blog
-archive: true
+archive: false
 showcase: false
 slug: what-i-thought-of-cytus-ii
-date: 2018-06-07T22:51:25.534Z
 title: What I Thought of 'Cytus II'
-description: "I would recommend [it] to anyone with a few hours to kill, and a pulse."
-image: /assets/blog__default.jpg
+description: 'I would recommend [it] to anyone with a few hours to kill, and a pulse.'
+image: /assets/blog__what-i-thought-of-cytus-ii.jpg
 tags:
   - gaming
+date: 2018-06-07T22:51:25.534Z
 ---
 
 I've been writing about how busy I've been for the past two weeks, but it seems I'm always able to squeeze in some gaming time regardless of my stress level. Some would say that's a bad habit, but let's be honest, it's not going anywhere.
