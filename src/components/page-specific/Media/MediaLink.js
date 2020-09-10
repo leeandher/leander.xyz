@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Link } from "gatsby"
 import { FaRegClock } from "react-icons/fa"
 
@@ -10,7 +10,6 @@ import { themer } from "../../../styles/helpers"
 const LinkWrapper = styled(Link)`
   display: block;
   background: ${themer("shade.lightest")};
-  ${({ image }) => image && css``}
   margin: 1.5rem;
   position: relative;
   border: 0.5rem solid ${themer("accent")};
@@ -114,7 +113,7 @@ const LinkInfo = styled.div`
 
 const MediaLink = ({
   date,
-  image,
+  // image,
   description,
   tags,
   title,
@@ -123,10 +122,12 @@ const MediaLink = ({
   slug,
 }) => {
   return (
-    <LinkWrapper to={`/${type}/${slug}`} image={image}>
-      <div className="image-container">
+    <LinkWrapper to={`/${type}/${slug}`}>
+      {/*
+        <div className="image-container">
         <img src={image} alt={title} />
-      </div>
+        </div>
+      */}
       <h2 className="title">{title}</h2>
       <LinkInfo>
         <time>{date}</time>

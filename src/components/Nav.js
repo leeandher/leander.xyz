@@ -69,7 +69,13 @@ const Nav = ({ accent, handleToggle, showSideBar }) => {
         <NavLink to="/resume" accent="blue">
           <span>Resume</span>
         </NavLink>
-        <NavLink to="https://jumpcut.fm" accent="purple" isExternal>
+        <NavLink
+          accent="purple"
+          isExternal
+          to="https://jumpcut.fm"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span>Podcast</span>
         </NavLink>
         <NavLink to="/contact" accent="pink">
