@@ -81,32 +81,26 @@ const LinkWrapper = styled(Link)`
 `
 
 const LinkInfo = styled.div`
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
   font-weight: 300;
   .ttr {
-    align-items: center;
     display: flex;
-    margin-left: 3rem;
+    align-items: center;
     svg {
-      margin: 0 0.5rem;
+      margin: 0.5rem 0;
       display: inline-block;
     }
-    p {
+    span {
       display: inline-block;
+      margin-left: 0.5rem;
       font-style: italic;
-      &:before {
-        content: "~";
-      }
       &:after {
-        content: " min";
+        content: " min read";
       }
     }
   }
   time {
     font-style: italic;
-    margin: 1rem 0;
     display: block;
   }
 `
@@ -133,7 +127,7 @@ const MediaLink = ({
         <time>{date}</time>
         <span className="ttr">
           <FaRegClock />
-          <p>{timeToRead}</p>
+          <span>{timeToRead}</span>
         </span>
       </LinkInfo>
       <p className="description">{description}</p>
