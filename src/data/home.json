@@ -1,14 +1,13 @@
 {
   "descriptors": [
-    "a total nerd",
-    "kinda okay at coding or whatever",
-    "the humblest person around",
+    "5 foot 8 on a good day",
+    "an aspiring plant enthusiast",
     "a dungeon master",
-    "always hungry, but always full",
-    "kinda funny sometimes",
-    "the best friend of dogs around the world",
-    "a listener to too many podcasts",
+    "far too into mech keyboards",
+    "silver 2 (probably)",
+    "larger than a breadbox",
+    "professional button pusher",
     "running out of descriptors"
   ],
-  "self-description": "Hey there, my name is in that big colourful box up there and welcome to my site!\n\nYou've found my <mark>little corner of the internet</mark>! I'm a 21 year old programming dork based out of Toronto, and I'm currently going to school at the University of Waterloo. I like to build cool stuff, learn how to build cool stuff, and work at jobs where I get to build cool stuff. \n\nHere's me at a glance:\n\n```js\nJSON.stringify(Leander)\n```\n\n```js\n{\n  name: \"Leander Rodrigues\",\n  age: 22,\n  school: \"University of Waterloo\",\n  program: {\n    spec: \"Nanotechnology\",\n    faculty: \"Engineering\"\n  },\n  location: \"Toronto, Canada\",\n  gradYear: 2021,\n  isAvailableForHire: false\n}\n```\n\nI don't exactly have a *normal* background in programming, but that's the <s>problem</s> best part about being self-taught, you gotta learn new things **c o n s t a n t l y**.\nAt the moment, I'm super into web development, but I've worked on game development (Unity) and mobile development (iOS/Android) at some previous co-op jobs! \n\nAs for this fancy, schmancy site, I [write some things](https://www.leander.xyz/blog), [take some notes](https://www.leander.xyz/notes), and sometimes [build stuff](https://www.leander.xyz/projects). If you like what you see, and decide I've passed the first gauntlet, check out [my digi-resume](https://www.leander.xyz/resume) or [shoot me a message](https://www.leander.xyz/contact) and I'll get back to you ASAP!"
+  "self-description": "Hey there web crawler, welcome to my site. It is supposed to be half-portfolio, half-personal outlet but honestly right now it's more like a neon LinkedIn page. Depending on what you're after, you can find some projects that I've built, notes from outdated courses, or maybe even a joke or two. Eventually I'll get consistent with my blog posts, but in the mean time you can find my socials on the footer.\n\nSo anyway, welcome to my <mark>little corner of the internet</mark>. I'm a Software Engineer from Toronto(-ish), but working full time in San Francisco. At work or not, I like building things, and websites are a pretty lit place to keep and share those things. Hopefully some of the stuff here gives you a good look at the guy hiding behind the fancy CSS. Quick run down:\n\n```javascript\n{\n  name: \"Leander Rodrigues\",\n  edu: {\n    school: \"University of Waterloo\",\n    program: \"Nanotechnology Engineer\",\n    reason: \"thought science was neat\",\n    'but why do you code now': \"because labs broke me\",\n  },\n  location: \"San Francisco, CA (probably)\",\n  isAvailableForHire: false,\n  isAvailableForFriendshipAndChats: true, // <3\n}\n```\n\nYeah so I didn't go to school for *Computer Science* like the rest of the UW alumni in the Bay Area but I see that as an absolute <s>mistake</s> win. Learning things online is pretty nice, and surprisingly easy. But honestly this is what I meant with how this site kinda feels like a LinkedIn at times. \n\nIt's _my_ site, I wanna talk about **me**. What's the point of having a site if not to stroke your own ego with snide comments and self-deprecating humour. If I send interesting, or you're future me, re-reading this later to see what past me though was 'representative' of his entire being, [check out my about me page](https://leander.xyz/about).\n\nAs for the rest of this fancy site, I [write some things](https://leander.xyz/blog), [take some notes](https://leander.xyz/notes), and sometimes [build stuff](https://leander.xyz/projects). If you like what you see, and decide I've passed the first gauntlet, check out [my digi-resume](https://www.leander.xyz/resume) or [shoot me a message](https://leander.xyz/contact) and I'll get back to you ASAP (maybe)!"
 }
