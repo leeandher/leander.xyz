@@ -1,75 +1,59 @@
 {
-  "helloText": "This page is supposed to be more **_personal_** and **_intimate_** than the other ones, and where I get _nice and close_ to you to tell you what kind of _**b o a r d g a m e s**_ I like to play and other saucy details.\n\nThe TL;DR is that I'm just a normal UW Engineering student but with more of a focus on doing my own thing than doing what my program tells me to. I code websites/apps for fun, play lots of board games, spend way too much money on food, and often just sit around listening to podcasts.\n\nI would describe myself as a _**tech enthusiast**_ if it didn't mean that I'd sound like a douche. I keep up with the latest releases in that world too, from hardware (laptops, phones, parts) to software (operating system updates, new features, etc.). My current setup is pretty sick if I do say so myself: _Razer Blade 15 2018 - GTX 1070 MQ, 512 SSD, i7-8750H._\n\nI also watch a lot of TV/Movies, generally whatever is coming out or popular on Netflix. My tastes are kinda wack, but my favourite genres are **thriller**, **horror**, and **action**. I'm totally open to suggestions so hit me up if you got anything you think I'd like.\n\n_Anyway, I've spent way too long writing about me that I've taken away from the rest of this page!_",
+  "helloText": "This page is supposed to be more **_personal_** and **_intimate_** than the other ones, and where I get _nice and close_ to you to tell you what kind of _**b o a r d g a m e s**_ I like to play and other saucy details. Allow me to publicly talk about myself without an 140 character limit.\n\nI think it's kind of obvious that I enjoy coding/working on software (seeing as this site exists), but that's pretty surface level. Please don't perceive me as 'just a coder', I am much worse than that. If it's a nerdy hobby I'm probably invested in it. I play games poorly (board and video), I listen (and forget) to a bunch of podcasts, I follow tech/software news, and I build mechanical keyboards because pretty rectangles. \n\nIn a shitty attempt to diversify my interests, I've been leeching off of my friends; stealing their hobbies a fair bit. Recently (Q4 2021), I've been getting into stationary (pretty stickers and paper), fountain pens (though my writing is still pretty poor), and journaling (though it's like once a month). Another one has been 🌱. My track record for _alive_ plants isn't great, but It's getting better with time (I think, they grow pretty slow). I will call it a success when my ivy grows taller than me.\n\nI wish there was a term to say that you're 'into movies/tv' without saying things like 'fanatic', 'buff' or 'enthusiast'. Maybe other people know how to deliver those lines, but I KNOW I would come across douchey if I introduced myself as a 'movie buff'. Plus, if I even vaguely reference [my movie podcast](https://jumpcut.fm), I may as well tattoo \\\"my opinion means shit\\\" on my forehead. \n\nAll of this lead-in was to say that I don't really have 'refined' tastes or an artistic eye. I unironically love the _Fast & Furious movies_ lol. In general though, I'd say my top genres for films are horror/animation/sci-fi. If you got any recs, feel free to hmu.",
   "picks": [
     {
-      "label": "Board Game",
-      "value": "Everdell"
+      "label": "movie",
+      "value": "into the spiderverse 🕸"
     },
     {
-      "label": "Podcast",
-      "value": "Everything is Alive"
+      "label": "show",
+      "value": "arcane s1 🔮"
     },
     {
-      "label": "Horror Movie",
-      "value": "Midsommar"
+      "label": "podcast",
+      "value": "my own lol 🎙"
     },
     {
-      "label": "Best Movie",
-      "value": "Spider-Man: Into the Spiderverse"
+      "label": "video game",
+      "value": "hollow knight 🐛"
     },
     {
-      "label": "Recent Coop Game",
-      "value": "🐲 DnD 5e"
+      "label": "board game",
+      "value": "everdell 🐁"
     },
     {
-      "label": "Recent Solo Game",
-      "value": "Hollow Knight"
+      "label": "keyboard",
+      "value": "my modded k2 ⌨️"
     },
     {
-      "label": "Mobile Game",
-      "value": "Cytus II"
+      "label": "food",
+      "value": "free 😋"
     },
     {
-      "label": "Programming Language",
-      "value": "JavaScript"
+      "label": "emoji",
+      "value": "💞"
     },
     {
-      "label": "Editor",
-      "value": "VS Code"
-    },
-    {
-      "label": "Food",
-      "value": "🍣/🍕/🍔/🍜"
-    },
-    {
-      "label": "Emoji",
-      "value": "🔥"
-    },
-    {
-      "label": "Animal",
-      "value": "Dog"
+      "label": "friend",
+      "value": "u 👋"
     }
   ],
   "faqs": [
     {
-      "question": "\"What is this site built on?\"",
-      "answer": "Ahhhh a fellow web nerd I see! Well this bad boy was built in React on Gatsby.js, and deployed through Netlify and Github. Gotta keep up those **JAMStack** methodologies 👌. Styled Components, and _my beautiful design aesthetic_ are responsible for the UI, no library was good enough for me!"
+      "question": "\"How did you make this site?\"",
+      "answer": "Well it's on Github, so you can actually take a look yourself if you want to. It's really just an old Gatsby site and Netlify CMS on the backend. I use Netlify with Github for deployment and that works well enough for me.\n\nThe most attractive parts of the site are really just external libraries implemented in a way I found cute, and a shit ton of CSS on random components. \"Anyone can wear the mask, you can wear the mask.\" - miles morales, spiderverse"
     },
     {
-      "question": "\"What's your coding setup?\"",
-      "answer": "In terms of hardware, I tend to use Windows laptops, mainly because nothing has provoked me to boot in Linux just yet, and Macs are 💲💸💰. I personally believe it's torture to write code without **at least two monitors**, but that may be a hot take. As for my editor, I'm not nearly cool enough to have any Vim scripts so I tend to stick to **VS Code**. I have way too many extensions and custom settings to list off so I'm just going to direct you to my [.config repository](https://github.com/leeandher/.config)."
+      "question": "\"What makes a good movie in your eyes?\"",
+      "answer": "If the world and characters are consistent and well-realized, I will usually enjoy the movie. Of course there needs to be an interesting conflict as well, but I find it extremely rewarding when characters are more gray, than just plain black and white. Motivations and shit I guess.\n\nThat, and a kickass soundtrack or art style. If you are going to be unique, don't half ass it. Media is a form of expression and I'd rather see a punchy, risky choice in your film/show than forgetful generic choices that don't ruffle feathers. Wes Anderson is one of my favs for that reason. Edgar Wright as well. Love my some bomb soundtracks."
     },
     {
-      "question": "\"What's the most rewarding personal project you've worked on?\"",
-      "answer": "I think it's a tossup between **Twitter CL** and **Conway**. Even though the former is still a work-in-progress, I think they're both visually impressive when turned on. Twitter CL's ability to stream tweets containing `lit` directly to your terminal feels exciting, while Conway's mock evolution and _dark mode_ are nice to zone out and watch."
+      "question": "\"How much have you spent on mechanical keyboards?\"",
+      "answer": "Why would I ever answer that? I'm sure you would like to know a number but I can assure you that I do Not. Whatever it is, I can safely assume it is 'Too Much'."
     },
     {
-      "question": "\"What's the most challenging personal project you've worked on?\"",
-      "answer": "That one has definitely got to be **lgr.fyi**, my personal URL shortener. The logic behind the shortening and redirecting wasn't all that challenging, but navigating the minefield that is AWS Instances and Load Balances to deploy both the frontend and backend was painful. Eventually I got it all up and running, only to now decide I need to completely redo my hosting situation since AWS is expensive for 24/7 instances past the free tier."
-    },
-    {
-      "question": "\"You really seem to like coding, why stay in Nanotechnology Engineering?\"",
-      "answer": "I think that it's really interesting! It's definitely a somewhat masochistic degree, and it's not a discipline I see myself starting a career in, but I still think that the content can be pretty cool. I re-discovered programming late January 2018, and so in hindsight, I might've taken a CS or ECE degree, but I like exploring the development world aimlessly, and I couldn't do that with a syllabus breathing down my neck."
+      "question": "\"Can we hang?\"",
+      "answer": "if ur chill, ya y not"
     }
   ]
 }
