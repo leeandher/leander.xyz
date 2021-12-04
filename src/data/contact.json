@@ -1,9 +1,9 @@
 {
-  "hit-me-up": "Hey there! Want to send me a message? Well just fill out this handy dandy form and I'll get back to you ASAP. Go on! I don't bite! I've never bitten anyone that didn't deserve it! 👌👌\n\nIf you just want to know a little bit more about me, check out the [/about](https://www.leander.xyz/about) page, where I list off a few of my 🔥 picks and answer a few FAQs (which I wrote myself, so they're like fake FAQs but it's cool).\n\nOn the off chance you're impressed by all this and want to know more about me career-wise, check out the [/resume](https://www.leander.xyz/resume) page. I think it's pretty neat, and you can pretty much get the TL;DR of my life, along with a PDF version for you to file away under _'if we get desperate'_.\n\nLooking forward to hearing from you!",
+  "hit-me-up": "hi there 👋! Fill out the form if you want to send me a message. You can also find my socials in the site footer if that's more your thing. I don't get all that many messages here though, so I will definitely read it, though idk when you can expect a reply. I mean if you think about this, present me is writing this message, but it's up to future me to abide by its promises. And future me is kind of shitty at that. \n\nI will try go get him to do his best though. You probably deserve a reply, forms are a lot of work to fill out! And this isn't one of those fancy credit card forms with a password manager that just auto complete, you gotta fill the whole thing out. Like what do you even enter for the subject? That field always trips me up when I'm filling out these sorts of forms, though that's usually for customer service. Those ones are at least pretty intuitive; \"My product is broken\" or \"Give me refund\", usually work great.\n\nOn the off chance you're reaching out with something career-wise, check out the [/resume](https://leander.xyz/resume) page. I think it's pretty neat, and you can pretty much get the TL;DR of my life, along with a PDF version for you to file away  somewhere. We can hope it's up to date, but present me is pretty lazy, hopefully future me get's his act together.\n\nAnyway, if you read all this, I hope you have a nice day. Looking forward to hearing from you!",
   "placeholders": {
-    "name": "Edgar Wright",
-    "email": "EdWright@gmail.com",
-    "subject": "You've been invited to a screening of Baby Driver 2!",
-    "message": "Just send a few small payments of..."
+    "name": "-- who r u --",
+    "email": "-- how do i get back to u (e.g. name@email.com) -- ",
+    "subject": "-- here is the subject of the email i will (try to) reply to --",
+    "message": "-- here is where you enter your love letter and/or email scam -- "
   }
 }
