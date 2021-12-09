@@ -10,7 +10,11 @@
     },
     {
       "emoji": "🤝",
-      "text": "Experience with startups, corporations, and volunteer-teams; practicing agile development, and shipping code weekly"
+      "text": "Experience with startups, corporations, and volunteer-teams; practising agile development, and shipping code consistently"
+    },
+    {
+      "emoji": "👋",
+      "text": "Genuinely interested in having a conversation with you!"
     }
   ],
   "character-sheet": [
@@ -20,6 +24,7 @@
         "HTML5",
         "CSS3",
         "JavaScript",
+        "TypeScript",
         "React (like a LOT of React)",
         "Getting Dressed in the Morning",
         "Vue",
@@ -35,29 +40,27 @@
       "attributes": [
         "Node.js",
         "Express",
-        "Next",
-        "TypeScript",
         "Prisma",
-        "NetlifyCMS",
+        "Django",
         "Reverse Parking",
-        "GraphQL / REST API Development",
+        "GraphQL / REST APIs",
         "AWS Suite (S3 / DynamoDB / EB / EC2 / SES / SNS)",
-        "JWTs",
+        "JWTs + OAuth",
         "Firebase",
-        "Digital Ocean"
+        "Digital Ocean",
+        "Celery",
+        "Redis"
       ]
     },
     {
       "category": "Cool Stuff",
       "attributes": [
         "React Native",
-        "iOS/Android Deployment",
-        "Standalone Apps (Electron)",
         "Java",
         "Python",
         "Ice Cubes",
         "Site Deployment",
-        "Unity 3D with C#",
+        "Minecraft Development",
         "CLI Development",
         "Gitmoji"
       ]
@@ -67,14 +70,11 @@
       "attributes": [
         "Git",
         "CircleCI",
-        "Jest / Mocha / Jasmine",
-        "Prettier / ESLint / TSLint",
+        "GH Actions",
+        "RTS / Jest / Enzyme",
+        "Pytest",
         "Docker",
-        "Zsh / Bash / Cmd",
         "Screwdrivers",
-        "Babel / Webpack / Gulp",
-        "Appium / Selenium",
-        "NPM / Yarn",
         "Netlify"
       ]
     },
@@ -82,16 +82,16 @@
       "category": "Concepts",
       "attributes": [
         "MVC",
+        "TDD",
         "UI/UX",
-        "Accessbility",
+        "Accessibility",
         "CI/CD",
         "Data Visualization",
-        "Server-side Rendering",
+        "SSR",
         "Code-splitting",
         "A sense of humour",
         "Design Thinking",
-        "Dev Ops",
-        "Agile Software Development"
+        "Agile"
       ]
     }
   ],
@@ -171,9 +171,9 @@
     {
       "title": "Nanotechnology Engineering",
       "location": "University of Waterloo",
-      "time": "Sep 2016 - Present",
+      "time": "Sep 2016 - Apr 2021",
       "link": "https://uwaterloo.ca/",
-      "description": "Currently a candidate for a B.A.Sc. Honors Nanotechnology Engineering at the University of Waterloo. My program gives me the opportunity to work with/study the latest and greatest in tech, research and science, while learning the fundamentals of engineering. "
+      "description": "Received a B.A.Sc. Honours Nanotechnology Engineering at the University of Waterloo. My program gives me the opportunity to work with/study the latest and greatest in tech, research and science, while learning the fundamentals of engineering. Pretty cool if you ask me. Self-taught (unless online courses count) dev stuff tho. "
     },
     {
       "title": "Fullstack Advanced React & GraphQL",
