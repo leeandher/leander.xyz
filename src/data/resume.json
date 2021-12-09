@@ -98,6 +98,35 @@
   "work-experience": [
     {
       "title": "Software Engineer",
+      "location": "San Francisco, CA",
+      "time": "Aug 2021 - Present",
+      "company": "Sentry",
+      "link": "https://sentry.io",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Python",
+        "Django",
+        "API Development",
+        "Open-Source"
+      ],
+      "bullets": [
+        {
+          "emoji": "♻️",
+          "text": "Connect third-party services with our product to integrate more closely into developer workflows"
+        },
+        {
+          "emoji": "🗺",
+          "text": "Explore growth-driven projects to increase customer productivity and engagment"
+        },
+        {
+          "emoji": "🚛",
+          "text": "Design, parallelize, build and ship user-requested features with considerations for testing, adoption and analtyics"
+        }
+      ]
+    },
+    {
+      "title": "Software Engineer",
       "location": "Toronto, ON (Remote)",
       "time": "Spring 2020 (4m)",
       "company": "Facebook",
@@ -349,9 +378,9 @@
     }
   ],
   "interests": [
-    "I recently starting getting _super_ into board games. Some of my favourites are _Dead of Winter_, _Coup_, _Spirit Island_, and _Betrayal at House on the Hill_. I also play a ton of video games, so you can quiz me if you want.",
-    "I am a **_total podcast junkie_**. I'm listening to podcasts whenever I'm doing anything with my hands, even coding on occasion. As of this moment, I'm subscribed to around 25. Top recommendations include: _Reply All_, _Everything is Alive_, _Syntax_, _My Brother, My Brother and Me,_ and _Cortex_.\n\nI might actually be starting my own, so keep your ears peeled 👀👂👀👂",
-    "I am an unwavering **dog** person, but sadly I don't have a cute puppy of my own just yet. When I move out, adopting a _pitbull_ or _shiba_ is definitely the top priority. In the mean time though, me and my roommates are taking care of another pal's kitten, and I am trying to teach him to fetch.",
-    "I prefer **VSCode** to Atom, I really enjoy programming in **JavaScript**, **React** is my preferred framework, but I'm actively exploring Vue, and I think `if` statement curly braces don't deserve their own lines. For more opinions to disagree with check out my [/about](https://www.leander.xyz/about) page."
+    "One of my biggest hobbies is gaming! From table top role playing games, to designer board games, to AAA video games, I'm on a quest to grow my backlog to a size never before seen by human eyes. Some of my recent board game favourites have been *Everdell*, and *Betrayal at House on the Hill*! For video games, I absolutely adore *Hollow Knight*, and most *Kingdom Hearts* games, to name a few.",
+    "I think I listen to more podcasts than music. I'm listening to podcasts whenever I'm doing anything with my hands, even coding on occasion. As of this moment, I'm subscribed to around 40+, though only about half update weekly. Top recommendations include: *Reply All*, *Everything is Alive*, *My Brother, My Brother and Me,* and *Cortex*.\n\nI also have my own podcast you can check out at <https://jumpcut.fm>",
+    "I am far too deep down the rabbit hole of **mechanical keyboards**. I know that hobby is crowded by Software Engineers, but I can't avoid the stereotype! I just love me some colourful rectangles. I'd love to show you the collection if you're interested (but people rarely are, lmao)",
+    "One of my current hobbies is *stationery + fountain pens*! I don't have excellent handwriting, but that doesn't stop my friends and I from mailing each other handwritten letters every few weeks. We decorate them with designer paper/stickers/tapes, and I use it as an excuse to stop staring at screens for 10+ hours a day."
   ]
 }
