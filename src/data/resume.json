@@ -97,32 +97,72 @@
   ],
   "work-experience": [
     {
-      "title": "Advanced App Engineering Senior Analyst",
-      "location": "Toronto, ON",
-      "time": "Fall 2018 (4m)",
-      "company": "Accenture",
-      "link": "https://www.accenture.com/ca-en",
+      "title": "Software Engineer",
+      "location": "Toronto, ON (Remote)",
+      "time": "Spring 2020 (4m)",
+      "company": "Facebook",
+      "link": "https://about.facebook.com/",
       "skills": [
+        "PHP",
+        "Hack",
         "React",
-        "Node",
-        "Handlebars",
-        "AWS Lambda",
-        "AWS Suite",
-        "Google Dialogflow",
-        "Git Workflows"
+        "XFN",
+        "Mercurial",
+        "GraphQL",
+        "Relay",
+        "Remote Work"
       ],
       "bullets": [
         {
-          "emoji": "🔨",
-          "text": "Designed reusable components in React.js through peer programming and test-driven development"
+          "emoji": "🎉",
+          "text": "Produce rapid full-stack feature changes and product revisions from the design-stage"
         },
         {
-          "emoji": "🚀",
-          "text": "Deployed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases"
+          "emoji": "🔌",
+          "text": "Connected and aligned cross-functional teams on project scope, status and deviations"
         },
         {
-          "emoji": "📚",
-          "text": "Received certified, formal training in DevOps, Agile Development and Design Thinking"
+          "emoji": "🧰",
+          "text": "Provided substantive new tooling and features to improve users' workflows"
+        },
+        {
+          "emoji": "🔎",
+          "text": "Identified and fixed pain-points in UI/UX with design constraints and user-requested deadlines "
+        }
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "location": "San Francisco, CA",
+      "time": "Winter 2020 (4m)",
+      "company": "Sentry",
+      "link": "https://sentry.io",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Python",
+        "Django",
+        "Celery",
+        "GCP",
+        "Postgres",
+        "Open-Source"
+      ],
+      "bullets": [
+        {
+          "text": "Designed product and engineering workflows for high demand features",
+          "emoji": "🖋"
+        },
+        {
+          "emoji": "⚡️",
+          "text": "Authored full-stack code for feature pipelines and implementations"
+        },
+        {
+          "emoji": "💞",
+          "text": "Iterated based on user critique and resource constraints"
+        },
+        {
+          "text": "Finalized work through in-depth documentation and virtual presentations",
+          "emoji": "🗃"
         }
       ]
     },
@@ -163,6 +203,36 @@
         {
           "emoji": "⚡",
           "text": "Actively participated in small-team Agile development activities like Scrum, Planning Poker and Sprints"
+        }
+      ]
+    },
+    {
+      "title": "Advanced App Engineering Senior Analyst",
+      "location": "Toronto, ON",
+      "time": "Fall 2018 (4m)",
+      "company": "Accenture",
+      "link": "https://www.accenture.com/ca-en",
+      "skills": [
+        "React",
+        "Node",
+        "Handlebars",
+        "AWS Lambda",
+        "AWS Suite",
+        "Google Dialogflow",
+        "Git Workflows"
+      ],
+      "bullets": [
+        {
+          "emoji": "🔨",
+          "text": "Designed reusable components in React.js through peer programming and test-driven development"
+        },
+        {
+          "emoji": "🚀",
+          "text": "Deployed client-facing widgets for Virtual Agents to satisfy dynamic, natural language use cases"
+        },
+        {
+          "emoji": "📚",
+          "text": "Received certified, formal training in DevOps, Agile Development and Design Thinking"
         }
       ]
     }
