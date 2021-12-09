@@ -52,23 +52,26 @@ const CardWrapper = styled.div`
     transform: scale(0.8);
   `}
   ${media.phone`
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 250px repeat(5, auto);
+  padding-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr repeat(5, auto);
+    grid-gap: 1rem 0;
   `}
 `
 const CardImage = styled.img`
   max-width: 100%;
+  max-height: 100%;
   border-radius: 1rem;
-  grid-area: 1 / 1 / 6 / 1;
+  grid-area: 1 / 1 / 5 / 1;
   ${media.phone`
-    grid-area: 1 / 1 / 1 / 5;
+    grid-area: 1 / 1 / 2 / 5;
+    max-height: 400px;
   `}
 `
 
 const CardHeader = styled.h1`
   display: block;
-  grid-area: 1 / 2 / 1 / 6;
-  padding-left: 1.5rem;
+  grid-area: 1 / 2 / 2 / 6;
   margin: 0;
   font-weight: 300;
   font-size: 2.75rem;
@@ -90,12 +93,10 @@ const CardSubtitle = styled.h2`
   display: block;
   grid-area: 2 / 2 / 2 / 6;
   margin: 0;
-  margin-left: 1.5rem;
+  text-align: center;
   font-weight: 300;
   font-size: 1.5rem;
-  letter-spacing: 2px;
-  width: calc(100% - 1.5rem);
-  height: 100%;
+  letter-spacing: 1.5px;
   border-bottom: 2px solid ${themer("accent")};
   span {
     font-weight: 500;
@@ -109,39 +110,29 @@ const CardSubtitle = styled.h2`
 `
 
 const CardTitles = styled.div`
-  padding-left: 3rem;
-  grid-area: 3 / 2 / 3 / 3;
+  grid-area: 3 / 2 / 4 / 4;
+  text-align: right;
+  justify-self: end;
   ${media.phone`
     grid-area: 4 / 1 / 4 / 3;
-    text-align: right;
-    width: 100%;
-    margin-top: 1.5rem;
-    padding-left: 0;
   `}
   font-weight: 500;
   font-size: 1.5rem;
-  p {
-    margin: 0;
-    margin-bottom: 0.75rem;
-  }
+  margin: 0.5rem 0.75rem;
+  margin-bottom: 0;
 `
 
 const CardValues = styled.div`
-  padding-left: 4rem;
-  grid-area: 3 / 3 / 3 / 6;
+  padding: 2rem 0;
+  grid-area: 3 / 4 / 4 / 6;
+  justify-self: start;
   ${media.phone`
     grid-area: 4 / 3 / 4 / 5;
-    text-align: left;
-    width: 100%;
-    padding-left: 2rem;
-    margin-top: 1.5rem;
   `}
   font-weight: 300;
   font-size: 1.5rem;
-  p {
-    margin: 0;
-    margin-bottom: 0.75rem;
-  }
+  margin: 0.5rem 0.75rem;
+  margin-bottom: 0;
 `
 
 const CardAnchorLink = styled.a`
@@ -176,27 +167,35 @@ const BusinessCard = props => {
       }
     }
   `)
-  const myAge = () => {
-    const d = new Date()
-    if (d.getMonth() > 9) return d.getFullYear() - 1998
-    if (d.getMonth() === 9 && d.getDate() >= 27) return d.getFullYear() - 1998
-    return d.getFullYear() - 1999
+  const myExp = () => {
+    const expInMiliseconds = new Date() - new Date(2021, 7, 9)
+    const expInMonths = expInMiliseconds / (1000 * 3600 * 24 * 30) + 16
+    const [years, months] = [
+      Math.floor(expInMonths / 12),
+      Math.round(expInMonths % 12),
+    ]
+    return `${years} year${years > 1 ? "s" : ""} ${months} month${
+      months > 1 ? "s" : ""
+    }`
   }
   return (
     <CardWrapper {...props}>
-      <CardImage src="/assets/profile_pic.jpg" alt="me throwin' peace signs" />
+      <CardImage
+        src="/assets/profile_pic_mountain.jpg"
+        alt="me on a big hill"
+      />
       <CardHeader>
         Hi, I'm <span>Leander Rodrigues</span>
       </CardHeader>
       <CardSubtitle>Full-stack Software Engineer</CardSubtitle>
       <CardTitles>
-        <p>Age</p>
-        <p>Location</p>
-        <p>Email</p>
+        <p>Work Experience:</p>
+        <p>Location:</p>
+        <p>Email:</p>
       </CardTitles>
       <CardValues>
-        <p>{myAge()} years old</p>
-        <p>Toronto, ON</p>
+        <p>{myExp()}</p>
+        <p>San Francisco, CA</p>
         <p>me@leander.xyz</p>
       </CardValues>
       <CardAnchorLink order={1} href="https://github.com/leeandher">

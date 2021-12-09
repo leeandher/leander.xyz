@@ -13,7 +13,6 @@ import GenCard from "../components/page-specific/Resume/GenCard"
 import GenText from "../components/page-specific/Resume/GenText"
 import WorkCard from "../components/page-specific/Resume/WorkCard"
 import Scroller from "../components/page-specific/Resume/Scroller"
-import CharacterSheetWrapper from "../components/page-specific/Resume/CharacterSheetWrapper"
 import EmojiBullet from "../components/page-specific/Resume/EmojiBullet"
 
 import resume from "../data/resume.json"
@@ -36,7 +35,7 @@ const ResumeSection = styled(Default)`
 const ResumeLayout = styled.div`
   display: grid;
   background: ${themer("shade.lightest")};
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 275px 1fr;
   max-width: ${themer("spacing.maxWidth")};
   min-width: ${themer("spacing.minWidth")};
   border-radius: 0.5rem;
@@ -116,9 +115,6 @@ const Resume = ({ data }) => {
             <a className="page-link" href="#summary-of-qualifications">
               Summary of Qualifications
             </a>
-            <a className="page-link" href="#character-sheet">
-              Character Sheet
-            </a>
             <a className="page-link" href="#work-experience">
               Work Experience
             </a>
@@ -151,16 +147,6 @@ const Resume = ({ data }) => {
                 </EmojiBullet>
               ))}
             </SOQWrapper>
-          </ResumeLayout>
-          <ResumeLayout>
-            <h2 className="title" id="character-sheet">
-              Character Sheet
-            </h2>
-            <div className="content">
-              <CharacterSheetWrapper
-                characterSheetData={resume["character-sheet"]}
-              />
-            </div>
           </ResumeLayout>
           <ResumeLayout>
             <h2 className="title" id="work-experience">

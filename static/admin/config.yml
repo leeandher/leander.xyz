@@ -154,13 +154,6 @@ collections:
             fields:
               - { name: emoji, label: Emoji, widget: string }
               - { name: text, label: Text, widget: text }
-          - name: character-sheet
-            label: Character Sheet
-            widget: list
-            identifier_field: category
-            fields:
-              - { name: category, label: Category, widget: string }
-              - { name: attributes, label: Attributes, widget: list }
           - name: work-experience
             label: Work Experience
             widget: list
