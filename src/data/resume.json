@@ -220,9 +220,16 @@
   ],
   "volunteer-work": [
     {
+      "title": "Project Program Judge",
+      "location": "csclub.uwaterloo.ca/",
+      "link": "https://csclub.uwaterloo.ca/",
+      "time": "Dec 4, 2021",
+      "description": "Judged the Project Program competition for the University of Waterloo Computer Science and Data Science clubs! The competition was between first year students who worked alongside upper year mentors to develop applications in about a month. Judging was done across a variety of categories (e.g. extensibility, complexity, etc.) to award the three lucky teams!"
+    },
+    {
       "title": "UW Blueprint",
       "location": "UWBlueprint.org",
-      "time": "Presently!",
+      "time": "2019",
       "link": "https://uwblueprint.org/",
       "description": "Blueprint is an initiative at the University of Waterloo to provide tech for nonprofits. A bunch of times every week, teams get together and work on building cool stuff for social good, and I'm a part of it! We work in Agile sprints, providing web apps, analysis tools and infrastructure to nonprofits every term - free of charge!"
     },
