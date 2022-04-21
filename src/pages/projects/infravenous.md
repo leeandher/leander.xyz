@@ -3,13 +3,10 @@ type: projects
 showcase: true
 slug: infravenous
 title: "Infravenous: MFA Vein Detection"
-description: As part of my Nanotechnology Engineering degree, a couple friends
-  and I had to put together a capstone project. In an effort to combine our
-  shared interests of core nanotechnology, hardware and software, we developed a
-  prototype for a bio-metric vein authentication scheme! It was meant to serve
-  as a standalone MFA method, similar to a Yubikey, but with added safeguards
-  that most bio-metrics do not possess. Check out our presentation for more
-  in-depth info!
+description: For our Engineering capstone, a couple friends and I put together a
+  prototype for a bio-metric vein authentication scheme, in our efforts to
+  combine hardware, software and nanotechnology. It was kinda like a Vein-based
+  MFA Yubikey, check out the demo video!
 image: /assets/project__infravenous.png
 repo: https://github.com/leeandher/infravenous
 link: https://youtu.be/emK0LczlKes
