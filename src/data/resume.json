@@ -112,16 +112,16 @@
       ],
       "bullets": [
         {
-          "emoji": "♻️",
-          "text": "Connect third-party services with our product to integrate more closely into developer workflows"
+          "text": "Connect third-party services with our product to integrate more closely into developer workflows",
+          "emoji": "♻️"
         },
         {
-          "emoji": "🗺",
-          "text": "Explore growth-driven projects to increase customer productivity and engagment"
+          "emoji": "🗺️",
+          "text": "Explore growth-driven projects to increase customer productivity and engagement"
         },
         {
           "emoji": "🚛",
-          "text": "Design, parallelize, build and ship user-requested features with considerations for testing, adoption and analytics"
+          "text": "Design, implement, build and ship user-requested features with considerations for testing, adoption and analytics"
         }
       ]
     },
