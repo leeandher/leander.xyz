@@ -2,12 +2,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-import {
-  FaGithub,
-  FaStackOverflow,
-  FaLinkedin,
-  FaFileAlt,
-} from "react-icons/fa"
+import { FaGithub, FaTwitter, FaLinkedin, FaFileAlt } from "react-icons/fa"
 
 import { media, themer } from "../../../styles/helpers"
 
@@ -203,15 +198,12 @@ const BusinessCard = props => {
       </CardAnchorLink>
       <CardAnchorLink
         order={2}
-        href="https://stackoverflow.com/users/story/10996907?view=Timeline"
-      >
-        <FaStackOverflow />
-      </CardAnchorLink>
-      <CardAnchorLink
-        order={3}
         href="https://www.linkedin.com/in/leander-rodrigues/"
       >
         <FaLinkedin />
+      </CardAnchorLink>
+      <CardAnchorLink order={3} href="https://twitter.com/LeeAndHer">
+        <FaTwitter />
       </CardAnchorLink>
       <CardAnchorLink order={4} href={pdf.publicURL}>
         <FaFileAlt />
