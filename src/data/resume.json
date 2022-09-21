@@ -1,16 +1,12 @@
 {
   "summary-of-qualifications": [
     {
-      "emoji": "🏆",
-      "text": "Self-taught full-stack developer with an expansive online portfolio of cool projects"
+      "emoji": "🖥️",
+      "text": "Self-taught full-stack developer with experience in startups, big tech companies, volunteering teams and open-source"
     },
     {
       "emoji": "🤓",
-      "text": "Avid interest in programming in general; following podcasts, newsletters and picking up new tech just to keep it fresh"
-    },
-    {
-      "emoji": "🤝",
-      "text": "Experience with startups, corporations, and volunteer-teams; practising agile development, and shipping code consistently"
+      "text": "Keen interest in computer science and best practices evidenced through a portfolio of neat projects"
     },
     {
       "emoji": "👋",
@@ -97,7 +93,7 @@
   ],
   "work-experience": [
     {
-      "title": "Software Engineer",
+      "title": "Software Engineer [Ecosystem + Enterprise]",
       "location": "San Francisco, CA",
       "time": "Aug 2021 - Present",
       "company": "Sentry",
@@ -108,38 +104,38 @@
         "Python",
         "Django",
         "API Development",
-        "Open-Source"
+        "Open-Source",
+        "SaaS",
+        "GCP",
+        "Postgres"
       ],
       "bullets": [
         {
-          "text": "Connect third-party services with our product to integrate more closely into developer workflows",
+          "text": "Built and managed critical features for third party developer\ntool integrations, such as Slack, GitHub and Jira.",
           "emoji": "♻️"
         },
         {
-          "emoji": "🗺️",
-          "text": "Explore growth-driven projects to increase customer productivity and engagement"
+          "emoji": "⚖️",
+          "text": "Maintained platform integrity with new features and\nestablished practices for building Apps and using the public API."
         },
         {
-          "emoji": "🚛",
-          "text": "Design, implement, build and ship user-requested features with considerations for testing, adoption and analytics"
+          "emoji": "🗺️",
+          "text": "Led data residency initiative with respect to integrations as\nSentry scaled to support international customers"
         }
       ]
     },
     {
-      "title": "Software Engineer",
+      "title": "Software Engineer [Recruiting Tools]",
       "location": "Toronto, ON (Remote)",
       "time": "Spring 2020 (4m)",
       "company": "Facebook",
       "link": "https://about.facebook.com/",
       "skills": [
-        "PHP",
-        "Hack",
+        "PHP (Hack)",
         "React",
-        "XFN",
-        "Mercurial",
         "GraphQL",
         "Relay",
-        "Remote Work"
+        "Phabricator"
       ],
       "bullets": [
         {
