@@ -30,7 +30,8 @@ export const palette = {
     default: "15px",
   },
   font: {
-    base: "Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    base:
+      "'Atkinson Hyperlegible', Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     mono:
       "'Iosevka', 'Operator Mono', 'Fira Code', Monaco, Consolas, monospace",
     thin: 300,
