@@ -3,15 +3,11 @@
   "picks": [
     {
       "label": "movie",
-      "value": "into the spiderverse 🕸"
+      "value": "into the spiderverse 🕷️"
     },
     {
       "label": "show",
       "value": "arcane s1 🔮"
-    },
-    {
-      "label": "podcast",
-      "value": "my own lol 🎙"
     },
     {
       "label": "video game",
@@ -22,20 +18,12 @@
       "value": "everdell 🐁"
     },
     {
-      "label": "keyboard",
-      "value": "my modded k2 ⌨️"
-    },
-    {
       "label": "food",
       "value": "free 😋"
     },
     {
       "label": "emoji",
       "value": "💞"
-    },
-    {
-      "label": "friend",
-      "value": "u 👋"
     }
   ],
   "faqs": [

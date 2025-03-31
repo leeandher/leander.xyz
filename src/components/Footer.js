@@ -1,12 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {
-  FaGithub,
-  FaLinkedin,
-  FaSteam,
-  FaTwitter,
-  FaPodcast,
-} from "react-icons/fa"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 import { getCopyrightYearsFrom } from "../helpers"
 import AnchorLink from "./AnchorLink"
@@ -70,29 +64,6 @@ const Footer = ({ handleToggle, showSideBar }) => {
   return (
     <StyledFooter>
       <h5>Find me online</h5>
-      <IconWrapper>
-        <StyledAnchorLink
-          href="https://twitter.com/LeeAndHer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitter />
-        </StyledAnchorLink>
-        <StyledAnchorLink
-          href="https://steamcommunity.com/id/LeeAndHer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaSteam />
-        </StyledAnchorLink>
-        <StyledAnchorLink
-          href="https://www.jumpcut.fm/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaPodcast />
-        </StyledAnchorLink>
-      </IconWrapper>
       <IconWrapper>
         <StyledAnchorLink
           href="https://github.com/leeandher"
