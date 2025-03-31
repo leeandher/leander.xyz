@@ -133,13 +133,6 @@ const Home = ({ data }) => {
             mainText="WORK STUFF"
             to="/resume"
           />
-          <QuoteCard
-            accent="purple"
-            isExternal
-            preText="I heard you have a"
-            mainText="PODCAST"
-            to="https://jumpcut.fm"
-          />
         </PanelWrapper>
       </Director>
       <Showcase skew="-4deg">

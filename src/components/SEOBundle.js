@@ -35,15 +35,6 @@ const SEOBundle = ({
           <meta property="og:image:height" content={320} />
           <meta property="og:image:width" content={320} />
 
-          {/* Twitter */}
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@leeandher" />
-          <meta name="twitter:creator" content="@leeandher" />
-          <meta name="twitter:title" content={seoTitle} />
-          <meta name="twitter:description" content={seoDescription} />
-          <meta name="twitter:image" content={image} />
-          <meta name="twitter:image:alt" content="leander.xyz logo" />
-
           {/* Iconography */}
           <meta name="theme-color" content={theme.shade.darkest} />
           <link rel="manifest" href={withPrefix("site.webmanifest")} />

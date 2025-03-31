@@ -69,16 +69,7 @@ const Nav = ({ accent, handleToggle, showSideBar }) => {
         <NavLink to="/resume" accent="blue">
           <span>Resume</span>
         </NavLink>
-        <NavLink
-          accent="purple"
-          isExternal
-          to="https://jumpcut.fm"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>Podcast</span>
-        </NavLink>
-        <NavLink to="/contact" accent="pink">
+        <NavLink to="/contact" accent="purple">
           <span>Contact</span>
         </NavLink>
       </StyledNav>

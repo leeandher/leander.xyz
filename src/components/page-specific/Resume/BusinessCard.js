@@ -2,7 +2,7 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { FaGithub, FaTwitter, FaLinkedin, FaFileAlt } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa"
 
 import { media, themer } from "../../../styles/helpers"
 
@@ -190,7 +190,7 @@ const BusinessCard = props => {
       </CardTitles>
       <CardValues>
         <p>{myExp()}</p>
-        <p>San Francisco, CA</p>
+        <p>Toronto, ON</p>
         <p>me@leander.xyz</p>
       </CardValues>
       <CardAnchorLink order={1} href="https://github.com/leeandher">
@@ -201,9 +201,6 @@ const BusinessCard = props => {
         href="https://www.linkedin.com/in/leander-rodrigues/"
       >
         <FaLinkedin />
-      </CardAnchorLink>
-      <CardAnchorLink order={3} href="https://twitter.com/LeeAndHer">
-        <FaTwitter />
       </CardAnchorLink>
       <CardAnchorLink order={4} href={pdf.publicURL}>
         <FaFileAlt />
