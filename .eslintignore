@@ -1,6 +1,0 @@
-# Other projects
-subdomains/*
-
-# Build files
-.cache/*
-public/*
