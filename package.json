@@ -18,8 +18,10 @@
     "@astrojs/netlify": "^6.2.5",
     "@astrojs/sitemap": "^3.3.0",
     "@astrojs/svelte": "^7.0.9",
+    "@tailwindcss/vite": "^4.1.1",
     "astro": "^5.5.6",
     "svelte": "^5.25.6",
+    "tailwindcss": "^4.1.1",
     "typescript": "^5.8.2"
   },
   "volta": {
