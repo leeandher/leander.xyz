@@ -9,7 +9,6 @@ import Nav from "./Nav"
 import Footer from "./Footer"
 import SEOBundle from "./SEOBundle"
 import ParticleBackground from "./ParticleBackground"
-import { Banner } from "./Banner"
 
 import { genComputedProperty } from "../helpers"
 import { themer } from "../styles/helpers"
@@ -79,7 +78,6 @@ class Page extends React.Component {
         <GlobalStyles theme={theme} />
         <ThemeProvider theme={theme}>
           <StyledPage egged={egged}>
-            <Banner />
             {bgDesign !== "none" && (
               <ParticleBackground
                 design={bgDesign}
