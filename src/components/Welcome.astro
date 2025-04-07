@@ -1,6 +1,7 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import Button from "./Button.svelte";
 ---
 
 <div id="container">
@@ -21,6 +22,7 @@ import background from "../assets/background.svg";
       </h1>
       <section id="links">
         <a class="button" href="https://docs.astro.build">Read our docs</a>
+        <Button class="button" client:load />
         <a href="https://astro.build/chat"
           >Join our Discord <svg
             xmlns="http://www.w3.org/2000/svg"
