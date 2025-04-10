@@ -14,6 +14,10 @@ export default class HTML extends React.Component {
     return (
       <html {...htmlAttributes} style={{ background: "#0F0F0F" }} lang="en">
         <head>
+          <script
+            src="https://js.sentry-cdn.com/89252253ddeba6f03a619cccc782f296.min.js"
+            crossOrigin="anonymous"
+          ></script>
           <meta charSet="utf-8" />
           <meta name="author" content="Leander Rodrigues" />
           <meta name="robots" content="index, follow" />
