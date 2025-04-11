@@ -7,9 +7,19 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
+import sentry from "@sentry/astro";
+
 export default defineConfig({
-  integrations: [svelte(), sitemap()],
+  integrations: [
+    sentry({
+      sourceMapsUploadOptions: {
+        project: "leanderxyz",
+        authToken: process.env.SENTRY_AUTH_TOKEN,
+      },
+    }),
+    sitemap(),
+    svelte(),
+  ],
   adapter: netlify(),
   vite: { plugins: [tailwindcss()] },
 });

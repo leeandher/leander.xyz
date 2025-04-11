@@ -2,6 +2,9 @@
   let counter = $state(0);
   function increment() {
     counter += 1;
+    if (counter > 10) {
+      throw new Error("This is a test error");
+    }
   }
 </script>
 
