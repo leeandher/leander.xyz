@@ -11,7 +11,5 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [svelte(), sitemap()],
   adapter: netlify(),
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  vite: { plugins: [tailwindcss()] },
 });
