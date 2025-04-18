@@ -3,3 +3,45 @@
   --font-sans: "Lexend Variable", "sans-serif";
   --font-serif: "Zilla Slab", "serif";
 }
+
+@theme {
+  --color-snap-50: #f0fdf9;
+  --color-snap-100: #ccfbef;
+  --color-snap-200: #98f7e1;
+  --color-snap-300: #5debcf;
+  --color-snap-400: #2bd6b9;
+  --color-snap-500: #13bfa5;
+  --color-snap-600: #0c9583;
+  --color-snap-700: #0e776b;
+  --color-snap-800: #105f57;
+  --color-snap-900: #124f47;
+  --color-snap-950: #042f2c;
+
+  --color-crackle-50: #fefbec;
+  --color-crackle-100: #fbf2ca;
+  --color-crackle-200: #f7e690;
+  --color-crackle-300: #f4d455;
+  --color-crackle-400: #f0bd24;
+  --color-crackle-500: #eaa116;
+  --color-crackle-600: #cf7c10;
+  --color-crackle-700: #ac5911;
+  --color-crackle-800: #8c4514;
+  --color-crackle-900: #733914;
+  --color-crackle-950: #421d06;
+
+  --color-pop-50: #fef1f7;
+  --color-pop-100: #fde6f2;
+  --color-pop-200: #fecce5;
+  --color-pop-300: #fea3ce;
+  --color-pop-400: #fc60a8;
+  --color-pop-500: #f63e8e;
+  --color-pop-600: #e61c6a;
+  --color-pop-700: #c80e50;
+  --color-pop-800: #a50f42;
+  --color-pop-900: #8a113b;
+  --color-pop-950: #55021e;
+
+  --color-snap: var(--color-snap-400);
+  --color-crackle: var(--color-crackle-400);
+  --color-pop: var(--color-pop-400);
+}
