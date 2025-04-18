@@ -1,1 +1,5 @@
 @import "tailwindcss";
+@theme {
+  --font-sans: "Lexend Variable", "sans-serif";
+  --font-serif: "Zilla Slab", "serif";
+}
