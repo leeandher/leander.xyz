@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @theme {
-  --font-sans: "Lexend Variable", "sans-serif";
-  --font-serif: "Zilla Slab", "serif";
+  --font-sans: "Lexend Variable", "Tahoma", "Verdana", "sans-serif";
+  --font-fancy: "Zilla Slab", "Georgia", "Garamond", "serif";
 }
 
 @theme {
@@ -40,8 +40,26 @@
   --color-pop-800: #a50f42;
   --color-pop-900: #8a113b;
   --color-pop-950: #55021e;
+}
 
+@theme {
+  --color-text: var(--color-crackle-950);
+  --color-subtext: rgba(var(--color-crackle-950), 65);
+  --color-link: #645dd7;
   --color-snap: var(--color-snap-400);
   --color-crackle: var(--color-crackle-400);
   --color-pop: var(--color-pop-400);
+  --color-surface: var(--color-crackle-50);
+}
+
+@layer theme {
+  .dark {
+    --color-text: var(--color-snap-50);
+    --color-subtext: rgba(var(--color-snap-50), 70);
+    --color-link: #b2b9ff;
+    --color-snap: var(--color-snap-200);
+    --color-crackle: var(--color-crackle-300);
+    --color-pop: var(--color-pop-300);
+    --color-surface: var(--color-snap-950);
+  }
 }

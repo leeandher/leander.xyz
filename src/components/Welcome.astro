@@ -3,17 +3,18 @@ import background from "../assets/background.svg";
 import Button from "./Button.svelte";
 ---
 
-<div id="container">
+<div class="bg:surface">
   <main>
     <section id="hero">
-      <p class="font-serif text-5xl font-bold italic">Leander Rodrigues</p>
-      <p class="font-sans text-xl">
-        This is some description text. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </p>
-
-      <Button class="button" client:load />
+      <div class="mx-16 my-auto">
+        <p class="font-fancy text-7xl text-pop">welcome to my site.</p>
+        <p class="font-sans text-xl">
+          This is some description text. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <Button class="button" client:load />
+      </div>
     </section>
   </main>
 </div>
