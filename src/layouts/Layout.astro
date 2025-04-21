@@ -1,10 +1,10 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import "@fontsource-variable/lexend";
 import "@fontsource/zilla-slab/700-italic.css";
 import "@fontsource/monaspace-neon";
 import Landscape from "../components/Landscape.svelte";
+import Navigation from "../components/Navigation.svelte";
 ---
 
 <!doctype html>
@@ -15,10 +15,10 @@ import Landscape from "../components/Landscape.svelte";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>👋 leander.xyz</title>
-    <ClientRouter />
   </head>
   <body class="bg-surface">
     <Landscape client:only="svelte" />
+    <Navigation client:load />
     <main>
       <slot />
     </main>

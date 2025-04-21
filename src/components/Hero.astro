@@ -1,0 +1,30 @@
+---
+import DancingText from "../components/DancingText.svelte";
+import WritingsLetter from "./WritingsLetter.svelte";
+---
+
+<section class="mx-4 h-screen flex flex-col justify-center">
+  <div class="mx-auto whitespace-nowrap">
+    <p
+      class="font-fancy text-base/70 text-2xl sm:text-3xl mb-0 lg:text-4xl lg:-mb-10"
+    >
+      heyyo. welcome to
+    </p>
+    <div
+      class="font-fancy text-base inline-block text-5xl sm:text-7xl lg:text-9xl"
+    >
+      <WritingsLetter client:load /><a class="text-crackle" href="/wares">w</a
+      ><a class="text-pop" href="/work">w</a>.
+    </div>
+    <DancingText
+      client:load
+      text="leander.xyz"
+      element="h1"
+      class="font-fancy text-base inline-block text-5xl sm:text-7xl lg:text-9xl"
+    />
+    <p class="font-sans text-base mt-4 text-right">
+      my name is leander rodrigues. <br />this is my corner of the internet. <br
+      />and i got some stuff around here.
+    </p>
+  </div>
+</section>

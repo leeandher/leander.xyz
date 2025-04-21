@@ -10,6 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sentry from "@sentry/astro";
 
 export default defineConfig({
+  compressHTML: true,
   integrations: [
     sentry({
       sourceMapsUploadOptions: {
