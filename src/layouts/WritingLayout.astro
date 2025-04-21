@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout>
-  <header class="my-16 text-center">
+  <header class="my-16">
     <h1 class="font-fancy text-6xl text-base">
       {frontmatter.title}
     </h1>
@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
       {frontmatter.description}
     </p>
   </header>
-  <article class="max-w-4xl px-6 py-10 m-auto shadow-2xl text-base">
+  <article class="max-w-4xl px-6 py-10 m-auto text-base">
     <slot />
   </article>
 </Layout>
@@ -54,6 +54,7 @@ const { frontmatter } = Astro.props;
     margin: var(--writing-margin) 0;
     padding: var(--writing-margin) var(--writing-indent-margin);
     border-radius: var(--writing-border-radius);
+    border: 2px solid var(--color-base);
   }
   article :global(ol) {
     list-style-type: decimal;
