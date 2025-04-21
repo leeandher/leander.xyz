@@ -20,14 +20,14 @@
   onmousemove={(e) => {
     currentX = e.clientX;
     currentY = e.clientY;
-    trailCoords.forEach((tC) => (tC.target = { x: e.pageX, y: e.pageY }));
+    trailCoords.forEach((tC) => (tC.target = { x: e.clientX, y: e.clientY }));
   }}
   onclick={() => {
     // trailCoords.push(createFollower(trailCoords.length));
   }}
 />
 
-<div class="absolute inset-0 -z-1">
+<div class="fixed inset-0 -z-1">
   <svg class="w-full h-full">
     {#each trailCoords as coord, index (index)}
       <circle

@@ -21,16 +21,19 @@ Here is an inline image! ![leander.xyz logo](https://dev.leander.xyz/favicon.ico
 
 Some `basic inline code` with more text
 
-```
-if (moreCode) {
-  //put it here
-  //multiline
-}
+
+<kbd>Shift</kbd> or <kbd>Shift + P</kbd>
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l);
+  return true;
+};
 ```
 
 [I'm an inline link, check me out!](https://www.leander.xyz)
 
-I can even do lists properly, like this one of cowboy words
+I can even do lists <mark>properlyapslidhjfhjioasjdfo asjdfoi asjiodf aoisdjf oiasj dofi asoidf oaissjdfoi aosidf aoisd foaj sdoif jaos dfof ajsoid f</mark>, like this one of cowboy words
 - yeehaw
 - ain't
 1. tarnation
@@ -40,6 +43,21 @@ I can even handle some big ol' tables
 
 | Good | Bad                                     | 
 | ---- | --------------------------------------- |
+| Dogs | Death                                   |
+| Love | Debt                                    |
+| GoT  | Getting your foot run over by a tractor | 
+| Dogs | Death                                   |
+| Love | Debt                                    |
+| GoT  | Getting your foot run over by a tractor | 
+| Dogs | Death                                   |
+| Love | Debt                                    |
+| GoT  | Getting your foot run over by a tractor | 
+| Dogs | Death                                   |
+| Love | Debt                                    |
+| GoT  | Getting your foot run over by a tractor | 
+| Dogs | Death                                   |
+| Love | Debt                                    |
+| GoT  | Getting your foot run over by a tractor | 
 | Dogs | Death                                   |
 | Love | Debt                                    |
 | GoT  | Getting your foot run over by a tractor | 

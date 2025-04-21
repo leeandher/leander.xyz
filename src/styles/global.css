@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
 @theme {
   @keyframes bounce {
@@ -18,6 +17,13 @@
   --font-sans: "Lexend Variable", "Tahoma", "Verdana", sans-serif;
   --font-fancy: "Zilla Slab", "Georgia", "Garamond", serif;
   --font-mono: "Monaspace Neon", "Courier New", "Consolas", monospace;
+}
+
+@theme {
+  --writing-margin: 0.75rem;
+  --writing-span-margin: 0.25rem;
+  --writing-indent-margin: 1.25rem;
+  --writing-border-radius: 0.25rem;
 }
 
 @theme {
@@ -60,20 +66,25 @@
 
 @theme {
   --color-base: var(--color-crackle-950);
+  --color-base-alt: var(--color-crackle-900);
   --color-link: #645dd7;
   --color-snap: var(--color-snap-400);
   --color-crackle: var(--color-crackle-400);
   --color-pop: var(--color-pop-400);
+  --color-pop-rgb: 252, 96, 168;
   --color-surface: var(--color-crackle-50);
+  --color-surface-alt: var(--color-crackle-100);
 }
 
 @layer theme {
   .dark {
     --color-base: var(--color-snap-50);
+    --color-base-alt: var(--color-snap-100);
     --color-link: #b2b9ff;
     --color-snap: var(--color-snap-200);
     --color-crackle: var(--color-crackle-300);
     --color-pop: var(--color-pop-300);
     --color-surface: var(--color-snap-950);
+    --color-surface-alt: var(--color-snap-900);
   }
 }
