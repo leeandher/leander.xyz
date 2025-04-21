@@ -20,7 +20,7 @@
   onmousemove={(e) => {
     currentX = e.clientX;
     currentY = e.clientY;
-    trailCoords.forEach((tC) => (tC.target = { x: e.clientX, y: e.clientY }));
+    trailCoords.forEach((tC) => (tC.target = { x: e.pageX, y: e.pageY }));
   }}
   onclick={() => {
     // trailCoords.push(createFollower(trailCoords.length));

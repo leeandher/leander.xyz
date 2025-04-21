@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   @keyframes bounce {
@@ -14,8 +15,9 @@
 }
 
 @theme {
-  --font-sans: "Lexend Variable", "Tahoma", "Verdana", "sans-serif";
-  --font-fancy: "Zilla Slab", "Georgia", "Garamond", "serif";
+  --font-sans: "Lexend Variable", "Tahoma", "Verdana", sans-serif;
+  --font-fancy: "Zilla Slab", "Georgia", "Garamond", serif;
+  --font-mono: "Monaspace Neon", "Courier New", "Consolas", monospace;
 }
 
 @theme {

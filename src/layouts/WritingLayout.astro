@@ -1,0 +1,90 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+  <header class="my-16 text-center">
+    <h1 class="font-fancy text-6xl text-base">
+      {frontmatter.title}
+    </h1>
+    <p class="font-sans text-1xl text-base/70 mt-2">
+      {frontmatter.description}
+    </p>
+  </header>
+  <article
+    class="max-w-4xl px-6 py-10 m-auto shadow-2xl prose prose-a:text-link"
+  >
+    <slot />
+  </article>
+</Layout>
+<!-- 
+<style>
+  article :global(h1) {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 0.5rem;
+  }
+  article :global(h2) {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+  article :global(h3) {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+  article :global(h4) {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+  article :global(a) {
+    color: var(--color-link);
+    text-decoration: underline;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+  article :global(p) {
+    margin-bottom: 0.5rem;
+  }
+  article :global(blockquote) {
+    position: relative;
+    font-style: italic;
+    padding-left: 0.75rem;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      height: 100%;
+      width: 0.25rem;
+      border-radius: 1000px;
+      background: var(--color-pop);
+    }
+  }
+  /* Need to fix this affecting pre blocks */
+  article :global(code) {
+    background: var(--color-base);
+    color: var(--color-surface);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+  }
+  article :global(ul) {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0.75rem;
+  }
+  article :global(ol) {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding-left: 0.75rem;
+  }
+  /* article :global(pre) code {
+    background: orange;
+    padding: 0.5rem 1rem;
+  } */
+</style> -->

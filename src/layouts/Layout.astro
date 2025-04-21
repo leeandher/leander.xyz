@@ -3,6 +3,8 @@ import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import "@fontsource-variable/lexend";
 import "@fontsource/zilla-slab/700-italic.css";
+import "@fontsource/monaspace-neon";
+import Landscape from "../components/Landscape.svelte";
 ---
 
 <!doctype html>
@@ -16,6 +18,9 @@ import "@fontsource/zilla-slab/700-italic.css";
     <ClientRouter />
   </head>
   <body class="bg-surface">
-    <slot />
+    <Landscape client:only="svelte" />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
