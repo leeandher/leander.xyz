@@ -1,4 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  @keyframes bounce {
+    animation-timing-function: linear;
+    0%,
+    100% {
+      transform: none;
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+  }
+}
+
 @theme {
   --font-sans: "Lexend Variable", "Tahoma", "Verdana", "sans-serif";
   --font-fancy: "Zilla Slab", "Georgia", "Garamond", "serif";
@@ -43,8 +57,7 @@
 }
 
 @theme {
-  --color-text: var(--color-crackle-950);
-  --color-subtext: rgba(var(--color-crackle-950), 65);
+  --color-base: var(--color-crackle-950);
   --color-link: #645dd7;
   --color-snap: var(--color-snap-400);
   --color-crackle: var(--color-crackle-400);
@@ -54,8 +67,7 @@
 
 @layer theme {
   .dark {
-    --color-text: var(--color-snap-50);
-    --color-subtext: rgba(var(--color-snap-50), 70);
+    --color-base: var(--color-snap-50);
     --color-link: #b2b9ff;
     --color-snap: var(--color-snap-200);
     --color-crackle: var(--color-crackle-300);
