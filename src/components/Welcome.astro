@@ -1,20 +1,17 @@
 ---
-import background from "../assets/background.svg";
-import Button from "./Button.svelte";
+import Landscape from "./Landscape.svelte";
 ---
 
-<div class="bg:surface">
-  <main>
-    <section id="hero">
-      <div class="mx-16 my-auto">
-        <p class="font-fancy text-7xl text-pop">welcome to my site.</p>
-        <p class="font-sans text-xl">
-          This is some description text. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-        <Button class="button" client:load />
-      </div>
-    </section>
-  </main>
-</div>
+<Landscape client:only="svelte" />
+<main>
+  <section>
+    <div class="mx-16 my-auto h-screen flex flex-col justify-center323">
+      <h1 class="font-fancy text-7xl text-text">welcome to my site.</h1>
+      <p class="font-sans text-xl text-text">
+        This is some description text. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </div>
+  </section>
+</main>

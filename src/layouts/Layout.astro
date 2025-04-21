@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import "@fontsource-variable/lexend";
 import "@fontsource/zilla-slab/700-italic.css";
@@ -12,8 +13,9 @@ import "@fontsource/zilla-slab/700-italic.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>👋 leander.xyz</title>
+    <ClientRouter />
   </head>
-  <body class="light">
+  <body class="bg-surface">
     <slot />
   </body>
 </html>
