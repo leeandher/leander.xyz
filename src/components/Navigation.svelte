@@ -1,9 +1,12 @@
 <script lang="ts">
-  let y = $state.raw(0);
-  let visible = $derived(y > 500);
+  import { send, receive } from "../styles/transition";
+  import { WaresLink, WorkLink, WritingsLink } from "./NavigationLinks.svelte";
+
+  let scrollY = $state.raw(0);
+  let visible = $derived(scrollY > 100);
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY />
 
 <nav class="w-full fixed z-10 bg-surface group">
   <div class="flex pl-4 pr-8 py-5 relative">
@@ -25,27 +28,9 @@
         "hover:opacity-100",
       ]}
     >
-      <li class="relative bar before:bg-snap">
-        <a href="/writings">writings</a>
-      </li>
-      <li class="relative bar before:bg-crackle">
-        <a href="/wares">wares</a>
-      </li>
-      <li class="relative bar before:bg-pop">
-        <a href="/work">work</a>
-      </li>
+      {@render WritingsLink({ element: "li", class: "relative" })}
+      {@render WaresLink({ element: "li", class: "relative" })}
+      {@render WorkLink({ element: "li", class: "relative" })}
     </ul>
   </div>
 </nav>
-
-<style>
-  .bar:before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-  }
-</style>
