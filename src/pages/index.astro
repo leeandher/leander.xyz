@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import WritingShowcase from "../components/WritingShowcase.svelte";
 ---
 
 <Layout>
   <Hero />
   <Hero />
+  <WritingShowcase client:load />
 </Layout>
