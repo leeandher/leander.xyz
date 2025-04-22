@@ -1,5 +1,9 @@
 <script lang="ts">
-  import { WaresLink, WorkLink, WritingsLink } from "./NavigationLinks.svelte";
+  import { getContext } from "svelte";
+  import { send, receive } from "../styles/transition";
+  import { WaresLink, WorkLink } from "./NavigationLinks.svelte";
+  import WritingsLink from "./WritingsLink.svelte";
+  import { navState } from "../utils/navState.svelte";
 </script>
 
 <nav class="w-full fixed z-10 bg-surface group">
@@ -16,7 +20,15 @@
       />
     </a>
     <ul class="flex w-full justify-end gap-6 items-center">
-      {@render WritingsLink({ element: "li", class: "relative" })}
+      {#if navState.writings === "nav"}
+        <li
+          class="relative"
+          in:receive={{ key: "writings" }}
+          out:send={{ key: "writings" }}
+        >
+          <WritingsLink />
+        </li>
+      {/if}
       {@render WaresLink({ element: "li", class: "relative" })}
       {@render WorkLink({ element: "li", class: "relative" })}
     </ul>

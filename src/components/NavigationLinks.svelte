@@ -4,12 +4,13 @@
 
   interface NavigationLinkProps extends HTMLBaseAttributes {
     element: string;
+    text?: string;
   }
 
   export { WritingsLink, WaresLink, WorkLink };
 </script>
 
-{#snippet WritingsLink({ element, ...rest }: NavigationLinkProps)}
+{#snippet WritingsLink({ element, text, ...rest }: NavigationLinkProps)}
   <svelte:element
     this={element}
     in:receive={{ key: "writings" }}
@@ -19,11 +20,11 @@
     <span
       class="absolute block -z-1 inset-0 top-full h-0.75 rounded-full bg-snap"
     ></span>
-    <a href="/writings">writings</a>
+    <a href="/writings">{text ? text : "writings"}</a>
   </svelte:element>
 {/snippet}
 
-{#snippet WaresLink({ element, ...rest }: NavigationLinkProps)}
+{#snippet WaresLink({ element, text, ...rest }: NavigationLinkProps)}
   <svelte:element
     this={element}
     in:receive={{ key: "wares" }}
@@ -33,11 +34,11 @@
     <span
       class="absolute block -z-1 inset-0 top-full h-0.75 rounded-full bg-crackle"
     ></span>
-    <a href="/writings">wares</a>
+    <a href="/wares">{text ? text : "wares"}</a>
   </svelte:element>
 {/snippet}
 
-{#snippet WorkLink({ element, ...rest }: NavigationLinkProps)}
+{#snippet WorkLink({ element, text, ...rest }: NavigationLinkProps)}
   <svelte:element
     this={element}
     in:receive={{ key: "work" }}
@@ -47,6 +48,6 @@
     <span
       class="absolute block -z-1 inset-0 top-full h-0.75 rounded-full bg-pop"
     ></span>
-    <a href="/writings">work</a>
+    <a href="/work">{text ? text : "work"}</a>
   </svelte:element>
 {/snippet}

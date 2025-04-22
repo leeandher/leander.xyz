@@ -2,8 +2,9 @@
   import type { Action } from "svelte/action";
   import { WritingsLink } from "./NavigationLinks.svelte";
   import { intersectionObserver } from "../utils/intersectionObserver.svelte";
+  import { navState } from "../utils/navState.svelte";
 
-  let isReady = $state.raw(false);
+  let isShowcased = $state.raw(false);
 </script>
 
 <section class="mx-4 h-screen flex flex-col justify-center">
@@ -14,16 +15,21 @@
       heyyo. welcome to
     </p>
     <div
-      class="font-fancy text-base inline-block text-5xl sm:text-7xl lg:text-9xl"
+      class="font-fancy text-base flex text-5xl sm:text-7xl lg:text-9xl"
       use:intersectionObserver={{
         viewCallback: (viewRatio) => {
-          console.log(viewRatio);
-          isReady = viewRatio > 0.3;
-          // console.log(isInView);
+          navState.writings = viewRatio > 0.5 ? "showcase" : "nav";
         },
       }}
     >
-      {@render WritingsLink({ element: "div", class: "relative" })}
+      <a class="text-snap" href="/writings">w</a>
+      {#if navState.writings === "showcase"}
+        {@render WritingsLink({
+          element: "div",
+          class: "relative",
+          text: "ritings",
+        })}
+      {/if}
     </div>
 
     <p class="font-sans text-base/70 mt-4 text-right">

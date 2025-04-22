@@ -7,11 +7,10 @@ export const [send, receive] = crossfade({
     const style = getComputedStyle(node);
     const transform = style.transform === "none" ? "" : style.transform;
     return {
-      duration: 600,
+      duration: 200,
       easing: quintOut,
       css: (t) => `
 				transform: ${transform} scale(${t});
-				opacity: ${t}
 			`,
     };
   },
