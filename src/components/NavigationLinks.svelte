@@ -1,6 +1,6 @@
 <script lang="ts" module>
   import type { HTMLBaseAttributes } from "svelte/elements";
-  import { send, receive } from "../styles/transition";
+  import { send, receive } from "../styles/comet";
 
   interface NavigationLinkProps extends HTMLBaseAttributes {
     element: string;

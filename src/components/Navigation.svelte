@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { getContext } from "svelte";
-  import { send, receive } from "../styles/transition";
+  import { send, receive } from "../styles/comet";
   import { WaresLink, WorkLink } from "./NavigationLinks.svelte";
   import WritingsLink from "./WritingsLink.svelte";
   import { navState } from "../utils/navState.svelte";
