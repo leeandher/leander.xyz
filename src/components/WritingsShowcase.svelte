@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { Action } from "svelte/action";
   import { WritingsLink } from "./NavigationLinks.svelte";
-  import { intersectionObserver } from "../utils/intersectionObserver.svelte";
-  import { navState } from "../utils/navState.svelte";
+  import { intersectionObserver } from "src/utils/intersectionObserver.svelte";
+  import { navState } from "src/utils/navState.svelte";
 
   let isShowcased = $state.raw(false);
 </script>

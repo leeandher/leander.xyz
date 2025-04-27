@@ -1,7 +1,7 @@
 ---
 title: My Blog Post 1
 description: This is an example description
-layout: ../../layouts/WritingLayout.astro
+layout: layouts/WritingLayout.astro
 ---
      
 # Heading 1

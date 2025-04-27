@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { send, receive } from "../styles/comet";
-  import { WaresLink, WorkLink } from "./NavigationLinks.svelte";
-  import WritingsLink from "./WritingsLink.svelte";
-  import { navState } from "../utils/navState.svelte";
+  import { send, receive } from "src/styles/comet";
+  import { WaresLink, WorkLink } from "src/components/NavigationLinks.svelte";
+  import WritingsLink from "src/components/WritingsLink.svelte";
+  import { navState } from "src/utils/navState.svelte";
 </script>
 
 <nav class="w-full fixed z-10 bg-surface group">
