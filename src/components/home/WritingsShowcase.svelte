@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { send, receive } from "src/styles/comet";
+  import { receive, send } from "src/styles/comet";
   import { intersectionObserver } from "src/utils/intersectionObserver.svelte";
   import { navState } from "src/utils/navState.svelte";
 </script>
 
 <section class="mx-4 h-screen flex flex-col justify-start">
   <div
-    class="font-fancy text-base flex text-5xl sm:text-7xl lg:text-9xl"
+    class=" lg:text-9xl font-fancy text-base flex text-5xl sm:text-7xl"
     use:intersectionObserver={{
       viewCallback: (viewRatio) => {
         navState.writings = viewRatio > 0.5 ? "showcase" : "nav";
