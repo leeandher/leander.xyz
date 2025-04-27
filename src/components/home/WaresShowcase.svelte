@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <section class="mx-4 h-screen flex flex-col justify-start">
   <div class="whitespace-nowrap">
     <div

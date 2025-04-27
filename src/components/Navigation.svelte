@@ -1,7 +1,5 @@
 <script lang="ts">
   import { send, receive } from "src/styles/comet";
-  import { WaresLink, WorkLink } from "src/components/NavigationLinks.svelte";
-  import WritingsLink from "src/components/WritingsLink.svelte";
   import { navState } from "src/utils/navState.svelte";
 </script>
 
@@ -25,11 +23,34 @@
           in:receive={{ key: "writings" }}
           out:send={{ key: "writings" }}
         >
-          <WritingsLink />
+          <span
+            class="absolute block -z-1 inset-0 top-full h-0.75 rounded-full bg-snap"
+          ></span>
+          <a href="/writings">writings</a>
         </li>
       {/if}
-      {@render WaresLink({ element: "li", class: "relative" })}
-      {@render WorkLink({ element: "li", class: "relative" })}
+
+      <li
+        class="relative"
+        in:receive={{ key: "wares" }}
+        out:send={{ key: "wares" }}
+      >
+        <span
+          class="absolute block -z-1 inset-0 top-full h-0.75 rounded-full bg-crackle"
+        ></span>
+        <a href="/wares">wares</a>
+      </li>
+
+      <li
+        class="relative"
+        in:receive={{ key: "work" }}
+        out:send={{ key: "work" }}
+      >
+        <span
+          class="absolute block -z-1 inset-0 top-full h-0.75 rounded-full bg-pop"
+        ></span>
+        <a href="/work">work</a>
+      </li>
     </ul>
   </div>
 </nav>
