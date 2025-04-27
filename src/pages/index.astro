@@ -1,4 +1,5 @@
 ---
+import AboutMe from "src/components/home/AboutMe.astro";
 import Hero from "src/components/home/Hero.astro";
 import WaresShowcase from "src/components/home/WaresShowcase.svelte";
 import WorkShowcase from "src/components/home/WorkShowcase.svelte";
@@ -8,6 +9,7 @@ import Layout from "src/layouts/Layout.astro";
 
 <Layout>
   <Hero />
+  <AboutMe />
   <WritingsShowcase client:load />
   <WaresShowcase client:load />
   <WorkShowcase client:load />

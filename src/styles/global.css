@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  @keyframes bounce {
+  --animate-dance: dance 1s ease-in-out infinite;
+  @keyframes dance {
     animation-timing-function: linear;
     0%,
     100% {
@@ -9,6 +10,16 @@
     }
     50% {
       transform: translateY(-10%);
+    }
+  }
+
+  --animate-marquee: marquee 12s linear infinite forwards;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--spacing) * 4));
     }
   }
 }

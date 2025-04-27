@@ -18,10 +18,7 @@
 <svelte:element this={element} aria-label={text} {...rest}>
   {#each characters as character, index (index)}
     <span
-      class={[
-        "inline-block",
-        isActive && "motion-safe:animate-bounce motion-reduce:animate-pulse",
-      ]}
+      class={["inline-block", isActive && "motion-safe:animate-dance"]}
       style={`animation-delay: ${index * 100}ms; transition: all 0.2s ease;`}
       role="presentation"
     >
