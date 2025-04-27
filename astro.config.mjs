@@ -15,7 +15,7 @@ export default defineConfig({
     sentry({
       sourceMapsUploadOptions: {
         project: "leanderxyz",
-        authToken: process.env.SENTRY_AUTH_TOKEN,
+        authToken: import.meta.env.SENTRY_AUTH_TOKEN,
       },
     }),
     sitemap(),
