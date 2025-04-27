@@ -23,6 +23,9 @@ importers:
       '@fontsource-variable/lexend':
         specifier: ^5.2.6
         version: 5.2.6
+      '@fontsource-variable/workbench':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/monaspace-neon':
         specifier: ^5.2.5
         version: 5.2.5
@@ -377,6 +380,9 @@ packages:
 
   '@fontsource-variable/lexend@5.2.6':
     resolution: {integrity: sha512-rDBYVTp0cMaj/UNK2m5EPHMZw3MZcl2CXdZVlv+OQwpg88r5g9prS60mayZ1N+hyH7XRka2YExAFEYBLEv0NRQ==}
+
+  '@fontsource-variable/workbench@5.2.5':
+    resolution: {integrity: sha512-93o3BSRAVlrwSEuKoSxd5WAzky8W1XH3NjATZGlm9Q45vF02Zf1gp8GBQdZcSbivLfb+UjZsmizu1t27gQ5dlw==}
 
   '@fontsource/monaspace-neon@5.2.5':
     resolution: {integrity: sha512-TjSSuHC37DroyhP5YCKRCAxdUb3In/uqHzqqW/8Ul+JWilz37d8lr8jFeapnbD3QdYXgiQoU2Rf/CmTdyl06DA==}
@@ -3298,6 +3304,8 @@ snapshots:
   '@fontsource-variable/aleo@5.2.5': {}
 
   '@fontsource-variable/lexend@5.2.6': {}
+
+  '@fontsource-variable/workbench@5.2.5': {}
 
   '@fontsource/monaspace-neon@5.2.5': {}
 

@@ -17,6 +17,7 @@
   --font-sans: "Lexend Variable", "Tahoma", "Verdana", sans-serif;
   --font-fancy: "Zilla Slab", "Georgia", "Garamond", serif;
   --font-mono: "Monaspace Neon", "Courier New", "Consolas", monospace;
+  --font-techy: "Workbench Variable", monospace;
 }
 
 @theme {

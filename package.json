@@ -21,6 +21,7 @@
     "@astrojs/svelte": "^7.0.9",
     "@fontsource-variable/aleo": "^5.2.5",
     "@fontsource-variable/lexend": "^5.2.6",
+    "@fontsource-variable/workbench": "^5.2.5",
     "@fontsource/monaspace-neon": "^5.2.5",
     "@fontsource/zilla-slab": "^5.2.5",
     "@sentry/astro": "^9.12.0",

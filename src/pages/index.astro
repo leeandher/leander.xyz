@@ -1,12 +1,14 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import WaresShowcase from "src/components/home/WaresShowcase.svelte";
 import Hero from "src/components/home/Hero.astro";
+import WaresShowcase from "src/components/home/WaresShowcase.svelte";
+import WorkShowcase from "src/components/home/WorkShowcase.svelte";
 import WritingsShowcase from "src/components/home/WritingsShowcase.svelte";
+import Layout from "src/layouts/Layout.astro";
 ---
 
 <Layout>
   <Hero />
   <WritingsShowcase client:load />
   <WaresShowcase client:load />
+  <WorkShowcase client:load />
 </Layout>
