@@ -35,16 +35,16 @@
 />
 
 <div class="fixed inset-0 -z-1">
-      <svg class="w-full h-full">
-        {#each trailCoords as coord, index (index)}
-          <circle
-            cx={coord.current.x + Math.cos(spin.current) * spinRadius}
-            cy={coord.current.y - Math.sin(spin.current) * spinRadius}
-            r={size.current}
-            class="fill-snap opacity-15"
-          ></circle>
-          <circle
-            cx={coord.current.x +
+  <svg class="w-full h-full">
+    {#each trailCoords as coord, index (index)}
+      <circle
+        cx={coord.current.x + Math.cos(spin.current) * spinRadius}
+        cy={coord.current.y - Math.sin(spin.current) * spinRadius}
+        r={size.current}
+        class="fill-snap opacity-15"
+      ></circle>
+      <circle
+        cx={coord.current.x +
           Math.cos(spin.current + (2 * 3.14) / 3) * spinRadius}
         cy={coord.current.y -
           Math.sin(spin.current + (2 * 3.14) / 3) * spinRadius}
