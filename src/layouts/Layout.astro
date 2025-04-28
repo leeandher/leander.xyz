@@ -2,7 +2,9 @@
 import "@fontsource-variable/lexend";
 import "@fontsource-variable/workbench/full.css";
 import "@fontsource/monaspace-neon";
+import "@fontsource/pirata-one";
 import "@fontsource/zilla-slab/700-italic.css";
+import Footer from "src/components/Footer.svelte";
 import Landscape from "src/components/Landscape.svelte";
 import Navigation from "src/components/Navigation.svelte";
 import "src/styles/global.css";
@@ -23,5 +25,6 @@ import "src/styles/global.css";
     <main>
       <slot />
     </main>
+    <Footer client:load />
   </body>
 </html>

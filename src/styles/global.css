@@ -29,6 +29,7 @@
   --font-fancy: "Zilla Slab", "Georgia", "Garamond", serif;
   --font-mono: "Monaspace Neon", "Courier New", "Consolas", monospace;
   --font-techy: "Workbench Variable", monospace;
+  --font-pirate: "Pirata One", "Georgia", "Garamond", serif;
 }
 
 @theme {

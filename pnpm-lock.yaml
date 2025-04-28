@@ -29,6 +29,9 @@ importers:
       '@fontsource/monaspace-neon':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource/pirata-one':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/zilla-slab':
         specifier: ^5.2.5
         version: 5.2.5
@@ -386,6 +389,9 @@ packages:
 
   '@fontsource/monaspace-neon@5.2.5':
     resolution: {integrity: sha512-TjSSuHC37DroyhP5YCKRCAxdUb3In/uqHzqqW/8Ul+JWilz37d8lr8jFeapnbD3QdYXgiQoU2Rf/CmTdyl06DA==}
+
+  '@fontsource/pirata-one@5.2.5':
+    resolution: {integrity: sha512-AY6BjibsVZdDj0FUyB3fQs1LDMASNXGnm842Sz9fqYTQUhiS2IabNLW/hy1FhXKhjI9rdOIXPpLBrpJR+Womyw==}
 
   '@fontsource/zilla-slab@5.2.5':
     resolution: {integrity: sha512-5cmKZbe3aVOuH1C+ogzToEyVgJwKgBYF9RCnbze1LL3wRN0BvzLnToo1fa/1bMyqh+CDvVVXBdYS5Etbr8U0Dg==}
@@ -3308,6 +3314,8 @@ snapshots:
   '@fontsource-variable/workbench@5.2.5': {}
 
   '@fontsource/monaspace-neon@5.2.5': {}
+
+  '@fontsource/pirata-one@5.2.5': {}
 
   '@fontsource/zilla-slab@5.2.5': {}
 
