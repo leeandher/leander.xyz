@@ -1,0 +1,183 @@
+backend:
+  name: github
+  repo: leeandher/leander.xyz
+  branch: v3
+  commit_messages:
+    create: ✨ created {{collection}} - "{{slug}}"
+    update: ✏️ edited {{collection}} - "{{slug}}"
+    delete: 🔥 deleted {{collection}} - "{{slug}}"
+    uploadMedia: 🍱 upload media - "{{path}}"
+    deleteMedia: 🔥 delete media - "{{path}}"
+local_backend: true
+
+media_folder: src/assets/images
+public_folder: src/assets/images
+
+site_url: https://www.leander.xyz
+display_url: https://www.leander.xyz
+
+# publish_mode: editorial_workflow
+
+collections:
+  - name: writings
+    label: writings
+    folder: src/pages/writings
+    create: true
+    fields:
+      - { name: title, label: title, widget: string }
+      - { name: image, label: header image, widget: image }
+      - { name: description, label: description, widget: text }
+      - { name: date, label: pubish date, widget: date }
+      - { name: body, label: body, widget: markdown }
+      - { name: tags, label: tags, widget: list }
+      - { name: showcase, label: showcase, widget: boolean, default: false }
+      - { name: archive, label: archive, widget: boolean, default: false }
+  - name: wares
+    label: wares
+    folder: src/pages/wares
+    slug: "{{fields.slug}}"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: title, widget: string }
+      - { name: image, label: header image, widget: image }
+      - { name: description, label: description, widget: text }
+
+      - { name: body, label: body, widget: markdown }
+
+      - { name: tags, label: tags, widget: list }
+      - { name: code, label: code link, widget: string }
+      - { name: demo, label: demo link, widget: string }
+      - { name: date, label: approximate date, widget: text }
+      - { name: showcase, label: showcase, widget: boolean, default: false }
+      - { name: archive, label: archive, widget: boolean, default: false }
+  # - name: pages
+  #   label: Pages
+  #   editor:
+  #     preview: false
+  #   files:
+  #     - name: home
+  #       label: Home
+  #       file: src/data/home.json
+  #       fields:
+  #         - name: descriptors
+  #           label: Descriptors
+  #           widget: list
+  #         - name: self-description
+  #           label: Self Description
+  #           widget: markdown
+  #     - name: about
+  #       label: About
+  #       file: src/data/about.json
+  #       fields:
+  #         - name: helloText
+  #           label: Hello Text
+  #           widget: markdown
+  #         - name: picks
+  #           label: 🔥 Picks
+  #           widget: list
+  #           identifier_field: label
+  #           fields:
+  #             - { name: label, label: Label, widget: string }
+  #             - { name: value, label: Value, widget: string }
+  #         - name: faqs
+  #           label: FAQs
+  #           widget: list
+  #           identifier_field: question
+  #           fields:
+  #             - { name: question, label: Question, widget: string }
+  #             - { name: answer, label: Answer, widget: markdown }
+  #     - name: contact
+  #       label: Contact
+  #       file: src/data/contact.json
+  #       fields:
+  #         - name: hit-me-up
+  #           label: Hit me up Text
+  #           widget: markdown
+  #         - name: placeholders
+  #           label: Placeholders
+  #           widget: object
+  #           fields:
+  #             - { name: name, label: Name, widget: string }
+  #             - { name: email, label: Email, widget: string }
+  #             - { name: subject, label: Subject, widget: string }
+  #             - { name: message, label: Message, widget: string }
+  #     - name: projects
+  #       label: Projects
+  #       file: src/data/projects.json
+  #       fields:
+  #         - name: neat-stuff
+  #           label: Some Other Neat Stuff
+  #           widget: markdown
+  #     - name: notes
+  #       label: Notes
+  #       file: src/data/notes.json
+  #       fields:
+  #         - name: descriptions
+  #           label: Descriptions
+  #           widget: list
+  #           identifier_field: category
+  #           fields:
+  #             - { name: category, label: Category, widget: string }
+  #             - { name: description, label: Description, widget: text }
+  #     - name: resume
+  #       label: Resume
+  #       file: src/data/resume.json
+  #       editor:
+  #         preview: false
+  #       fields:
+  #         - name: summary-of-qualifications
+  #           label: Summary of Qualifications
+  #           widget: list
+  #           identifier_field: text
+  #           fields:
+  #             - { name: emoji, label: Emoji, widget: string }
+  #             - { name: text, label: Text, widget: text }
+  #         - name: work-experience
+  #           label: Work Experience
+  #           widget: list
+  #           fields:
+  #             - { name: title, label: Job Title, widget: string }
+  #             - { name: location, label: Job Location, widget: string }
+  #             - { name: time, label: Job Length, widget: string }
+  #             - { name: company, label: Company, widget: string }
+  #             - { name: link, label: Company Site, widget: string }
+  #             - { name: skills, label: Skills, widget: list }
+  #             - name: bullets
+  #               label: Bullets
+  #               widget: list
+  #               fields:
+  #                 - { name: emoji, label: Emoji, widget: string }
+  #                 - { name: text, label: Text, widget: text }
+  #         - name: education
+  #           label: Education
+  #           widget: list
+  #           fields:
+  #             - { name: title, label: Course Title, widget: string }
+  #             - { name: location, label: Location/Website, widget: string }
+  #             - { name: time, label: Completion Date, widget: string }
+  #             - { name: link, label: Link, widget: string }
+  #             - { name: description, label: Description, widget: text }
+  #         - name: volunteer-work
+  #           label: Volunteering
+  #           widget: list
+  #           fields:
+  #             - { name: title, label: Volunteer Job, widget: string }
+  #             - { name: location, label: Location/Website, widget: string }
+  #             - { name: time, label: Date, widget: string }
+  #             - { name: link, label: Link, widget: string }
+  #             - { name: description, label: Description, widget: text }
+  #         - name: achievements
+  #           label: Achievements
+  #           widget: list
+  #           fields:
+  #             - { name: title, label: Achievement Title, widget: string }
+  #             - { name: location, label: Location/Website, widget: string }
+  #             - { name: time, label: Date, widget: string }
+  #             - { name: link, label: Link, widget: string }
+  #             - { name: description, label: Description, widget: text }
+  #         - name: interests
+  #           label: Interests
+  #           widget: list
+  #           field: { name: item, label: Item, widget: markdown }

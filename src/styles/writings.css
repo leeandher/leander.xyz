@@ -1,0 +1,124 @@
+@import "src/styles/global.css";
+
+article p {
+  margin: var(--writing-margin) 0;
+}
+article h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: var(--writing-margin) 0;
+}
+article h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: var(--writing-margin) 0;
+}
+article h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: var(--writing-margin) 0;
+}
+article h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: var(--writing-margin) 0;
+}
+article img {
+  margin: var(--writing-margin) 0;
+}
+article kbd {
+  border: 1px solid var(--color-base);
+  box-shadow: 0 2px 0 var(--color-base);
+  padding: var(--writing-span-margin);
+  border-radius: var(--radius-sm);
+}
+article pre {
+  margin: var(--writing-margin) 0;
+  padding: var(--writing-margin) var(--writing-indent-margin);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-base);
+}
+article ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding-inline-start: var(--writing-indent-margin);
+  margin: var(--writing-margin) 0;
+}
+article ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-inline-start: var(--writing-indent-margin);
+  margin: var(--writing-margin) 0;
+}
+article hr {
+  color: var(--color-base);
+  margin: var(--writing-margin) 0;
+}
+article table {
+  margin: var(--writing-margin) 0;
+}
+
+article th {
+  border: 1px solid var(--color-base);
+  background: var(--color-base-alt);
+  color: var(--color-surface);
+  padding: var(--writing-span-margin) 0;
+  padding-inline: var(--writing-indent-margin);
+}
+
+article td {
+  border: 1px solid var(--color-base);
+  padding: var(--writing-span-margin);
+}
+
+article :not(thead) > tr:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+
+article blockquote {
+  position: relative;
+  font-family: var(--font-fancy);
+  font-size: 1.125rem;
+  margin: var(--writing-margin) 0;
+  padding-inline-start: var(--writing-indent-margin);
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 100%;
+    width: var(--writing-span-margin);
+    border-radius: var(--writing-span-margin);
+    background: var(--color-pop);
+  }
+}
+
+article :not(pre) > code {
+  background: var(--color-base);
+  color: var(--color-surface);
+  padding: var(--writing-span-margin);
+  border-radius: var(--radius-sm);
+}
+
+article a {
+  color: var(--color-link);
+  text-decoration: underline;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+article mark {
+  position: relative;
+  color: var(--color-base);
+  background: unset;
+  padding-inline: var(--writing-span-margin);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom: 2px solid var(--color-pop);
+  background: rgba(var(--color-pop-rgb), 0.2);
+}
+
+article ::selection {
+  background: rgba(var(--color-pop-rgb), 0.2);
+}

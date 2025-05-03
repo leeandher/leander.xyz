@@ -1,11 +1,24 @@
 ---
+import { getCollection } from "astro:content";
+import DancingText from "src/components/DancingText.svelte";
 import Layout from "src/layouts/Layout.astro";
-import Navigation from "src/components/Navigation.svelte";
+const writings = await getCollection("writings");
 ---
 
 <Layout>
-  <div class="text-4xl" transition:animate="slide">
-    <Navigation client:load />
-    This is the writings page
-  </div>
+  <section class="mx-4 h-screen flex flex-col justify-center">
+    <div class="mx-auto whitespace-nowrap">
+      <DancingText
+        client:load
+        text="writings"
+        element="h1"
+        class="font-fancy text-base inline-block text-5xl sm:text-7xl lg:text-9xl"
+      />
+    </div>
+    {
+      writings.map((writing) => (
+        <a href={`writings/${writing.id}`}>{writing.data.title}</a>
+      ))
+    }
+  </section>
 </Layout>

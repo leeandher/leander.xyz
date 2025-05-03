@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="noindex" />
+    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+    <title>admin | leander.xyz</title>
+  </head>
+  <body>
+    <!-- Load the DecapCMS dashboard -->
+    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+    <!-- Load the styles for previewing the writings collection -->
+    <script>
+      window.CMS.registerPreviewStyle("/src/styles/writings.css");
+    </script>
+    <!-- Only showing body in preview panel -->
+    <script>
+      var WritingPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var title = entry.getIn(["data", "title"]);
+          var description = entry.getIn(["data", "description"]);
+
+          return h(
+            "div",
+            { className: "bg-surface" },
+            h(
+              "header",
+              {},
+              h("h1", { className: "font-fancy text-6xl text-base" }, title),
+              h(
+                "p",
+                { className: "font-sans text-1xl text-base/70 mt-2" },
+                description
+              )
+            ),
+            h(
+              "article",
+              { className: "max-w-4xl px-6 py-10 m-auto text-base" },
+              this.props.widgetFor("body")
+            )
+          );
+        },
+      });
+
+      // Register the custom preview template for a specific collection
+      CMS.registerPreviewTemplate("writings", WritingPreview);
+    </script>
+  </body>
+</html>
