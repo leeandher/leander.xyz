@@ -3,15 +3,22 @@ import WelcomeMat from "src/components/home/WelcomeMat.svelte";
 const possibleQuestions = [
   "who are you?",
   "meaning of life?",
-  "can you juggle",
+  "can you juggle?",
   "cats or dogs?",
   "favourite dinosaur?",
   "silliest hobby?",
+  "rock or paper or scissors?",
+  "can you whistle?",
+  "favourite cloud shape?",
+  "is cereal soup?",
 ];
-const questions = possibleQuestions.sort(() => Math.random() - 0.5).slice(0, 5);
+const indices = [0, 1, 2, 3].map((i) =>
+  Math.floor(Math.random() * (possibleQuestions.length - i))
+);
+const questions = indices.map((index) => possibleQuestions.splice(index, 1));
 ---
 
-<section class="h-screen flex flex-col justify-start">
+<section class="h-screen flex flex-col justify-center">
   <h2
     class="font-fancy text-base text-5xl sm:text-7xl lg:text-9x text-center sm:text-left mx-auto"
   >
@@ -40,13 +47,13 @@ const questions = possibleQuestions.sort(() => Math.random() - 0.5).slice(0, 5);
     <WelcomeMat client:load />
     <p>
       my name is <b>leander rodrigues</b>. i am someone who is really interested
-      in people, games, art, and technology — especially where they interesect.
+      in people, games, art, and technology — especially where they intersect.
       i'm based out of Toronto, Canada and write code for a living.
     </p>
     <p>
       i've rebuilt this place a few times, and probably will a few more, so
-      please experience it throughly, whatever that means for you. i use it to
-      share my thoughts and express <i>something</i>, though thats a bit of a
+      please experience it thoroughly, whatever that means for you. i use it to
+      share my thoughts and express <i>something</i>, though that's a bit of a
       moving target. if you have thoughts, i'd <small>probably</small>
       love to hear them.
     </p>
