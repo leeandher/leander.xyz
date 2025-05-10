@@ -1,28 +1,58 @@
 ---
-
+import WelcomeMat from "src/components/home/WelcomeMat.svelte";
+const possibleQuestions = [
+  "who are you?",
+  "meaning of life?",
+  "can you juggle",
+  "cats or dogs?",
+  "favourite dinosaur?",
+  "silliest hobby?",
+];
+const questions = possibleQuestions.sort(() => Math.random() - 0.5).slice(0, 5);
 ---
 
 <section class="h-screen flex flex-col justify-start">
   <h2
-    class="font-fancy text-base text-5xl sm:text-7xl lg:text-9x text-center sm:text-left mx-8"
+    class="font-fancy text-base text-5xl sm:text-7xl lg:text-9x text-center sm:text-left mx-auto"
   >
-    about me
+    ~ about me ~
   </h2>
-  <div class="flex gap-x-2 overflow-hidden select-none w-full">
+  <div class="flex gap-x-2 overflow-hidden select-none w-full relative">
+    <span class="absolute top-1/2 left-0 right-0 h-0.5 bg-base -z-1"></span>
     {
       [false, true].map((value) => (
         <ul
-          class="flex justify-around gap-x-2 w-full animate-marquee shrink-0"
+          class="flex justify-around gap-x-2 w-full shrink-0 text-center italic animate-marquee"
           aria-hidden={value}
         >
-          {/* TODO(Leander): Come up with better questions */}
-          <li>who are you?</li>
-          <li>meaning of life?</li>
-          <li>can you juggle?</li>
-          <li>cats or dogs?</li>
-          <li>favorite dinosaur?</li>
+          {questions.map((question) => (
+            <li class="hover:scale-110 transition-all bg-surface px-2 rounded-full">
+              {question}
+            </li>
+          ))}
         </ul>
       ))
     }
+  </div>
+  <div
+    class="flex flex-col gap-y-4 mt-6 content-start max-w-xl mx-auto px-8 text-left text-base"
+  >
+    <WelcomeMat client:load />
+    <p>
+      my name is <b>leander rodrigues</b>. i am someone who is really interested
+      in people, games, art, and technology — especially where they interesect.
+      i'm based out of Toronto, Canada and write code for a living.
+    </p>
+    <p>
+      i've rebuilt this place a few times, and probably will a few more, so
+      please experience it throughly, whatever that means for you. i use it to
+      share my thoughts and express <i>something</i>, though thats a bit of a
+      moving target. if you have thoughts, i'd <small>probably</small>
+      love to hear them.
+    </p>
+    <p>
+      oh and i'm not gonna answer those half-questions up there, i'll leave
+      those to the imagination.
+    </p>
   </div>
 </section>
