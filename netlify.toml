@@ -4,3 +4,9 @@ command = "pnpm run build"
 
 [build.environment]
 NODE_VERSION = "v22.14.0"
+
+[dev]
+port = 2710
+command = "pnpm run dev"
+
+

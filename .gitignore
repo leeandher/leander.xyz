@@ -1,14 +1,15 @@
 # build output
 dist/
 
-# generated types
+# generated
 .astro/
 .netlify/
+.cache/
+# comes from netlify edge functions on netlify dev
+deno.lock
 
 # dependencies
 node_modules/
-public/
-.DS_Store
 
 # logs
 npm-debug.log*
@@ -22,6 +23,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# jetbrains setting folder
-.idea/
