@@ -73,3 +73,6 @@ yarn-error.log
 # Subdomains can take care of themselves mom!
 !subdomains/**/**
 subdomains/.DS_Store
+
+# Local Netlify folder
+.netlify
